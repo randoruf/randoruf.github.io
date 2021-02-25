@@ -1,0 +1,97 @@
+* { box-sizing: border-box }
+
+body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Helvetica Neue',
+    Helvetica,
+    sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  background-color: #fff;
+}
+
+.medium { font-weight: 500 }
+strong { font-weight: 600 }
+
+.white { color: #fff }
+.red  { color: #74120F }
+
+.bd { border: 3px solid }
+.bt { border-top: 3px solid }
+.br { border-right: 3px solid }
+.bb { border-bottom: 3px solid }
+.bl { border-left: 3px solid }
+
+a {
+  color: #3377BB;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #225577;
+  text-decoration: underline;
+}
+
+.codelike {
+  font-family: monospace;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+table.table-light {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+th,
+td {
+  padding: 8px 10px 10px;
+  line-height: inherit;
+}
+
+th { vertical-align: bottom }
+td { vertical-align: top }
+
+.table-light th,
+.table-light td {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(36,51,64, 0.5);
+}
+
+.table-light tr:last-child td {
+  border-bottom: 0;
+}
+
+@media (min-width: 52em) {
+  .md-p4  { padding: 4rem !important }
+  .md-py4 { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+}
+
+@media (max-width: 52em) {
+  #tldr-table thead {
+    display: none !important;
+  }
+  #tldr-table td {
+    display: block;
+    border-bottom: 0;
+    padding: 4px 10px 6px;
+  }
+  #tldr-table td:nth-of-type(3):before { content: "Best book: "; }
+  #tldr-table td:nth-of-type(4):before { content: "Best video lectures: "; }
+
+  #tldr-table td:last-child {
+    padding-bottom: 2em;
+    content: "Best video lectures:";
+  }
+}

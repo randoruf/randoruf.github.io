@@ -1,0 +1,791 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Object and Memory · Gitbook基础</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Randoruf">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex-m/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-bibtex-indexed-cite/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-callouts/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chap01-static.html" />
+    
+    
+    <link rel="prev" href="chap01-const.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="chap01-c-crash-course.html">
+            
+                <a href="chap01-c-crash-course.html">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    C Crash Course
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    C++程序设计基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chap01-data-type-grammar.html">
+            
+                <a href="chap01-data-type-grammar.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    Data types and C++ Syntax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chap01-const.html">
+            
+                <a href="chap01-const.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    Const keyword
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="chap01-accessing-object.html">
+            
+                <a href="chap01-accessing-object.html">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    Object and Memory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="chap01-static.html">
+            
+                <a href="chap01-static.html">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    Static keyword
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Funtions</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="chap02-statement.html">
+            
+                <a href="chap02-statement.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Statement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chap03-functions.html">
+            
+                <a href="chap03-functions.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="chap03-functions-calls-return.html">
+            
+                <a href="chap03-functions-calls-return.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    Functions and Calls
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Class</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="chap04-class-introduction.html">
+            
+                <a href="chap04-class-introduction.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Class Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="chap04-inheritance.html">
+            
+                <a href="chap04-inheritance.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="chap04-overloading.html">
+            
+                <a href="chap04-overloading.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    Overloading
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Expression</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="chap05-expression.html">
+            
+                <a href="chap05-expression.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Expression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="chap05-rvalue-lvalue-move.html">
+            
+                <a href="chap05-rvalue-lvalue-move.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    Rvalue and Lvalue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="chap05-precedence-associativity.html">
+            
+                <a href="chap05-precedence-associativity.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    Precedence Associativity
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Array and Container(aka. Abstract Data Structure)</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="chap06-array.html">
+            
+                <a href="chap06-array.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="chap06-container.html">
+            
+                <a href="chap06-container.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="chap06-container-vector.html">
+            
+                <a href="chap06-container-vector.html">
+            
+                    
+                        <b>5.3.</b>
+                    
+                    Vector
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="chap06-string.html">
+            
+                <a href="chap06-string.html">
+            
+                    
+                        <b>5.4.</b>
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="chap07-template-introduction.html">
+            
+                <a href="chap07-template-introduction.html">
+            
+                    
+                        <b>5.5.</b>
+                    
+                    Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Object and Memory</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="accessing-objects-in-memory">Accessing objects in Memory</h1>
+<p>&#x5982;&#x679C;&#x719F;&#x6089;&#x8BA1;&#x7B97;&#x673A;&#x7ED3;&#x6784;&#x5E94;&#x8BE5;&#x77E5;&#x9053;&#xFF0C; <strong>&#x7A0B;&#x5E8F;&#x7684;&#x6570;&#x636E;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x653E;&#x5728;&#x5185;&#x5B58;&#x5185;</strong>&#x3002; 
+&#x5176;&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x5C31;&#x662F; <strong><em>&#x201C;&#x5BF9;&#x5185;&#x5B58;&#x4E2D;&#x6570;&#x636E;&#x7684;&#x8BFB;&#x5199;&#x201D;</em></strong> </p>
+<p><strong>&#x4EFB;&#x4F55;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x5360;&#x6709;&#x5185;&#x5B58;&#x7684;&#x5B9E;&#x4F53;(entity) &#x53EB; &#x5BF9;&#x8C61;(object)</strong>, &#x5176;&#x4E2D;&#x5305;&#x62EC; data(variable, constants), statemens(code and functions).  </p>
+<p>&#x5176;&#x4E2D;&#xFF0C; &#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x7684;&#x88AB;&#x6210;&#x4E3A; <strong>variable &#x53D8;&#x91CF;</strong> , &#x4E00;&#x65E6;&#x4EA7;&#x751F;&#x540E;&#x5C31;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;&#x7684;&#x53EB; <strong>constant &#x5E38;&#x91CF;</strong>&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x800C;&#x8A00;&#x6709;&#x4E24;&#x4E2A;&#x79CD;<strong>&#x8BBF;&#x95EE;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;</strong></p>
+<ul>
+<li><strong>identifier/reference</strong> (variable/constant name) &#x6807;&#x8BC6;&#x7B26;</li>
+<li><strong>pointer</strong> (memory address) &#x6307;&#x9488;</li>
+</ul>
+<h1 id="pointer-and-reference">Pointer and Reference</h1>
+<p>A <strong>reference</strong> is a alias to variable&apos;s memory. 
+The reference itself does not have the memory. The reference will simply behave as the varaible it refers to. Some points about references:</p>
+<ul>
+<li>need to <strong>refer to an object</strong> when you initialize it. </li>
+<li><strong>can&apos;t be re-refered</strong> to any other objects once it is initialized. </li>
+<li>mutating a <strong>reference</strong> is mutating <strong>the aliased variable</strong></li>
+</ul>
+<p><a href="https://docs.microsoft.com/en-us/cpp/cpp/references-cpp?view=msvc-160" target="_blank">https://docs.microsoft.com/en-us/cpp/cpp/references-cpp?view=msvc-160</a></p>
+<pre class="language-"><code class="lang-cpp">T  s<span class="token punctuation">;</span>   <span class="token comment">// Declare the object.</span>
+T<span class="token operator">&amp;</span> sRef <span class="token operator">=</span> s<span class="token punctuation">;</span>   <span class="token comment">// Declare the reference.</span>
+</code></pre>
+<p>A <strong>pointer</strong> is a variable that has its own memory, and it can store the address of the object it &quot;pointing to&quot;.  </p>
+<ul>
+<li>has a value (memory address) <strong>&#x4E00;&#x4E2A;&#x76D2;&#x5B50;&#xFF0C; &#x91CC;&#x9762;&#x5B58;&#x50A8;&#x7740;&#x5730;&#x5740;&#x503C;</strong>&#x3002;</li>
+<li>can dereference to access object it points to <strong>&#x6307;&#x5411;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5730;&#x5740;&#xFF08;&#x4F46;&#x5BF9;&#x8C61;&#x53EF;&#x80FD;&#x4E0D;&#x5B58;&#x5728;&#xFF09;</strong></li>
+<li>powerful and dangerous. </li>
+</ul>
+<pre class="language-"><code class="lang-cpp"><span class="token operator">&amp;</span>v <span class="token comment">// the address of object v</span>
+<span class="token operator">*</span>p <span class="token comment">// dereference operator (the object the address p)</span>
+<span class="token operator">*</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>v<span class="token punctuation">)</span> <span class="token operator">==</span> v  <span class="token comment">//</span>
+</code></pre>
+<p>&#x8FD8;&#x6709;&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x7C7B;&#x81EA;&#x5E26;&#x6210;&#x5458;(member),&#x65E2;&#x53EF;&#x4EE5;&#x662F; class &#x4E5F;&#x53EF;&#x4EE5; struct </p>
+<pre class="language-"><code class="lang-cpp">v<span class="token operator">-&gt;</span><span class="token function">getVolume</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//same as </span>
+<span class="token punctuation">(</span><span class="token operator">*</span>v<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getVolumn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x60F3;&#x4E00;&#x60F3;&#x4E3A;&#x4EC0;&#x4E48;&#x6709;&#x7528;&#xFF1F; &#x56E0;&#x4E3A; <code>v-&gt;node-&gt;node</code> &#x7684;&#x539F;&#x5F0F;&#x662F; <code>(*(*v).node).node</code></p>
+<h2 id="deep-copy-and-shallow-copy">Deep Copy and Shallow Copy</h2>
+<p>Note that you <strong>can&apos;t make copies of reference!!!</strong>
+You can only make copies of the objects that has <strong>pointers</strong>. </p>
+<ul>
+<li><strong>Deep Copy</strong><ul>
+<li>Copy the content inside an object, e.g. <code>auto ... = *p</code></li>
+<li>Create <strong>another seperated copy</strong>. </li>
+</ul>
+</li>
+<li><strong>Shallow Copy</strong> <ul>
+<li>Copy the memory address instead of the content, e.g. <code>auto ... = p</code></li>
+<li><strong>The identical object</strong> </li>
+</ul>
+</li>
+</ul>
+<h1 id="declaration-statement-and-memory-allocation">Declaration Statement and Memory Allocation</h1>
+<p>&#x672C;&#x7AE0;&#x4E0A;&#x662F;<strong>&#x53D8;&#x91CF;/&#x5E38;&#x91CF;&#x7684;&#x58F0;&#x660E;</strong>&#x3002;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">const</span> <span class="token keyword">double</span> pi <span class="token operator">=</span> <span class="token number">3.14159</span><span class="token punctuation">;</span> 
+<span class="token keyword">double</span> radius <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C; &#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x4F1A;&#x88AB;&#x5B58;&#x50A8;&#x5230;&#x4E00;&#x4E2A;&#x53EB; memory &#x4E0A;&#x3002;
+<strong>&#x7531;&#x4E8E; RAM &#x53EB; (random access memory)</strong>, &#x8FD9;&#x610F;&#x5473;&#x7740;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; &#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C; &#x5FEB;&#x901F;&#x5730;&#x8BBF;&#x95EE;&#x4F60;&#x60F3;&#x8981;&#x7684;&#x6570;&#x636E;&#x3002; </p>
+<h2 id="variable-as-a-bounding-box">Variable as a Bounding Box</h2>
+<p>&#x4E0A;&#x56FE;&#x4F60;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#xFF0C; &#x6BCF;&#x4E2A; variable &#x5305;&#x542B; <strong>name</strong>, <strong>type</strong>, <strong>value</strong>. &#x4E3A;&#x4E86;&#x65B9;&#x9762;&#x7406;&#x89E3;&#xFF0C; &#x4F60;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x6709;<strong>&#x4E00;&#x4E2A;&#x5BB9;&#x91CF;&#x6709;&#x9650;&#x7684;&#x5BB9;&#x5668;</strong>&#x3002;
+<img src="2020-12-10-15-19-06.png" alt="">
+&#x8FD9;&#x91CC;&#x7684;<strong>&#x5BB9;&#x91CF;&#x6709;&#x9650;</strong>&#x975E;&#x5E38;&#x6709;&#x7528;&#xFF0C;&#x4F60;&#x5FC5;&#x987B;&#x660E;&#x767D;&#x6BCF;&#x4E2A;&#x5E38;&#x91CF;/&#x53D8;&#x91CF;&#x7684;&#x5BB9;&#x91CF;&#x662F;&#x6709;&#x9650;&#x7684;&#x3002; </p>
+<h2 id="memory-chunk">Memory Chunk</h2>
+<p>&#x5176;&#x4E2D;&#x5185;&#x5B58;&#x5982;&#x4E0B;&#xFF0C; <strong>&#x4E00;&#x822C;&#x800C;&#x8A00;&#xFF0C;&#x6BCF;&#x884C; (&#x6BCF;&#x4E2A; byte) &#x662F; 8 bit &#x5DE6;&#x53F3;</strong>&#x3002; Typically, each address location holds 8-bit (i.e., 1-byte) of data. 
+&#x4E3A;&#x4EC0;&#x4E48;&#x5185;&#x5B58;&#x7684;&#x6700;&#x5C0F;&#x6570;&#x636E;&#x957F;&#x5EA6;&#x662F; 8-bit &#x5462;&#xFF1F; &#x56E0;&#x4E3A; 8 &#x4F4D;&#x8DB3;&#x591F;&#x8868;&#x793A;ASCII &#x3002; &#x8FD9;&#x662F;&#x7531;&#x4E8E;&#x5386;&#x53F2;&#x539F;&#x56E0;&#x51B3;&#x5B9A;&#x7684;&#x3002;
+<a href="https://en.wikipedia.org/wiki/ASCII" target="_blank">https://en.wikipedia.org/wiki/ASCII</a> &#x53EF;&#x89C1;&#x662F;7&#x4F4D;&#x7684;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x4ECD;&#x7136;&#x4E0D;&#x76F8;&#x4FE1; <strong>1 byte = 8 bits</strong> &#xFF08;&#x5373; <strong>&#x6BCF;&#x884C; 8 bits</strong>&#xFF09; &#xFF0C; &#x53EF;&#x4EE5;&#x8FD0;&#x884C;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x5728;64&#x4F4D;&#x7CFB;&#x7EDF; &#x7ED3;&#x679C;&#x8FD4;&#x56DE; 8 &#xFF0C; &#x5373; <code>int*</code> &#x8FD9;&#x4E2A;&#x7C7B;&#x578B;&#x662F; 8 Bytes. 
+&#x5728;32&#x4F4D;&#x7CFB;&#x7EDF; &#x7ED3;&#x679C;&#x8FD4;&#x56DE; 4 &#x3002; </p>
+<p><strong>32&#x4F4D;</strong>&#x7684;&#x7CFB;&#x7EDF;&#x81F3;&#x5C11;&#x9700;&#x8981;<strong>4&#x4E2A;&#x5185;&#x5B58;&#x4F4D;&#x7F6E; (&#x5373; 4 bytes) </strong>&#x6765;&#x5B58;&#x50A8;<strong>&#x4E00;&#x4E2A;&#x8FDE;&#x7EED;&#x7684;&#x5BF9;&#x8C61;/&#x6570;&#x636E;</strong>&#x3002; A 32-bit system typically uses 32-bit addresses. To store a 32-bit address, 4 memory locations are required. </p>
+<p>&#x540C;&#x7406;&#xFF0C; <strong>&#x5982;&#x679C;64&#x4F4D;&#x7CFB;&#x7EDF;&#x5C31;&#x9700;&#x8981;&#x66F4;&#x591A;8&#x4E2A;&#x5185;&#x5B58;&#x4F4D;&#x7F6E;(&#x5373; 8 bytes)</strong> (8x8=64) .</p>
+<p>&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5DF2;&#x77E5; &#x6700;&#x5C0F;&#x7684; <strong>1 Byte &#x4E3A; 8 bits</strong> (&#x4E00;&#x822C;&#x662F;&#x6307;&#x9488;&#x7684;&#x5927;&#x5C0F;)&#x3002;</p>
+<p><strong>&#x5982;&#x679C;&#x6BCF;&#x4E00;&#x4E2A;&#x5185;&#x5B58;&#x5730;&#x5740;&#x90FD;&#x4EE3;&#x8868; 1 Byte &#x7684;&#x7ED3;&#x5C3E;&#x5730;&#x5740;</strong>&#xFF0C; &#x90A3;&#x4E48;&#x5BF9;&#x4E8E; 32&#x4F4D;&#x7CFB;&#x7EDF;&#x800C;&#x8A00;&#xFF0C;&#x6700;&#x591A;&#x53EF;&#x4EE5;&#x8868;&#x793A; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mn>4</mn><mo>&#xD7;</mo><mn>8</mn></mrow></msup><mo>=</mo><msup><mn>2</mn><mn>32</mn></msup></mrow><annotation encoding="application/x-tex">2^{4\times8} = 2^{32} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">4</span><span class="mbin mtight">&#xD7;</span><span class="mord mtight">8</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span>&#xFF0C; &#x4E5F;&#x5C31;&#x662F;&#x6700;&#x5927; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>32</mn></msup></mrow><annotation encoding="application/x-tex">2^{32} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span> Bytes (&#x56E0;&#x4E3A; 1 &#x4E2A;&#x4F4D;&#x7F6E; &#x662F; 1 Byte) &#x3002; &#x90A3;&#x4E48; 32&#x4F4D;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x7D22;&#x5F15;&#x7684;&#x6700;&#x5927;&#x5730;&#x5740;&#x4E3A; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>3</mn></msup><mn>2</mn><mo>&#xD7;</mo><mn>1</mn><msup><mn>0</mn><mrow><mo>&#x2212;</mo><mn>9</mn></mrow></msup><mo>&#x2248;</mo><mn>4.29</mn><mtext>&#xA0;GB</mtext></mrow><annotation encoding="application/x-tex">2^32 \times 10^{-9} \approx 4.29 \text{ GB}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#xD7;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2212;</span><span class="mord mtight">9</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x2248;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">4</span><span class="mord">.</span><span class="mord">2</span><span class="mord">9</span><span class="mord text"><span class="mord">&#xA0;GB</span></span></span></span></span> &#x3002; &#x6CE8;&#x610F;&#xFF0C; &#x6B64;&#x65F6;&#x7684; GB &#x7684; B &#x662F; <strong>Byte &#xFF0C; &#x4E5F;&#x5C31;&#x662F;&#x5185;&#x5B58;&#x6700;&#x5C0F;&#x7684; Chunk</strong>.   </p>
+<h2 id="stack-and-memory-allocation">Stack and Memory Allocation</h2>
+<p>Stack &#x7684; Memory Layout. </p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">int</span> a<span class="token punctuation">;</span>
+  <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">;</span> <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">12345</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token operator">&amp;</span>b<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#x5230;&#x8FD9;&#x4E2A; Stack &#x7684;&#x5730;&#x5740;&#x662F;&#x4ECE;&#x5927;&#x5230;&#x5C0F;&#x7684;&#xFF0C; <strong>&#x6307;&#x9488;&#x603B;&#x662F;&#x6307;&#x5411; Object &#x7684;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;</strong>&#xFF0C; &#x56E0;&#x6B64;&#x5728;&#x6B64;&#x56FE;&#x4E2D;&#x7684;&#x8868;&#x793A;&#x5373;&#x4E3A; &#x5757;&#x7684;&#x5E95;&#x90E8;&#xFF08;&#x4F60;&#x53CD;&#x8FC7;&#x6765;&#x770B;&#x5C31;&#x662F;&#x771F;&#x6B63;&#x7684; Stack &#x4E86;&#xFF0C; &#x56E0;&#x4E3A; <code>p</code> &#x5728;&#x6700;&#x4E0A;&#x9762;&#xFF09;&#x3002; </p>
+<p><img src="2020-12-14-16-42-32.png" alt=""></p>
+<h3 id="stack-frames-and-functions">Stack Frames and Functions</h3>
+<p>All variables (including parameters to the function) that are part of a function are part of that function&#x2019;s stack frame. 
+<strong>&#x6240;&#x6709;&#x51FD;&#x6570;&#x7684;&#x53D8;&#x91CF;(&#x5305;&#x62EC;&#x53C2;&#x6570;)</strong> &#x90FD;&#x662F;<strong>&#x88AB;&#x653E;&#x5728; stack frame &#x4E2D;</strong>&#x3002; </p>
+<p>A stack frame and function :</p>
+<ul>
+<li>Inside a function, we need access to:<ul>
+<li>arguments</li>
+<li><strong>local variables</strong></li>
+</ul>
+</li>
+<li>When the function terminates, need to retrieve<ul>
+<li>return value</li>
+<li>register values from previous function</li>
+<li>previous stack pointer</li>
+<li><strong>return address</strong> (to return to the caller)</li>
+</ul>
+</li>
+</ul>
+<p>All of these are located on the stack. Thus, a small region on the stack is associated with the invocation of each function. This is called a <strong>stack frame</strong>.
+<a href="http://www.cse.unsw.edu.au/~cs1917/12s2/lect/17_Memory4.pdf" target="_blank">http://www.cse.unsw.edu.au/~cs1917/12s2/lect/17_Memory4.pdf</a></p>
+<h3 id="example-1--what-happens-here">Example 1 : What happens here?</h3>
+<p>&#x4F8B;&#x5B50;&#xFF1A; &#x5982;&#x679C;&#x8FD4;&#x56DE; stack frame &#x4E2D;&#x7684; local variable &#x5185;&#x5B58;&#x5730;&#x5740;&#x3002; </p>
+<pre class="language-"><code class="lang-cpp">Cube <span class="token operator">*</span><span class="token function">CreateCube</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Cube <span class="token function">c</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// local variable </span>
+  <span class="token keyword">return</span> <span class="token operator">&amp;</span>c<span class="token punctuation">;</span>  <span class="token comment">// return the address of a local variable in a stack frame. </span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Cube <span class="token operator">*</span>c <span class="token operator">=</span> <span class="token function">CreateCube</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">SomeOtherFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">double</span> v <span class="token operator">=</span> c<span class="token operator">-&gt;</span><span class="token function">getVolume</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">double</span> a <span class="token operator">=</span> c<span class="token operator">-&gt;</span><span class="token function">getSurfaceArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x8C03;&#x7528; <code>CreateCube()</code> &#x51FD;&#x6570;, </p>
+<p><img src="2020-12-14-17-27-34.png" alt=""></p>
+<p>&#x5982;&#x679C;&#x8C03;&#x7528;&#x65B0;&#x7684;&#x51FD;&#x6570; <code>SomeOtherFunction();</code>, <strong>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x539F;&#x6765;&#x7684; stack frame &#x88AB;&#x8986;&#x76D6;&#x4E86;</strong>&#x3002;</p>
+<p>&#xFF08;&#x56E0;&#x4E3A;&#x5DF2;&#x7ECF;&#x8FD4;&#x56DE;&#x5230; main function stack frame &#x4E86;)&#x3002; &#x7136;&#x540E;&#x539F;&#x6765;&#x7684;&#x6307;&#x9488;&#x5C31;&#x4E0D;&#x77E5;&#x9053;&#x6307;&#x5411;&#x4EC0;&#x4E48;&#x4E86;&#x3002;</p>
+<p><img src="2020-12-14-17-31-22.png" alt=""></p>
+<h2 id="heap-and-memory-allocation">Heap and Memory Allocation</h2>
+<p>As programmers, we can <strong>use heap memory in cases where the lifecycle of the variable exceeds the lifecycle of the function</strong>. &#x7528; Heap &#x7684;&#x8BDD;&#xFF0C; &#x53D8;&#x91CF;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x5F80;&#x5F80;&#x975E;&#x5E38;&#x957F;&#x3002; </p>
+<h3 id="allocating">Allocating</h3>
+<p>The only to creat heap memory is with the use of the <code>new</code> keyword. Forget <code>mallc()</code>, that is the old thing from C stuff. </p>
+<ul>
+<li>Allocate memory</li>
+<li><strong>Construct object</strong> </li>
+<li><strong>Return a memory address</strong> </li>
+</ul>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">int</span> <span class="token operator">*</span>ptr_add <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">;</span>
+</code></pre>
+<p>To allocate an array, you need <code>new type[size]</code></p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">int</span> <span class="token operator">*</span>x <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>The size of the array here is not fixed.</strong></p>
+<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info-allocating-arrays-with-constructor"><i class="fa fa-info"></i> INFO: allocating arrays (with constructor)</h3></div><div class="panel-body"><p>Note that the <strong>constructor</strong> will be called on <strong>each element in the array</strong>!</p><p>It is recommended to use <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>vector</span><span class="token punctuation">&gt;</span></span></code>. Array is not recommended.  </p></div></div>
+<h3 id="releasing">Releasing</h3>
+<p>The only way to free heap memory is with use of the <code>delete</code> keyword. Forget <code>free()</code>, that is the old thing from C stuff. </p>
+<ul>
+<li><strong>Destruct object</strong> (a default destrcutor)</li>
+<li>Release memory according <strong>to a memory address</strong>. </li>
+</ul>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">delete</span> ptr_add<span class="token punctuation">;</span> 
+<span class="token comment">// delete (*ptr_dd); // is incorrect as (*ptr_add) is an object!</span>
+</code></pre>
+<p>To allocate an array, you need to tell the system to delete all arrays (instead of the first one?)</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">delete</span><span class="token punctuation">[</span><span class="token punctuation">]</span> x<span class="token punctuation">;</span>
+</code></pre>
+<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info-releasing-arrays-with-destructor"><i class="fa fa-info"></i> INFO: releasing arrays (with destructor)</h3></div><div class="panel-body"><p>Note that the <strong>destructor</strong> will be called on <strong>each element in the array</strong>!</p></div></div>
+<p>Be careful of duplicating delete....</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Circle <span class="token operator">*</span>c1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Circle</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Radius as 1 </span>
+    Circle <span class="token operator">*</span>c2 <span class="token operator">=</span> c1<span class="token punctuation">;</span>            <span class="token comment">// address of (*c1)  </span>
+
+    c2<span class="token operator">-&gt;</span><span class="token function">setRadius</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">delete</span> c2<span class="token punctuation">;</span>
+    <span class="token keyword">delete</span> c1<span class="token punctuation">;</span> <span class="token comment">//  heap object has been released...  </span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/* Expected:  
+   malloc: *** error for object 0x100531380: 
+    pointer being freed was not allocated
+*/</span>
+</code></pre>
+<h1 id="memory-layout-in-c-runtime">Memory Layout in C++ Runtime</h1>
+<p>&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x7B14;&#x8BB0; <a href="https://courses.engr.illinois.edu/cs225/fa2020/resources/stack-heap/" target="_blank">https://courses.engr.illinois.edu/cs225/fa2020/resources/stack-heap/</a></p>
+<ul>
+<li><strong><em>Automatic Variables</em></strong> (a function&apos;s scope, <strong>local varaiables</strong> including pointers, and <strong>caller&apos;s return address</strong> that allows the program be back to the caller after completing a subroutine/function) <ul>
+<li>&#x672C;&#x5730;&#x53D8;&#x91CF;(&#x6709; scope &#x9650;&#x5236;), &#x8FD4;&#x56DE;&#x5730;&#x5740;(recursion), <strong>&#x81EA;&#x52A8;deallocate</strong></li>
+</ul>
+</li>
+<li><strong><em>Dynamic Memory Allocation</em></strong> (programmers&apos; direct manipulation on memory space, keywords invovles <code>malloc/new</code>  to allocate and <code>free/delette</code> to free up) <ul>
+<li><strong>&#x7A0B;&#x5E8F;&#x5458;&#x624B;&#x52A8;allocate</strong>, <strong>&#x624B;&#x52A8; deallocate</strong>, &#x4E0D;&#x4E00;&#x5B9A;&#x6709; scope &#x9650;&#x5236;&#x3002;</li>
+<li><strong><em>Good Practice: &#x5728; &#x624B;&#x52A8; deallocate &#x4E4B;&#x540E;&#xFF0C; &#x9A6C;&#x4E0A;&#x8BA9; pointer &#x53D8;&#x6210; nullptr &#x6765;&#x8868;&#x660E;&#x539F;&#x6765;&#x7684;&#x4F4D;&#x7F6E;&#x662F;&#x4E0D;&#x518D;&#x5141;&#x8BB8;&#x8BBF;&#x95EE;&#x4E86;</em></strong>&#x3002; &#x5426;&#x5219;&#xFF0C; &#x8FD9;&#x4E2A; pointer &#x8FD8;&#x662F;&#x4F1A;&#x6307;&#x5411;&#x539F;&#x6765;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#x3002; 
+```cpp
+int <em> createINT(){
+int </em> a = new int;
+*a = 100;
+return a;
+}</li>
+</ul>
+</li>
+</ul>
+<p>int main(int argc, const char <em> argv[]) {
+    int</em> a = createINT();
+    std::cout &lt;&lt; *a &lt;&lt; std::endl;
+    // set the freed pointer to nullptr to 
+    // unable access to the original freed position. 
+    delete a;
+    a = nullptr; 
+    return 0;
+}</p>
+<p>```</p>
+<p>&#x4EE3;&#x7801;&#x5BF9;&#x5E94;&#x533A;&#x57DF;
+<img src="2021-01-06-15-34-49.png" alt=""></p>
+<p><strong>&#x601D;&#x8003;&#x9898;</strong>&#xFF1A;What is <strong>stack overflow</strong> (also called &#x201C;<strong>stack smashing</strong>&#x201D;)?</p>
+<p><a href="https://courses.cs.washington.edu/courses/cse351/17sp/lectures/CSE351-L15-buffoverflow_17sp-ink-day2-new.pdf" target="_blank">https://courses.cs.washington.edu/courses/cse351/17sp/lectures/CSE351-L15-buffoverflow_17sp-ink-day2-new.pdf</a></p>
+<h2 id="memory-leak-and-smart-pointer">Memory Leak and Smart Pointer</h2>
+<p>&#x7531;&#x4E8E;&#x4F7F;&#x7528; <code>malloc/new</code> &#x7684;&#x65F6;&#x5019;&#xFF0C; &#x9700;&#x8981; <strong>&#x624B;&#x52A8;deallocate</strong>, &#x5426;&#x5219;&#x5728; Heap &#x4E2D;&#x7684;&#x7A7A;&#x95F4;&#x662F;&#x4E0D;&#x4F1A;&#x88AB;&#x91CA;&#x653E;&#x7684;&#x3002; &#x5982;&#x679C;&#x5FD8;&#x8BB0; <strong>&#x624B;&#x52A8;deallocate</strong> &#xFF0C; &#x5728;&#x4E00;&#x4E9B;&#x5927;&#x578B;&#x9879;&#x76EE;&#x4E0A;&#xFF0C; &#x4F1A;&#x9020;&#x6210; Heap &#x975E;&#x5E38;&#x5927;&#xFF01;</p>
+<p>Memory is never automatically reclaimed, even if it goes out of scope. Any memory lost, but not freed, is considered to be &#x201C;leaked memory&#x201D;.</p>
+<p>&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x6F5C;&#x5728;&#x7684; Memory Leak &#x95EE;&#x9898; (&#x5176;&#x4ED6;&#x7A0B;&#x5E8F;&#x90FD;&#x6709; Garbage Collection&#x4E86;&#xFF0C; C++ &#x600E;&#x4E48;&#x80FD;&#x6CA1;&#x6709;&#x5462;&#xFF1F;)&#xFF0C; 
+&#x6700;&#x65B0; C++ &#x5F15;&#x5165;&#x4E86; Smart pointer. &#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5FAE;&#x8F6F;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x6587;&#x6863; 
+<a href="https://docs.microsoft.com/en-us/cpp/cpp/smart-pointers-modern-cpp?view=msvc-160" target="_blank">https://docs.microsoft.com/en-us/cpp/cpp/smart-pointers-modern-cpp?view=msvc-160</a></p>
+<p>&#x8FD8;&#x6709; <a href="https://docs.microsoft.com/en-us/cpp/cpp/how-to-create-and-use-unique-ptr-instances?view=msvc-160" target="_blank">https://docs.microsoft.com/en-us/cpp/cpp/how-to-create-and-use-unique-ptr-instances?view=msvc-160</a>
+&#x548C; 
+<a href="https://docs.microsoft.com/en-us/cpp/cpp/how-to-create-and-use-shared-ptr-instances?view=msvc-160" target="_blank">https://docs.microsoft.com/en-us/cpp/cpp/how-to-create-and-use-shared-ptr-instances?view=msvc-160</a></p>
+<h2 id="heap-deallocation">Heap Deallocation</h2>
+<p>&#x5982;&#x679C;&#x4F60;&#x5B66;&#x8FC7;&#x6BD4;&#x8F83;&#x57FA;&#x7840;&#x7684;&#x8BA1;&#x7B97;&#x673A;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C; &#x4F60;&#x4F1A;&#x660E;&#x767D; Heap &#x662F;&#x6BD4;&#x8F83;&#x6DF7;&#x4E71;&#x7684;&#x7ED3;&#x6784;&#x3002; 
+<img src="2020-12-10-16-45-00.png" alt="">
+&#x5728; <strong><em>&#x624B;&#x52A8; deallocate</em></strong> &#x7684;&#x65F6;&#x5019;&#xFF0C; &#x5E38;&#x89C1;&#x95EE;&#x9898;&#x662F; <strong>Heap &#x788E;&#x7247;&#x5316; (causing fragmentations in the heap)</strong>. </p>
+<p>&#x4F60;&#x611F;&#x5174;&#x8DA3;&#x53EF;&#x4EE5;&#x7814;&#x7A76;&#x4EE5;&#x4E0B; heap allocation scheme that try to pick the &#x201C;best&#x201D; spot for you . &#x8FD9;&#x91CC;&#x4E0D;&#x6DF1;&#x5165;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chap01-const.html" class="navigation navigation-prev " aria-label="Previous page: Const keyword">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chap01-static.html" class="navigation navigation-next " aria-label="Next page: Static keyword">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Object and Memory","level":"1.5","depth":1,"next":{"title":"Static keyword","level":"1.6","depth":1,"path":"chap01-static.md","ref":"./chap01-static.md","articles":[]},"previous":{"title":"Const keyword","level":"1.4","depth":1,"path":"chap01-const.md","ref":"./chap01-const.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex-m","-highlight","prism","prism-themes","bibtex-indexed-cite","video","page-toc","callouts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"callouts":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex-m":{},"fontsettings":{"theme":"white","family":"sans","size":2},"bibtex-indexed-cite":{"path":"/"},"prism-themes":{},"video":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"Randoruf","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"bibCount":0,"variables":{},"title":"Gitbook基础","bib":[{"citationKey":"KUFFNER2000RRT","entryType":"INPROCEEDINGS","entryTags":{"TITLE":"RRT-connect: An efficient approach to single-query path planning","AUTHOR":"Kuffner, James J and LaValle, Steven M","BOOKTITLE":"Proceedings 2000 ICRA. Millennium Conference. IEEE International Conference on Robotics and Automation. Symposia Proceedings (Cat. No. 00CH37065)","VOLUME":"2","PAGES":"995--1001","YEAR":"2000","ORGANIZATION":"IEEE"}}],"gitbook":"*"},"file":{"path":"chap01-accessing-object.md","mtime":"2021-02-03T23:33:41.696Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-06T02:37:05.867Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

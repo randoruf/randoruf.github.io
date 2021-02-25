@@ -1,0 +1,932 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>C Crash Course · Gitbook基础</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Randoruf">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex-m/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-bibtex-indexed-cite/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-callouts/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="./" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="chap01-c-crash-course.html">
+            
+                <a href="chap01-c-crash-course.html">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    C Crash Course
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    C++程序设计基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chap01-data-type-grammar.html">
+            
+                <a href="chap01-data-type-grammar.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    Data types and C++ Syntax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chap01-const.html">
+            
+                <a href="chap01-const.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    Const keyword
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chap01-accessing-object.html">
+            
+                <a href="chap01-accessing-object.html">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    Object and Memory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="chap01-static.html">
+            
+                <a href="chap01-static.html">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    Static keyword
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Funtions</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="chap02-statement.html">
+            
+                <a href="chap02-statement.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Statement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chap03-functions.html">
+            
+                <a href="chap03-functions.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="chap03-functions-calls-return.html">
+            
+                <a href="chap03-functions-calls-return.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    Functions and Calls
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Class</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="chap04-class-introduction.html">
+            
+                <a href="chap04-class-introduction.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Class Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="chap04-inheritance.html">
+            
+                <a href="chap04-inheritance.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="chap04-overloading.html">
+            
+                <a href="chap04-overloading.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    Overloading
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Expression</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="chap05-expression.html">
+            
+                <a href="chap05-expression.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Expression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="chap05-rvalue-lvalue-move.html">
+            
+                <a href="chap05-rvalue-lvalue-move.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    Rvalue and Lvalue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="chap05-precedence-associativity.html">
+            
+                <a href="chap05-precedence-associativity.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    Precedence Associativity
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Array and Container(aka. Abstract Data Structure)</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="chap06-array.html">
+            
+                <a href="chap06-array.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="chap06-container.html">
+            
+                <a href="chap06-container.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="chap06-container-vector.html">
+            
+                <a href="chap06-container-vector.html">
+            
+                    
+                        <b>5.3.</b>
+                    
+                    Vector
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="chap06-string.html">
+            
+                <a href="chap06-string.html">
+            
+                    
+                        <b>5.4.</b>
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="chap07-template-introduction.html">
+            
+                <a href="chap07-template-introduction.html">
+            
+                    
+                        <b>5.5.</b>
+                    
+                    Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >C Crash Course</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="c-crash-course">C Crash Course</h1>
+<p>[TOC]</p>
+<h3 id="c-and-object-oriented-design">C and Object Oriented Design</h3>
+<p>&#x8981;&#x6CE8;&#x610F;&#x5230;&#xFF0C; <strong>Pointer &#x548C; OO &#x7684;&#x5173;&#x7CFB;&#x975E;&#x5E38;&#x5BC6;&#x5207;</strong>&#x3002; OO &#x901A;&#x8FC7; <code>new</code>  &#x521B;&#x5EFA;&#x4E00;&#x4E2A;<strong>&#x552F;&#x4E00;&#x7684;&#x5BF9;&#x8C61;</strong>&#xFF0C; &#x800C; Pointer &#x80FD;&#x591F;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;<strong>&#x552F;&#x4E00;&#x7684;&#x5BF9;&#x8C61;</strong>&#x3002;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5728; C &#x8FD0;&#x7528; OO&#x8BBE;&#x8BA1;&#xFF0C;&#x57FA;&#x672C;&#x4E0A;&#x90FD;&#x662F;&#x8981;&#x7528; Pointer &#x5B8C;&#x6210; <strong>Parameter Passing</strong> &#x548C; <strong>Return</strong> (&#x65B9;&#x4FBF; return &#x540E;&#x5728;&#x5916;&#x9762;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4FEE;&#x6539;) &#x3002; </p>
+<p>C&#x5E76;&#x6CA1;&#x6709; OO &#x8BBE;&#x8BA1;&#xFF0C; &#x4F46;&#x4F60;&#x53EF;&#x4EE5;&#x7528; <code>struct</code> &#x548C; <code>function</code> &#x5B9E;&#x73B0;&#x3002; </p>
+<p>&#x4F46;&#x8981;&#x5341;&#x5206;&#x6CE8;&#x610F;&#xFF0C;&#x4F60;&#x5FC5;&#x987B; <strong>Pass-by-Pointer</strong> &#x6765;<strong><em>&#x4FDD;&#x8BC1;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; function &#x786E;&#x5B9E;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x5BF9;&#x8C61;&#x7684;&#x5185;&#x5BB9;</em></strong>&#x3002;</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">typedef</span> <span class="token keyword">struct</span><span class="token punctuation">{</span>
+    Node <span class="token operator">*</span>head<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span> Queue<span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">append</span><span class="token punctuation">(</span>Queue <span class="token operator">*</span>q&#xFF0C; T val<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">pop</span><span class="token punctuation">(</span>Queue <span class="token operator">*</span>q<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">*</span>T <span class="token function">get_top_item</span><span class="token punctuation">(</span>Queue <span class="token operator">*</span>q<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4F7F;&#x7528; Pass-by-Pointer &#x624D;&#x80FD;&#x4FEE;&#x6539;&#x6B63;&#x786E;&#x7684; Instance/&#x5BF9;&#x8C61;<strong>(&#x4F8B;&#x5982;&#x66F4;&#x6539; Queue &#x7684; head)</strong>&#x3002;Pass-by-value &#x662F;&#x65E0;&#x6CD5;&#x4FEE;&#x6539;&#x539F;&#x6765;Queue &#x7684; Head &#xFF08;&#x56E0;&#x4E3A;&#x7B49;&#x4E8E;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x80FD;&#x591F;&#x76F4;&#x63A5;&#x4FEE;&#x6539; Node &#x5185;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4F60;&#x4E5F;&#x9700;&#x8981;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; pointer &#xFF08;&#x5141;&#x8BB8;&#x5728;&#x5916;&#x90E8;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#xFF09;&#x3002;</p>
+<h3 id="understand-the-function">Understand the function</h3>
+<ul>
+<li><strong>function phototype</strong> in header file </li>
+<li><strong>function definition</strong> in <code>.c</code> file </li>
+</ul>
+<h3 id="return-0-in-main-function">Return 0 in Main function</h3>
+<p>&#x4E3A;&#x4EC0;&#x4E48; C &#x8FD4;&#x56DE; <code>0</code>?</p>
+<ul>
+<li><strong>0</strong> &#x4EE3;&#x8868; <strong>&#x96F6;&#x9519;&#x8BEF;</strong>&#x3002;</li>
+<li>&#x5176;&#x4ED6;&#x6570;&#x5B57;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x9519;&#x8BEF;&#x4EE3;&#x7801;&#x3002; </li>
+<li>&#x67E5;&#x770B;&#x7A0B;&#x5E8F;&#x662F;&#x5426;&#x8FD0;&#x884C;&#x6210;&#x529F; <code>echo $?</code> &#x6253;&#x5370; <code>?</code> environment variable</li>
+</ul>
+<h3 id="linking">Linking</h3>
+<ul>
+<li><strong>C++&#x7684;&#x4F20;&#x7EDF;&#x662F; function prototype &#x548C; definition &#x5206;&#x79BB;</strong><ul>
+<li><code>#include</code> &#x4E00;&#x822C;&#x53EA;&#x4F1A;&#x590D;&#x5236;&#x63D2;&#x5165; header files &#x3002; <strong>&#x6CE8;&#x610F; header files &#x53EA;&#x4F1A;&#x542B;&#x6709; function prototype</strong> &#xFF0C;</li>
+<li>&#x5982;&#x679C; <code>#include</code> C &#x6587;&#x4EF6;&#x4F1A;&#x600E;&#x4E48;&#x6837;&#xFF1F;&#x6CA1;&#x9519;&#xFF0C;&#x4F1A;&#x8BF4; multiple implementation. </li>
+<li>&#x4F46;&#x662F; <code>#include</code> header file &#x7684;&#x8BDD;&#xFF0C; &#x5C31;&#x53EF;&#x4EE5;<strong>&#x5F88;&#x65B9;&#x4FBF;&#x5730;&#x5BFC;&#x5165;&#x5916;&#x90E8;&#x51FD;&#x6570;</strong>&#x3002;<strong>&#x56E0;&#x4E3A; header file &#x91CC;&#x9762;&#x6839;&#x672C;&#x6CA1;&#x6709;&#x5B9E;&#x73B0;&#xFF0C;&#x5BFC;&#x5165;&#x4E86;&#x4E5F;&#x6CA1;&#x4E8B;&#xFF01;</strong></li>
+</ul>
+</li>
+<li><strong>Linker</strong> <ul>
+<li>&#x5728;&#x7F16;&#x8BD1;&#x5355;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C; <strong>compiler &#x4F1A;&#x76F4;&#x63A5;&#x5FFD;&#x89C6;&#x6CA1;&#x6709; definition &#x7684;&#x90E8;&#x5206;&#xFF0C;&#x53EA;&#x4F1A;&#x7F16;&#x8BD1; prototype.</strong></li>
+<li><strong>&#x8FD9;&#x4FDD;&#x8BC1;&#x4E86;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x90FD;&#x53EF;&#x4EE5;&#x88AB;&#x72EC;&#x7ACB;&#x7F16;&#x8BD1;</strong>&#xFF08;&#x5982;&#x679C;&#x53EA;&#x4FEE;&#x6539;&#x4E86;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x56E0;&#x4E3A;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#x7684;&#x7F16;&#x8BD1;&#x90FD;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5E76;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x5176;&#x4ED6;&#x5206;&#x79BB;&#x7684;&#x6587;&#x4EF6;&#xFF01;&#xFF09;&#x3002;</li>
+<li><strong>&#x5355;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x7F3A;&#x5931;&#x90E8;&#x5206;</strong>&#xFF08;<strong>&#x5C31;&#x662F; compiler &#x4E0D;&#x77E5;&#x9053;&#x7684; definition/implementation &#x90E8;&#x5206;</strong>&#xFF09;&#x88AB;&#x79F0;&#x4E3A; <strong>symbol</strong>. </li>
+<li>Linker &#x53EF;&#x4EE5;&#x586B;&#x8865;&#x7A0B;&#x5E8F;&#x7F3A;&#x5931;&#x7684;&#x90E8;&#x5206; (&#x8FDE;&#x63A5; definition)&#xFF0C;&#x4E5F;&#x5C31;&#x662F; resolve symbols. <ul>
+<li>&#x5BF9;&#x4E8E; shared libraries, &#x5C31;&#x662F;&#x628A; symbol &#x66FF;&#x6362;&#x4E3A; memory address. &#xFF08;&#x4E0D;&#x61C2;&#xFF1F;&#x4E86;&#x89E3;&#x4E00;&#x4E0B; C++ memory layout&#xFF09;</li>
+<li>&#x5BF9;&#x4E8E; &#x81EA;&#x5B9A;&#x4E49;&#x7684; libraries, &#x6211;&#x4E0D;&#x77E5;&#x9053;&#x3002;&#x3002;&#x3002;&#x3002;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="string">String</h3>
+<p>&#x6CE8;&#x610F;&#x5230; <code>sizeof(s)</code> &#x548C; <code>strlen(s)</code> &#x662F;&#x6709;&#x533A;&#x522B;&#x7684;&#x3002;</p>
+<p>&#x5047;&#x8BBE;&#x4F60;&#x6709; </p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">char</span> s<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&apos;f&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;u&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;c&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;k&apos;</span><span class="token punctuation">}</span><span class="token punctuation">;</span> 
+<span class="token function">strlen</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token comment">// &#x7B54;&#x6848;&#x662F; 4</span>
+<span class="token keyword">sizeof</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token comment">// &#x7B54;&#x6848;&#x662F; 10</span>
+</code></pre>
+<ul>
+<li><code>sizeof(s)</code><ul>
+<li>&#x5B9E;&#x9645;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x5360;&#x7528;&#x7684;&#x4F4D;&#x7F6E;</li>
+</ul>
+</li>
+<li><code>strlen(s)</code> <ul>
+<li>&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x957F;&#x5EA6;</li>
+</ul>
+</li>
+</ul>
+<p>&#x8FD8;&#x6709;&#x53E6;&#x4E00;&#x4E2A;&#x6613;&#x9519;&#x70B9;&#xFF0C;&#x5047;&#x8BBE;</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">char</span> <span class="token operator">*</span>s<span class="token punctuation">;</span> 
+<span class="token keyword">char</span> ori_s<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&apos;f&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;u&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;c&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;k&apos;</span><span class="token punctuation">}</span><span class="token punctuation">;</span> 
+s <span class="token operator">=</span> ori_s<span class="token punctuation">;</span> 
+<span class="token function">strlen</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token comment">// &#x7B54;&#x6848;&#x662F;4 </span>
+<span class="token keyword">sizeof</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token comment">// &#x7B54;&#x6848;&#x603B;&#x662F; 8, &#x56E0;&#x4E3A;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#x7684;&#x5927;&#x5C0F;&#x662F; 8</span>
+</code></pre>
+<p>&#x56E0;&#x4E3A; <code>char s[N]</code> &#x548C; <code>char *s</code>  &#x4E24;&#x8005;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF01;&#xFF01;&#x6240;&#x4EE5; sizeof &#x4E5F;&#x4E0D;&#x4E00;&#x6837;&#xFF01;</p>
+<h3 id="terminal-&#x547D;&#x4EE4;">Terminal &#x547D;&#x4EE4;</h3>
+<p>&#x5C55;&#x793A;&#x6240;&#x6709; files (&#x5FAE;&#x5185;&#x6838;)</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">ls</span> /dev
+</code></pre>
+<p>&#x4F60;&#x4F1A;&#x770B;&#x5230; <code>stdin</code> &#x548C; <code>stdout</code>. </p>
+<h3 id="debugging-c-programs">Debugging C programs</h3>
+<p>Understand <strong>why pointers are dangerous</strong> and what is <strong>segmentation fault</strong>. </p>
+<h4 id="defensive-programming">Defensive Programming</h4>
+<ul>
+<li><p>Always check <strong>return values from functions</strong> (such as <code>malloc()</code> and <code>fopen()</code>)</p>
+</li>
+<li><p>Always <strong>initialise pointers to <code>NULL</code></strong> on creation (excluding initialization with assignment)</p>
+</li>
+<li><p>Always <strong>check that pointers</strong> are not <code>NULL</code> before deferencing them </p>
+</li>
+<li><pre class="language-"><code class="lang-c"><span class="token keyword">if</span> <span class="token punctuation">(</span>ptr_str<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+&#x2217;ptr_str <span class="token operator">=</span> <span class="token string">&quot;FIT2100&quot;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul>
+<p>Use the <code>fprintf(stderr)</code> to print logfile. </p>
+<h4 id="the-gdb-debugger">The gdb debugger</h4>
+<p>A good way to debug is to set up <strong>breakpoint</strong>. </p>
+<p><strong>You should embed the error message into the program</strong> if you want to use <code>gdb</code>. </p>
+<pre class="language-"><code class="lang-bash">gcc <span class="token punctuation">[</span>flags<span class="token punctuation">]</span> &#x2212;g <span class="token operator">&lt;</span>source files<span class="token operator">&gt;</span> &#x2212;o <span class="token operator">&lt;</span>output file<span class="token operator">&gt;</span>
+</code></pre>
+<p>For example, compile source code <code>sourcefile1.c</code>, <code>sourcefile2.c</code> and so on to a program <code>myprogram</code></p>
+<pre class="language-"><code class="lang-bash">gcc &#x2212;g sourcefile1.c sourcefile2.c <span class="token punctuation">..</span>. &#x2212;o myprogram
+</code></pre>
+<p>To open <code>gdb</code> (one of the following command)</p>
+<pre class="language-"><code class="lang-bash">$    gdb
+$ gdb myprogram
+</code></pre>
+<p>By entering the debugger (denote with <code>(gdb)</code> instead of <code>$</code>), you can specify which program to debug. Skip this step if you already specify the program while opening <strong>gdb</strong>.</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">(</span>gdb<span class="token punctuation">)</span> <span class="token function">file</span> myprogram
+</code></pre>
+<p>To test the program in <strong>gdb</strong>.</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">(</span>gdb<span class="token punctuation">)</span> run
+</code></pre>
+<p>If a segmentation fault occur, <strong>gdb</strong> can explicitly tell you what is this segmentation fault (instead just tell you segmentation fault....)</p>
+<p>Other useful commands, to find out the <strong>line of code</strong>  where your program crashed. </p>
+<pre class="language-"><code>(gdb) where
+</code></pre><p> or look at <strong>a stack trace of the function calls</strong> (the last one may the deepest error)</p>
+<pre class="language-"><code>(gdb) backtrace
+</code></pre><h4 id="gdb-breakpoint-and-step-through">gdb breakpoint and step through</h4>
+<p>To manually <strong>insert the breakpoint</strong> into the <strong>source code</strong>/ </p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">(</span>gdb<span class="token punctuation">)</span> <span class="token builtin class-name">break</span> <span class="token number">5</span> source.c :5
+</code></pre>
+<p>To break at line 5 of the current program </p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">(</span>gdb<span class="token punctuation">)</span> <span class="token builtin class-name">break</span> <span class="token number">5</span>
+</code></pre>
+<p>To break a function named myfunction.c </p>
+<pre class="language-"><code>(gdb) break myfunction
+</code></pre><p>To remove breakpoints, use <code>clear</code> instead of <code>break</code> (to delete breakpoint at line 5)</p>
+<pre class="language-"><code>(gdb) clear 5
+</code></pre><p>To test the program in <strong>gdb</strong>.</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">(</span>gdb<span class="token punctuation">)</span> run
+</code></pre>
+<p>When the program hits the breakppoint, you could choose to </p>
+<ul>
+<li><code>(gdb) step</code> : <strong><em>step into function</em></strong> that is called (to deeper stack, look at the details of the function). </li>
+<li><code>(gdb) finish</code> : finish the current function and break when it returns </li>
+<li><code>(gdb) next</code> : <strong><em>step over the function</em></strong> that is called (treat the function as a command, and do not look at the details of the function)</li>
+<li><code>(gdb) continue</code> : to the next breakpoint. </li>
+</ul>
+<p>Like <strong>Visual Studio</strong>, you could look at the memory, and also see the content in the variable. The <code>print</code> and <code>display</code> command can display the content of a variable in the memory. </p>
+<ul>
+<li><p><code>print</code> : work as <strong>printf</strong> command in c. (it can automatically infer the type). </p>
+</li>
+<li><p><code>print/x</code> : print in hexadecimal (default format for memory)</p>
+</li>
+<li><code>print/c</code> : print as ascii code characters (simply decode the number to character)</li>
+<li><code>print/t</code> : print in binary (not recommended)</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">(</span>gdb<span class="token punctuation">)</span> print myvariable 
+<span class="token punctuation">(</span>gdb<span class="token punctuation">)</span> print/x myvariable
+</code></pre>
+<p>or watch command. It is similar to <strong>subscribe</strong>, whenever the variable is updated, the debugger will notify you </p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">(</span>gdb<span class="token punctuation">)</span> <span class="token function">watch</span> myvariable
+</code></pre>
+<p>To get help </p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">(</span>gdb<span class="token punctuation">)</span> <span class="token builtin class-name">help</span> <span class="token punctuation">[</span>command<span class="token punctuation">]</span>
+</code></pre>
+<p>To quit the debugger </p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">(</span>gdb<span class="token punctuation">)</span> quit
+</code></pre>
+<h3 id="declare-local-variable">Declare Local Variable</h3>
+<p>C programs run with <strong>stack</strong>, you need to know the size of the stack while adding new stacks. </p>
+<p>That is the reason why you should declare all variables before you use it. </p>
+<h3 id="memory-addressing">Memory Addressing</h3>
+<p>C &#x8BED;&#x8A00;&#x7684;&#x5185;&#x5B58;<strong>&#x6700;&#x5C0F;&#x5355;&#x4F4D;&#x662F; Byte</strong>&#x3002; &#x6240;&#x4EE5;&#x6587;&#x4EF6;&#x662F; a sequence of bytes, &#x8FD9;&#x65B9;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x67E5;&#x770B; &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x7B14;&#x8BB0;&#x3002; 
+&#x540C;&#x7406; <code>sizeof()</code> &#x64CD;&#x4F5C;&#x7B26;&#x8FD4;&#x56DE;&#x7684;&#x4E00;&#x5B9A;&#x662F; <strong>byte</strong>.</p>
+<h3 id="understand-standard-io">Understand <strong>standard I/O</strong></h3>
+<ul>
+<li><code>stdin</code></li>
+<li><code>stdout</code></li>
+<li><code>stderr</code></li>
+<li><strong>Literal characters</strong> and <strong>formattig characters</strong> (format specifier). <ul>
+<li>It is interesting that you have <code>%p</code> to specifier pointer in the standard I/O</li>
+</ul>
+</li>
+<li>Why we should have <em>pointer</em>? see <code>scanf</code> function. <ul>
+<li>If <strong><em>reading a string</em></strong>? Should I use pointer? No, <strong><em>because the array identifier is the pointer to the first element.</em></strong> </li>
+<li>Modification needs pointer</li>
+</ul>
+</li>
+</ul>
+<h3 id="pointer">Pointer</h3>
+<p>Read C++ Primer. Know <code>*</code> and <code>&amp;</code>. </p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">int</span> <span class="token operator">*</span>iptr<span class="token punctuation">;</span> 
+<span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span> 
+iptr <span class="token operator">=</span> <span class="token operator">&amp;</span>x<span class="token punctuation">;</span>
+</code></pre>
+<p>Know the <code>void</code> pointer, and why <code>malloc</code> should return a <code>void</code> pointer. (HInt: <strong><em>explicit type conversion</em></strong> or namely <strong><em>casting</em></strong>)</p>
+<p>Accessing pointers (a good practice, never access a <code>NULL</code> pointer)</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">if</span> <span class="token punctuation">(</span>ptr<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">// *ptr....</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>if <code>ptr</code> is <code>NULL</code>, the condition will not match. </p>
+<h3 id="pass-by-value">Pass-by-Value</h3>
+<pre class="language-"><code class="lang-c"><span class="token keyword">void</span> <span class="token function">addition</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span>
+</code></pre>
+<h3 id="pass-by-pointer">Pass-by-Pointer</h3>
+<pre class="language-"><code class="lang-c"><span class="token keyword">void</span> <span class="token function">swap_ref</span><span class="token punctuation">(</span><span class="token keyword">int</span> &#x2217;xptr <span class="token punctuation">,</span> <span class="token keyword">int</span> &#x2217;yptr<span class="token punctuation">)</span>
+</code></pre>
+<p>See how to access pointer in the <strong>pointer</strong> section.... </p>
+<h3 id="pass-by-array">Pass-by-array</h3>
+<p>I want to pass an array of integers </p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">int</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">,</span> <span class="token keyword">int</span> nums<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> ans <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> 
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">unsigned</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">!=</span> n<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        ans <span class="token operator">+=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> ans<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="understand-the-main-function-and-passing-an-array-to-a-function">Understand the <code>main</code> function and <strong><em>passing an array to a function</em></strong>.</h3>
+<pre class="language-"><code class="lang-c"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>The pointer <code>*</code> is <strong><em>right-associativity</em></strong>, and array <code>[]</code> has higher <strong><em>precedence</em></strong>. </p>
+<p>Hence, <code>char *argv[]</code> reads as <strong><em>the array of pointers</em></strong>, where the type in the array is <code>char *</code>. </p>
+<p>To print all arguments while calling the function</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">while</span><span class="token punctuation">(</span>argc<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%s%s&quot;</span><span class="token punctuation">,</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token operator">++</span>argv<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>argc <span class="token operator">&gt;</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">&quot; &quot;</span> <span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+  <span class="token punctuation">}</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Note : <code>(++argv)</code> causes the pointer to point at <code>argv[1]</code>. since the first argument is in fact the program (command) name.</p>
+<h3 id="expression">Expression</h3>
+<p>Each expression should genereate a value. </p>
+<h3 id="statement">Statement</h3>
+<p>A sentence that consists of <strong>expressions</strong> that ending with <code>;</code> symbol. </p>
+<p>Multiple statements can be grouped together in a scope. That is statement blocks <code>{}</code>. The scope is a <strong>local stack</strong>. If you don&apos;t understand, look at the memory layout in C++ note. </p>
+<h3 id="selective-structures">Selective Structures</h3>
+<p>Read C++ Primer, <code>if-else</code>, <code>switch</code></p>
+<h3 id="iterative-structures">Iterative Structures</h3>
+<p>Read C++ Primer, <code>for</code> , <code>while</code>, <code>do-while</code>. </p>
+<h3 id="structs-in-c">Structs in C</h3>
+<h4 id="define-a-function-pointer-in-struct">Define a function pointer in struct</h4>
+<p>C&#x8BED;&#x8A00;&#x6709; Member function &#x5417;&#xFF1F;&#x6CA1;&#x6709;&#xFF0C;&#x4F46;&#x6709; function pointer. </p>
+<p><img src="image-20210111154059504.png" alt="image-20210111154059504"></p>
+<p>To <strong>group data</strong> of different <strong><em>primitive types</em></strong>, it is the early version of <strong>data structure</strong> (but <strong><em>without methods inside it).</em></strong> </p>
+<p>If you use a <strong>pointer</strong> to refer a <code>struct</code> in C, the thing will be interstring </p>
+<pre class="language-"><code class="lang-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+
+<span class="token keyword">struct</span> <span class="token class-name">person</span><span class="token punctuation">{</span>
+    <span class="token keyword">char</span> name<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
+    <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">struct</span> <span class="token class-name">person</span> p <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;fuck you&quot;</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">}</span><span class="token punctuation">;</span> 
+    <span class="token keyword">struct</span> <span class="token class-name">person</span> <span class="token operator">*</span>ptrp <span class="token operator">=</span> <span class="token operator">&amp;</span>p<span class="token punctuation">;</span> 
+        <span class="token comment">// pointer </span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;name: %s\n&quot;</span><span class="token punctuation">,</span> ptrp<span class="token operator">-&gt;</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;age: %d\n&quot;</span><span class="token punctuation">,</span> ptrp<span class="token operator">-&gt;</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+      <span class="token comment">// variable itself </span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;name: %s\n&quot;</span><span class="token punctuation">,</span> p<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;age: %d\n&quot;</span><span class="token punctuation">,</span> p<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Note: you must use <code>struct</code> tag to refer to a struct type. You can think of <code>struct persoon</code> as a <strong>whole type</strong>. This is different from C++. </p>
+<h4 id="structs-and-typedef">Structs and <code>typedef</code></h4>
+<p>In ACM competetion, you often need <code>long long</code></p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">typedef</span> <span class="token keyword">long</span> <span class="token keyword">long</span> <span class="token keyword">int</span> ll<span class="token punctuation">;</span>
+</code></pre>
+<p>Or in C compiler, the <code>size_t</code> is in fact (signed number can be a problem!)</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">typedef</span> <span class="token keyword">unsigned</span> <span class="token keyword">long</span> <span class="token keyword">int</span> <span class="token class-name">size_t</span><span class="token punctuation">;</span>
+</code></pre>
+<p>But think of how to use <code>typedef</code> with <code>struct</code>. The code will be cleaner</p>
+<pre class="language-"><code class="lang-c">Person p <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;fuck you&quot;</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">}</span><span class="token punctuation">;</span> 
+Person <span class="token operator">*</span>ptrp <span class="token operator">=</span> <span class="token operator">&amp;</span>p<span class="token punctuation">;</span>
+</code></pre>
+<p>The first approach is to think of <code>struct person</code> as a whole type. </p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">person</span> Person<span class="token punctuation">;</span>
+</code></pre>
+<p>But it seems that <code>person</code> keyword is redundant. Can we remove it? The answer is yes. </p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+    <span class="token keyword">char</span> name<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
+    <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> Person<span class="token punctuation">;</span>
+</code></pre>
+<p>Now the struct itself is anonymous. But we have <strong>typename</strong> for it by <code>typedef</code>. </p>
+<p>This can be useful when defining data structure, such as <strong>Binary Tree</strong> or <strong>Linked List.</strong> </p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">node</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> _val<span class="token punctuation">;</span> 
+    <span class="token keyword">struct</span> <span class="token class-name">node</span> <span class="token operator">*</span>_parent<span class="token punctuation">;</span>
+    <span class="token keyword">struct</span> <span class="token class-name">node</span> <span class="token operator">*</span>_left<span class="token punctuation">;</span> 
+    <span class="token keyword">struct</span> <span class="token class-name">node</span> <span class="token operator">*</span>_right<span class="token punctuation">;</span>  
+<span class="token punctuation">}</span> Node<span class="token punctuation">;</span>
+</code></pre>
+<p>or linked list. </p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">node</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> _val<span class="token punctuation">;</span> 
+    <span class="token keyword">struct</span> <span class="token class-name">node</span> <span class="token operator">*</span>_next<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span> Node<span class="token punctuation">;</span>
+</code></pre>
+<p>Note that, the <code>typedef</code> will activate at the end, that means you still need write the whole type <code>struct node</code> inside the function.</p>
+<h3 id="multi-dimensional-arrays">Multi-dimensional Arrays</h3>
+<p>The pre-allocated multi-dimension arrays </p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">int</span> arr1 <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+<p>The dynamic allocated arrays </p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">int</span> <span class="token operator">*</span><span class="token operator">*</span><span class="token function">create_2Darray</span> <span class="token punctuation">(</span><span class="token keyword">int</span> dimx<span class="token punctuation">,</span> <span class="token keyword">int</span> dimy<span class="token punctuation">,</span> <span class="token keyword">int</span> initial_value<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">,</span> j<span class="token punctuation">;</span>                <span class="token comment">/* counters */</span>
+    <span class="token keyword">int</span> <span class="token operator">*</span><span class="token operator">*</span>array<span class="token punctuation">;</span>
+
+    <span class="token comment">/* allocate an array of pointers, the 2D array is an array of pointers.... */</span>
+    array <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token function">malloc</span> <span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span> <span class="token operator">*</span> dimx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">/* populate each row. */</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> dimx<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+      <span class="token comment">/* allocate an array of integers in a row. It should store the actual content*/</span>
+      array<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span> <span class="token function">malloc</span> <span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token operator">*</span> dimy<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+         <span class="token comment">/* once the row is ready, fill elements in the row (row, column) */</span> 
+      <span class="token keyword">for</span> <span class="token punctuation">(</span>j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> dimy<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span>
+        array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> initial_value<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> array<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>To release the memory space </p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">void</span> <span class="token function">free_2Darray</span> <span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token operator">*</span>array<span class="token punctuation">,</span> <span class="token keyword">int</span> dimx<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> dimx<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">/* free the memory of each row */</span>
+    <span class="token function">free</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     
+  <span class="token punctuation">}</span>
+  <span class="token comment">/* free the array of pointers*/</span>
+  <span class="token function">free</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Think about the difference between </p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">int</span> arr1 <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
+<span class="token keyword">int</span> &#x2217;arr2 <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>The <code>arr1</code> will take the size of <strong>10*15</strong> <strong>integer type.</strong> </li>
+<li>The <code>arr2</code> will take the size of <strong>10</strong> of type <code>int *</code> . <code>arr2</code> is <strong>an array of pointers.</strong>  Note that the pointers can be <code>NULL</code>. You have to explicitly alllocate space for <code>arr2</code>. </li>
+<li>Why <code>arr2</code> ? Because <code>arr2</code> can hold <strong>row of variable length</strong>. </li>
+</ul>
+<h3 id="compilation">Compilation</h3>
+<ul>
+<li><code>clang hello.c -o hello</code></li>
+</ul>
+<h3 id="math-constant">Math Constant</h3>
+<p>How to use $\pi$ in C ?</p>
+<p><a href="https://docs.microsoft.com/en-us/cpp/c-runtime-library/math-constants?view=msvc-160" target="_blank">https://docs.microsoft.com/en-us/cpp/c-runtime-library/math-constants?view=msvc-160</a></p>
+<p>And <strong><em>link the shared C run-time library</em></strong>  <code>clang hello.c -o hello -lm</code></p>
+<h3 id="others">Others</h3>
+<ul>
+<li>Read  <a href="FIT2100-2020-Tute-01_2021SSB.pdf">FIT2100-2020-Tute-01_2021SSB.pdf</a>  for details. </li>
+<li>Read  <a href="FIT2100-2020-Tute-01_2021SSB.pdf">FIT2100-2020-Tute-02_2021SSB.pdf</a>  for details. </li>
+<li>How to read double type  <a href="Tutorial%201%20Source%20Code-20201230/task2-read-double.c">task2-read-double.c</a> </li>
+<li>How to generate random sequence in C  <a href="Tutorial%201%20Source%20Code-20201230/task5-random-number.c">task5-random-number.c</a> </li>
+</ul>
+<h2 id="low-level-io">Low-level I/O</h2>
+<p>&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8BFB;&#x53D6; <code>array</code>, <code>struct</code> &#x3002;&#x90FD;&#x9700;&#x8981;</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">struct</span> <span class="token class-name">student</span> s<span class="token punctuation">;</span> 
+<span class="token function">read</span><span class="token punctuation">(</span>fd<span class="token punctuation">,</span> <span class="token operator">&amp;</span>s<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="./" class="navigation navigation-next navigation-unique" aria-label="Next page: C++程序设计基础">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"C Crash Course","level":"1.1","depth":1,"next":{"title":"C++程序设计基础","level":"1.2","depth":1,"path":"README.md","ref":"./README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex-m","-highlight","prism","prism-themes","bibtex-indexed-cite","video","page-toc","callouts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"callouts":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex-m":{},"fontsettings":{"theme":"white","family":"sans","size":2},"bibtex-indexed-cite":{"path":"/"},"prism-themes":{},"video":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"Randoruf","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"bibCount":0,"variables":{},"title":"Gitbook基础","bib":[{"citationKey":"KUFFNER2000RRT","entryType":"INPROCEEDINGS","entryTags":{"TITLE":"RRT-connect: An efficient approach to single-query path planning","AUTHOR":"Kuffner, James J and LaValle, Steven M","BOOKTITLE":"Proceedings 2000 ICRA. Millennium Conference. IEEE International Conference on Robotics and Automation. Symposia Proceedings (Cat. No. 00CH37065)","VOLUME":"2","PAGES":"995--1001","YEAR":"2000","ORGANIZATION":"IEEE"}}],"gitbook":"*"},"file":{"path":"chap01-c-crash-course.md","mtime":"2021-02-04T00:39:37.309Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-06T02:37:05.867Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

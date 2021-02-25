@@ -1,0 +1,783 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Overloading · Gitbook基础</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Randoruf">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex-m/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-bibtex-indexed-cite/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-callouts/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chap05-expression.html" />
+    
+    
+    <link rel="prev" href="chap04-inheritance.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="chap01-c-crash-course.html">
+            
+                <a href="chap01-c-crash-course.html">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    C Crash Course
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    C++程序设计基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chap01-data-type-grammar.html">
+            
+                <a href="chap01-data-type-grammar.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    Data types and C++ Syntax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chap01-const.html">
+            
+                <a href="chap01-const.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    Const keyword
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chap01-accessing-object.html">
+            
+                <a href="chap01-accessing-object.html">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    Object and Memory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="chap01-static.html">
+            
+                <a href="chap01-static.html">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    Static keyword
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Funtions</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="chap02-statement.html">
+            
+                <a href="chap02-statement.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Statement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chap03-functions.html">
+            
+                <a href="chap03-functions.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="chap03-functions-calls-return.html">
+            
+                <a href="chap03-functions-calls-return.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    Functions and Calls
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Class</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="chap04-class-introduction.html">
+            
+                <a href="chap04-class-introduction.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Class Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="chap04-inheritance.html">
+            
+                <a href="chap04-inheritance.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.3" data-path="chap04-overloading.html">
+            
+                <a href="chap04-overloading.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    Overloading
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Expression</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="chap05-expression.html">
+            
+                <a href="chap05-expression.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Expression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="chap05-rvalue-lvalue-move.html">
+            
+                <a href="chap05-rvalue-lvalue-move.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    Rvalue and Lvalue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="chap05-precedence-associativity.html">
+            
+                <a href="chap05-precedence-associativity.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    Precedence Associativity
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Array and Container(aka. Abstract Data Structure)</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="chap06-array.html">
+            
+                <a href="chap06-array.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="chap06-container.html">
+            
+                <a href="chap06-container.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="chap06-container-vector.html">
+            
+                <a href="chap06-container-vector.html">
+            
+                    
+                        <b>5.3.</b>
+                    
+                    Vector
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="chap06-string.html">
+            
+                <a href="chap06-string.html">
+            
+                    
+                        <b>5.4.</b>
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="chap07-template-introduction.html">
+            
+                <a href="chap07-template-introduction.html">
+            
+                    
+                        <b>5.5.</b>
+                    
+                    Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Overloading</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="overloading-operators">Overloading Operators</h1>
+<p>C++ allows <strong>custom behaviors</strong> to be defined on over 20 operators:
+<img src="2020-12-16-14-36-49.png" alt=""></p>
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="hint-general-syntax"><i class="fa fa-lightbulb-o"></i> Hint: General Syntax</h3></div><div class="panel-body"><p><code>type operator operator-symbol ( parameter-list )</code></p></div></div>
+<p>Examples how to overload an operator... <a href="https://docs.microsoft.com/en-us/cpp/cpp/operator-overloading?view=msvc-160" target="_blank">https://docs.microsoft.com/en-us/cpp/cpp/operator-overloading?view=msvc-160</a></p>
+<h2 id="ovealoading-operator-with-const">Ovealoading Operator with Const</h2>
+<p>&#x5F88;&#x591A;&#x8BA1;&#x7B97;&#x5E76;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x53C2;&#x6570;&#x3002;&#x4F8B;&#x5982; <code>1+1</code> &#x8FD0;&#x7B97;&#x540E;&#x4E0D;&#x4F1A;&#x53D8;&#x6210; <code>2+1 = 2</code> &#x3002; 
+&#x5BF9;&#x4E8E; Binary Operator, &#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <strong>const pass-by-reference</strong> &#x6765;&#x4FDD;&#x8BC1;&#x4E0D;&#x4F1A;&#x4FEE;&#x6539;&#x53F3;&#x8FB9;&#x7684;&#x503C;&#x3002;
+&#x4F46;&#x662F;&#xFF0C;&#x600E;&#x4E48;&#x4FDD;&#x8BC1;&#x5DE6;&#x8FB9;&#x7684;&#x503C;&#x4E0D;&#x4F1A;&#x88AB;&#x4FEE;&#x6539;&#x5462;&#xFF1F; (&#x901A;&#x5E38;&#x4F1A;&#x7528; <code>this</code> pointer &#x6765;&#x6307;&#x4EE3;&#x5F53;&#x524D;&#x7684; object)&#x3002; &#x7528; <strong><code>const</code> member function</strong>. </p>
+<p><strong>Example Complex Number</strong>:</p>
+<p>The header file</p>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">pragma</span> <span class="token expression">once</span></span>
+
+<span class="token keyword">class</span> <span class="token class-name">Complex</span><span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    <span class="token comment">// all data members are deep copy due to they are primitive types.</span>
+    <span class="token comment">// - no need to create destructor. </span>
+    <span class="token keyword">double</span> re_<span class="token punctuation">,</span> im_<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Complex</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token function">Complex</span><span class="token punctuation">(</span><span class="token keyword">double</span> re<span class="token punctuation">,</span> <span class="token keyword">double</span> im<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">double</span> <span class="token function">getRealPart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span><span class="token punctuation">;</span>
+    <span class="token keyword">double</span> <span class="token function">getImaginPart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span><span class="token punctuation">;</span>
+
+    Complex <span class="token keyword">operator</span><span class="token operator">+</span><span class="token punctuation">(</span><span class="token keyword">const</span> Complex <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token keyword">const</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>The implementation of the class </p>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&quot;Complex.h&quot;</span></span>
+
+<span class="token class-name">Complex</span><span class="token operator">::</span><span class="token function">Complex</span><span class="token punctuation">(</span><span class="token keyword">double</span> re<span class="token punctuation">,</span> <span class="token keyword">double</span> im<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    re_ <span class="token operator">=</span> re<span class="token punctuation">;</span>
+    im_ <span class="token operator">=</span> im<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Complex</span><span class="token operator">::</span><span class="token function">Complex</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    re_ <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    im_ <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">double</span> <span class="token class-name">Complex</span><span class="token operator">::</span><span class="token function">getRealPart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span><span class="token punctuation">{</span>
+    <span class="token comment">// with the `const` decoration to say</span>
+    <span class="token comment">// the function will not modift any things.</span>
+    <span class="token keyword">return</span> re_<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">double</span> <span class="token class-name">Complex</span><span class="token operator">::</span><span class="token function">getImaginPart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> im_<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+Complex Complex<span class="token operator">::</span><span class="token keyword">operator</span><span class="token operator">+</span><span class="token punctuation">(</span><span class="token keyword">const</span> Complex <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token keyword">const</span><span class="token punctuation">{</span>
+    <span class="token comment">// make sure the function will not change content refered by `this` pointer.</span>
+    <span class="token keyword">double</span> re <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getRealPart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> other<span class="token punctuation">.</span><span class="token function">getRealPart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">double</span> im <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getImaginPart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> other<span class="token punctuation">.</span><span class="token function">getImaginPart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token function">Complex</span><span class="token punctuation">(</span>re<span class="token punctuation">,</span> im<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF1A; <code>(*this)</code> &#x7B49;&#x4EF7;&#x4E8E;&#x7B26;&#x53F7;<strong>&#x5DE6;&#x8FB9;&#x7684;&#x5BF9;&#x8C61;</strong>&#x3002;</p>
+<p>You may notice that the complex number addition has the <strong><code>const</code> keyword appended at the of the member function</strong>. 
+It means it <strong>will not modify the object for which it is called</strong>. In this context, the object being called is refered by <code>this</code> pointer. 
+Thus, if you have a <code>const</code> decoration at the end of the member-function, it should not make changes to the object pointed by <code>this</code> pointer. </p>
+<p>Now, the <strong>LEFT</strong> and <strong>RIGHT</strong> hand side of the addition operators are constant. </p>
+<ul>
+<li><code>this</code> object is constant since constant member function </li>
+<li><code>other</code> object is constant since pass-by-reference (why? see the Google C++ Style. You should always label <code>const</code> for pass-by-reference).    </li>
+</ul>
+<p>Now, see what will happen.</p>
+<p>The main function </p>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&quot;Complex.h&quot;</span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Complex a <span class="token operator">=</span> <span class="token function">Complex</span><span class="token punctuation">(</span> <span class="token number">1.2</span><span class="token punctuation">,</span> <span class="token number">3.4</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Complex b <span class="token operator">=</span> <span class="token function">Complex</span><span class="token punctuation">(</span> <span class="token number">5.6</span><span class="token punctuation">,</span> <span class="token number">7.8</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Complex c <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+
+    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;c is (&quot;</span> <span class="token operator">&lt;&lt;</span> c<span class="token punctuation">.</span><span class="token function">getRealPart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;, &quot;</span> <span class="token operator">&lt;&lt;</span> c<span class="token punctuation">.</span><span class="token function">getImaginPart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;)\n&quot;</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="assignment-operator">Assignment Operator</h2>
+<p>&#x5047;&#x8BBE; <code>obj1</code> &#x548C; <code>obj2</code> &#x90FD;&#x662F; class <code>Cube</code> &#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<pre class="language-"><code class="lang-cpp">obj1 <span class="token operator">=</span> obj2<span class="token punctuation">;</span> 
+<span class="token comment">//obj1.operator=(obj2)</span>
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x8D4B;&#x503C;&#x7684;&#x610F;&#x601D;&#x662F;&#xFF1A; <strong>&#x8BA9; <code>obj1</code> &#x6210;&#x4E3A; <code>obj2</code> &#x7684;&#x526F;&#x672C; (let <code>obj1</code> be a copy of <code>obj2</code>)</strong>.</p>
+<p><a href="http://courses.cms.caltech.edu/cs11/material/cpp/donnie/cpp-ops.html" target="_blank">http://courses.cms.caltech.edu/cs11/material/cpp/donnie/cpp-ops.html</a></p>
+<p>&#x5982;&#x679C;&#x8981;&#x5B9E;&#x73B0; <strong>operator chaining</strong> &#x4F8B;&#x5982;</p>
+<pre class="language-"><code class="lang-cpp">a <span class="token operator">=</span> b <span class="token operator">=</span> c <span class="token operator">=</span> d <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>
+<span class="token comment">// a = (b = (c = (d = 42)))</span>
+</code></pre>
+<ul>
+<li>&#x628A; 42 &#x8D4B;&#x503C;&#x5230; d , &#x8FD4;&#x56DE; d  <ul>
+<li>since assignment operator is <strong><em>right-associative</em></strong></li>
+</ul>
+</li>
+<li>&#x628A; d &#x8D4B;&#x503C;&#x5230; c , &#x8FD4;&#x56DE; c </li>
+<li>&#x628A; c &#x8D4B;&#x503C;&#x5230; b , &#x8FD4;&#x56DE; b
+...</li>
+</ul>
+<p>&#x4F60;&#x5927;&#x6982;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#xFF0C; <strong><em>assignment operator <code>=</code> &#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x5DE6;&#x8FB9;&#x7684;&#x5BF9;&#x8C61;</em></strong> &#x624D;&#x80FD;&#x4F7F;&#x5F97; operator chaining &#x5DE5;&#x4F5C;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A; <code>(*this)</code> &#x7B49;&#x4EF7;&#x4E8E;&#x7B26;&#x53F7;<strong>&#x5DE6;&#x8FB9;&#x7684;&#x5BF9;&#x8C61;</strong>&#x3002;</p>
+<h3 id="example-1-assignment-operator-overloading">Example 1: Assignment Operator Overloading</h3>
+<p><strong>Assignment Operator</strong> &#x5FC5;&#x987B;&#x662F; <strong>Return-by-Reference</strong>.</p>
+<p>The header file (definition) <code>MyClass.h</code></p>
+<pre class="language-"><code class="lang-cpp">MyClass <span class="token operator">&amp;</span> <span class="token keyword">operator</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">const</span> MyClass <span class="token operator">&amp;</span>rhs<span class="token punctuation">)</span>
+</code></pre>
+<p>The implementation syntax <code>MyClass.cpp</code>
+&#x7C7B;&#x4F3C;&#x4E8E; <strong>Copy Constructor</strong>&#xFF08;&#x4F46;&#x5728;&#x590D;&#x5236;&#x4E4B;&#x524D;&#x4F1A;&#x6E05;&#x9664;&#x539F;&#x6709;&#x7684;&#x5185;&#x5B58;&#x548C;&#x6570;&#x636E;&#xFF09; &#xFF0C;&#x5E76;&#x8FDB;&#x884C; <strong>deep copy</strong>. </p>
+<pre class="language-"><code class="lang-cpp">MyClass <span class="token operator">&amp;</span> MyClass<span class="token operator">::</span><span class="token keyword">operator</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">const</span> MyClass <span class="token operator">&amp;</span> other<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token comment">// 1.  Deallocate any memory that MyClass is using internally</span>
+    <span class="token comment">// 2.  Allocate some memory (to hold the contents of rhs)</span>
+    <span class="token comment">// 3.  Copy the values from rhs into this instance</span>
+    <span class="token comment">// 4.  Return *this </span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF1A; <code>(*this)</code> &#x7B49;&#x4EF7;&#x4E8E;&#x7B26;&#x53F7;<strong>&#x5DE6;&#x8FB9;&#x7684;&#x5BF9;&#x8C61;</strong>&#x3002;</p>
+<h3 id="example-2--how-to-implement-copy-constructor-assignment-operator-and-destructor">Example 2 : How to Implement Copy Constructor, Assignment Operator and Destructor?</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Copy an object</th>
+<th>Destroy an object</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><em>Copy Constructor</em></strong> <code>pass-by-value</code></td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong><em>Copy Assignment Operator</em></strong> <code>=</code></td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong><em>Destructor</em></strong></td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p>&#x663E;&#x7136;&#xFF0C;&#x8981;&#x5206;&#x522B;&#x5B9E;&#x73B0;&#x4E0A;&#x8FF0;&#x4E09;&#x79CD; <strong><em>Copy Constructor</em></strong>, <strong><em>Copy Assignment Operator</em></strong> &#x548C; <strong><em>Destructor</em></strong>  &#x65B9;&#x6CD5;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x53EA;&#x5B9E;&#x73B0;&#x4E24;&#x79CD; <strong>private helper function</strong> &#x5373;&#x53EF;&#x3002;&#x4F8B;&#x5982; </p>
+<p><strong><em>Copy Constructor</em></strong> 
+Triggered by <strong>pass-by-value</strong> to perform deep copy...</p>
+<pre class="language-"><code class="lang-cpp"><span class="token class-name">Tower</span><span class="token operator">::</span><span class="token function">Tower</span><span class="token punctuation">(</span><span class="token keyword">const</span> Tower <span class="token operator">&amp;</span>other<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">_deep_copy</span><span class="token punctuation">(</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+ <span class="token comment">// nothing to return as it is a constructor.....</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>Copy Assignment Operator</strong></p>
+<p>return-by-reference to return the <strong>lhs</strong>.</p>
+<pre class="language-"><code class="lang-cpp">Tower <span class="token operator">&amp;</span> Tower<span class="token operator">::</span><span class="token keyword">operator</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">const</span> Tower <span class="token operator">&amp;</span>rhs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">!=</span> <span class="token operator">&amp;</span>rhs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">_destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// clear old data in (*this) object</span>
+        <span class="token function">_deep_copy</span><span class="token punctuation">(</span>rhs<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// deep copy data from rhs to (*this)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token operator">*</span><span class="token keyword">this</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>To see why the self-assignment should not do anything, read the paragraph below....</p>
+<p><strong><em>Destructor</em></strong>
+...necessary if you need to delete any heap memory!</p>
+<pre class="language-"><code class="lang-cpp"><span class="token class-name">Tower</span><span class="token operator">::</span><span class="token operator">~</span><span class="token function">Tower</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">_destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// clear the heap </span>
+    <span class="token comment">// nothing to return as it is destrcutor....</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="example-3--ensure-your-assignment-operator-doesnt-self-destroy">Example 3 : Ensure your assignment operator doesn&#x2019;t self-destroy</h3>
+<p>What is wrong with the following code?</p>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&quot;Cube.h&quot;</span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    cs225<span class="token operator">::</span>Cube <span class="token function">c</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    c <span class="token operator">=</span> c<span class="token punctuation">;</span> 
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+</code></pre>
+<p>If you can remember, our implementation looks like </p>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&quot;Cube.h&quot;</span></span>
+
+Cube <span class="token operator">&amp;</span> Cube<span class="token operator">::</span><span class="token keyword">operator</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">const</span> Cube <span class="token operator">&amp;</span>rhs<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">_destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">_copy</span><span class="token punctuation">(</span>rhs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token operator">*</span><span class="token keyword">this</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>That means you first destory <code>c</code>, then try to copy the content in <code>c</code> (but it is not there anymore...).</p>
+<p>You need something to prevent the self-assignment... </p>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&quot;Cube.h&quot;</span></span>
+
+Cube <span class="token operator">&amp;</span> Cube<span class="token operator">::</span><span class="token keyword">operator</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">const</span> Cube <span class="token operator">&amp;</span>rhs<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">!=</span> <span class="token operator">&amp;</span>rhs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// if (*this != rhs) </span>
+        <span class="token function">_destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">_copy</span><span class="token punctuation">(</span>rhs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token operator">*</span><span class="token keyword">this</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Now, <strong>only if the current object (lhs) is different from the rhs</strong>, the assignment will do the actual job....
+Remember, <code>this</code> is a pointer....</p>
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="hint-pointer-address-comparision"><i class="fa fa-lightbulb-o"></i> Hint: Pointer Address Comparision</h3></div><div class="panel-body"><p>And using <strong>pointer address comparision</strong> requires less work... 
+(pleaase use <code>if (this != &amp;rhs)</code>)</p></div></div>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chap04-inheritance.html" class="navigation navigation-prev " aria-label="Previous page: Inheritance">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chap05-expression.html" class="navigation navigation-next " aria-label="Next page: Expression">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Overloading","level":"3.3","depth":1,"next":{"title":"Expression","level":"4.1","depth":1,"path":"chap05-expression.md","ref":"./chap05-expression.md","articles":[]},"previous":{"title":"Inheritance","level":"3.2","depth":1,"path":"chap04-inheritance.md","ref":"./chap04-inheritance.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex-m","-highlight","prism","prism-themes","bibtex-indexed-cite","video","page-toc","callouts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"callouts":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex-m":{},"fontsettings":{"theme":"white","family":"sans","size":2},"bibtex-indexed-cite":{"path":"/"},"prism-themes":{},"video":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"Randoruf","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"bibCount":0,"variables":{},"title":"Gitbook基础","bib":[{"citationKey":"KUFFNER2000RRT","entryType":"INPROCEEDINGS","entryTags":{"TITLE":"RRT-connect: An efficient approach to single-query path planning","AUTHOR":"Kuffner, James J and LaValle, Steven M","BOOKTITLE":"Proceedings 2000 ICRA. Millennium Conference. IEEE International Conference on Robotics and Automation. Symposia Proceedings (Cat. No. 00CH37065)","VOLUME":"2","PAGES":"995--1001","YEAR":"2000","ORGANIZATION":"IEEE"}}],"gitbook":"*"},"file":{"path":"chap04-overloading.md","mtime":"2021-02-06T02:30:54.338Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-06T02:37:05.867Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

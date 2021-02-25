@@ -1,0 +1,894 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Data types and C++ Syntax · Gitbook基础</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Randoruf">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex-m/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-bibtex-indexed-cite/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-callouts/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chap01-const.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="chap01-c-crash-course.html">
+            
+                <a href="chap01-c-crash-course.html">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    C Crash Course
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    C++程序设计基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="chap01-data-type-grammar.html">
+            
+                <a href="chap01-data-type-grammar.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    Data types and C++ Syntax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chap01-const.html">
+            
+                <a href="chap01-const.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    Const keyword
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chap01-accessing-object.html">
+            
+                <a href="chap01-accessing-object.html">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    Object and Memory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="chap01-static.html">
+            
+                <a href="chap01-static.html">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    Static keyword
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Funtions</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="chap02-statement.html">
+            
+                <a href="chap02-statement.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Statement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chap03-functions.html">
+            
+                <a href="chap03-functions.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="chap03-functions-calls-return.html">
+            
+                <a href="chap03-functions-calls-return.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    Functions and Calls
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Class</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="chap04-class-introduction.html">
+            
+                <a href="chap04-class-introduction.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Class Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="chap04-inheritance.html">
+            
+                <a href="chap04-inheritance.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="chap04-overloading.html">
+            
+                <a href="chap04-overloading.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    Overloading
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Expression</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="chap05-expression.html">
+            
+                <a href="chap05-expression.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Expression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="chap05-rvalue-lvalue-move.html">
+            
+                <a href="chap05-rvalue-lvalue-move.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    Rvalue and Lvalue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="chap05-precedence-associativity.html">
+            
+                <a href="chap05-precedence-associativity.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    Precedence Associativity
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Array and Container(aka. Abstract Data Structure)</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="chap06-array.html">
+            
+                <a href="chap06-array.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="chap06-container.html">
+            
+                <a href="chap06-container.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="chap06-container-vector.html">
+            
+                <a href="chap06-container-vector.html">
+            
+                    
+                        <b>5.3.</b>
+                    
+                    Vector
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="chap06-string.html">
+            
+                <a href="chap06-string.html">
+            
+                    
+                        <b>5.4.</b>
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="chap07-template-introduction.html">
+            
+                <a href="chap07-template-introduction.html">
+            
+                    
+                        <b>5.5.</b>
+                    
+                    Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Data types and C++ Syntax</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x6211;&#x4EEC;&#x77E5;&#x9053;&#xFF0C; &#x6240;&#x6709;&#x4FE1;&#x606F;&#x90FD;&#x53EF;&#x4EE5;&#x88AB;&#x8868;&#x8FBE;&#x4E3A; 0 &#x548C; 1 &#x3002;
+&#x95EE;&#x9898;&#x662F;&#xFF0C; &#x6211;&#x4EEC;&#x5982;&#x4F55;&#x533A;&#x5206; <strong>&quot;&#x5B57;&#x7B26;&quot;</strong> &#x548C; <strong>&quot;&#x6574;&#x6570;&quot;</strong> &#x8FD9;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x5462;&#xFF1F;</p>
+<p>&#x8FD9;&#x5C31;&#x7275;&#x6D89;&#x5230; <strong>&#x6570;&#x636E;&#x63CF;&#x8FF0;</strong> &#x548C; <strong>&#x6570;&#x636E;&#x5904;&#x7406;</strong>&#x3002;</p>
+<h1 id="&#x6570;&#x636E;&#x7684;&#x63CF;&#x8FF0;-data-types">&#x6570;&#x636E;&#x7684;&#x63CF;&#x8FF0; (Data Types)</h1>
+<p>&#x5229;&#x7528; <strong>&#x201C;&#x6570;&#x636E;&#x7C7B;&#x578B;(data type)&#x201D;</strong> &#x53BB;&#x628A;&#x4FE1;&#x606F;&#x63CF;&#x8FF0;&#x4E3A;&#x8BA1;&#x7B97;&#x673A;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;&#x53EA;&#x6709;&#x6B63;&#x786E;&#x5730;&#x6807;&#x8BB0;&#x4E86; <strong>&#x201C;&#x7C7B;&#x578B;&#x201D;</strong>&#xFF0C; &#x8BA1;&#x7B97;&#x673A;&#x624D;&#x80FD;&#x6B63;&#x786E;&#x5730;&#x89E3;&#x8BFB; <strong>&#x8F93;&#x5165;&#x6570;&#x636E;(input data)</strong>&#x3002; &#x4E00;&#x4E2A;&#x53CD;&#x4F8B;&#x662F; JavaScript&#xFF0C; &#x5176;&#x7C7B;&#x578B;&#x7CFB;&#x7EDF;&#x975E;&#x5E38;&#x6DF7;&#x4E71;&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x8BA1;&#x7B97;&#x673A;&#x53EF;&#x80FD;&#x5E76;&#x4E0D;&#x80FD;&#x6B63;&#x786E;&#x5730;&#x89E3;&#x8BFB;&#x8F93;&#x5165;&#x6570;&#x636E;. </p>
+<h2 id="why-strong-type-is-good">Why Strong-type is Good?</h2>
+<p><strong><em>Example 1: JavaScript</em></strong>
+By comparing their sequences of UTF-16 code units values, even though the type is clearly integer. see from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" target="_blank">here</a>. </p>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">const</span> array1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">21</span><span class="token punctuation">,</span> <span class="token number">100000</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+array1<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>array1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// expected output: Array [1, 100000, 21, 30, 4]</span>
+</code></pre>
+<p><strong><em>Example 2: C++</em></strong></p>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span>     <span class="token comment">// std::cout</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;algorithm&gt;</span>    <span class="token comment">// std::sort</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;vector&gt;</span>       <span class="token comment">// std::vector</span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> arr<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">21</span><span class="token punctuation">,</span> <span class="token number">100000</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    std<span class="token operator">::</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> <span class="token function">myvector</span> <span class="token punctuation">(</span>arr<span class="token punctuation">,</span> arr<span class="token operator">+</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// using default comparison (operator &lt;):</span>
+    std<span class="token operator">::</span><span class="token function">sort</span> <span class="token punctuation">(</span>myvector<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> myvector<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;\nArray after sorting using default sort is : \n&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
+        cout <span class="token operator">&lt;&lt;</span> myvector<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> <span class="token string">&quot; &quot;</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// expected output: Array [1 4 21 30 100000]</span>
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x4F8B;&#x5B50;&#x8BF4;&#x660E;&#x4E86;&#xFF0C; &#x4E3A;&#x4EC0;&#x4E48;&#x5F3A;&#x7C7B;&#x578B;&#x662F;&#x597D;&#x7684;&#x3002;</p>
+<h2 id="type-conversion">Type Conversion</h2>
+<p>&#x7C7B;&#x578B;&#x4E4B;&#x95F4;&#x7684;&#x8F6C;&#x6362;&#x9700;&#x8981;&#x6253;&#x9192;&#x5341;&#x4E8C;&#x5206;&#x7CBE;&#x795E;&#x3002;</p>
+<p><strong>Example 3: what&apos;s wrong?</strong></p>
+<pre class="language-"><code class="lang-cpp">PNG <span class="token function">createSpotlight</span><span class="token punctuation">(</span>PNG image<span class="token punctuation">,</span> <span class="token keyword">int</span> centerX<span class="token punctuation">,</span> <span class="token keyword">int</span> centerY<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">unsigned</span> x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> x <span class="token operator">&lt;</span> image<span class="token punctuation">.</span><span class="token function">width</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> x<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">unsigned</span> y <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> y <span class="token operator">&lt;</span> image<span class="token punctuation">.</span><span class="token function">height</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> y<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            HSLAPixel <span class="token operator">&amp;</span> pixel <span class="token operator">=</span> image<span class="token punctuation">.</span><span class="token function">getPixel</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">double</span> distX <span class="token operator">=</span> x <span class="token operator">-</span> centerX<span class="token punctuation">;</span> 
+            <span class="token keyword">double</span> distY <span class="token operator">=</span> y <span class="token operator">-</span> centerY<span class="token punctuation">;</span>
+            <span class="token keyword">double</span> dist <span class="token operator">=</span> std<span class="token operator">::</span><span class="token function">sqrt</span><span class="token punctuation">(</span>distX<span class="token operator">*</span>distX <span class="token operator">+</span> distY<span class="token operator">*</span>distY<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>dist <span class="token operator">&lt;</span> <span class="token number">160</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                pixel<span class="token punctuation">.</span>l <span class="token operator">=</span> pixel<span class="token punctuation">.</span>l <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> dist<span class="token operator">*</span><span class="token number">0.005</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                pixel<span class="token punctuation">.</span>l <span class="token operator">=</span> pixel<span class="token punctuation">.</span>l <span class="token operator">*</span> <span class="token number">0.2</span><span class="token punctuation">;</span> 
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> image<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#x5230; <code>x</code> &#x548C; <code>centerX</code> &#x5206;&#x522B;&#x5C5E;&#x4E8E;&#x4E0D;&#x540C;&#x7684;&#x7C7B;&#x578B;&#x3002; 
+&#x800C;&#x4E14;&#x8FD8;&#x662F; <code>x</code> &#x5C5E;&#x4E8E; <strong>unsigned int</strong>, &#x800C; <code>centerX</code> &#x5C5E;&#x4E8E; <strong>signed int</strong>. 
+&#x5982;&#x679C;&#x4F60;&#x770B; <a href="https://csapp.cs.cmu.edu/" target="_blank">CSAPP</a> &#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x4F1A;&#x660E;&#x767D; unsigned int &#x7528;&#x7684;&#x666E;&#x901A; representation, &#x800C; signed int &#x662F;&#x7528; <a href="https://en.wikipedia.org/wiki/Two%27s_complement" target="_blank">two&apos;s complement</a> &#x3002; &#x8FD9;&#x4E24;&#x8005;&#x7684;&#x5DEE;&#x522B;&#x975E;&#x5E38;&#x5927;&#xFF0C; <strong>&#x6240;&#x4EE5;&#x5728;&#x8FD0;&#x7B97;&#x4E4B;&#x524D;&#xFF0C; &#x5341;&#x5206;&#x6CE8;&#x610F; unsigned int &#x662F;&#x5426;&#x88AB;&#x663E;&#x5F0F;&#x5730;&#x88AB;&#x8F6C;&#x6362;&#x6210; signed.</strong> &#x4F8B;&#x5982;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">double</span> distX <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span>x <span class="token operator">-</span> centerX<span class="token punctuation">;</span> 
+<span class="token keyword">double</span> distY <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span>y <span class="token operator">-</span> centerY<span class="token punctuation">;</span>
+</code></pre>
+<p>&#x8FD8;&#x53EF;&#x4EE5;&#x8FDB;&#x4E00;&#x6B65;&#x4E86;&#x89E3;&#x4E00;&#x4E0B; <strong>Two&apos;s Complement &#x7684;&#x754C;&#x9650;</strong>&#x3002;
+&#x4F8B;&#x5982;&#x4E24;&#x4E2A;&#x6B63;&#x6570;&#x7684; &#x52A0;&#x6CD5; &#x6216;&#x8005; &#x79EF; &#x7684;&#x7ED3;&#x679C;&#x4E3A;&#x8D1F;&#x6570;&#x3002;&#x8FD9;&#x662F;&#x8D85;&#x8FC7;&#x4E86;&#x503C;&#x7684;&#x8868;&#x793A;&#x8303;&#x56F4;&#x4E86;&#x3002;</p>
+<p>&#x901A;&#x7528;&#x6027;</p>
+<p>&#x4F46;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x6CE8;&#x610F;&#x5230; <strong>&#x5F3A;&#x7C7B;&#x578B;&#x7CFB;&#x7EDF; &#x7684;&#x5F31;&#x70B9;</strong>: <strong>Reusability</strong> &#x3002;&#x4F8B;&#x5982;&#x53EA;&#x662F;&#x666E;&#x901A;&#x7684;&#x52A0;&#x6CD5;&#xFF0C; &#x4F60;&#x5C31;&#x8981;&#x5199;&#x4E00;&#x5806;&#x7684;&#x5B9E;&#x73B0;&#x3002; &#x8FD9;&#x662F;&#x975E;&#x5E38;&#x75DB;&#x82E6;&#x7684;&#x3002; </p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">double</span> <span class="token function">addition</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">double</span> <span class="token function">addition</span><span class="token punctuation">(</span><span class="token keyword">double</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token keyword">double</span> <span class="token function">addition</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">double</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token keyword">double</span> <span class="token function">addition</span><span class="token punctuation">(</span><span class="token keyword">double</span> a<span class="token punctuation">,</span> <span class="token keyword">double</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token keyword">double</span> <span class="token function">addition</span><span class="token punctuation">(</span><span class="token keyword">float</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<p>&#x8FD9;&#x5C06;&#x4F1A;&#x901A;&#x8FC7; <strong>Generic</strong> &#x6216;&#x8005; &#x662F; <strong>Template</strong> &#x89E3;&#x51B3;&#x3002;</p>
+<h2 id="generic">Generic</h2>
+<p>&#x5982;&#x679C;&#x4F60;&#x611F;&#x5174;&#x8DA3;&#x53EF;&#x4EE5;&#x770B;&#x4E00;&#x770B; <a href="https://www.typescriptlang.org/docs/handbook/generics.html" target="_blank">TypeScript Generic</a> &#x7684; <em>type variable</em> &#x3002; &#x8FD9; Generic &#x7684;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x65F6;&#xFF0C; &#x9700;&#x8981;&#x663E;&#x5F0F;&#x5730; explcitly &#x8BF4;&#x660E; T &#x5230;&#x5E95;&#x662F;&#x4EC0;&#x4E48;&#x3002; </p>
+<pre class="language-"><code class="lang-typescript"><span class="token keyword">function</span> <span class="token generic-function"><span class="token function">addition</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>a<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">,</span> b<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token constant">T</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5728;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019; (&#x4E00;&#x822C;&#x662F; runtime)</p>
+<pre class="language-"><code class="lang-typescript"><span class="token keyword">let</span> output <span class="token operator">=</span> <span class="token generic-function"><span class="token function">addition</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token builtin">number</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x7136;&#x540E; &#x5FAE;&#x8F6F;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x6587;&#x6863; &#x8BF4; &#x201C;Generic &#x548C; Template&#x201D; &#x6709;&#x533A;&#x522B;&#x3002;&#x3002;&#x3002;&#x3002;</p>
+<blockquote>
+<p>Generics and templates are both language features that provide support for parameterized types. <strong>However, they are different and have different uses</strong>. This topic provides an overview of the many differences.</p>
+</blockquote>
+<p>&#x6700;&#x5927;&#x7684;&#x533A;&#x522B;&#x662F; Generic &#x662F; runtime substituted (&#x53EF;&#x4EE5;&#x770B;&#x4E0A;&#x9762;&#x7684;&#x8C03;&#x7528;&#x4F8B;&#x5B50;)&#xFF0C; &#x800C;&#x7531;&#x4E8E; C++ &#x9700;&#x8981;&#x5148;&#x7F16;&#x8BD1;&#xFF0C; &#x6240;&#x4EE5; Template &#x4E00;&#x822C;&#x662F; Templates are specialized at compile time&#x3002; 
+&#x8FD9;&#x4E2A;&#x4F1A;&#x9020;&#x6210;&#x5F88;&#x591A;&#x4E0D;&#x540C;&#x7684;&#x5F71;&#x54CD;&#xFF0C; &#x8BE6;&#x89C1;<a href="https://docs.microsoft.com/en-us/cpp/extensions/generics-and-templates-visual-cpp?view=msvc-160" target="_blank">&#x5FAE;&#x8F6F;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x6587;&#x6863;</a>.</p>
+<h2 id="template">Template</h2>
+<p>&#x4F5C;&#x4E3A;&#x5F3A;&#x7C7B;&#x578B;&#x8BED;&#x8A00;&#xFF0C;C++ &#x8981;&#x6C42;&#x6240;&#x6709;&#x53D8;&#x91CF;&#x90FD;&#x5177;&#x6709;&#x7279;&#x5B9A;&#x7C7B;&#x578B;&#xFF0C;&#x7531;&#x7A0B;&#x5E8F;&#x5458;&#x663E;&#x5F0F;&#x58F0;&#x660E; <strong>(explcitly specify the type of a variable)</strong>&#x3002; 
+&#x5728;&#x4F7F;&#x7528;&#x4E0A; &#x548C; Generic &#x975E;&#x5E38;&#x7C7B;&#x4F3C;&#xFF0C; &#x7EC6;&#x8282;&#x5728;&#x4E4B;&#x540E;&#x4F1A;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#x3002; &#x5176;&#x80FD;&#x591F;&#x8BA9;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x90FD;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x7B97;&#x6CD5;&#x3002;</p>
+<p>C++ introduces generic programming, via the so-called <em>template</em>. You can apply the same algorithm to different data types. </p>
+<p><strong>Example</strong> : 
+A template <code>addition<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>T</span><span class="token punctuation">&gt;</span></span></code> for a generic function with a single type parameter T </p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">template</span> <span class="token operator">&lt;</span><span class="token keyword">typename</span> <span class="token class-name">T</span><span class="token punctuation">,</span> <span class="token keyword">typename</span> <span class="token class-name">U</span><span class="token punctuation">,</span> <span class="token keyword">typename</span> <span class="token class-name">V</span><span class="token operator">&gt;</span>
+V <span class="token function">addition</span><span class="token punctuation">(</span><span class="token keyword">const</span> T<span class="token operator">&amp;</span> a<span class="token punctuation">,</span> <span class="token keyword">const</span> U<span class="token operator">&amp;</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5047;&#x5982;&#x4F60;&#x8981;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#xFF08;&#x5F53;&#x7136;&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x8BA9; typename &#x88AB;&#x66FF;&#x6362;substituded &#x4E3A;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#xFF09;&#xFF0C; </p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">19</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> c <span class="token operator">=</span> addition<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="stl">STL</h2>
+<p>&#x5728;C++&#x6807;&#x51C6;&#x4E2D;&#xFF0C;STL&#x88AB;&#x7EC4;&#x7EC7;&#x4E3A;&#x4E0B;&#x9762;&#x7684;13&#x4E2A;&#x5934;&#x6587;&#x4EF6;&#xFF1A;<code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>algorithm</span><span class="token punctuation">&gt;</span></span></code>&#x3001;<code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>deque</span><span class="token punctuation">&gt;</span></span></code>&#x3001;<code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>functional</span><span class="token punctuation">&gt;</span></span></code>&#x3001;<code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iterator</span><span class="token punctuation">&gt;</span></span></code>&#x3001;<code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>vector</span><span class="token punctuation">&gt;</span></span></code>&#x3001;<code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>list</span><span class="token punctuation">&gt;</span></span></code>&#x3001;<code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>map</span><span class="token punctuation">&gt;</span></span></code>&#x3001;<code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>memory</span><span class="token punctuation">&gt;</span></span></code>&#x3001;<code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>numeric</span><span class="token punctuation">&gt;</span></span></code>&#x3001;<code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>queue</span><span class="token punctuation">&gt;</span></span></code>&#x3001;<code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>set</span><span class="token punctuation">&gt;</span></span></code>&#x3001;<code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stack</span><span class="token punctuation">&gt;</span></span></code> &#x548C; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>utility</span><span class="token punctuation">&gt;</span></span></code>
+C++ provides a huge set of reusable standard libraries, in particular, the <strong>Standard Template Library (STL)</strong>.</p>
+<h2 id="&#x5E38;&#x89C1;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;-primitive-types">&#x5E38;&#x89C1;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B; (Primitive Types)</h2>
+<p><strong>&quot;&#x6570;&#x636E;&#x7C7B;&#x578B; type&quot;</strong> &#x901A;&#x5E38;&#x662F;&#x5BF9;&#x73B0;&#x5B9E;&#x751F;&#x6D3B;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x7684;<strong>&#x62BD;&#x8C61;&#x5EFA;&#x6A21;</strong>(abstract modelling)&#x3002;&#x4F8B;&#x5982;&#x4E00;&#x4E2A; &#x5E73;&#x9762;&#x4E0A;&#x7684; <em>&#x5706;(circle)</em> &#x5C31;&#x662F; (x, y, r) &#x4E09;&#x5143;&#x6570;&#x5C31;&#x8DB3;&#x591F;&#x4E86;&#x3002;
+C++&#x4E5F;&#x6709;&#x4E00;&#x4E9B;<strong>&#x6700;&#x57FA;&#x672C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B; (primitive types)</strong> &#x6765;&#x8868;&#x793A;&#x81EA;&#x7136;&#x754C;&#x4E2D;&#x7684;&#x6570;&#x5B66;&#x73B0;&#x8C61;&#x3002;</p>
+<p><img src="2020-12-09-17-19-00.png" alt=""></p>
+<p><strong>&#x5176; Pointer &#x7528;&#x6765;&#x8868;&#x793A;&#x5185;&#x5B58;&#x4E2D;&#x5BF9;&#x8C61;&#x7684;&#x5730;&#x5740;&#x4F4D;&#x7F6E;</strong>&#x3002;void &#x901A;&#x5E38;&#x9700;&#x8981;&#x5F3A;&#x7C7B;&#x578B;&#x8F6C;&#x6362;(type casting). </p>
+<p>&#x8981;&#x6CE8;&#x610F;&#x5230; C++ Compiler &#x662F; Machine-specified &#x7684;&#xFF0C; &#x6240;&#x4EE5;&#x8FD9;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E; <strong>&#x793A;&#x6570;&#x8303;&#x56F4;</strong> &#x548C; <strong>&#x7CBE;&#x5EA6;</strong> &#x4E0D;&#x552F;&#x4E00;&#x3002; </p>
+<h3 id="&#x6574;&#x578B;-int-bool-enum">&#x6574;&#x578B; (int, bool, enum)</h3>
+<h4 id="&#x6574;&#x6570;-int">&#x6574;&#x6570; int</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Byte</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[signed/unsigned] <strong>short int</strong></td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>[signed/unsigned] <strong>int</strong></td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>[signed/unsigned] <strong>long int</strong></td>
+<td>4</td>
+<td>95476L<br>37821U<br>9573256UL<br><strong>U</strong> stands for unsigned, while <strong>L</strong> stands for long.</td>
+</tr>
+</tbody>
+</table>
+<p>By default, <code>int</code> is <code>signed int</code>.  <code>long int</code> is useless since it machine-specified. The range of values can be seen at the <a href="https://docs.microsoft.com/en-us/cpp/cpp/data-type-ranges" target="_blank">Microsoft C++ Doc</a></p>
+<p>&#x9664;&#x4E86; <strong>&#x5341;&#x8FDB;&#x5236;(decimal)</strong> &#x5916;&#xFF0C; &#x8FD8;&#x53EF;&#x4EE5;&#x7528; <strong>&#x4E8C;&#x8FDB;&#x5236;</strong>&#x3001;<strong>&#x516B;&#x8FDB;&#x5236;</strong>&#x3001;<strong>&#x5341;&#x516D;&#x8FDB;&#x5236;</strong>&#x3002; &#x611F;&#x5174;&#x8DA3;&#x53EF;&#x4EE5;&#x770B;&#x5FAE;&#x8F6F;&#x5F00;&#x53D1;&#x6587;&#x6863;&#x7684; <a href="https://docs.microsoft.com/en-us/cpp/cpp/numeric-boolean-and-pointer-literals-cpp?view=msvc-160#integer-literals" target="_blank">Integer literals</a> &#x548C; <a href="https://docs.microsoft.com/en-us/cpp/cpp/numeric-boolean-and-pointer-literals-cpp" target="_blank">Binary literals (C++14)</a></p>
+<p>&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A; </p>
+<blockquote>
+<p><strong>C++&#x7684;&#x5341;&#x8FDB;&#x5236;&#x6574;&#x6570; (Decimal literal) &#x4E0D;&#x5141;&#x8BB8;&#x4EE5; 0 &#x5F00;&#x59CB;</strong> (beginning the specification with <code>0</code> is not permitted) </p>
+</blockquote>
+<p><strong><em>&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x65E0;&#x8BBA;&#x662F; &#x4E8C;&#x8FDB;&#x5236;&#x3001;&#x516B;&#x8FDB;&#x5236;&#x3001;&#x5341;&#x516D;&#x8FDB;&#x5236; &#x90FD;&#x4EE5; 0 &#x5F00;&#x5934;&#x7684;</em></strong>&#x3002;&#x9664;&#x4E86;&#x8FD9;&#x6761;&#x5916;&#xFF0C;&#x5176;&#x4ED6;&#x770B;&#x770B;&#x5C31;&#x597D;&#x4E86;&#x3002;</p>
+<ul>
+<li>&#x4E8C;&#x8FDB;&#x5236; <code>0b</code> &#x6216;&#x8005; <code>0B</code></li>
+<li>&#x516B;&#x8FDB;&#x5236; <code>0</code></li>
+<li>&#x5341;&#x516D;&#x8FDB;&#x5236; <code>0x</code> &#x6216;&#x8005; <code>0X</code></li>
+</ul>
+<h4 id="&#x5E03;&#x5C14;&#x503C;-bool">&#x5E03;&#x5C14;&#x503C; bool</h4>
+<p>&#x901A;&#x5E38;&#x7528;&#x5728; <strong>if else &#x7684; controll flow</strong>. </p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">bool</span> b <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x8BE6;&#x7EC6;&#x53C2;&#x9605; <a href="https://docs.microsoft.com/en-us/cpp/cpp/bool-cpp" target="_blank">&#x5FAE;&#x8F6F;&#x5F00;&#x53D1;&#x8005;&#x6587;&#x6863;</a>.</p>
+<h4 id="&#x679A;&#x4E3E;-enum">&#x679A;&#x4E3E; Enum</h4>
+<p>&#x5229;&#x7528;<strong>&#x6574;&#x6570;&#x53BB;&#x62BD;&#x8C61;&#x5316;&#x67D0;&#x4E9B;&#x73B0;&#x8C61;</strong>&#x3002;
+&#x4EE5;&#x524D;&#x4F60;&#x4E5F;&#x89C9;&#x5F97; Enum &#x7C7B;&#x5F88;&#x6DF7;&#x4E71;&#xFF0C; &#x6BD4;&#x5982;&#x4E0B;&#x9762;&#x7684; <code>Clubs</code> &#x5230;&#x5E95;&#x662F;&#x54EA;&#x91CC;&#x6765;&#x7684;&#xFF1F;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">enum</span> <span class="token class-name">Suit</span> <span class="token punctuation">{</span> Diamonds<span class="token punctuation">,</span> Hearts<span class="token punctuation">,</span> Clubs<span class="token punctuation">,</span> Spades <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">PlayCard</span><span class="token punctuation">(</span>Suit suit<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>suit <span class="token operator">==</span> Clubs<span class="token punctuation">)</span> <span class="token comment">// Enumerator is visible without qualification </span>
+      <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4F46;&#x5728; C++11 &#x4FEE;&#x590D;&#x4E86;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C; &#x53EB; <code>scoped enum</code> &#x3002; &#x6709;&#x4E86;&#x4F5C;&#x7528;&#x57DF;&#x4EE5;&#x540E;&#x5C31;&#x5341;&#x5206;&#x6E05;&#x6670;&#x4E86;&#x3002;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">enum</span> <span class="token keyword">class</span> <span class="token class-name">Suit</span> <span class="token punctuation">{</span> Diamonds<span class="token punctuation">,</span> Hearts<span class="token punctuation">,</span> Clubs<span class="token punctuation">,</span> Spades <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">PlayCard</span><span class="token punctuation">(</span>Suit suit<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>suit <span class="token operator">==</span> Suit<span class="token operator">::</span>Clubs<span class="token punctuation">)</span> <span class="token comment">// Enumerator must be qualified by enum type</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> 
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#x5230;&#xFF0C; &#x5728;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C; &#x7F16;&#x8BD1;&#x5668;&#x81EA;&#x52A8;&#x9ED8;&#x8BA4; </p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">enum</span> <span class="token class-name">Suit</span> <span class="token punctuation">{</span> Diamonds <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> Hearts<span class="token punctuation">,</span> Clubs<span class="token punctuation">,</span> Spades <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">//Diamonds = 0, Hearts = 1, Clubs = 2, Spades = 3</span>
+</code></pre>
+<p>&#x540E;&#x9762;&#x7684;&#x7684; <code>Hearts = 1</code> ....&#x90FD;&#x4F1A;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x5176;&#x4ED6;&#x8BE6;&#x7EC6;&#x53C2;&#x9605; <a href="https://docs.microsoft.com/en-us/cpp/cpp/enumerations-cpp" target="_blank">&#x5FAE;&#x8F6F;&#x5F00;&#x53D1;&#x8005;&#x6587;&#x6863;</a>.</p>
+<h4 id="&#x6D6E;&#x70B9;&#x6570;-float--double">&#x6D6E;&#x70B9;&#x6570; Float &amp; Double</h4>
+<p>&#x6709; <strong>&quot;&#x5C0F;&#x6570;&#x70B9;&#x793A;&#x6570;&#x6CD5;&quot;</strong> &#x548C; <strong>&#x201C;&#x6307;&#x6570;&#x793A;&#x6570;&#x6CD5;&#x201D;</strong> &#x3002; </p>
+<pre class="language-"><code class="lang-cpp"><span class="token number">3.14159</span> 
+<span class="token number">314159e-5</span>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Byte</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td>4</td>
+<td>1.572f <br>8.94F<br>.025e2f</td>
+</tr>
+<tr>
+<td><strong>double</strong></td>
+<td>8</td>
+<td>60.34 <br>0.25e2</td>
+</tr>
+<tr>
+<td>long double</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<p>By default, <code>double</code> is used. <code>long double</code> is useless since it machine-specified.  The range of values can be seen at the <a href="https://docs.microsoft.com/en-us/cpp/cpp/data-type-ranges" target="_blank">Microsoft C++ Doc</a></p>
+<h4 id="&#x5B57;&#x7B26;-char--strings">&#x5B57;&#x7B26; Char &amp; Strings</h4>
+<p><strong>&#x5355;&#x5B57;&#x7B26;</strong>&#x7531; <strong>&#x5355;&#x5F15;&#x53F7;</strong> &#x548C; <strong>&#x5355;&#x7B26;&#x53F7;</strong>&#x3002; 
+&#x8868;&#x793A;&#x53CC;&#x5F15;&#x53F7; <code>&apos;&quot;&apos;</code> 
+&#x8868;&#x793A;&#x5355;&#x5F15;&#x53F7; <code>&apos;\&apos;&apos;</code> </p>
+<p><strong>&#x5B57;&#x7B26;&#x4E32;</strong> &#x7531; <strong>&#x53CC;&#x5F15;&#x53F7;</strong> &#x548C; <strong>&#x591A;&#x4E2A;&#x7B26;&#x53F7;</strong>&#x3002;
+&#x4F8B;&#x5982; <code>&quot;fuckyou&quot;</code> &#x548C; <code>&quot;\&quot;fuck\&quot;&quot;</code></p>
+<p>&#x5176;&#x4E2D; <code>\</code> &#x53EB;&#x8F6C;&#x4E49;&#x7B26;&#x53F7;&#x3002;
+&#x6B64;&#x7B26;&#x53F7;&#x8FD8;&#x53EF;&#x4EE5;&#x7528;&#x4E8E; <strong>&#x8F6C;&#x4E49;&#x5B57;&#x7B26;(escape character)</strong>, &#x8FD9;&#x662F;&#x4E00;&#x79CD;&#x975E;&#x5E38;&#x7279;&#x6B8A;&#x7684;&#x7B26;&#x53F7;&#x3002;
+&#x6CE8;&#x610F;<strong>&#x6240;&#x6709;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;&#x5355;&#x7B26;&#x53F7;</strong>&#x3002; &#x4F8B;&#x5982; <code>\n</code> &#x662F;&#x4E00;&#x4E2A; newline character &#x5E76;&#x4E0D;&#x662F;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x3002; </p>
+<p>&#x5173;&#x4E8E;&#x6709;&#x54EA;&#x4E9B; Escape Sequences &#x53EF;&#x4EE5;&#x770B; <a href="https://docs.microsoft.com/en-us/cpp/c-language/escape-sequences?view=msvc-160" target="_blank">&#x5FAE;&#x8F6F;&#x5F00;&#x53D1;&#x8005;&#x6587;&#x6863;</a>. </p>
+<h1 id="&#x6570;&#x636E;&#x7684;&#x5904;&#x7406;-manipulation-on-data">&#x6570;&#x636E;&#x7684;&#x5904;&#x7406; (Manipulation on Data)</h1>
+<p>&#x6570;&#x636E;&#x7684;&#x5904;&#x7406;&#x6307; &#x8F93;&#x5165;&#x3001;&#x6574;&#x7406;&#x3001;&#x8FD0;&#x7B97;&#x3001;&#x5B58;&#x50A8;&#x3001;&#x8F93;&#x51FA;&#x7B49;&#x6D3B;&#x52A8;&#xFF0C; <strong>&#x662F;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;</strong>&#xFF0C;&#x4E5F;&#x662F;&#x7A0B;&#x5E8F;&#x5458;&#x667A;&#x6167;&#x7ED3;&#x6676;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;
+&#x4F60;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x7A0B;&#x5E8F;&#x7684;&#x8BA1;&#x7B97;&#x90E8;&#x5206;&#x3002;</p>
+<p>&#x5728;<strong>&#x7ED3;&#x6784;&#x5316;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;</strong>&#x4E2D;&#xFF0C; <strong>&#x6570;&#x636E;</strong>&#x548C;<strong>&#x6570;&#x636E;&#x7684;&#x5904;&#x7406;</strong>&#x4E24;&#x90E8;&#x5206;&#x662F;&#x5206;&#x79BB;&#x7684;&#x3002;
+&#x800C;&#x5728;<strong>&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;</strong>&#x4E2D;&#xFF0C; <strong>&#x6570;&#x636E;</strong>&#x548C;<strong>&#x5904;&#x7406;</strong>&#x662F;&#x88AB;&#x5C01;&#x88C5;&#x5728;&#x4E00;&#x8D77;&#x7684;&#x3002;</p>
+<p>&#x5728;<strong>&#x9762;&#x5BF9;&#x60F3;&#x8C61;&#x8BBE;&#x8BA1;</strong>&#x4E2D;&#xFF0C;&#x6700;&#x57FA;&#x7840;&#x7684;&#x5355;&#x5143;&#x662F; <strong>&#x7C7B;(class)</strong></p>
+<ul>
+<li>&#x5176;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x88AB;&#x6210;&#x4E3A; &quot;&#x5C5E;&#x6027;(attribute)&quot; &#x6216;&#x8005; &quot;&#x6570;&#x636E;&#x6210;&#x5458;(data member)&quot;</li>
+<li>&#x5176;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5BF9;&#x5E94;&#x7684;&#x5904;&#x7406;&#x53EB; &quot;&#x65B9;&#x6CD5;(method)&quot; &#x6216;&#x8005; &quot;&#x6210;&#x5458;&#x51FD;&#x6570;(member function)&quot;. </li>
+</ul>
+<p>&#x8FD9;&#x6837;&#xFF0C; &#x6BCF;&#x4E2A;&#x7C7B;&#x90FD;&#x6709;&#x5176;&#x72EC;&#x7279;&#x7684;<strong>&#x6570;&#x636E;&#x63CF;&#x8FF0;</strong>&#x53CA;&#x5176;<strong>&#x6570;&#x636E;&#x5904;&#x7406;&#x7684;&#x65B9;&#x6CD5;</strong>&#xFF0C;&#x5728;&#x5199;&#x7A0B;&#x5E8F;&#x65F6;&#x4F1A;&#x663E;&#x5F97;&#x5341;&#x5206;&#x65B9;&#x4FBF;&#xFF0C;<em>&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x7C7B;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4EC0;&#x4E48;&#x64CD;&#x4F5C;&#x90FD;&#x4E00;&#x76EE;&#x4E86;&#x7136;</em>&#xFF0C; &#x56E0;&#x4E3A;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#x90FD;&#x5728;&#x8FD9;&#x91CC;&#x4E86;&#x3002;</p>
+<p>&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x4F18;&#x52BF;&#x662F;&#x7C7B;&#x4F3C;&#x6E38;&#x620F;&#x8BBE;&#x8BA1;&#x4E2D;&#xFF0C; &#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x5730;&#x521B;&#x9020;&#x5C5E;&#x4E8E;&#x81EA;&#x5DF1;&#x7684;<strong>&#x6570;&#x636E;&#x63CF;&#x8FF0;</strong>&#x3002; &#x4F8B;&#x5982;&#xFF0C; &#x4E00;&#x4E2A;&#x6E38;&#x620F;&#x4E2D;&#x7684;&#x89D2;&#x8272;&#x3002;
+&#x4F46;&#x5728;&#x7ED3;&#x6784;&#x5316;&#x4E2D;&#xFF0C; &#x4F60;&#x53EA;&#x80FD;&#x5229;&#x7528;&#x5DF2;&#x6709;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x663E;&#x5F97;&#x5341;&#x5206;&#x9EBB;&#x70E6;&#x3002;&#x867D;&#x7136; C &#x8BED;&#x8A00;&#x4E2D;&#x7684; struct &#x5176;&#x5B9E;&#x4E5F;&#x53EF;&#x4EE5;&#x8D77;&#x5230;&#x7C7B;&#x4F3C;&#x4F5C;&#x7528;&#x3002;</p>
+<h1 id="&#x7F16;&#x7A0B;&#x8BED;&#x6CD5;-programming-language-c">&#x7F16;&#x7A0B;&#x8BED;&#x6CD5; Programming Language C++</h1>
+<p>&#x4F60;&#x5728;&#x5B66;&#x4E86; FIT2014 &#x8FD9;&#x95E8;&#x8BFE;&#x540E;&#xFF0C;&#x5C31;&#x4F1A;&#x660E;&#x767D;&#x5176;&#x5B9E; Compiler &#x7684; Parsing &#x4E3B;&#x8981;&#x4F9D;&#x8D56; <strong>Context-free Grammar</strong>. &#x5176;&#x4E00;&#x822C;&#x5305;&#x542B; </p>
+<ul>
+<li>Terminal symbols (alphabet set) </li>
+<li>Production rules (with terminal and non-terminal symbols)</li>
+</ul>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x628A; Terminal symbols &#x7406;&#x89E3;&#x4E3A; token &#xFF0C;&#x8FD9;&#x662F; lexical analysis &#x540E;&#x83B7;&#x5F97;&#x7684;&#x6700;&#x5C0F;&#x57FA;&#x672C;&#x5355;&#x8BCD;&#x3002;</p>
+<p>&#x603B;&#x7ED3;&#x8D77;&#x6765;&#x5C31;&#x662F;&#xFF0C;</p>
+<ul>
+<li><strong>&#x5B57;&#x7B26;</strong> (alphabet set)</li>
+<li><strong>&#x5355;&#x8BCD;</strong> (token)</li>
+<li><strong>&#x8BED;&#x53E5;</strong> (statement)</li>
+</ul>
+<p>&#x5176;&#x4E2D;&#x8BED;&#x53E5;&#xFF08;statement&#xFF09;&#x662F;C++&#x7A0B;&#x5E8F;&#xFF08;program&#xFF09;&#x4E2D;&#x7684;&#x7EC4;&#x6210;&#x6210;&#x5206;&#x3002; &#x5E38;&#x89C1;&#x6709;</p>
+<ul>
+<li>declaration statements; &#x58F0;&#x660E;&#x8BED;&#x53E5;</li>
+<li>expression statements; &#x8868;&#x8FBE;&#x5F0F;&#x8BED;&#x53E5;</li>
+</ul>
+<p>&#x8FD8;&#x6709;&#x5176;&#x4ED6;&#x4E00;&#x4E9B;&#x6BD4;&#x8F83;&#x5176;&#x4ED6;&#x53EF;&#x4EE5;&#x67E5;&#x770B; <a href="https://docs.microsoft.com/zh-cn/cpp/cpp/overview-of-cpp-statements?view=msvc-160" target="_blank">&#x5FAE;&#x8F6F;&#x5F00;&#x53D1;&#x8005;&#x6587;&#x6863; overview of cpp statements</a></p>
+<h2 id="&#x5B57;&#x7B26;&#x96C6;-alphabet-set">&#x5B57;&#x7B26;&#x96C6; (Alphabet Set)</h2>
+<p>&#x5373;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x7684;&#x5B57;&#x7B26;&#x3002;
+&#x4E00;&#x822C;&#x662F; <strong><a href="https://en.wikipedia.org/wiki/ASCII" target="_blank">ASCII</a></strong>, &#x5305;&#x542B;&#x82F1;&#x6587;&#x5B57;&#x7B26;&#x3001;&#x6570;&#x5B66;&#x548C;&#x4E00;&#x4E9B;&#x7279;&#x6B8A;&#x7B26;&#x53F7; &#xFF0C;&#x4F46;&#x5176;&#x5E76;&#x4E0D;&#x652F;&#x6301;&#x4E2D;&#x6587;&#x3002; </p>
+<p>&#x7136;&#x800C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <strong><a href="https://en.wikipedia.org/wiki/UTF-8" target="_blank">UTF-8</a></strong> &#x6765;&#x5F25;&#x8865;&#x7F3A;&#x9677;&#x3002;</p>
+<h2 id="&#x8BCD;&#x6C47;-token">&#x8BCD;&#x6C47; (token)</h2>
+<p>Lexical Analysis &#x540E;&#x80FD;&#x83B7;&#x5F97;&#x7684;&#x6700;&#x5C0F;&#x8BED;&#x6CD5;&#x5355;&#x4F4D;&#x3002;
+<strong>&#x4E00;&#x4E2A; token &#x53EF;&#x4EE5;&#x7531;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x6784;&#x6210;</strong>&#x3002;
+&#x5176;&#x4E2D; token &#x6839;&#x636E;&#x5176;&#x4F5C;&#x7528;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x4EE5;&#x4E0B;&#x4E94;&#x5927;&#x7C7B;</p>
+<ul>
+<li>&#x5173;&#x952E;&#x5B57; (reserved <strong>keyword</strong>)</li>
+<li>&#x6807;&#x8BC6;&#x7B26; (<strong>identifier</strong>/variable name)</li>
+<li>&#x8FD0;&#x7B97;&#x7B26; (<strong>operator</strong>)</li>
+<li>&#x5206;&#x5272;&#x7B26; (<strong>delimiter</strong>)</li>
+<li>&#x5E38;&#x6570; (<strong>number</strong>)</li>
+</ul>
+<h3 id="&#x5173;&#x952E;&#x5B57;-keyword">&#x5173;&#x952E;&#x5B57; (keyword)</h3>
+<p>&#x662F;&#x6839;&#x636E; C++ &#x7684;&#x7279;&#x6B8A;&#x8BED;&#x4E49;&#x7B26;&#x3002;<strong><em>&#x8981;&#x6CE8;&#x610F;&#x5230; C++&#x8BED;&#x8A00;&#x4E0D;&#x5141;&#x8BB8;&#x5BF9;&#x5173;&#x952E;&#x5B57;&#x91CD;&#x5B9A;&#x4E49;</em></strong>&#x3002;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span>     <span class="token comment">// std::cout </span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> <span class="token keyword">char</span> <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span> 
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// expected output (error): </span>
+<span class="token comment">// 8:14: error: expected unqualified-id before &apos;=&apos; token</span>
+<span class="token comment">// 9:13: error: expected primary-expression before &apos;char&apos;</span>
+</code></pre>
+<p>&#x5173;&#x952E;&#x5B57;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x67E5;&#x9605; <a href="https://docs.microsoft.com/en-us/cpp/cpp/keywords-cpp?view=msvc-160" target="_blank">&#x5FAE;&#x8F6F;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x6587;&#x6863;</a> &#x83B7;&#x5F97;.   </p>
+<h3 id="&#x6807;&#x8BC6;&#x7B26;-identifier">&#x6807;&#x8BC6;&#x7B26; (identifier)</h3>
+<p>&#x4F60;&#x770B;&#x540D;&#x5B57;&#x5C31;&#x77E5;&#x9053; Identification &#x662F;&#x4EC0;&#x4E48;&#xFF1F;&#x662F;<strong>&#x8EAB;&#x4EFD;</strong>&#x7684;&#x610F;&#x601D;&#x3002;
+&#x6240;&#x4EE5; identifier &#x662F; &#x7A0B;&#x5E8F;&#x5458; &#x7ED9; <strong>&#x5BF9;&#x8C61;(object)</strong> <sup><a href="#fn_1" id="reffn_1">1</a></sup> <strong>&#x547D;&#x540D;&#x7B26; (token)</strong>&#x3002;
+<strong>&#x547D;&#x540D;&#x89C4;&#x5219;</strong>&#x662F; </p>
+<ul>
+<li>&#x201C;&#x4EE5;<strong>&#x5B57;&#x6BCD;</strong>&#x6216;&#x8005;<strong>&#x4E0B;&#x5212;&#x7EBF;</strong>&#x5F00;&#x59CB;&#x201D;&#xFF0C; </li>
+<li>&#x7B2C;&#x4E8C;&#x4E2A;&#x5B57;&#x7B26;&#x5F00;&#x59CB;&#x4EE5; &#x201C;<strong>&#x5B57;&#x6BCD;</strong>&#x3001;<strong>&#x6570;&#x5B57;</strong>&#x3001;<strong>&#x4E0B;&#x5212;&#x7EBF;</strong>&#x7684;&#x7EC4;&#x5408;&#x201D;</li>
+</ul>
+<p>&#x5176;&#x4E2D;<strong>&#x4E0B;&#x5212;&#x7EBF;&#x5F00;&#x59CB;</strong>&#x662F;&#x56E0;&#x4E3A;&#x65E9;&#x671F; Object-Oriented &#x6280;&#x672F;&#x4E0D;&#x5B8C;&#x5584;&#xFF0C;<strong>&#x7528;&#x4E0B;&#x5212;&#x7EBF;&#x6765;&#x8868;&#x660E; private members</strong>. &#x4F46;&#x5728; Python &#x8BED;&#x8A00;&#x4E2D;&#xFF0C; &#x53EF;&#x4EE5;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x4ED6;&#x4EEC;&#x4E5F;&#x6CA1;&#x6709; Private member &#x7279;&#x6027;&#x3002;</p>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x80FD;&#x4EE5;<strong>&#x6570;&#x5B66;&#x5F00;&#x59CB;</strong>&#xFF1F; &#x56E0;&#x4E3A; C++ &#x5141;&#x8BB8; <strong>&#x79D1;&#x5B66;&#x8BA1;&#x7B97;&#x6CD5;</strong> &#x548C; <strong>&#x4E8C;&#x8FDB;&#x5236;&#x3001;&#x516B;&#x8FDB;&#x5236;&#x3001;&#x5341;&#x516D;&#x8FDB;&#x5236;</strong>&#x7B49;&#x8868;&#x793A;&#x65B9;&#x6CD5;&#x3002;&#x4F8B;&#x5982;&#xFF0C; </p>
+<pre class="language-"><code class="lang-cpp"><span class="token number">3e-10</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x5141;&#x8BB8;&#x4EE5;&#x201C;&#x6570;&#x5B57;&#x5F00;&#x59CB;&#x201D;&#x7684;&#x547D;&#x540D;&#xFF0C; &#x90A3;&#x4E48;&#x8FD9;&#x662F;&#x4F60;&#x7684; identifier &#x8FD8;&#x662F; constant number &#x5462;&#xFF1F;</p>
+<h3 id="&#x8FD0;&#x7B97;&#x7B26;-operator">&#x8FD0;&#x7B97;&#x7B26; (Operator)</h3>
+<p>&#x6570;&#x5B66;&#x4E2D;&#x6700;&#x7B80;&#x5355;&#x3001;&#x6700;&#x91CD;&#x8981;&#x7684;&#x7B26;&#x53F7;&#x3002;</p>
+<p>C++ &#x4E5F;&#x6709;&#x7C7B;&#x4F3C;&#x7684;&#x539F;&#x5B50;&#x7EA7;&#x64CD;&#x4F5C;&#xFF0C; &#x53EF;&#x4EE5;&#x901A;&#x8FC7; <a href="https://docs.microsoft.com/en-us/cpp/cpp/cpp-built-in-operators-precedence-and-associativity" target="_blank">&#x5FAE;&#x8F6F;C++&#x5F00;&#x53D1;&#x6587;&#x6863;&#x67E5;&#x770B;</a></p>
+<p>&#x5176;&#x4E2D; Operator &#x6700;&#x91CD;&#x8981;&#x7684;&#x662F; <a href="https://docs.microsoft.com/en-us/cpp/cpp/cpp-built-in-operators-precedence-and-associativity" target="_blank">Precedence and associativity</a>&#x3002; &#x5373; <strong>&#x4F18;&#x5148;&#x7EA7;</strong> &#x548C; <strong>&#x7ED3;&#x5408;&#x6027;</strong>&#x3002; </p>
+<p>Precedence &#x662F; Parsing &#x7684; <strong>&#x6240;&#x6709; production rules &#x7684;&#x5148;&#x540E;&#x5173;&#x7CFB;</strong>&#x3002; &#x663E;&#x7136;&#xFF0C; &#x5728;&#x9047;&#x5230;&#x76F8;&#x540C;&#x7684; production rule &#x7684;&#x65F6;&#x5019;&#xFF0C; &#x6392;&#x5728;&#x524D;&#x9762;&#x7684;&#x4F1A;&#x88AB;&#x4F18;&#x5148;&#x6267;&#x884C;&#x3002;</p>
+<p>Associativity &#x662F; Parsing &#x7684; <strong>&#x540C;&#x4E00;&#x6761; production rule &#x7684; non-terminal symbols &#x7684;&#x5C55;&#x5F00;&#x987A;&#x5E8F;</strong> &#x3002; &#x4E00;&#x822C;&#x6709; Left-association<sup><a href="#fn_2" id="reffn_2">2</a></sup> &#x548C; Right-association&#x3002; &#x5F53;&#x7136;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x6709; randon-association &#xFF0C; &#x4E0D;&#x8FC7;&#x8FD9;&#x6050;&#x6015;&#x6CA1;&#x6709;&#x4EBA;&#x8FD9;&#x4E48;&#x505A;&#x3002;</p>
+<p>&#x8981;&#x6CE8;&#x610F;&#x5230;&#x67D0;&#x4E9B; Opeartor &#x662F; <strong>right to left associativity</strong>&#xFF0C; <strong>&#x867D;&#x7136;&#x5927;&#x90E8;&#x5206;&#x662F; left to right associativity</strong>&#x3002;&#x6CE8;&#x610F;&#x5230;&#x8FD9;&#x4E00;&#x70B9;&#x975E;&#x5E38;&#x91CD;&#x8981;&#xFF0C; &#x6709;&#x52A9;&#x4E8E;&#x4F60;&#x4EE5;&#x540E;&#x7406;&#x89E3;&#x590D;&#x6742;&#x7684; declartion &#x8BED;&#x53E5;&#x3002;</p>
+<p>&#x8BE6;&#x60C5;&#x53EF;&#x4EE5;&#x770B; <a href="#">&#x5F85;&#x7EED;</a></p>
+<blockquote id="fn_1">
+<sup>1</sup>. <strong>&#x5BF9;&#x8C61;Object</strong>: &#x5373;&#x88AB;&#x4FDD;&#x5B58;&#x5728;<strong>&#x4E00;&#x6BB5;&#x8FDE;&#x7EED;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x6570;&#x636E;</strong>&#x3002;&#x8FD9;&#x8DDF;&#x5185;&#x5B58;&#x7684;&#x72EC;&#x7279;&#x6784;&#x9020;&#x6709;&#x5173;&#x7CFB;&#xFF0C; &#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5DF2;&#x77E5;&#x5185;&#x5B58;&#x7684;&#x7A7A;&#x95F4;&#x5176;&#x5B9E;&#x662F;&#x4E00;&#x6BB5;&#x4E00;&#x6BB5;&#x7684;&#xFF0C;  &#x6700;&#x5C0F;&#x7684;&#x7A7A;&#x95F4;&#x6BB5;&#x4E3A; 64 bits (&#x5373; 8 bytes) &#xFF0C; &#x8FD9;&#x5C31;&#x7275;&#x6D89;&#x5230; CPU &#x5904;&#x7406; instruction &#x7684;&#x539F;&#x7406;&#x4E86;&#x3002;&#x901A;&#x5E38;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x4F1A;&#x5360;&#x591A;&#x6BB5;&#x5185;&#x5B58;&#xFF0C; &#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x53EA;&#x6709;&#x6B63;&#x786E;&#x7684; decoding &#x65B9;&#x6CD5;&#xFF0C;&#x5C31;&#x80FD;&#x88AB;&#x6B63;&#x786E;&#x6EF4;&#x89E3;&#x8BFB;&#xFF0C; &#x6240;&#x4EE5;&#x88AB;&#x6210;&#x4E3A;&#x5BF9;&#x8C61;&#xFF08;&#x800C;&#x4E0D;&#x662F;&#x6570;&#x636E;&#xFF09;&#x3002;<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#x21A9;</a>
+</blockquote>
+<blockquote id="fn_2">
+<sup>2</sup>. <strong>Left Association</strong>: <strong>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</strong>&#x9010;&#x4E00;&#x5C55;&#x5F00; Non-terminal symbols. <a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#x21A9;</a>
+</blockquote>
+<h3 id="&#x5206;&#x5272;&#x7B26;-delimiter">&#x5206;&#x5272;&#x7B26; (delimiter)</h3>
+<p>&#x7528;&#x6765;&#x5206;&#x5272;&#x4E0D;&#x540C;&#x7684; <strong>token (&#x8BED;&#x6CD5;&#x5355;&#x4F4D;)</strong>&#x3002;</p>
+<p>commas &#x9017;&#x53F7; <code>,</code>
+semicolon &#x5206;&#x53F7; <code>;</code> 
+quotes &#x5F15;&#x53F7; <code>&quot;</code> &#x548C; <code>&apos;</code> 
+braces &#x62EC;&#x53F7; <code>{}</code>
+pipes &#x7BA1;&#x9053; <code>|</code> 
+slashes &#x659C;&#x6760; <code>/</code> <code>\</code></p>
+<h3 id="&#x5E38;&#x6570;-constants">&#x5E38;&#x6570; (constants)</h3>
+<p>C++&#x5E38;&#x6570;&#x6709; <strong>&#x6570;&#x503C;</strong>&#x3001;<strong>&#x5B57;&#x7B26;</strong>&#x3001;<strong>&#x5B57;&#x7B26;&#x4E32;</strong>&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: C++程序设计基础">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chap01-const.html" class="navigation navigation-next " aria-label="Next page: Const keyword">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Data types and C++ Syntax","level":"1.3","depth":1,"next":{"title":"Const keyword","level":"1.4","depth":1,"path":"chap01-const.md","ref":"./chap01-const.md","articles":[]},"previous":{"title":"C++程序设计基础","level":"1.2","depth":1,"path":"README.md","ref":"./README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex-m","-highlight","prism","prism-themes","bibtex-indexed-cite","video","page-toc","callouts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"callouts":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex-m":{},"fontsettings":{"theme":"white","family":"sans","size":2},"bibtex-indexed-cite":{"path":"/"},"prism-themes":{},"video":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"Randoruf","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"bibCount":0,"variables":{},"title":"Gitbook基础","bib":[{"citationKey":"KUFFNER2000RRT","entryType":"INPROCEEDINGS","entryTags":{"TITLE":"RRT-connect: An efficient approach to single-query path planning","AUTHOR":"Kuffner, James J and LaValle, Steven M","BOOKTITLE":"Proceedings 2000 ICRA. Millennium Conference. IEEE International Conference on Robotics and Automation. Symposia Proceedings (Cat. No. 00CH37065)","VOLUME":"2","PAGES":"995--1001","YEAR":"2000","ORGANIZATION":"IEEE"}}],"gitbook":"*"},"file":{"path":"chap01-data-type-grammar.md","mtime":"2021-02-03T23:33:41.700Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-06T02:37:05.867Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,920 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Functions and Calls · Gitbook基础</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Randoruf">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex-m/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-bibtex-indexed-cite/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-callouts/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chap04-class-introduction.html" />
+    
+    
+    <link rel="prev" href="chap03-functions.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="chap01-c-crash-course.html">
+            
+                <a href="chap01-c-crash-course.html">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    C Crash Course
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    C++程序设计基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chap01-data-type-grammar.html">
+            
+                <a href="chap01-data-type-grammar.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    Data types and C++ Syntax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chap01-const.html">
+            
+                <a href="chap01-const.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    Const keyword
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chap01-accessing-object.html">
+            
+                <a href="chap01-accessing-object.html">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    Object and Memory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="chap01-static.html">
+            
+                <a href="chap01-static.html">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    Static keyword
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Funtions</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="chap02-statement.html">
+            
+                <a href="chap02-statement.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Statement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chap03-functions.html">
+            
+                <a href="chap03-functions.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3" data-path="chap03-functions-calls-return.html">
+            
+                <a href="chap03-functions-calls-return.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    Functions and Calls
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Class</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="chap04-class-introduction.html">
+            
+                <a href="chap04-class-introduction.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Class Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="chap04-inheritance.html">
+            
+                <a href="chap04-inheritance.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="chap04-overloading.html">
+            
+                <a href="chap04-overloading.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    Overloading
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Expression</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="chap05-expression.html">
+            
+                <a href="chap05-expression.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Expression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="chap05-rvalue-lvalue-move.html">
+            
+                <a href="chap05-rvalue-lvalue-move.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    Rvalue and Lvalue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="chap05-precedence-associativity.html">
+            
+                <a href="chap05-precedence-associativity.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    Precedence Associativity
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Array and Container(aka. Abstract Data Structure)</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="chap06-array.html">
+            
+                <a href="chap06-array.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="chap06-container.html">
+            
+                <a href="chap06-container.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="chap06-container-vector.html">
+            
+                <a href="chap06-container-vector.html">
+            
+                    
+                        <b>5.3.</b>
+                    
+                    Vector
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="chap06-string.html">
+            
+                <a href="chap06-string.html">
+            
+                    
+                        <b>5.4.</b>
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="chap07-template-introduction.html">
+            
+                <a href="chap07-template-introduction.html">
+            
+                    
+                        <b>5.5.</b>
+                    
+                    Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Functions and Calls</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="function-calls">Function Calls</h1>
+<p>How to <strong>pass the parameters</strong> as inputs to a called function?</p>
+<ul>
+<li>Pass-By-Value (default)</li>
+<li>Pass-By-Pointer</li>
+<li><strong>Pass-By-Reference</strong> (newer C++)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Pass by Value</th>
+<th>Pass by Pointer</th>
+<th>Pass by Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Copies of the parameter?</strong></td>
+<td>The <strong>value</strong> (including memmory address) of each <strong>data member</strong> is copied when invoking.</td>
+<td>The <strong>address</strong> es of the parameters are copied.</td>
+<td><strong>Nothing</strong></td>
+</tr>
+<tr>
+<td><strong>Can make modification to caller&apos;s objects?</strong></td>
+<td><strong>No</strong> (except there is pointer in the data member, see <a href="#shallow-copy-in-pass-by-value">shallow-copy-in-pass-by-value</a>)</td>
+<td>Yes</td>
+<td>Yes (but it should be avoid by <code>const</code> keyword)</td>
+</tr>
+<tr>
+<td>Valid objects passed into the function (compile error instead of runtime error)?</td>
+<td>Yes</td>
+<td><strong>NO</strong></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Speed?</td>
+<td>Slow</td>
+<td>Fast</td>
+<td>Fast</td>
+</tr>
+<tr>
+<td><strong>Safety (side effect)</strong> ?</td>
+<td><strong>Best</strong></td>
+<td><strong>Worst</strong> (pointers are dangerous, use reference if possible).</td>
+<td><strong>Good</strong></td>
+</tr>
+</tbody>
+</table>
+<p>&#x5230;&#x540E;&#x9762;&#x4F60;&#x5C31;&#x5927;&#x6982;&#x7406;&#x89E3; <strong>Pass-by-Value &#x5B9E;&#x9645;&#x4E0A;&#x662F; Pass-by-Reference &#x548C; Copy-Constructor.</strong></p>
+<p>To even reduce the <strong>side-effect</strong> the <strong>parameter passing</strong>, you would better to use <code>const</code> . 
+Read this at <a href="#reducing-side-effect-by-const">Reducing Side-Effect by Const</a>. </p>
+<h2 id="calls-to-constructors">Calls to Constructors</h2>
+<p>How many times do our different joinCubes files call each constructor?</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>By Value <br><code>void foo(Cube a)</code></th>
+<th>By Pointer <br><code>void foo(Cube *a)</code></th>
+<th>By Reference<br><code>void foo(Cube &amp;a)</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Default Constructor</strong><br><code>Cube::Cube()</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>Cunstom Constructor</strong> <br><code>Cube::Cube(double)</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>Copy Constructor</strong><br><code>Cube::Cube(const Cube &amp; )</code></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example-custom-class">Example Custom Class</h2>
+<p>Assume the common class is <code>Circle.hpp</code></p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">class</span> <span class="token class-name">Circle</span><span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    <span class="token keyword">double</span> r_<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Circle</span><span class="token punctuation">(</span><span class="token keyword">double</span> r<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token keyword">double</span> <span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token keyword">double</span> <span class="token function">getR</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token keyword">void</span> <span class="token function">setRadius</span><span class="token punctuation">(</span><span class="token keyword">double</span> r<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>and the implementation is <code>Circle.cpp</code></p>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&quot;Circle.hpp&quot;</span></span>
+
+<span class="token class-name">Circle</span><span class="token operator">::</span><span class="token function">Circle</span><span class="token punctuation">(</span><span class="token keyword">double</span> r<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  r_ <span class="token operator">=</span> r<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">double</span> <span class="token class-name">Circle</span><span class="token operator">::</span><span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> PI<span class="token operator">*</span>r_<span class="token operator">*</span>r_<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">double</span> <span class="token class-name">Circle</span><span class="token operator">::</span><span class="token function">getR</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> r_<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token class-name">Circle</span><span class="token operator">::</span><span class="token function">setRadius</span><span class="token punctuation">(</span><span class="token keyword">double</span> r<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  r_ <span class="token operator">=</span> r<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="pass-by-value--pass-by-object">Pass-by-Value / Pass-by-Object</h2>
+<p>By default, arguments are <strong>&quot;passed by value&quot;</strong> to a function. 
+It can also be thought of <strong>&quot;Pass-by-Object&quot;</strong> as it will invoke the <strong><em>copy constructor.</em></strong>  </p>
+<p>Assume there is a new function, that will genereate a new circle based on the area </p>
+<pre class="language-"><code class="lang-cpp">Circle <span class="token function">joinCircle</span><span class="token punctuation">(</span>Circle c1<span class="token punctuation">,</span> Circle c2<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">double</span> totalArea <span class="token operator">=</span> c1<span class="token punctuation">.</span><span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> c2<span class="token punctuation">.</span><span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">double</span> newRadius <span class="token operator">=</span> std<span class="token operator">::</span><span class="token function">pow</span><span class="token punctuation">(</span>totalArea<span class="token operator">/</span>PI<span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token operator">/</span><span class="token number">2.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    Circle <span class="token function">result</span><span class="token punctuation">(</span>newRadius<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/* Some changes to the parameters! */</span>
+    c1<span class="token punctuation">.</span><span class="token function">setRadius</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    c2<span class="token punctuation">.</span><span class="token function">setRadius</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Although you make some changes to the data member of the input arguments, but this is <strong>pass by value</strong>! The arguments here are actually the copies of the original ones. </p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Circle <span class="token function">c1</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Circle <span class="token function">c2</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    Circle c3 <span class="token operator">=</span> <span class="token function">joinCircle</span><span class="token punctuation">(</span>c1<span class="token punctuation">,</span> c2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;c3 &quot;</span><span class="token operator">&lt;&lt;</span> c3<span class="token punctuation">.</span><span class="token function">getR</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;c2 &quot;</span> <span class="token operator">&lt;&lt;</span> c2<span class="token punctuation">.</span><span class="token function">getR</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;c1 &quot;</span> <span class="token operator">&lt;&lt;</span> c1<span class="token punctuation">.</span><span class="token function">getR</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* Expected: 
+
+    c3 11.1803
+    c2 5
+    c1 10
+*/</span>
+</code></pre>
+<h3 id="shallow-copy-in-pass-by-value">Shallow Copy in Pass-by-Value</h3>
+<p>&#x8BF7;&#x8BB0;&#x4F4F; <strong>Pointer</strong> &#x672C;&#x8EAB;&#x5C31;&#x662F;&#x4E00;&#x4E2A;<strong>&#x53D8;&#x91CF;</strong>&#xFF08;&#x91CC;&#x9762;<strong>&#x6709;&#x5730;&#x5740;&#x503C;</strong>&#xFF0C; &#x4F1A;&#x5360;&#x7528;&#x7A7A;&#x95F4;&#xFF09;&#x3002;</p>
+<p>But be careful, <strong><em>if the data members are pointers</em></strong>, you only have <strong><em>shallow copy</em></strong> 
+(look at the <a href="chap01-accessing-object.html#deep-copy-and-shallow-copy">deep copy and shallow copy</a>)!</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">/* a class */</span> 
+<span class="token keyword">class</span> <span class="token class-name">Circle</span><span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    <span class="token keyword">double</span> r_<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Circle</span><span class="token punctuation">(</span><span class="token keyword">double</span> r<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        r_ <span class="token operator">=</span> r<span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+    <span class="token keyword">int</span> <span class="token operator">*</span>x<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">/* to demonstrate the shallow copy since the pointer */</span> 
+Circle <span class="token function">modifyPointer</span><span class="token punctuation">(</span>Circle c1<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">/* Some changes to the parameters! */</span>
+    <span class="token operator">*</span>c1<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> c1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    Circle <span class="token function">c1</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    c1<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">;</span>
+    <span class="token operator">*</span>c1<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;c1.x = &quot;</span> <span class="token operator">&lt;&lt;</span> <span class="token operator">*</span>c1<span class="token punctuation">.</span>x <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+
+    Circle c3 <span class="token operator">=</span> <span class="token function">modifyPointer</span><span class="token punctuation">(</span>c1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;c1.x = &quot;</span> <span class="token operator">&lt;&lt;</span> <span class="token operator">*</span>c1<span class="token punctuation">.</span>x <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* Expected: 
+  c1.x = 0
+  c1.x = 100
+*/</span>
+</code></pre>
+<h3 id="copy-constructor">Copy Constructor</h3>
+<p>When <strong>a non-primitive variable</strong> is <strong>passed/returned by value</strong>, a copy must be made. As with a constructor, an <strong>automatic copy constructor</strong> is provided for you if you choose not to define one: </p>
+<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title" id="caution-copy-constructor"><i class="fa fa-exclamation-triangle"></i> Caution: Copy Constructor</h3></div><div class="panel-body"><p>All copy constructors will be triggered by <strong>pass-by-values</strong>.</p><p>All copy constructors will <strong>read in the passed parameters by reference</strong>. </p></div></div>
+<p>&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x88AB;&#x7ED5;&#x6655;&#xFF0C; <strong>&#x600E;&#x4E48; pass-by-values &#x91CC;&#x9762;&#x53C8;&#x6709; pass-by-reference &#x5462;</strong>&#xFF1F; &#x4F60;&#x770B;&#x770B; Custom Copy Constructor &#x5C31;&#x77E5;&#x9053;&#x600E;&#x4E48;&#x56DE;&#x4E8B;&#x4E86;&#x3002; </p>
+<p><strong>Automatic copy constructor</strong> (shallow copy)</p>
+<ul>
+<li><strong>Copy each member variable</strong> of object using copy constructor </li>
+<li>Allocate new memory </li>
+<li>As we dicussed in the last section, <strong>the automatic copy constructor is usually shallow copy</strong>. see <a href="#shallow-copy-in-pass-by-value">here</a>.  </li>
+</ul>
+<p><strong>Custom copy constructor (deep copy)</strong></p>
+<ul>
+<li>read in the source parameters by reference</li>
+<li>usually defined as <strong>deep copy</strong> on purpose.  </li>
+</ul>
+<p>If there is a class Tower, it takes value, pointer and reference </p>
+<p>The header file <code>Tower.h</code> looks like </p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">class</span> <span class="token class-name">Tower</span><span class="token punctuation">{</span>
+  <span class="token keyword">public</span><span class="token operator">:</span>
+      <span class="token comment">// a custom constructor</span>
+      <span class="token function">Tower</span><span class="token punctuation">(</span>Cube c<span class="token punctuation">,</span> Cube <span class="token operator">*</span>ptr<span class="token punctuation">,</span> <span class="token keyword">const</span> Cube <span class="token operator">&amp;</span>ref<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+      <span class="token comment">// a custom copy constructor</span>
+      <span class="token function">Tower</span><span class="token punctuation">(</span><span class="token keyword">const</span> Tower <span class="token operator">&amp;</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+  <span class="token keyword">private</span><span class="token operator">:</span>
+      Cube cube_<span class="token punctuation">;</span>
+      Cube <span class="token operator">*</span>ptr_<span class="token punctuation">;</span>
+      <span class="token keyword">const</span> Cube <span class="token operator">&amp;</span>ref<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>And <strong>copy constructor</strong> (pass-by-reference) looks like </p>
+<pre class="language-"><code class="lang-cpp"><span class="token class-name">Tower</span><span class="token operator">::</span><span class="token function">Tower</span><span class="token punctuation">(</span><span class="token keyword">const</span> Tower <span class="token operator">&amp;</span> other<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">// Deep copy cube_ (copy by value):</span>
+  cube_ <span class="token operator">=</span> other<span class="token punctuation">.</span>cube_<span class="token punctuation">;</span> 
+
+  <span class="token comment">// Deep copy ptr_ </span>
+  <span class="token comment">// the constructor will allocate new space and initialise every thing. and finally return an address</span>
+  ptr_ <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Cube</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">(</span>other<span class="token punctuation">.</span>ptr_<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+
+  <span class="token comment">// Deep copy ref_:</span>
+  <span class="token comment">/* NON-SENSE as reference needs an object to refer when it is initialized. 
+    you should not have reference in the data member.... 
+  */</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title" id="caution-never-use-reference-in-data-members"><i class="fa fa-exclamation-triangle"></i> Caution: Never Use Reference in Data Members</h3></div><div class="panel-body"><p>The above example may report errors. Because you have reference in the private member. <strong>But this is NOT recommended</strong>. </p></div></div>
+<h2 id="pass-by-pointer">Pass-By-Pointer</h2>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cmath&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&quot;Circle.hpp&quot;</span></span>
+
+Circle <span class="token function">joinCircle</span><span class="token punctuation">(</span>Circle <span class="token operator">*</span>c1<span class="token punctuation">,</span> Circle <span class="token operator">*</span>c2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">double</span> totalArea <span class="token operator">=</span> c1<span class="token operator">-&gt;</span><span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> c2<span class="token operator">-&gt;</span><span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">double</span> newR <span class="token operator">=</span> std<span class="token operator">::</span><span class="token function">pow</span><span class="token punctuation">(</span>totalArea<span class="token operator">/</span><span class="token number">3.14159</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token operator">/</span><span class="token number">2.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Circle <span class="token function">c3</span><span class="token punctuation">(</span>newR<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> c3<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Circle <span class="token operator">*</span>c1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Circle</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Circle <span class="token operator">*</span>c2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Circle</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    Circle c3 <span class="token operator">=</span> <span class="token function">joinCircle</span><span class="token punctuation">(</span>c1<span class="token punctuation">,</span> c2<span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="pass-by-reference">Pass-By-Reference</h2>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cmath&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&quot;Circle.hpp&quot;</span></span>
+
+Circle <span class="token function">joinCircle</span><span class="token punctuation">(</span>Circle <span class="token operator">&amp;</span> c1<span class="token punctuation">,</span> Circle <span class="token operator">&amp;</span> c2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">double</span> totalArea <span class="token operator">=</span> c1<span class="token punctuation">.</span><span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> c2<span class="token punctuation">.</span><span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">double</span> newR <span class="token operator">=</span> std<span class="token operator">::</span><span class="token function">pow</span><span class="token punctuation">(</span>totalArea<span class="token operator">/</span><span class="token number">3.14159</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token operator">/</span><span class="token number">2.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Circle <span class="token function">c3</span><span class="token punctuation">(</span>newR<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> c3<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Circle <span class="token operator">*</span>c1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Circle</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Circle <span class="token operator">*</span>c2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Circle</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    Circle c3 <span class="token operator">=</span> <span class="token function">joinCircle</span><span class="token punctuation">(</span><span class="token operator">*</span>c1<span class="token punctuation">,</span> <span class="token operator">*</span>c2<span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="reducing-side-effect-by-const">Reducing Side-Effect by Const</h1>
+<p>We all like <strong>pure</strong> things, especially the <strong>pure functions</strong> as it can <strong><em>reduce our brain memory load</em></strong>!  </p>
+<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info-pure-and-functional-programming"><i class="fa fa-info"></i> INFO: Pure and Functional Programming</h3></div><div class="panel-body"><p>This is a very important topic in programming language. Look at the functional programming and lambda calculus. </p></div></div>
+<p>In C++, the <strong>side-effect caused by a function</strong> can be reduced by using the <code>const</code> keyword. </p>
+<h2 id="pass-by-value-const">Pass-by-value-const</h2>
+<pre class="language-"><code class="lang-cpp">Cube <span class="token function">joinCubes</span><span class="token punctuation">(</span><span class="token keyword">const</span> Cube s1<span class="token punctuation">,</span> <span class="token keyword">const</span> Cube s2<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="pass-by-pointer-const">Pass-by-pointer-const</h2>
+<pre class="language-"><code class="lang-cpp">Cube <span class="token function">joinCubes</span><span class="token punctuation">(</span><span class="token keyword">const</span> Cube <span class="token operator">*</span>s1<span class="token punctuation">,</span> <span class="token keyword">const</span> Cube <span class="token operator">*</span>s2<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="pass-by-reference-const">Pass-by-reference-const</h2>
+<pre class="language-"><code class="lang-cpp">Cube <span class="token function">joinCubes</span><span class="token punctuation">(</span><span class="token keyword">const</span> Cube <span class="token operator">&amp;</span>s1<span class="token punctuation">,</span> <span class="token keyword">const</span> Cube <span class="token operator">&amp;</span>s2<span class="token punctuation">)</span>
+</code></pre>
+<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title" id="caution-google-c-style-guide-best-practice"><i class="fa fa-exclamation-triangle"></i> Caution: Google C++ Style Guide Best Practice</h3></div><div class="panel-body"><p>All parameters <strong>passed by reference</strong> must be labelled by <code>const</code>. </p></div></div>
+<h3 id="const-functions">Const Functions</h3>
+<p>If you want to promise a function should be pure, you can use <code>const</code> as part of <strong>member function&apos;s declaration</strong>. </p>
+<p>The header file <code>Cube.h</code> looks like </p>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">pragma</span> <span class="token expression">once</span></span>
+<span class="token keyword">namespace</span> cs225 <span class="token punctuation">{</span> 
+  <span class="token keyword">class</span> <span class="token class-name">Cube</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Cube</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">Cube</span><span class="token punctuation">(</span><span class="token keyword">double</span> length<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token keyword">double</span> <span class="token function">getVolume</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span><span class="token punctuation">;</span> 
+    <span class="token keyword">double</span> <span class="token function">getSurfaceArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span><span class="token punctuation">;</span> 
+  <span class="token keyword">private</span><span class="token operator">:</span>
+    <span class="token keyword">double</span> length_<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The implementation <code>Cube.cpp</code> looks like </p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">double</span> <span class="token class-name">Cube</span><span class="token operator">::</span><span class="token function">getVolume</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> length_ <span class="token operator">*</span> length_ <span class="token operator">*</span> length_<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+
+<span class="token keyword">double</span> <span class="token class-name">Cube</span><span class="token operator">::</span><span class="token function">getSurfaceArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token number">6</span> <span class="token operator">*</span> length_ <span class="token operator">*</span> length_<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="function-returns">Function Returns</h1>
+<p>Identical to passing into a function, we also have three choices on how memory is used when returning from a function:</p>
+<h2 id="return-by-value">Return by value</h2>
+<pre class="language-"><code class="lang-cpp">Cube <span class="token function">joinCubes</span><span class="token punctuation">(</span><span class="token keyword">const</span> Cube <span class="token operator">&amp;</span>s1<span class="token punctuation">,</span> <span class="token keyword">const</span> Cube <span class="token operator">&amp;</span>s2<span class="token punctuation">)</span>
+</code></pre>
+<ul>
+<li>create <strong>a new object</strong> with <strong>constructors</strong>.</li>
+<li>Slow compared to Return-by-reference</li>
+</ul>
+<h2 id="return-by-pointer">Return by pointer</h2>
+<pre class="language-"><code class="lang-cpp">Cube <span class="token operator">*</span><span class="token function">joinCubes</span><span class="token punctuation">(</span><span class="token keyword">const</span> Cube <span class="token operator">&amp;</span>s1<span class="token punctuation">,</span> <span class="token keyword">const</span> Cube <span class="token operator">&amp;</span>s2<span class="token punctuation">)</span>
+</code></pre>
+<ul>
+<li>Similar to return by value, but the address to the value.</li>
+</ul>
+<div class="panel panel-danger"><div class="panel-heading"><h3 class="panel-title" id="danger--stack-frame-is-unstable"><i class="fa fa-times-circle"></i> Danger:  Stack Frame is Unstable</h3></div><div class="panel-body"><p>never return a reference to a <strong>local variable</strong> within a function (<strong>stack memory</strong>!)</p></div></div>
+<h2 id="return-by-reference">Return by reference</h2>
+<p>&#x7528;&#x6CD5;</p>
+<ul>
+<li>return a reference to <code>*this</code> object </li>
+<li>want to <strong>change the content that is protected a data structure</strong> (see in the linked list)</li>
+<li>faster (without calling constructor)</li>
+</ul>
+<pre class="language-"><code class="lang-cpp">Cube <span class="token operator">&amp;</span><span class="token function">joinCubes</span><span class="token punctuation">(</span><span class="token keyword">const</span> Cube <span class="token operator">&amp;</span>s1<span class="token punctuation">,</span> <span class="token keyword">const</span> Cube <span class="token operator">&amp;</span>s2<span class="token punctuation">)</span>
+</code></pre>
+<div class="panel panel-danger"><div class="panel-heading"><h3 class="panel-title" id="danger--stack-frame-is-unstable"><i class="fa fa-times-circle"></i> Danger:  Stack Frame is Unstable</h3></div><div class="panel-body"><p>never return a reference to a <strong>local variable</strong> within a function (<strong>stack memory</strong>!)</p></div></div>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chap03-functions.html" class="navigation navigation-prev " aria-label="Previous page: Functions">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chap04-class-introduction.html" class="navigation navigation-next " aria-label="Next page: Class Introduction">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Functions and Calls","level":"2.3","depth":1,"next":{"title":"Class Introduction","level":"3.1","depth":1,"path":"chap04-class-introduction.md","ref":"./chap04-class-introduction.md","articles":[]},"previous":{"title":"Functions","level":"2.2","depth":1,"path":"chap03-functions.md","ref":"./chap03-functions.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex-m","-highlight","prism","prism-themes","bibtex-indexed-cite","video","page-toc","callouts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"callouts":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex-m":{},"fontsettings":{"theme":"white","family":"sans","size":2},"bibtex-indexed-cite":{"path":"/"},"prism-themes":{},"video":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"Randoruf","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"bibCount":0,"variables":{},"title":"Gitbook基础","bib":[{"citationKey":"KUFFNER2000RRT","entryType":"INPROCEEDINGS","entryTags":{"TITLE":"RRT-connect: An efficient approach to single-query path planning","AUTHOR":"Kuffner, James J and LaValle, Steven M","BOOKTITLE":"Proceedings 2000 ICRA. Millennium Conference. IEEE International Conference on Robotics and Automation. Symposia Proceedings (Cat. No. 00CH37065)","VOLUME":"2","PAGES":"995--1001","YEAR":"2000","ORGANIZATION":"IEEE"}}],"gitbook":"*"},"file":{"path":"chap03-functions-calls-return.md","mtime":"2021-02-03T23:33:41.703Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-06T02:37:05.867Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

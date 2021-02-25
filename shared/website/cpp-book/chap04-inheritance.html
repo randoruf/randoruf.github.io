@@ -1,0 +1,915 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Inheritance · Gitbook基础</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Randoruf">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex-m/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-bibtex-indexed-cite/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-callouts/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chap04-overloading.html" />
+    
+    
+    <link rel="prev" href="chap04-class-introduction.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="chap01-c-crash-course.html">
+            
+                <a href="chap01-c-crash-course.html">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    C Crash Course
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    C++程序设计基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chap01-data-type-grammar.html">
+            
+                <a href="chap01-data-type-grammar.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    Data types and C++ Syntax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chap01-const.html">
+            
+                <a href="chap01-const.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    Const keyword
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chap01-accessing-object.html">
+            
+                <a href="chap01-accessing-object.html">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    Object and Memory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="chap01-static.html">
+            
+                <a href="chap01-static.html">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    Static keyword
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Funtions</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="chap02-statement.html">
+            
+                <a href="chap02-statement.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Statement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chap03-functions.html">
+            
+                <a href="chap03-functions.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="chap03-functions-calls-return.html">
+            
+                <a href="chap03-functions-calls-return.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    Functions and Calls
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Class</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="chap04-class-introduction.html">
+            
+                <a href="chap04-class-introduction.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Class Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2" data-path="chap04-inheritance.html">
+            
+                <a href="chap04-inheritance.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="chap04-overloading.html">
+            
+                <a href="chap04-overloading.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    Overloading
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Expression</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="chap05-expression.html">
+            
+                <a href="chap05-expression.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Expression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="chap05-rvalue-lvalue-move.html">
+            
+                <a href="chap05-rvalue-lvalue-move.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    Rvalue and Lvalue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="chap05-precedence-associativity.html">
+            
+                <a href="chap05-precedence-associativity.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    Precedence Associativity
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Array and Container(aka. Abstract Data Structure)</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="chap06-array.html">
+            
+                <a href="chap06-array.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="chap06-container.html">
+            
+                <a href="chap06-container.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="chap06-container-vector.html">
+            
+                <a href="chap06-container-vector.html">
+            
+                    
+                        <b>5.3.</b>
+                    
+                    Vector
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="chap06-string.html">
+            
+                <a href="chap06-string.html">
+            
+                    
+                        <b>5.4.</b>
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="chap07-template-introduction.html">
+            
+                <a href="chap07-template-introduction.html">
+            
+                    
+                        <b>5.5.</b>
+                    
+                    Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Inheritance</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="inheritance">Inheritance</h1>
+<p>In nearly all object-oriented languages (including C++), classes can be extended to build other classes. We call the class being extended the <strong>base class</strong> and the class inheriting the functionality the <strong>derived class</strong>.</p>
+<ul>
+<li>base class</li>
+<li>derived class</li>
+</ul>
+<h2 id="example-1--single-inheritance">Example 1 : Single Inheritance</h2>
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="hint-do-we-really-need-multiple-inheritance"><i class="fa fa-lightbulb-o"></i> Hint: Do we really need multiple inheritance?</h3></div><div class="panel-body"><p><strong>No</strong>. See <a href="https://isocpp.org/wiki/faq/multiple-inheritance#mi-needed" target="_blank">https://isocpp.org/wiki/faq/multiple-inheritance#mi-needed</a></p></div></div>
+<p><a href="https://docs.microsoft.com/en-us/cpp/cpp/single-inheritance" target="_blank">https://docs.microsoft.com/en-us/cpp/cpp/single-inheritance</a></p>
+<p>The PrintedDocument -&gt; Book -&gt; Paperbackbook , and the class diagram (arrow shows the <strong>parent</strong>).</p>
+<p><img src="2020-12-20-16-21-57.png" alt=""></p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">// deriv_SingleInheritance.cpp</span>
+<span class="token comment">// compile with: /LD</span>
+<span class="token keyword">class</span> <span class="token class-name">PrintedDocument</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Book is derived from PrintedDocument.</span>
+<span class="token keyword">class</span> <span class="token class-name">Book</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">PrintedDocument</span></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// PaperbackBook is derived from Book.</span>
+<span class="token keyword">class</span> <span class="token class-name">PaperbackBook</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">Book</span></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>A parent can have multiple children. It looks like </p>
+<p><img src="2020-12-20-16-24-42.png" alt=""></p>
+<p>But <strong>a child can only have single parent (single inheritance)</strong>. </p>
+<h2 id="example-2--order-of-constructor-destructor-call-in-c">Example 2 : Order of Constructor/ Destructor Call in C++</h2>
+<p><a href="https://www.geeksforgeeks.org/order-constructor-destructor-call-c/" target="_blank">https://www.geeksforgeeks.org/order-constructor-destructor-call-c/</a></p>
+<p>In C++, both the <strong>parent and chlid classes</strong> are initialized.</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">// base class</span>
+<span class="token keyword">class</span> <span class="token class-name">Parent</span><span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;Inside base class&quot;</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// derived class</span>
+<span class="token keyword">class</span> <span class="token class-name">Child</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">Parent</span></span><span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Child</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;Inside sub class&quot;</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Child obj<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The expected results are </p>
+<p><img src="2020-12-20-17-25-39.png" alt=""></p>
+<h2 id="example-3--public-access-specifier-in-inheritance">Example 3 : Public Access Specifier in Inheritance</h2>
+<p>If the base class <code>Line.h</code> is </p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">class</span> <span class="token class-name">Line</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span><span class="token operator">:</span>
+        <span class="token function">Line</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// default constructor </span>
+        <span class="token function">Line</span><span class="token punctuation">(</span><span class="token keyword">double</span> length<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token keyword">double</span> <span class="token function">getLength</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span><span class="token operator">:</span>
+        <span class="token keyword">double</span> length_<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>The derivated clas <code>Square.h</code> is </p>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&quot;Line.h&quot;</span></span>
+<span class="token keyword">class</span> <span class="token class-name">Square</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">Line</span></span> <span class="token punctuation">{</span> 
+    <span class="token keyword">public</span><span class="token operator">:</span>
+        <span class="token keyword">double</span> <span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span><span class="token punctuation">;</span>
+        <span class="token comment">// all public members of `Line`! (but think carefully to constructors). </span>
+        <span class="token comment">// If you don&apos;t explcitly declare the constructor, </span>
+        <span class="token comment">// the compiler will use the default constructor in Line (but because `Line(double length)` is not a default constructor, it would not appear here). </span>
+    <span class="token keyword">private</span><span class="token operator">:</span>
+        <span class="token comment">// Nothing!</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>In the above code, <code>Square</code> is derived from the base class <code>Line</code>. </p>
+<p>For a <strong>derived class</strong>, </p>
+<ul>
+<li><strong>Public members</strong> of the base class <ul>
+<li>Avaliable to <strong>both Base and Derived classes</strong>. </li>
+</ul>
+</li>
+<li><strong>Private Members</strong> of the <ul>
+<li>Avaliable to <strong>Base class</strong> not Derived class.</li>
+</ul>
+</li>
+<li><strong><em>Why the inheritance produces an object but using two classes?</em></strong><ul>
+<li>Look at Example 2 : Order of Constructor/ Destructor Call in C++</li>
+</ul>
+</li>
+</ul>
+<h2 id="example-4--which-private-member-">Example 4 : Which Private Member ?</h2>
+<p>&#x5047;&#x5982; <strong>Base &#x548C; Derived Classes &#x90FD;&#x6709;&#x76F8;&#x540C;&#x7684; private member</strong>, 
+compiler <strong><em>&#x53EA;&#x4F1A;&#x521D;&#x59CB;&#x5316; Base Class &#x7684; private member</em></strong>. </p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">// base class</span>
+<span class="token keyword">class</span> <span class="token class-name">Parent</span><span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token comment">// default constructor</span>
+    <span class="token function">Parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;Inside base class&quot;</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">void</span> <span class="token function">printName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot; - My name is &quot;</span> <span class="token operator">&lt;&lt;</span> name_ <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token keyword">private</span><span class="token operator">:</span>
+    std<span class="token operator">::</span>string name_ <span class="token operator">=</span> <span class="token string">&quot;Yuki Amamiya&quot;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// derived class</span>
+<span class="token keyword">class</span> <span class="token class-name">Child</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">Parent</span></span><span class="token punctuation">{</span>
+    <span class="token function">Child</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;Inside derived class&quot;</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    std<span class="token operator">::</span>string name_ <span class="token operator">=</span> <span class="token string">&quot;Hitomi Amamiya&quot;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Child obj<span class="token punctuation">;</span>
+    obj<span class="token punctuation">.</span><span class="token function">printName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><img src="2020-12-20-17-39-17.png" alt=""></p>
+<p>&#x53EF;&#x89C1;&#x53EA;&#x6709; Parent &#x7684; private member &#x88AB;&#x521D;&#x59CB;&#x5316;&#x4E86;&#x3002;</p>
+<h1 id="polymorphism">Polymorphism</h1>
+<p>Object-Orientated Programming (OOP) concept that <strong>a single object may take on the type of any of its base types</strong>.</p>
+<p>&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x884C;&#x4E3A;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x50CF;&#x5B83;&#x7684; Base type. </p>
+<h2 id="polymorphism-&#x7684;&#x597D;&#x5904;&#xFF1F;">Polymorphism &#x7684;&#x597D;&#x5904;&#xFF1F;</h2>
+<p>Why Polymorphism? Suppose you&#x2019;re managing an animal shelter that adopts cats, dogs and pigs:</p>
+<p>The <code>animalShelter.cpp</code> without inheritance and polymorphism.</p>
+<pre class="language-"><code class="lang-cpp">Cat <span class="token operator">&amp;</span> <span class="token class-name">AnimalShelter</span><span class="token operator">::</span><span class="token function">adopt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">}</span> 
+Dog <span class="token operator">&amp;</span> <span class="token class-name">AnimalShelter</span><span class="token operator">::</span><span class="token function">adopt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">}</span> 
+Pig <span class="token operator">&amp;</span> <span class="token class-name">AnimalShelter</span><span class="token operator">::</span><span class="token function">adopt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">}</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<p>With Polymorphism, say </p>
+<blockquote>
+<p>A <code>Cat</code> may polymorph itself to a <code>Animal</code>. </p>
+</blockquote>
+<p>You then only need to write a very simple function <code>animalShelter.cpp</code>.</p>
+<pre class="language-"><code class="lang-cpp">Animal <span class="token operator">&amp;</span> <span class="token class-name">AnimalShelter</span><span class="token operator">::</span><span class="token function">adopt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">}</span>
+</code></pre>
+<h2 id="virtual">Virtual</h2>
+<p>Virtual &#x7684;&#x4F7F;&#x7528;&#x8981;&#x9075;&#x5FAA;&#x4E00;&#x4E0B;&#x89C4;&#x5219;&#x3002;
+&#x539F;&#x56E0;&#x89C1; <a href="https://randoruf.github.io/2020/12/21/cpp-virtual-function.html" target="_blank">https://randoruf.github.io/2020/12/21/cpp-virtual-function.html</a></p>
+<ul>
+<li>&#x89C4;&#x5219;1 &#xFF1A; <strong>private function &#x4E0D;&#x80FD;&#x4F7F;&#x7528; virtual</strong> &#x3002;&#x9632;&#x6B62; private function &#x7684;&#x6307;&#x9488;&#x88AB;&#x4FDD;&#x5B58;&#x5230; V-table &#x4E2D;&#xFF08;&#x8FD9;&#x662F;&#x5371;&#x9669;&#x7684;&#x884C;&#x4E3A;&#xFF09;</li>
+</ul>
+<p>The virtual keyword allows us to <strong>override the behavior of a
+class by its derived type</strong>. It is very useful when it comes to <strong>Polymorphism</strong>. </p>
+<p>Watch <a href="https://www.youtube.com/watch?v=oIV2KchSyGQ" target="_blank">https://www.youtube.com/watch?v=oIV2KchSyGQ</a>. </p>
+<p>The following case is incorrect if you want to apply <strong>the concept of polymorphism</strong>...</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">class</span> <span class="token class-name">Entity</span><span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    std<span class="token operator">::</span>string <span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;Entity&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Player</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">Entity</span></span><span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    std<span class="token operator">::</span>string name_<span class="token punctuation">;</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Player</span><span class="token punctuation">(</span><span class="token keyword">const</span> std<span class="token operator">::</span>string <span class="token operator">&amp;</span>name<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        name_ <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    std<span class="token operator">::</span>string <span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name_<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>If you want to apply <strong>the concept of polymorphism</strong>...</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">/* 
+    This function should work for objects generated by Entity or Player.
+*/</span>
+<span class="token keyword">void</span> <span class="token function">printName</span><span class="token punctuation">(</span>Entity<span class="token operator">*</span> entity<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> entity<span class="token operator">-&gt;</span><span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// print &quot;Entity&quot;?</span>
+    Entity <span class="token operator">*</span>e <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Entity</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printName</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// print &quot;Yuki sama&quot;?</span>
+    Player <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Player</span><span class="token punctuation">(</span><span class="token string">&quot;Yuki sama&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printName</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>However, the actual resutl!</p>
+<p><img src="2020-12-20-18-03-42.png" alt=""></p>
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="hint-we-have-two-implementations-of-the-method-getname"><i class="fa fa-lightbulb-o"></i> Hint: We have two implementations of the method GetName()</h3></div><div class="panel-body"><p>We have two implementations of the method <code>GetName()</code>. Which to choose?
+Well, <strong>C++ will simply call the method belongs to that type</strong>. </p><p>&#x8FD9;&#x5C31;&#x975E;&#x5E38;&#x7C7B;&#x4F3C;&#x4E8E;&#x6211;&#x4EEC;&#x76F4;&#x63A5;<strong>&#x58F0;&#x660E;&#x4E86;&#x4E24;&#x4E2A;&#x72EC;&#x7ACB;&#x7684; class</strong>, &#x672C;&#x8EAB;&#x8DDF; Inheritance &#x6CA1;&#x6709;&#x592A;&#x591A;&#x5173;&#x7CFB;&#x3002; &#x53EA;&#x4F1A;&#x8C03;&#x7528; <strong>&#x5F53;&#x524D;type</strong> &#x91CC;&#x9762;&#x7684; member-function. &#x4F8B;&#x5982;&#x6B64;&#x5904;&#x53EA;&#x8C03;&#x7528;&#x4E86; Entity &#x7684;&#x65B9;&#x6CD5;&#x3002;</p></div></div>
+<h3 id="exampel-0--virtual-function">Exampel 0 : Virtual Function</h3>
+<p>How to fix it? - <strong>Virtual Function!</strong>
+Vritual function has a virtual table, so it is called virtual function.
+&#x8BB0;&#x5F97;&#x8981;&#x540C;&#x65F6;&#x52A0;&#x4E0A; <code>virtual</code> &#x548C; <code>override</code> &#x3002; </p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">class</span> <span class="token class-name">Entity</span><span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">virtual</span> std<span class="token operator">::</span>string <span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;Entity&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Player</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">Entity</span></span><span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    std<span class="token operator">::</span>string name_<span class="token punctuation">;</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Player</span><span class="token punctuation">(</span><span class="token keyword">const</span> std<span class="token operator">::</span>string <span class="token operator">&amp;</span>name<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        name_ <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    std<span class="token operator">::</span>string <span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> override <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name_<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="example-1&#xFF1A;-polymorphism-and-pointer-virtual-function">Example 1&#xFF1A; Polymorphism and Pointer (virtual function)</h3>
+<p>The main function looks like </p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">/* 
+    This function should work for objects generated by Entity or Player.
+*/</span>
+<span class="token keyword">void</span> <span class="token function">printName</span><span class="token punctuation">(</span>Entity<span class="token operator">*</span> entity<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> entity<span class="token operator">-&gt;</span><span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// print &quot;Entity&quot;?</span>
+    Entity <span class="token operator">*</span>e <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Entity</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printName</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// print &quot;Yuki sama&quot;?</span>
+    Player <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Player</span><span class="token punctuation">(</span><span class="token string">&quot;Yuki sama&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printName</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="example-2--polymorphism-and-reference-virtual-function">Example 2 : Polymorphism and Reference (virtual function)</h3>
+<p>The main function looks like </p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">void</span> <span class="token function">printName</span><span class="token punctuation">(</span><span class="token keyword">const</span> Entity <span class="token operator">&amp;</span>entity<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> entity<span class="token punctuation">.</span><span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Player p <span class="token operator">=</span> <span class="token function">Player</span><span class="token punctuation">(</span><span class="token string">&quot;Yuki sama&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Entity <span class="token operator">&amp;</span>e <span class="token operator">=</span> p<span class="token punctuation">;</span>
+    <span class="token function">printName</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// printName only allow Entity class. </span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="example-3--destructor">Example 3 : Destructor</h3>
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="hint--destructor-with-virtual"><i class="fa fa-lightbulb-o"></i> Hint:  Destructor with virtual</h3></div><div class="panel-body"><p><strong><em>In any base class, the destructor must be virtual.</em></strong></p></div></div>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">class</span> <span class="token class-name">Cube</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token operator">~</span><span class="token function">Cube</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;~Cube()&quot;</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">RubikCube</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">Cube</span></span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token operator">~</span><span class="token function">RubikCube</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;~RubikCube&quot;</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    Cube <span class="token operator">*</span>ptr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">RubikCube</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">delete</span> ptr<span class="token punctuation">;</span> 
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><img src="2020-12-23-10-55-38.png" alt=""></p>
+<p>How to fix it?</p>
+<h3 id="example-4--multi-layer-inheritence">Example 4 : Multi-layer Inheritence</h3>
+<p>The <strong>V-table</strong> will store <strong>the lowest function implementation</strong>. 
+The following <code>Dog.speak()</code> implementation is <strong>useless</strong>. </p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">class</span> <span class="token class-name">Animal</span><span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">virtual</span> std<span class="token operator">::</span>string <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">Animal</span></span><span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    std<span class="token operator">::</span>string <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> override <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token string">&quot;Dog&quot;</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Husky</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">Dog</span></span><span class="token punctuation">{</span>
+    std<span class="token operator">::</span>string <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> override <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token string">&quot;Dog-Husky&quot;</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">GoldenRetriever</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">Dog</span></span><span class="token punctuation">{</span>
+    std<span class="token operator">::</span>string <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> override <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token string">&quot;Dog-GoldenRetriever&quot;</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    GoldenRetriever g <span class="token operator">=</span> <span class="token function">GoldenRetriever</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Animal <span class="token operator">&amp;</span>a <span class="token operator">=</span> g<span class="token punctuation">;</span>
+    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> a<span class="token punctuation">.</span><span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="abstract-class">Abstract Class</h2>
+<p>The abstract class is implenmented by <strong>pure virtual methods</strong>.</p>
+<ul>
+<li>Requirement <ul>
+<li>contain at least one pure virtual function </li>
+</ul>
+</li>
+<li>Syntax <ul>
+<li>without implementation (is different from Java)</li>
+<li>the function pointer is equal to <code>0</code></li>
+</ul>
+</li>
+<li>As a result <ul>
+<li><strong>Can NOT instantiate the base class</strong>.  </li>
+<li><img src="2020-12-23-10-12-28.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h3 id="example-1--pure-virtual-methods">Example 1 : Pure Virtual Methods</h3>
+<p>A pure virtual method does not have a definition and makes the class and <strong>abstract class</strong>.</p>
+<p><strong>A pure virtual function is declared by assigning 0 in declaration.</strong></p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">class</span> <span class="token class-name">Entity</span><span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">virtual</span> std<span class="token operator">::</span>string <span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Now it is less confusing compared to Example 0.<br>Because you need to implement all methods in the derived types. 
+(The base type is <strong>an abstract class has only names of functions</strong>...)</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chap04-class-introduction.html" class="navigation navigation-prev " aria-label="Previous page: Class Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chap04-overloading.html" class="navigation navigation-next " aria-label="Next page: Overloading">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Inheritance","level":"3.2","depth":1,"next":{"title":"Overloading","level":"3.3","depth":1,"path":"chap04-overloading.md","ref":"./chap04-overloading.md","articles":[]},"previous":{"title":"Class Introduction","level":"3.1","depth":1,"path":"chap04-class-introduction.md","ref":"./chap04-class-introduction.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex-m","-highlight","prism","prism-themes","bibtex-indexed-cite","video","page-toc","callouts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"callouts":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex-m":{},"fontsettings":{"theme":"white","family":"sans","size":2},"bibtex-indexed-cite":{"path":"/"},"prism-themes":{},"video":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"Randoruf","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"bibCount":0,"variables":{},"title":"Gitbook基础","bib":[{"citationKey":"KUFFNER2000RRT","entryType":"INPROCEEDINGS","entryTags":{"TITLE":"RRT-connect: An efficient approach to single-query path planning","AUTHOR":"Kuffner, James J and LaValle, Steven M","BOOKTITLE":"Proceedings 2000 ICRA. Millennium Conference. IEEE International Conference on Robotics and Automation. Symposia Proceedings (Cat. No. 00CH37065)","VOLUME":"2","PAGES":"995--1001","YEAR":"2000","ORGANIZATION":"IEEE"}}],"gitbook":"*"},"file":{"path":"chap04-inheritance.md","mtime":"2021-02-03T23:33:41.707Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-06T02:37:05.867Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

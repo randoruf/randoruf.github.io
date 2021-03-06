@@ -1,8 +1,10 @@
 # Haohua Li
 
-Email: [masswie@yahoo.com](mailto:masswie@yahoo.com) 
+Email: <masswie22@gmail.com>
 
 Github: <https://github.com/randoruf> 
+
+Personal Website: <https://ran.moe/>
 
 ---
 
@@ -30,18 +32,6 @@ Github: <https://github.com/randoruf>
 
 ---
 
-## Commercial Software
-
-None 
-
----
-
-## Refereed Publication
-
-None 
-
----
-
 ## Projects
 
 | CSSR-Matlab                                                  |
@@ -49,12 +39,6 @@ None
 | Proting CSSR into Matlab. CSSR is an algorithm proposed by Cosma Shalizi, which infers the minimum hidden Markov model from an input sequence. |
 
 [Details](https://ran.moe/projects/)
-
----
-
-## Open Source Community Contribution 
-
-None 
 
 ---
 
@@ -91,14 +75,6 @@ Matlab
 Java
 
 Assembly Languages 
-
-
-
-Chinese (Cantonese, Mandarin)
-
-English (IELTS 6.5)
-
-Japanese (Introductory level)
 
 
 

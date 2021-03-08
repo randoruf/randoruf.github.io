@@ -28,6 +28,8 @@ OI 算法大全 https://oi-wiki.org/
 
 词汇，发音，语法
 
+**单词表** https://dictionary.cambridge.org/zhs/plus/wordlist
+
 **英语** (dictionary, thesaurus, grammar, pronouciation)  <https://www.collinsdictionary.com/>
 
 **英语/中文** (辞书、词库、语法) <https://www.collinsdictionary.com/zh/>

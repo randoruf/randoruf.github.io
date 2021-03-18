@@ -49,7 +49,7 @@ For the `Library Search Paths` use `$(HOME)/boost_1_57_0/lib`
 
 ### Include and Library for Target
 
-某些特立独行的 Library 喜欢用动态库 `dylib` , 要注意到这是二进制文件。在 Porject 的 Building Setting 并不能成功 Linking 这些二进制库。 
+某些特立独行的 Library 喜欢用动态库 `dylib` , 要注意到这是二进制文件。在 Porject 的 Building Setting 并不能成功 Linking 这些二进制库。 (就是说你 ， **ompl** 和 **boost**)
 
 最常见的错误就是 **Linking Error**  ( 提示都是什么 ***symbol is undefined)***.
 
@@ -62,3 +62,15 @@ For the `Library Search Paths` use `$(HOME)/boost_1_57_0/lib`
 (添加时你可能需要查看隐藏文件， 即 `command` + `Shift` + `.` )
 
 ![image-20210318113023449](/shared/imgs/image-20210318113023449.png)
+
+
+
+下面给你看一看 boost 缺少 `dylib` 的常见状态：
+
+![image-20210318113917505](/shared/imgs/image-20210318113917505.png)
+
+千万别惊慌，这其实是 Linking 文件。适当配置即可解决。
+
+方法就是添加 Boost 的动态库到 ***Linking Binary with Libraries*** 里面 (一个一个加真麻烦)
+
+![image-20210318114129117](/shared/imgs/image-20210318114129117.png)

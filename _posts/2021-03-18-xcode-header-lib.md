@@ -47,6 +47,16 @@ For the `Library Search Paths` use `$(HOME)/boost_1_57_0/lib`
 
 
 
+### Include and Library in the subdirectory 
+
+还有一个常见的设置就是在 `Header Search Paths` 和 `Library Search Paths` 加上 `$(PROJECT_DIR)` 并选中 'recursive' 。
+
+这样在子目录的代码文件都被加入。
+
+![image-20210318121408522](/shared/imgs/image-20210318121408522.png)
+
+
+
 ### Include and Library for Target
 
 某些特立独行的 Library 喜欢用动态库 `dylib` , 要注意到这是二进制文件。在 Porject 的 Building Setting 并不能成功 Linking 这些二进制库。 (就是说你 ， **ompl** 和 **boost**)
@@ -74,3 +84,4 @@ For the `Library Search Paths` use `$(HOME)/boost_1_57_0/lib`
 方法就是添加 Boost 的动态库到 ***Linking Binary with Libraries*** 里面 (一个一个加真麻烦)
 
 ![image-20210318114129117](/shared/imgs/image-20210318114129117.png)
+

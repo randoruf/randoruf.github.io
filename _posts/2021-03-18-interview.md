@@ -6,5 +6,5 @@ date: 2021-03-18T00:20:00Z
 
 
 
-<sricpt>window.location.href = "https://randoruf.blogspot.com/2021/03/2021318.html";</script>
+<script>window.location.href = "https://randoruf.blogspot.com/2021/03/2021318.html";</script>
 

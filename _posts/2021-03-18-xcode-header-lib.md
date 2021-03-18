@@ -21,18 +21,27 @@ mac:~ woz$ brew install boost
 mac:~ woz$
 ```
 
-Create symlink in your homedir
+然后查询这些库都被 brew 装到哪里了？
 
-```c
-mac:~ woz$ cd
-mac:~ woz$ ln -s /usr/local/Cellar/boost/1.57.0 boost_1_57_0
-mac:~ woz$ 
+```
+brew --prefix boost
 ```
 
-Inside Xcode refer to the just created symlink like this
+显示 `/usr/local/opt/boost` 
+
+可以打开以后把路径复制。然后点击蓝色的 Project 图标， 打开设置。
+
+<img src="/shared/imgs/image-20210318110141537.png" alt="image-20210318110141537" style="zoom: 50%;" />
+
+然后搜索 Header search path 和 Library search path 即可。把路径加入到设置中。
+
+<img src="/shared/imgs/image-20210318110231597.png" alt="image-20210318110231597" style="zoom:50%;" />
 
 ![image-20210318105225694](/shared/imgs/image-20210318105225694.png)
 
 For the `Header Search Paths` use `$(HOME)/boost_1_57_0/include`
 
 For the `Library Search Paths` use `$(HOME)/boost_1_57_0/lib`
+
+
+

@@ -6,6 +6,8 @@ date: 2021-03-18T00:20:00Z
 
 
 
+### Include and Library for Project 
+
 [Include boost in xcode - Stack Overflow](https://stackoverflow.com/questions/10141983/include-boost-in-xcode/32673824#32673824)
 
 I followed henrikstroem's great post, like this:
@@ -45,3 +47,18 @@ For the `Library Search Paths` use `$(HOME)/boost_1_57_0/lib`
 
 
 
+### Include and Library for Target
+
+某些特立独行的 Library 喜欢用动态库 `dylib` , 要注意到这是二进制文件。在 Porject 的 Building Setting 并不能成功 Linking 这些二进制库。 
+
+最常见的错误就是 **Linking Error**  ( 提示都是什么 ***symbol is undefined)***.
+
+这时候就需要点 Target 
+
+<img src="/shared/imgs/image-20210318112926298.png" alt="image-20210318112926298" style="zoom: 67%;" /> 	
+
+右边可以看到 **Building Phase** , 在 ***Linking Binary with Libraries*** 就可以添加动态库了
+
+(添加时你可能需要查看隐藏文件， 即 `command` + `Shift` + `.` )
+
+![image-20210318113023449](/shared/imgs/image-20210318113023449.png)

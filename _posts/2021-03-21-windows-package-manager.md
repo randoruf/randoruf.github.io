@@ -20,3 +20,6 @@ date: 2021-03-21T00:20:0Z
 
 在 powershell 之类的安装就可以了。完成后 Visual Studio 可以直接 `#include` 
 
+vcpkg需要用到 Visual Studio 来 Build 下载的库，所以记得先装好 Visual Studio ， 这样才能有指定的 Building Toolset. 
+
+(如果还是没有就直接 `x64 Native Tool Command Prompt`)

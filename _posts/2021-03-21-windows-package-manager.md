@@ -16,10 +16,7 @@ date: 2021-03-21T00:20:0Z
 
 如果你想安装 C++ 库也很方便。
 
-**vcpkg** 可以把 include 和 lib 统统安装好， 并让 Visual Studio 自动找到。
+**vcpkg** (记得在默认的 powershell 运行, 不要运行任何 Build Tool Prompt) 可以把 include 和 lib 统统安装好， 并让 Visual Studio 自动找到。
 
-在 powershell 之类的安装就可以了。完成后 Visual Studio 可以直接 `#include` 
 
-vcpkg需要用到 Visual Studio 来 Build 下载的库，所以记得先装好 Visual Studio ， 这样才能有指定的 Building Toolset. 
 
-(如果还是没有就直接 `x64 Native Tool Command Prompt`)

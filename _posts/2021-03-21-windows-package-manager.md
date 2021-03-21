@@ -18,4 +18,5 @@ date: 2021-03-21T00:20:0Z
 
 **vcpkg** 可以把 include 和 lib 统统安装好， 并让 Visual Studio 自动找到。
 
-下次你直接 include 就可以了。所以你可以很方便地安装 **OMPL**, **openCV**, Eigen, boost 等等的奇怪东西。 
+在 powershell 之类的安装就可以了。完成后 Visual Studio 可以直接 `#include` 
+

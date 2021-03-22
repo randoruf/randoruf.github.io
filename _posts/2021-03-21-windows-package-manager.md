@@ -22,7 +22,43 @@ vcpkg integrate install
 
 **vcpkg** (记得在**纯净的 powershell** 运行, 不要运行任何 x64 Native Build Tool Prompt 之类的 wrapper 命令行) 
 
-可以把 include 和 lib 统统安装好， 并让 Visual Studio 自动找到。
+以后想装什么新的 library , 可以直接 
 
-[Setup SDL2 with VS2019 and vcpkg - DEV Community](https://dev.to/taowyoo/setup-sdl2-with-vs2019-and-vcpkg-32eg)
+```
+vcpkg search <pkg_name>
+```
 
+例如我想装 sdl2 和 ompl 
+
+有一项结果就是 
+
+```
+ompl                 1.5.0#1          The Open Motion Planning Library, consists of many state-of-the-art sampling-b...
+ompl[app]                             Add support for reading meshes and performing collision checking
+```
+
+还有 sdl2 
+
+```
+sdl2                 2.0.12#5         Simple DirectMedia Layer is a cross-platform development library designed to p...
+sdl2[vulkan]                          Vulkan functionality for SDL
+sdl2-gfx             1.0.4-6          Graphics primitives (line, circle, rectangle etc.) with AA support, rotozoomer...
+sdl2-image           2.0.5            SDL_image is an image file loading library. It loads images as SDL surfaces an...
+sdl2-image[libjpeg-turbo]             Support for JPEG image format
+sdl2-image[libwebp]                   Support for WEBP image format.
+sdl2-image[tiff]                      Support for TIFF image format
+sdl2-mixer           2.0.4#10         Multi-channel audio mixer library for SDL.
+sdl2-mixer[dynamic-load]              Load plugins with dynamic call
+sdl2-mixer[libflac]                   Support for FLAC audio format.
+sdl2-mixer[libmodplug]                Support for MOD audio format.
+sdl2-mixer[libvorbis]                 Support for OGG Vorbis audio format.
+sdl2-mixer[mpg123]                    Support for MP3 audio format.
+sdl2-mixer[nativemidi]                Support for MIDI audio format on Windows and macOS.
+sdl2-mixer[opusfile]                  Support for Opus audio format.
+sdl2-net             2.0.1-8          Networking library for SDL
+sdl2-ttf             2.0.15-3         A library for rendering TrueType fonts with SDL
+```
+
+当然装你需要的就可以了。
+
+[Install SDL2 on Windows 10 with Visual Studio 2017 (sdl2-image, sdl2-mixer, sdl2-net, sdl2-ttf) - YouTube](https://www.youtube.com/watch?v=MTIUfkkbxSE)

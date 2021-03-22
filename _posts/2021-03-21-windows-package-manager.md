@@ -14,9 +14,15 @@ date: 2021-03-21T00:20:0Z
 
 
 
-如果你想安装 C++ 库也很方便。
+如果你想安装 C++ 库也很方便。首先安装好 **vcpkg**, 把 vcpkg 加入到 system path 。然后让他连接 Visual Studio (先安装 Visual Studio).s
 
-**vcpkg** (记得在默认的 powershell 运行, 不要运行任何 Build Tool Prompt) 可以把 include 和 lib 统统安装好， 并让 Visual Studio 自动找到。
+```bash
+vcpkg integrate install
+```
 
+**vcpkg** (记得在**纯净的 powershell** 运行, 不要运行任何 x64 Native Build Tool Prompt 之类的 wrapper 命令行) 
 
+可以把 include 和 lib 统统安装好， 并让 Visual Studio 自动找到。
+
+[Setup SDL2 with VS2019 and vcpkg - DEV Community](https://dev.to/taowyoo/setup-sdl2-with-vs2019-and-vcpkg-32eg)
 

@@ -6,6 +6,10 @@ permalink: /projects/
 
 ---
 
+发现一个很好地展示自己 project 的样式 [Marius V. Storvik (techiew.github.io)](https://techiew.github.io/)
+
+
+
 ## Previous Projects 
 
 | CSSR-Matlab                                                  |

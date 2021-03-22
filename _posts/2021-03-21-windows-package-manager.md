@@ -61,11 +61,15 @@ sdl2-ttf             2.0.15-3         A library for rendering TrueType fonts wit
 
 当然装你需要的就可以了。
 
-- sdl2
+- sdl2:x64-windows
 - sdl2-gfx
 - sdl2-image
 - sdl2-mixer
 - sdl2-net
 - sdl2-ttf
 
-[Install SDL2 on Windows 10 with Visual Studio 2017 (sdl2-image, sdl2-mixer, sdl2-net, sdl2-ttf) - YouTube](https://www.youtube.com/watch?v=MTIUfkkbxSE)
+[Setup SDL2 with VS2019 and vcpkg - DEV Community](https://dev.to/taowyoo/setup-sdl2-with-vs2019-and-vcpkg-32eg))
+
+![image-20210322173448403](/shared/imgs/image-20210322173448403.png)
+
+这里可以选 x86 还是 x64 哦。

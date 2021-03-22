@@ -70,6 +70,8 @@ sdl2-ttf             2.0.15-3         A library for rendering TrueType fonts wit
 
 [Setup SDL2 with VS2019 and vcpkg - DEV Community](https://dev.to/taowyoo/setup-sdl2-with-vs2019-and-vcpkg-32eg))
 
+[Setup SDL2 with VS2019 and vcpkg - DEV Community](https://ran.moe/shared/pdf/docs/vcpkg-sdl2-installation.pdf)
+
 ![image-20210322173448403](/shared/imgs/image-20210322173448403.png)
 
 这里可以选 x86 还是 x64 哦。

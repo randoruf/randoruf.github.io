@@ -24,6 +24,8 @@ OI 算法大全 https://oi-wiki.org/
 
 开源机器人学学习指南 https://github.com/qqfly/how-to-learn-robotics 。 放弃吧，这个只能作为业余爱好， 李群李代数， 虚功原理、拉格朗日。。。。 清华学长写的。
 
+[Lazy Foo' Productions - Beginning Game Programming v2.0](http://lazyfoo.net/tutorials/SDL/)
+
 ### 言語学習に役立つウェブサイト集
 
 词汇，发音，语法

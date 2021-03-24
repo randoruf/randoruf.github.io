@@ -87,7 +87,7 @@ Give your project/solution whatever name you'd like and place it where ever you'
 	1. Go to project properties: <br>![Alt Text](/shared/imgs/yl8f67ddggiitwreud5j.png)
 	2. Go to **Configuration Properties -> VC++ Directories -> Library Directories -> Edit**.<br>![Alt Text](/shared/imgs/fdfdeqeqtidofdrj7h79.png)
 	3. And then add the directory where SDL2main.lib located: `$(VcpkgCurrentInstalledDir)$(VcpkgConfigSubdir)lib\manual-link\` or  <br> `...\vcpkg\installed\x86-windows\debug\lib\manual-link`    
-	4. Then told linker to link the `SDL2maind.lib`, go to **Configuration Properties -> Linker -> Input-> Additional Dependencies -> Edit** <br>![image-20210323171312517](/shared/imgs/image-20210323171312517.png)Then add <br>![image-20210323171347840](/shared/imgs/image-20210323171347840.png)
+	4. Then told linker to link the `SDL2maind.lib` , go to **Configuration Properties -> Linker -> Input-> Additional Dependencies -> Edit** <br>![image-20210323171312517](/shared/imgs/image-20210323171312517.png)Then add <br>![image-20210323171347840](/shared/imgs/image-20210323171347840.png)
 	5. Now we finished all we need before coding, close the property page.
 
 4. Finally, create an example program to test the configuration

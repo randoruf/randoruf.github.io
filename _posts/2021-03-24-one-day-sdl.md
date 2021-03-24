@@ -22,7 +22,7 @@ date: 2021-03-24T00:20:0Z
 
 一个 SDL 游戏的基本流程
 
-<img src="image-20210325001135099.png" alt="image-20210325001135099" style="zoom:50%;" />
+<img src="/shared/imgs/image-20210325001135099.png" alt="image-20210325001135099" style="zoom:50%;" />
 
 
 

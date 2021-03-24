@@ -10,6 +10,7 @@ date: 2021-03-24T00:20:0Z
 
 - [SDL入门_慕课手记 (imooc.com)](https://www.imooc.com/article/25190) [李超_慕课网精英讲师 (imooc.com)](https://www.imooc.com/t/4873493)
 - [Lazy Foo' Productions - Beginning Game Programming v2.0](https://lazyfoo.net/tutorials/SDL/index.php)
+- [Intro to SDL - Google Slides](https://docs.google.com/presentation/d/15MtBrLfLpwN3rBCb2xR0PxdbbFY_4PakVZQBjKNUWVM/edit#slide=id.g2c01ef4af_044)
 
 ---
 
@@ -33,13 +34,12 @@ date: 2021-03-24T00:20:0Z
 
 
 
-### 如何更新窗口
+### 如何更新窗口 ( Surface and Texture)
 
 - [c++ - What is an SDL renderer? - Stack Overflow](https://stackoverflow.com/questions/21007329/what-is-an-sdl-renderer)
-
 - [SDL中Window,Renderer,Texture,Surface之间的关系_ykee126的专栏-CSDN博客](https://blog.csdn.net/ykee126/article/details/106806611)
-
 - [「SDL第五篇」彻底理解纹理（Texture）_慕课手记 (imooc.com)](https://www.imooc.com/article/25379)
+- [Surfaces and Textures - Free Pascal meets SDL (freepascal-meets-sdl.net)](https://www.freepascal-meets-sdl.net/surfaces-and-textures/)
 
 SDL_Render 是渲染器，它也是主存中的一个对象。对Render操作时实际上分为两个阶段：
 
@@ -49,13 +49,15 @@ SDL_Render 是渲染器，它也是主存中的一个对象。对Render操作时
 
 
 
-#### 使用SDL_Texture
+上面提及到的 SDL_Surface 和 SDL_Texture 本质上都是**一组像素信息** (A structure that contains an efficient, driver-specific representation of **pixel data**.)。
 
-SDL提供了非常好用的操作SDL_Texture的方法，下面我们来重点介绍一下使用SDL_Texute的基本步骤。
+<img src="/shared/imgs/CreationOfTextureFlowDiagram-Plain.png" alt="img" style="zoom:50%;" />
 
-- 创建一个 SDL_Texture。
-- 渲染 Texture
-- Destory Texture
+注意 Surface 是过时的概念， 应该弃用 (但是字体还是需要 Surface )。
+
+**Texture 主要有 width 、 height、 pixel format**  。你要明白，即使是几何图形也是由像素点组成的。如何创建 Texture 可以看下面。
+
+由于 Texture 本质上就是**一区块像素点 (x, y, width, length)**， 所以 **SDL_Rect** 的概念就非常重要。
 
 
 
@@ -68,19 +70,119 @@ CPU渲染在初级教程随处可见，不讨论。说一下简单的过程。
 - 通过 `SDL_BlitSurface` 图形/图片复制到 Window 的 Surface 上
 	- (也有一些函数可以直接在 Window 的 Surface 画几何图形) 
 
+注意 Surface 是过时的概念， 应该弃用。
+
 
 
 #### 通过 GPU 渲染 (**Renderer**)
 
-这种方法更加常用，因为可以使用硬件加速。
+[CategoryRender - SDL Wiki' (libsdl.org)](https://wiki.libsdl.org/CategoryRender)
 
-每个 Renderer 都被绑定了一个窗口，在对 Renderer 进行刷新时， 可以刷新窗口。
+实际上 Surface 和 Texture 都是一些像素的信息。但是 Texture 的功能更加强大，你可以做一些 rotation 等操作(The texture images can have an additional color tint or alpha modulation applied to them, and may also be stretched with linear interpolation, rotated or flipped/mirrored.)。
 
-Texture 可以理解为 GPU 中的 Surface 。**而我们需要把 Texture 复制到 Renderer 上**。
+每个 Renderer 都被绑定了一个窗口，在对 Renderer 进行刷新时， 可以刷新窗口。**我们需要把 Texture 复制到 Renderer 上**来让窗口显示 Texture。
 
 **你可以把 Texture 理解为图案， 而 Renderer 理解为画布**。你需要在画布上画图形。
 
-而且 Texture 的功能更加强大，你可以做一些转换操作。实际上 Surface 和 Texture 都是一些像素的信息。
+有三种方式创建 Texture 
+
+- 设定好 pixel format 和 texture access 后手动填充像素（例如生成几何图形）
+	- Pixel Format 可以用 `SDL_GetWindowPixelFormat()` 获得，即使用 Window 默认的 Pixel Format。
+	- [Texture Access](https://wiki.libsdl.org/SDL_TextureAccess)  有三个值 
+		- SDL_TEXTUREACCESS_STATIC 几乎不改变
+		- SDL_TEXTUREACCESS_STREAMING 经常变化（在读取时需要上互斥锁，不允许别的线程修改。例如我在看书别把书抢走）。
+		- SDL_TEXTUREACCESS_TARGET 
+	- 注意上面的 Pixel Format 和 Texture Access 也适用于下面直接读取图片的操作。
+- 从 Surface 读取， 但是由于 Surface 不建议使用，这种方法也不建议
+- 直接读取图片，很多游戏都是这么做的。建议直接用 `SDL2_image` , 因为 PNG 图像质量最高。
+
+
+
+#### Texture Scaling and Movement 
+
+很简单，  **`SDL_RenderCopy()`  要求 source_rect 和 dest_rect** 。 
+
+你可以大概思考一下复制到 Screen/Render 的哪个位置 (**用 `SDL_Rect` 指定 x, y, w, h** ， 当然这种方法只能一块一块地画， 没有旋转)。
+
+记得 SDL 的坐标系不是笛卡尔坐标系。
+
+
+
+#### Texture Manipulation
+
+系统默认是 SDL_TEXTUREACCESS_STATIC 类型。
+
+但你可以在创建 Texture 的时候选择 SDL_TEXTUREACCESS_STREAMING （这种类型允许 Texture 上的像素被修改，所以叫 Manipulation) 
+
+每次你要修改 Texture 的时候（例如从 Surface 复制 pixel 到 Texture 时， 你需要对 Texture 上锁， 禁止别的线程读取你还没修改完的东西，或者改变 Texture 的调色，叫 Color Key）。
+
+- 给 Texture 上锁 `SDL_LockTexture()`  [Lazy Foo' Productions - Texture Manipulation](https://lazyfoo.net/tutorials/SDL/40_texture_manipulation/index.php)
+- 给 Texture 解锁  `SDL_UnlockTexture()` 
+
+注意 SDL 并没有 Matrix 的概念。是将一串 row 串起来 (希尔伯特曲线？[一种降维打击的可视化方案_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/av289538969/))。
+
+这就涉及 pitch 这个概念：一个 Row 的 number of bytes. 这是为了在 memory copy 时更方便，例如 `pitch * height ` 就是整个 texture/surface 所占用的 bytes （还记得吗？内存的最小单位是 byte 呢！东大的招生题也是 8 bits 呢）
+
+ 关于 Texture Manipulation 的例子可以看这个 ： [Lazy Foo' Productions - Texture Manipulation](https://lazyfoo.net/tutorials/SDL/40_texture_manipulation/index.php) 。通过遍历 Texture 的每一个像素， 然后如果是白色就设为透明。
+
+
+
+#### Texture Rotation and Flipping 
+
+[Lazy Foo' Productions - Rotation and Flipping](https://lazyfoo.net/tutorials/SDL/15_rotation_and_flipping/index.php)
+
+[How To Make A Game #17 : Multiple Animations & Render Flipping : in C++ And SDL2 Tutorial - YouTube](https://www.youtube.com/watch?v=xhof7x7FOq0)
+
+如果你直接把图片读取成 Texture ， 可以用 [SDL_RenderCopyEx - SDL Wiki' (libsdl.org)](https://wiki.libsdl.org/SDL_RenderCopyEx) 做很多处理
+
+- SDL_Rect 不说了
+- angle 是旋转角度
+- center 是旋转轴的 (x, y) [SDL_Point - SDL Wiki' (libsdl.org)](https://wiki.libsdl.org/SDL_Point)
+- flip 是翻转图片 (水平转180°，垂直转180°， 还是不转？)
+
+
+
+#### Texture Streaming 
+
+[Lazy Foo' Productions - Texture Streaming](https://lazyfoo.net/tutorials/SDL/42_texture_streaming/index.php)
+
+你可以很生猛地直接改变 Texture 的像素点（例如显示 Web Cam,  甚至是 Video），显然，要用 Buffer 。
+
+要小心， **Texture 的 Pixel Format 必须要和 Streaming 流数据的 Pixel 相符**。
+
+```cpp
+//Copy frame from buffer
+gStreamingTexture.lockTexture();
+gStreamingTexture.copyPixels( gDataStream.getBuffer() );
+gStreamingTexture.unlockTexture();
+```
+
+`gDataStream.getBuffer()`  是数据流。可以提供最上面的一帧。
+
+
+
+#### Render to Texture 
+
+[Lazy Foo' Productions - Render to Texture](https://lazyfoo.net/tutorials/SDL/43_render_to_texture/index.php)
+
+ 
+
+
+
+### 字体
+
+字体最常用的是 True Type Font 格式。**字体实际上也可以由像素组成**(由 `SDL_ttf` 绘制成 Surface )。因为是 Surface ， 你有两种方法画到屏幕
+
+- 通过 Texture 和 Renderer 
+- 直接 Copy/Blit 到屏幕上 (Surface 特有)
+
+![SDL2 text creation diagram](/shared/imgs/sdl2_diagram1.png)
+
+当然还有一种方法就是割图片的区块作为字体：[Lazy Foo' Productions - Bitmap Fonts](https://lazyfoo.net/tutorials/SDL/41_bitmap_fonts/index.php)
+
+
+
+
 
 
 

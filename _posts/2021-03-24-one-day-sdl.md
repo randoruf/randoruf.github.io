@@ -8,9 +8,9 @@ date: 2021-03-24T00:20:0Z
 
 ## 主要参考资料
 
+- [Intro to SDL - Google Slides](https://docs.google.com/presentation/d/15MtBrLfLpwN3rBCb2xR0PxdbbFY_4PakVZQBjKNUWVM/edit#slide=id.g2c01ef4af_044)   - 备份 http://randoruf.github.io/shared/pdf/docs/Intro_to_SDL.pdf
 - [SDL入门_慕课手记 (imooc.com)](https://www.imooc.com/article/25190) [李超_慕课网精英讲师 (imooc.com)](https://www.imooc.com/t/4873493)
 - [Lazy Foo' Productions - Beginning Game Programming v2.0](https://lazyfoo.net/tutorials/SDL/index.php)
-- [Intro to SDL - Google Slides](https://docs.google.com/presentation/d/15MtBrLfLpwN3rBCb2xR0PxdbbFY_4PakVZQBjKNUWVM/edit#slide=id.g2c01ef4af_044)   - 备份 http://randoruf.github.io/shared/pdf/docs/Intro_to_SDL.pdf
 
 ---
 

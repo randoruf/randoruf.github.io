@@ -10,13 +10,19 @@ date: 2021-03-24T00:20:0Z
 
 - [SDL入门_慕课手记 (imooc.com)](https://www.imooc.com/article/25190) [李超_慕课网精英讲师 (imooc.com)](https://www.imooc.com/t/4873493)
 - [Lazy Foo' Productions - Beginning Game Programming v2.0](https://lazyfoo.net/tutorials/SDL/index.php)
-- [Intro to SDL - Google Slides](https://docs.google.com/presentation/d/15MtBrLfLpwN3rBCb2xR0PxdbbFY_4PakVZQBjKNUWVM/edit#slide=id.g2c01ef4af_044)
+- [Intro to SDL - Google Slides](https://docs.google.com/presentation/d/15MtBrLfLpwN3rBCb2xR0PxdbbFY_4PakVZQBjKNUWVM/edit#slide=id.g2c01ef4af_044)   - 备份 http://randoruf.github.io/shared/pdf/docs/Intro_to_SDL.pdf
 
 ---
 
 以我的理解， SDL 是软件和硬件之间的 Bridging ，主要用在多媒体处理。能够通过 API 直接调用硬件。
 
 所以十分适合 User Interface 的开发。但很多人会选择用来做游戏（实际上用来做应用程序也没问题）。
+
+<img src="/shared/imgs/image-20210325001037438.png" alt="image-20210325001135099" style="zoom:50%;" />
+
+一个 SDL 游戏的基本流程
+
+<img src="image-20210325001135099.png" alt="image-20210325001135099" style="zoom:50%;" />
 
 
 
@@ -176,7 +182,7 @@ gStreamingTexture.unlockTexture();
 - 通过 Texture 和 Renderer 
 - 直接 Copy/Blit 到屏幕上 (Surface 特有)
 
-![SDL2 text creation diagram](/shared/imgs/sdl2_diagram1.png)
+<img src="/shared/imgs/sdl2_diagram1.png" alt="image-20210325001135099" style="zoom:50%;" />
 
 当然还有一种方法就是割图片的区块作为字体：[Lazy Foo' Productions - Bitmap Fonts](https://lazyfoo.net/tutorials/SDL/41_bitmap_fonts/index.php)
 

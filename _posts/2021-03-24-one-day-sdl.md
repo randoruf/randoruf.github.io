@@ -24,6 +24,10 @@ date: 2021-03-24T00:20:0Z
 
 <img src="/shared/imgs/image-20210325001135099.png" alt="image-20210325001135099" style="zoom:50%;" />
 
+### 安装 SDL 2
+
+[安装 SDL2 (Setup SDL2 with VS2019 and vcpkg) (ran.moe)](https://ran.moe/2021/03/23/install-sdl2-windows.html)
+
 
 
 ### Bit Flags 

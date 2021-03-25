@@ -179,7 +179,45 @@ gStreamingTexture.unlockTexture();
 
 [Lazy Foo' Productions - Render to Texture](https://lazyfoo.net/tutorials/SDL/43_render_to_texture/index.php)
 
+ 从字面的上的意思理解就是， 把图案画到 Texture ，而不是直接画到 Renderer 上。
+
+ 有很多函数比如 [SDL_RenderDrawRect - SDL Wiki' (libsdl.org)](https://wiki.libsdl.org/SDL_RenderDrawRect) 和 SDL gfx 的图形绘制函数 [SDL2_gfx: I:/Sources/sdl2gfx/SDL2_gfxPrimitives.h File Reference (ferzkopp.net)](https://www.ferzkopp.net/Software/SDL2_gfx/Docs/html/_s_d_l2__gfx_primitives_8h.html) 都只接受在 Renderer 上直接画图。
+
+但实际上 `SDL_SetRenderTarget` 可以把 Texture 和 Renderer 绑定， 于是 Texture 就可以成为 Render 的 Render Target ， 也就是把图案画到 Render 上。
+
+记得在创建 Texture 的时候要选择 `SDL_TEXTUREACCESS_TARGET` , 其中 width 和 height 代表 Texture 的dimension（单位是 Pixel) 。
+
+```cpp
+
+// create texture as the render target (so we don't want to draw on the renderer)....
+SDL_Texture* mTexture = SDL_CreateTexture( gRenderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, width, height );
+
+// render targer to mTexture 
+SDL_SetRenderTarget( gRenderer, mTexture );
+
+// draw/render rectangle to the render target/texture
+SDL_Rect fillRect = { SCREEN_WIDTH / 4, SCREEN_HEIGHT / 4, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 };
+SDL_SetRenderDrawColor( gRenderer, 0xFF, 0x00, 0x00, 0xFF );        
+SDL_RenderFillRect( gRenderer, &fillRect );
+
+//Reset render target
+SDL_SetRenderTarget( gRenderer, NULL );
+
+// copy the texture to the renderer 
+SDL_Rect srcrect =  { x, y, mWidth, mHeight }; 
+SDL_Rect renderQuad = { x, y, mWidth, mHeight };
+double angle; 
+SDL_Point* center;
+SDL_RendererFlip flip;  //  https://wiki.libsdl.org/SDL_RendererFlip
+SDL_RenderCopyEx( gRenderer, mTexture, &srcrect, &dstrect, angle, center, flip);
  
+//Update screen
+SDL_RenderPresent( gRenderer );
+```
+
+ 
+
+
 
 
 

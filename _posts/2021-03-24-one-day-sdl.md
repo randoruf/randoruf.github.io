@@ -215,7 +215,7 @@ SDL_RenderCopyEx( gRenderer, mTexture, &srcrect, &dstrect, angle, center, flip);
 SDL_RenderPresent( gRenderer );
 ```
 
- 
+ 详情可以看 [Render to Texture](/shared/pdf/docs/render_to_texture.pdf)
 
 
 

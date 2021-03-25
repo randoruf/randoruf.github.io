@@ -200,7 +200,7 @@ SDL_Rect fillRect = { SCREEN_WIDTH / 4, SCREEN_HEIGHT / 4, SCREEN_WIDTH / 2, SCR
 SDL_SetRenderDrawColor( gRenderer, 0xFF, 0x00, 0x00, 0xFF );        
 SDL_RenderFillRect( gRenderer, &fillRect );
 
-//Reset render target
+//Reset render target(一定要在 RenderCopy 前把 Render Targert 设置为 Renderer, 否则只会复制到 Texture 上， 因为此时 render target 依旧为 Texture...)。
 SDL_SetRenderTarget( gRenderer, NULL );
 
 // copy the texture to the renderer 

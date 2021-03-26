@@ -30,6 +30,10 @@ Github: <https://github.com/randoruf>
 
 ## Projects
 
+| Motion Planning and Path Planning Simulation                 |
+| ------------------------------------------------------------ |
+| 该项目的目的是设计一个验证停车运动规划的验证模拟器。这个项目主要基于 C++ 和 SDL 多媒体库开发， 其路径规划功能能够调用 OMPL (Open Motion Planning Library) 来使用 Sampling-based 的路径规划算法 (如果 RRT, PRM 等)。 项目主要涉及运动规划的算法(如 RRT, A\*), differential constraint 的 kinematic 运动约束， Occupancy Grid Map 的表示， 二维碰撞检测,   SDL 多媒体库的使用方法。 |
+
 | CSSR-Matlab                                                  |
 | ------------------------------------------------------------ |
 | 这是CSSR算法的接口程序。CSSR算法是由Cosma Shalizi提出的一种算法，它从输入序列中推导出最小隐马尔可夫模型。 |

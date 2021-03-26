@@ -9,7 +9,7 @@ date: 2021-03-24T00:20:0Z
 
 
 
-## 主要参考资料
+## SDL 基础
 
 - [Intro to SDL - Google Slides](https://docs.google.com/presentation/d/15MtBrLfLpwN3rBCb2xR0PxdbbFY_4PakVZQBjKNUWVM/edit#slide=id.g2c01ef4af_044)   - 备份 <http://randoruf.github.io/shared/pdf/docs/Intro_to_SDL.pdf>
 - [SDL入门_慕课手记 (imooc.com)](https://www.imooc.com/article/25190) [李超_慕课网精英讲师 (imooc.com)](https://www.imooc.com/t/4873493)
@@ -347,3 +347,32 @@ SDL_RenderPresent( gRenderer );
 这里可以做两个线程， 一个负责渲染， 一个负责定时。
 
 渲染的一直在 Buffer 渲染（见 `video_buf` ），然后到时间了就从 Buffer 取出一帧， RenderCopy 就完事了（自然一帧也是texture)。
+
+
+
+---
+
+## SDL 高级主题
+
+### SDL Alpha Blending  
+
+SDL 的文档写的比较抽象，注意到 `SDL_RenderCopy()` 会用到 Blending 。而 `SDL_RenderCopy()` 有 `src` 和 `dst` 。
+
+再看看 [SDL_BlendMode - SDL Wiki' (libsdl.org)](https://wiki.libsdl.org/SDL_BlendMode) 的 src 和 dst 是不是觉得很熟悉了？要记住 `SDL_Renderer`  有时候的 render target 也是 Texture （也就是把 Texture 复制到 Texture ， 例如把车胎的 Texture 复制到 车辆的 Texture , 用 `SDL_SetRenderTarget` 即可。 
+
+- SDL_BLENDMODE_NONE : 没有透明度。两个 Texture 颜色会直接覆盖。
+- SDL_BLENDMODE_BLEND : 混色
+- SDL_BLENDMODE_ADD : 
+- SDL_BLENDMODE_MOD :   
+
+
+
+#### 例子1： 夜晚光照效果
+
+[Is possible to create ambient light in SDL2? - Game Development - Simple Directmedia Layer (libsdl.org)](https://discourse.libsdl.org/t/is-possible-to-create-ambient-light-in-sdl2/28381)
+
+**把光照渲染到阴影上，最后展示整个阴影**。
+
+- 光照是一个Texture (是 PNG 文件， 自带透明度) , 且 blending 模式为 `SDL_BLENDMODE_ADD`. 
+- 阴影也是 Texture , 可以设置为 `(0, 0, 0, 255)` 意味黑色，最后的透明度无所谓。阴影的 blending 模式为 `SDL_BLENDMODE_MOD`
+

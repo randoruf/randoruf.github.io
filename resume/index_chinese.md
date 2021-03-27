@@ -40,7 +40,7 @@ Github: <https://github.com/randoruf>
 
 | FIT3161-FIT3162 Heart Disease Prediction Web App             |
 | ------------------------------------------------------------ |
-| 利用数据挖掘技术，可以很容易地捕捉到患者心血管疾病的早期症状。在特征选择上，采用 Chi-square 和 Point Biserial Correlation。通过网格搜索对SVM、KNN、ANN、Random Forest、GBM等模型进行优化。React.js和Flask分别作为前端和后端。 |
+| 利用数据挖掘技术，制作了预测患者心血管疾病的网页应用。在特征选择上，采用 Chi- square 和 Point Biserial Correlation。通过网格搜索对SVM、KNN、ANN、Random Forest、 GBM等模型进行参数优化。在网页技术栈方面，使用React.js和Flask分别作为前端和后端。 |
 
 | ECE3091 Robot Building Competition                           |
 | ------------------------------------------------------------ |

@@ -39,14 +39,5 @@ The design of this website is inspired by the anime [Toradora!](http://king-cr.j
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PdjceuLg8Tc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-声优DD的感想 “挑战自我， 走出舒适区”
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/z7FnA4yH3UA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-"赛伯朋克"的人工智能 : **无大学学历制造机器人**。
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-780u496wuo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lmVU7ZvH-i0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YcidornQ7rU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

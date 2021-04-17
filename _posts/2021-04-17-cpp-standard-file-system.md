@@ -22,3 +22,7 @@ Among classes the filesystem namespace, the `path` class is the most important o
 
 You can see the usage here https://docs.microsoft.com/en-us/cpp/standard-library/path-class
 
+---
+
+还有 `directory_iterator` , 可以查看目录下都有什么文件。
+

@@ -7,6 +7,12 @@ date: 2021-04-21
 
 * TOC
 {:toc}
+[六. 勇者斗恶龙 - How to Learn Robotics (gitbook.io)](https://qiu6401.gitbook.io/how-to-learn-robotics/dragonquest)
+
+![img](/shared/imgs/LZebc7Fa_Uk1RuGvcDr_2FChineseFactory.jpg)
+
+当你看到还有非常多与你我同龄的人在工厂里做着重复、枯燥的工作的时候，你会有强烈的感觉：「这就是恶龙！」
+
 
 
 ## 规划算法的经典
@@ -116,3 +122,35 @@ RRT 在1998 年被提出，一直到 10 年后的 2010 年，才有人想到把 
 
 更别说软工那种，写个 停车APP 就能发论文。所以要批判性地看论文， 特别是应用类的真的是重灾区，之前看 “机器学习识别心脏病的论文”， 真的无力吐槽， 看了浪费我时间， **所以文献其实不是越多越好**。
 
+
+
+## 优化算法
+
+其实就是数学优化。 
+
+我想有时间专门学一下。
+
+可以以 ECE3093 Optimisation estimation and numerical methods 为蓝本
+
+
+
+## 机器人
+
+可以看机器人的 **Robot, Vision and Control** 。 
+
+- 参考 [二. 先修知识 - How to Learn Robotics (gitbook.io)](https://qiu6401.gitbook.io/how-to-learn-robotics/prerequisite)
+
+  - **线性代数**:   这是控制论的基础，可以看 《Linear Algebra Done Right》 ,  Youtube 上有视频
+  - **微积分**：机器人里，所有涉及到导数、积分、优化的地方，都需要用到微积分。所以，这门数学课也是一开始就绕不开的。我没有太好的视频推荐，不妨也看看 Gilbert Strange 的[《微积分重点》](http://open.163.com/special/opencourse/weijifen.html) ([Highlights of Calculus](https://ocw.mit.edu/resources/res-18-005-highlights-of-calculus-spring-2010/))？
+
+- [三. 入门 - How to Learn Robotics (gitbook.io)](https://qiu6401.gitbook.io/how-to-learn-robotics/gettingstarted)
+
+- [四. 实践 - How to Learn Robotics (gitbook.io)](https://qiu6401.gitbook.io/how-to-learn-robotics/dirtyyourhands)
+
+- [五. 进阶 - How to Learn Robotics (gitbook.io)](https://qiu6401.gitbook.io/how-to-learn-robotics/advanced)
+
+- 掌握 李代数，拉格朗日方程， 可以看 Planning Algorithms  和 CMU 的 Probabilistic Robotics 。 
+
+- 然后回头看 Modern Robotics: Mechanics, Planning, and Control 和 宾州大学的 Cousera Robotics 课程
+
+  

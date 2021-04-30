@@ -1,12 +1,13 @@
 ---
 layout: post
 title: "C++ 析构函数 (为什么需要避免使用全局对象 global object)"
-date: 2021-04-28zh C++ 类 析构函数 - 华为云 
+date: 2021-04-28
 ---
 
 
 * TOC
 {:toc}
+
 ---
 
 这篇文章写得不错。

@@ -25,3 +25,52 @@ C++11 新增了 Haskell 的类似语句。
 
 [std::all_of, std::any_of, std::none_of - cppreference.com](https://en.cppreference.com/w/cpp/algorithm/all_any_none_of)
 
+## 例子
+
+读取 vector of vector 中的所有值。
+
+```C++
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <numeric>
+
+int main(){
+    std::vector<std::vector<int>> agents;
+
+    agents.push_back(std::vector<int>(10));
+    // ivec will become: [0..9] 
+    std::iota(agents[agents.size()-1].begin(), agents[agents.size()-1].end(), 0); 
+
+    agents.push_back(std::vector<int>(5));
+    // ivec will become: [0..4] 
+    std::iota(agents[agents.size()-1].begin(), agents[agents.size()-1].end(), 0); 
+
+    agents.push_back(std::vector<int>(8));
+    // ivec will become: [0..7] 
+    std::iota(agents[agents.size()-1].begin(), agents[agents.size()-1].end(), 0);
+    
+    // print all elements....
+    unsigned int i = 0; 
+    while (std::any_of(agents.begin(), agents.end(), [i](const std::vector<int>& v){ return i < v.size(); }))
+    {   
+        std::cout << "i = " << i << " \n"; 
+        for (unsigned int k = 0; k < agents.size(); k++){
+            if (i < agents[k].size()){
+                std::cout << "agent "<< i << " : "<< agents[k][i] << "\n"; 
+            }else
+            {
+                std::cout << "agent "<< i << " : None\n"; 
+            }
+            
+            
+        }
+        std::cout << "----------------------------\n"; 
+        i++; 
+    }
+    std::cout << "The maximum length over all three vectors " << i << std::endl;  
+
+
+}
+```
+

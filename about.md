@@ -19,9 +19,9 @@ The design of this website is inspired by the anime [Toradora!](http://king-cr.j
 
 [Photo Credit](https://www.netflix.com/au/title/80049275) (not for commercial use. I don't own the copyright)
 
-<img src="image-20210509002653422.png" alt="image-20210509002653422" style="zoom:33%;" />
+<img src="/image-20210509002653422.png" alt="image-20210509002653422" style="zoom:33%;" />
 
-<img src="image-20210509002725471.png" alt="image-20210509002725471" style="zoom:33%;" />
+<img src="/image-20210509002725471.png" alt="image-20210509002725471" style="zoom:33%;" />
 
 ---
 

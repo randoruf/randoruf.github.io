@@ -11,7 +11,7 @@ title:  "人生规划"
 
 - C++, Python, Haskell 
 	- C++, Python 是因为 ROS 
-	- Haskell 是因为 Rust 
+	- Haskell 是因为 Rust [关于 Haskell 的一些思考](https://ran.moe/2021/05/08/haskell.html)
 
 <img src="0_Ph6z0gEq-uyEpAoL.png" alt="img" style="zoom:25%;" />
 

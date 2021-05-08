@@ -29,8 +29,6 @@ title:  "说说你从非学霸变成学霸的经历吧？"
 
 [Jiang Ren 的C++面试笔记](https://ran.moe/2021/05/08/jr.html)
 
-[关于 Haskell 的一些思考](https://ran.moe/2021/05/08/haskell.html)
-
 ---
 
 不是学霸，只能说是从一个学渣变成一个比较努力的人吧。

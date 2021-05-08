@@ -13,6 +13,10 @@ title:  "人生规划"
 	- C++, Python 是因为 ROS 
 	- Haskell 是因为 Rust 
 
+<img src="0_Ph6z0gEq-uyEpAoL.png" alt="img" style="zoom:25%;" />
+
+
+
 ### 研究兴趣
 
 - Robotics 

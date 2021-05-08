@@ -21,7 +21,15 @@ title:  "说说你从非学霸变成学霸的经历吧？"
 | ------------------------------------------------------------ |
 | 日本某大手企业员工(System Engineer), 日本某国立大学 Bioinformatics 专业. |
 
-相关文章：[跟优秀的人相处是种怎样的体验？](https://ran.moe/shared/pdf/yuushu_hito/)
+相关文章：
+
+[跟优秀的人相处是种怎样的体验？](https://ran.moe/shared/pdf/yuushu_hito/)
+
+[人生规划 - 机器人学、运动规划](https://ran.moe/shared/pdf/my_way/)
+
+[Jiang Ren 的C++面试笔记](https://ran.moe/2021/05/08/jr.html)
+
+[关于 Haskell 的一些思考](https://ran.moe/2021/05/08/haskell.html)
 
 ---
 

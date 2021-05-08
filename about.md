@@ -19,14 +19,14 @@ The design of this website is inspired by the anime [Toradora!](http://king-cr.j
 
 [Photo Credit](https://www.netflix.com/au/title/80049275) (not for commercial use. I don't own the copyright)
 
+<img src="image-20210509002653422.png" alt="image-20210509002653422" style="zoom:33%;" />
+
+<img src="image-20210509002725471.png" alt="image-20210509002725471" style="zoom:33%;" />
+
 ---
 
-> **坚持总会有回报**。
-
-精神来源：**《说说你从非学霸变成学霸的经历吧？》**<https://ran.moe/shared/pdf/xueba/>
-
-我还特别喜欢这首歌， 希望我自己可以有所改变。
-
+> 大丈夫です。夢は必ず実現します
+>
 > いつか僕もそうなりたいな		总有一天，我也想成为那样的人
 >
 > 三日坊主はやめにして				不要做三天打鱼， 两天晒网

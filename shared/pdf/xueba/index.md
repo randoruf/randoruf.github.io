@@ -18,9 +18,11 @@ title:  "说说你从非学霸变成学霸的经历吧？"
 | ------------------------------------------------------------ |
 | 日本某大手企业员工(System Engineer), 日本某国立大学 Bioinformatics 专业. |
 
+你的人生剩余 ：
 <div class="progress-bar">
   <span class="progress-bar-fill" style="width: 70%;"></span>
 </div>
+
 
 [人生规划 - 机器人学、运动规划](https://ran.moe/shared/pdf/my_way/)
 

@@ -52,7 +52,7 @@ Miscellaneous projects (including assignments and side-projects). This is more l
 
 | FIT2102 Asteroids Game                                       |
 | :----------------------------------------------------------- |
-| Developed in TypeScript, the Observable design pattern and functional reactive programming (FRP) were used.  It can be improved by [RxJS](https://rxjs-dev.firebaseapp.com/guide/overview) in the future. <br />**Duration**: 1 month (Sep 2019). <br /><img src="/shared/project_gallary/image-20201120220742135.png" alt="image-20200208003228574" style="zoom:10%;" /> |
+| Developed in TypeScript, the Observable design pattern and functional reactive programming (FRP) were used.  It can be improved by [RxJS](https://rxjs-dev.firebaseapp.com/guide/overview) in the future. <br />**Duration**: 1 month (Sep 2019).  ->  [play](/shared/website/asteroids_2019Assignment1/asteroids.html) <br /><img src="/shared/project_gallary/image-20201120220742135.png" alt="image-20200208003228574" style="zoom:10%;" /> |
 
 | ENG1003 Running App Assignment                               |
 | :----------------------------------------------------------- |

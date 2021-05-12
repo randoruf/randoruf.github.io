@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <style>
+            @import url(style.css);
+            p.highlight {
+                color: red;
+            }
+            svg {
+                background-color: rgb(41, 41, 36);
+            }
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            .column {
+                float: left;
+                width: 600px; /* width: 50% ; */
+                max-width: 100%;
+            }
+        </style>
+        <script src="svgelement.js"></script>
+        <script src="observable.js"></script>
+        <script src="asteroids.js"></script>
+    </head>
+    <body>
+
+    <div class="row">
+            <div class="column">
+                <svg id="canvas" width="600" height="600"></svg>
+            </div>
+            <div class="column" style="background-color:#e0e0d1;">
+                <h1>Asteroids</h1>
+                <p> Life <span id="life" style="font-size:30px;"> 0 </span>
+                    - Score <span id="score" style="font-size:30px;"> 0 </span>
+                    - Level <span id="level" style="font-size:30px;"> 0 </span></p>
+                <hr>
+                <h3>How to Play?</h3>
+                <p>Use <b>[A][W][D]</b> to move the ship.  </p>
+                <p>Note that the ship uses thrust to move, <b>[S]</b> does not work in this game. </p>
+                <p>Use <b>[SPACE]</b> to shoot.</p> 
+                <p><b>Enemies(pink rectangles)</b> always attempt to approach your ship, destroy and avoid them.</p>
+                <p><b>Asteroids(circles)</b> comes from anywhere. </p>
+                <p>There will be more asteroids at a higher level.</p>
+                <p>Big asteroids break down into smaller asteroids and only smaller asteroids can be destroyed. </p>
+                <p>There is not actual victory in this game. Try to get a higher score!</p>
+
+                <hr>
+                <b>FEEDBACK</b>: Excellent game functionality with great extra features. Good use of fluent observable methods. Would have liked to see more use of the array fluent methods like filter/map rather than just forEach. Nice use of curried functions, although you missed some opportunities to change the order of the arguments and then use partially applied functions. Nice use of generics. Some areas you tried to 'cheese' your way into making the function pure by using higher order functions, however the inner function is still impure anyway, so it's not a real advantage. Good documentation, although it would have been good to include more on what ideas from the lectures you were using.
+            </div>
+
+        </div>
+    
+        
+    </body>
+</html>

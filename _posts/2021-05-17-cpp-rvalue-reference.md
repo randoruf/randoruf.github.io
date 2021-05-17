@@ -54,5 +54,10 @@ stack.emplace_back(Complex(2, 3)); // 虚数 2 + 3i
 void emplace_back( Args&&... args );
 ```
 
+还有一种比较少见的用法 [c++ - What does auto&& tell us? - Stack Overflow](https://stackoverflow.com/questions/13230480/what-does-auto-tell-us) , 就是类似左值引用。
 
+```c++
+auto&& vec = some_expression_that_may_be_rvalue_or_lvalue;
+```
 
+（具体有什么用我还不知道。。。。）

@@ -37,7 +37,7 @@ const TreeNode& root;
 - `push_back()`
 - `emplace_back()`
 
-两者实际上都是在 `vector<T>` 的结尾加上一个新的元素， 不同的是 `emplace_back()` 用的是右值引用， 并且速度一般比 `push_back()` 更快。 
+两者实际上都是在 `vector<T>` 的结尾加上一个新的元素， 不同的是 `emplace_back()` 用的是右值引用， 并且速度一般比 `push_back()` 更快（因为知道是临时变量， 避免了重复复制）。 
 
 注意到其他使用 `vector<T>` 实现的数据结构都有类似的特点， 例如 `queue, stack, heap` 等等。
 

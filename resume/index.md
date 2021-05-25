@@ -6,8 +6,6 @@ Github: <https://github.com/randoruf>
 
 Personal Website: <https://ran.moe/>
 
----
-
 ## Experience
 
 | [Monash Biomedical Imaging](https://www.monash.edu/researchinfrastructure/mbi) / Winter Research Intern |
@@ -18,19 +16,11 @@ Personal Website: <https://ran.moe/>
 | ------------------------------------------------------------ |
 | *Nov 2019 - Feb 2020,  Melbourne, Victoria, Australia*<br />- Use the [HCTSA](https://github.com/benfulcher/hctsa) to analyze the local field potential (LFP) of flies to assess features that may potentially relate to the degrees of consciousness. HCTSA is a Matlab library containing thousands of promising time-series analysing algorithms.<br />- Explore if the Epsilon machine can be a neural marker of the degree of consciousness under the supervision of Professor [Naotsusgu Tsuchiya](https://sites.google.com/monash.edu/tlab/) through analyzing the electrical activity recordings in humans (aka. scalp EEG). The data is collected from sleep and anaesthesia experiments. I also wrote [CSSR-Matlab](https://au.mathworks.com/matlabcentral/fileexchange/74604-cssr-matlab) which is a wrapper of [CSSR](https://github.com/stites/CSSR) and contains some methods to transform the one-dimensional time series to symbolic vectors. |
 
----
-
 ## Education
 
 | [Monash University](https://www.monash.edu/) / Bachelor of Engineering (Honours) and Bachelor of Computer Science |
 | ------------------------------------------------------------ |
 | *Feb 2016 -  July 2021,  Melbourne, Australia*<br /><br />**Specialisation**:  Electrical and Computer Systems Engineering and Advanced Computer Science.<br />**GPA** 3.2/4<br />**WAM** 77 |
-
-| [Sun Yat-sen Memorial Secondary School](https://en.wikipedia.org/wiki/Sun_Yat-sen_Memorial_Secondary_School) / High School Diploma |
-| ------------------------------------------------------------ |
-| *Sept 2012 -  June 2015,  Zhongshan city, Guangdong Province, China* |
-
----
 
 ## Projects
 
@@ -39,8 +29,6 @@ Personal Website: <https://ran.moe/>
 | Proting CSSR into Matlab. CSSR is an algorithm proposed by Cosma Shalizi, which infers the minimum hidden Markov model from an input sequence. |
 
 [Details](https://ran.moe/projects/)
-
----
 
 ## Other Accomplications |& Certifications
 
@@ -64,17 +52,15 @@ Personal Website: <https://ran.moe/>
 
 ## Skills
 
-JavaScript/TypeScript
+C++/C
 
 Python
 
-C++/C
+JavaScript/TypeScript
 
 Matlab
 
 Java
-
-Assembly Languages 
 
 
 

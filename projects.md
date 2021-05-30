@@ -4,11 +4,7 @@ title: Portfolio
 permalink: /projects/
 ---
 
----
 
-发现一个很好地展示自己 project 的样式 [Marius V. Storvik (techiew.github.io)](https://techiew.github.io/)
-
-Miscellaneous projects (including assignments and side-projects). This is more like my *diary* instead of a formal description. 
 
 | ECE4094-ECE4095 Simulation-based Autonamous Parking System   |
 | :----------------------------------------------------------- |

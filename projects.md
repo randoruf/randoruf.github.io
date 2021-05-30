@@ -12,11 +12,11 @@ permalink: /projects/
 
 | FIT3161-FIT3162 Heart Disease Prediction Web App             |
 | :----------------------------------------------------------- |
-| Using the data mining technique to capture the early signs of cardiovascular disease of their patients easily. In the feature selection, chi-square and point biserial correlation were used. The models (including SVM, KNN, ANN, Random Forest, GBM) were tuned by grid search. React.js and Flask were used as the front-end and backend separately. <br />**Duration**: 2-3 months (Aug 2020).  -> [gallary](/shared/project_gallary/FIT3161-heart-diease.html)<br /><img src="/shared/project_gallary/image-20201120222258275.png" alt="image-20200208003228574" style="zoom:15%;" /> |
+| Using the data mining technique to capture the early signs of cardiovascular disease of their patients easily. In the feature selection, chi-square and point biserial correlation were used. The models (including SVM, KNN, ANN, Random Forest, GBM) were tuned by grid search. React.js and Flask were used as the front-end and backend separately. <br />**Duration**: 2-3 months (Aug 2020).  -> [gallary](/shared/project_gallary/FIT3161-heart-diease.html)<br /><img src="/shared/project_gallary/image-20201120222258275.png" alt="image-20200208003228574" style="zoom:60%;" /> |
 
 | Winter Research Internship @ [tLab](https://sites.google.com/monash.edu/tlab/home) |
 | :----------------------------------------------------------- |
-| Use the K-medoids, PCA/t-SNE, [HCTSA](https://github.com/benfulcher/hctsa) and Multitaper Spectrogram to analyze the sleep data under the supervision of Naotsugu Tsuchiya. <br />**Duration**: 1 month (May 2020). <br><img src="/shared/imgs/image-20210205142640664.png" alt="image-20210205142640664" style="zoom:50%;" /><br>[![View Github](GitHub_Rep_brightgreen.svg)](https://github.com/randoruf/tlab-intern-code-2019-2020/tree/master/tLab-2020-winter-research-sleep) |
+| Use the K-medoids, PCA/t-SNE, [HCTSA](https://github.com/benfulcher/hctsa) and Multitaper Spectrogram to analyze the sleep data under the supervision of Naotsugu Tsuchiya. <br />**Duration**: 1 month (May 2020). <br><img src="/shared/imgs/image-20210205142640664.png" alt="image-20210205142640664" style="zoom:80%;" /><br>[![View Github](GitHub_Rep_brightgreen.svg)](https://github.com/randoruf/tlab-intern-code-2019-2020/tree/master/tLab-2020-winter-research-sleep) |
 
 | CSSR-Matlab                                                  |
 | ------------------------------------------------------------ |
@@ -28,7 +28,7 @@ permalink: /projects/
 
 | ECE3091 Robot Building Competition                           |
 | :----------------------------------------------------------- |
-| The aim of the project is to design and construct an autonomous robot that is able to navigate itself in a 1.2m x 1.2m arena, pick up three coloured pucks, and stack them one-by-one in a given sequence inside the construction zone of the arena. It mainly involves 1) navigation/path finding; 2) colour sensing; 3) manipulation of the pucks.  The knowledge involves PSoC, sensors, motors, schematics and CAD. <br />**Duration**: 2-3 months (Aug 2019).  -> [gallary](/shared/project_gallary/ECE3091-robot.html)<br /><img src="/shared/project_gallary/image-20201120212551511.png" alt="image-20200208003228574" style="zoom:20%;" /> <a href="/images/princes_highway_clayton.jpg" style="color: #ebeeee"> <br />Princes Highway Clayton on 01/09/2019 - 生死之外无大事</a> |
+| The aim of the project is to design and construct an autonomous robot that is able to navigate itself in a 1.2m x 1.2m arena, pick up three coloured pucks, and stack them one-by-one in a given sequence inside the construction zone of the arena. It mainly involves 1) navigation/path finding; 2) colour sensing; 3) manipulation of the pucks.  The knowledge involves PSoC, sensors, motors, schematics and CAD. <br />**Duration**: 2-3 months (Aug 2019).  -> [gallary](/shared/project_gallary/ECE3091-robot.html)<br /><img src="/shared/project_gallary/image-20201120212551511.png" alt="image-20200208003228574" style="zoom:40%;" /> <a href="/images/princes_highway_clayton.jpg" style="color: #ebeeee"> <br />Princes Highway Clayton on 01/09/2019 - 生死之外无大事</a> |
 
 | FIT2102 AI Player for the card game "Hearts"                 |
 | :----------------------------------------------------------- |

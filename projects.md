@@ -8,27 +8,11 @@ permalink: /projects/
 
 发现一个很好地展示自己 project 的样式 [Marius V. Storvik (techiew.github.io)](https://techiew.github.io/)
 
-
-
-## Previous Projects 
-
-| CSSR-Matlab                                                  |
-| ------------------------------------------------------------ |
-| A project attempts to port CSSR into Matlab during the summer research internship under the supervision of [Naotsugu Tsuchiya](https://sites.google.com/monash.edu/tlab/). <br />CSSR is an algorithm, developed by [Cosma Shalizi](http://www.stat.cmu.edu/~cshalizi/), can infer the epsilon transition (or epsilon machine) from an observed sequence. <br />Feeling interested? Read this **related resource** (Roberto N. Muñoz et.al.): <https://arxiv.org/abs/1905.13173><br /><br /><img src="/shared/project_gallary/image-20201120225807816.png" style="zoom:40%;" /><br />[photo credit (Roberto N. Muñoz et.al.)](https://arxiv.org/abs/1905.13173)<br />You may be familiar with C++ compilation and think of this project as nothing. But it can be easily incorporated into [HCTSA](https://github.com/benfulcher/hctsa) over any platform.<br />[![View CSSR-Matlab on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://au.mathworks.com/matlabcentral/fileexchange/74604-cssr-matlab)<br /> |
-
----
-
-## Current Projects
+Miscellaneous projects (including assignments and side-projects). This is more like my *diary* instead of a formal description. 
 
 | ECE4094-ECE4095 Simulation-based Autonamous Parking System   |
 | :----------------------------------------------------------- |
-| Motion planning for autonamous parking suggested by [Akansel Cosgun](https://research.monash.edu/en/persons/akansel-cosgun). <br />**Duration**: Aug 2020 - May 2021 |
-
----
-
-## Others
-
-Miscellaneous projects (including assignments and side-projects). This is more like my *diary* instead of a formal description. 
+| Motion planning for autonamous parking suggested by [Akansel Cosgun](https://research.monash.edu/en/persons/akansel-cosgun). <br /><img src="/shared/imgs/prioritized_goal_example_presentation-20210530164736474.gif" alt="hello" style="zoom:80%;" /><br />[Smart Parking Space Assignment using Motion Planning](https://ran.moe/ece4095-parking-system-demo/)<br />**Duration**: Aug 2020 - May 2021 |
 
 | FIT3161-FIT3162 Heart Disease Prediction Web App             |
 | :----------------------------------------------------------- |
@@ -37,6 +21,10 @@ Miscellaneous projects (including assignments and side-projects). This is more l
 | Winter Research Internship @ [tLab](https://sites.google.com/monash.edu/tlab/home) |
 | :----------------------------------------------------------- |
 | Use the K-medoids, PCA/t-SNE, [HCTSA](https://github.com/benfulcher/hctsa) and Multitaper Spectrogram to analyze the sleep data under the supervision of Naotsugu Tsuchiya. <br />**Duration**: 1 month (May 2020). <br><img src="/shared/imgs/image-20210205142640664.png" alt="image-20210205142640664" style="zoom:50%;" /><br>[![View Github](GitHub_Rep_brightgreen.svg)](https://github.com/randoruf/tlab-intern-code-2019-2020/tree/master/tLab-2020-winter-research-sleep) |
+
+| CSSR-Matlab                                                  |
+| ------------------------------------------------------------ |
+| A project attempts to port CSSR into Matlab during the summer research internship under the supervision of [Naotsugu Tsuchiya](https://sites.google.com/monash.edu/tlab/). <br />CSSR is an algorithm, developed by [Cosma Shalizi](http://www.stat.cmu.edu/~cshalizi/), can infer the epsilon transition (or epsilon machine) from an observed sequence. <br />Feeling interested? Read this **related resource** (Roberto N. Muñoz et.al.): <https://arxiv.org/abs/1905.13173><br /><br /><img src="/shared/project_gallary/image-20201120225807816.png" style="zoom:40%;" /><br />[photo credit (Roberto N. Muñoz et.al.)](https://arxiv.org/abs/1905.13173)<br />You may be familiar with C++ compilation and think of this project as nothing. But it can be easily incorporated into [HCTSA](https://github.com/benfulcher/hctsa) over any platform.<br />[![View CSSR-Matlab on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://au.mathworks.com/matlabcentral/fileexchange/74604-cssr-matlab)<br /> |
 
 | Summer Research Internship @ [tLab](https://sites.google.com/monash.edu/tlab/home) |
 | :----------------------------------------------------------- |

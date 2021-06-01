@@ -11,13 +11,13 @@ permalink: /about/
 
 履历书： [Resume](/resume/)
 
+You can reach me by email masswie@yahoo.com 
+
 ---
 
 The design of this website is inspired by the anime [Toradora!](http://king-cr.jp/special/toradora_complete-box/)
 
 <img src="/toradora_logo.png" alt="AAAABT0WcfqUPbaPg2evxi-anbAbqRm-cROuLJyLUYQEw9oXdNXcCVmjkEZdyyrcIU49KZWvHBM1NaR317Dtd1pyyHKY7PbtpIJqNPJ3" style="zoom:33%;" />
-
-[Photo Credit](https://www.netflix.com/au/title/80049275) (not for commercial use. I don't own the copyright)
 
 <img src="/image-20210509002653422.png" alt="image-20210509002653422" style="zoom:33%;" />
 

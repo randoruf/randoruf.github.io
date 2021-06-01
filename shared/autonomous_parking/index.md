@@ -1,6 +1,8 @@
+---
+layout: page
+title: "Autonomous Parking for Self-Driving Cars"
+---
 
-
-# Autonomous Parking for Self-Driving Cars
 
 The [source code](https://github.com/randoruf/ece4095-parking-system-demo) 
 

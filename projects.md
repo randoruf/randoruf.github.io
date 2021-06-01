@@ -8,7 +8,7 @@ permalink: /projects/
 
 | ECE4094-ECE4095 Simulation-based Autonamous Parking System   |
 | :----------------------------------------------------------- |
-| Motion planning for autonamous parking suggested by [Akansel Cosgun](https://research.monash.edu/en/persons/akansel-cosgun). <br /><img src="/shared/imgs/prioritized_goal_example_presentation-20210530164736474.gif" alt="hello" style="zoom:80%;" /><br />[Smart Parking Space Assignment using Motion Planning](/shared/autonomous_parking/)<br />**Duration**: Aug 2020 - May 2021 |
+| Motion planning for autonamous parking suggested by [Akansel Cosgun](https://research.monash.edu/en/persons/akansel-cosgun). <br /><img src="/shared/imgs/prioritized_goal_example_presentation-20210530164736474.gif" alt="hello" style="zoom:80%;" /><br />[Smart Parking Space Assignment using Motion Planning](/shared/autonomous_parking/)<br />**Duration**: Aug 2020 - ? <br /> I will continue on the project due to personal interest. There a lot of things to do. |
 
 | FIT3161-FIT3162 Heart Disease Prediction Web App             |
 | :----------------------------------------------------------- |

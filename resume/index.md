@@ -4,6 +4,8 @@ Email: <masswie22@gmail.com>
 
 Github: <https://github.com/randoruf> 
 
+LinkedIn: https://www.linkedin.com/in/randoruf/
+
 Personal Website: <https://ran.moe/>
 
 ## Experience
@@ -24,11 +26,15 @@ Personal Website: <https://ran.moe/>
 
 ## Projects
 
+| Autonamous Parking for Self-driving Cars                     |
+| ------------------------------------------------------------ |
+| Parking spaces assignment algorithms, <br />motion planning and replanning for moving obstacles by using OMPL <br />simulation and evaluation of the goal assignment and motion planning algorithms. <br />https://github.com/randoruf/ece4095-parking-system-demo |
+
 | CSSR-Matlab                                                  |
 | ------------------------------------------------------------ |
-| Proting CSSR into Matlab. CSSR is an algorithm proposed by Cosma Shalizi, which infers the minimum hidden Markov model from an input sequence. |
+| Proting CSSR into Matlab. CSSR is an algorithm proposed by Cosma Shalizi, which infers the minimum hidden Markov model from an input sequence.<br />https://www.mathworks.com/matlabcentral/fileexchange/74604-cssr-matlab |
 
-[Details](https://ran.moe/projects/)
+[More](https://ran.moe/projects/)
 
 ## Other Accomplications |& Certifications
 

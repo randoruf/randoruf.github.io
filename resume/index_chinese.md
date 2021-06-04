@@ -1,8 +1,10 @@
-# 李浩华
+# 李浩華
 
 Email: <masswie22@gmail.com>
 
 Github: <https://github.com/randoruf> 
+
+LinkedIn: https://www.linkedin.com/in/randoruf/
 
 个人网站: <https://ran.moe/>
 

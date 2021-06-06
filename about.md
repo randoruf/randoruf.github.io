@@ -25,6 +25,14 @@ The design of this website is inspired by the anime [Toradora!](http://king-cr.j
 
 ---
 
+我是特务的粉丝
+
+**李特务Blog**	   <https://www.notion.so/41bdd6ad71f8400da75456c8a6749a5f> 
+
+**李特务的豆瓣**	<https://www.douban.com/people/nikkeiyonda/>
+
+---
+
 > 大丈夫です。夢は必ず実現します
 >
 > いつか僕もそうなりたいな		总有一天，我也想成为那样的人

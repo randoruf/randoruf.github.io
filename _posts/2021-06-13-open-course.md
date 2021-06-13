@@ -6,6 +6,12 @@ date: 2021-06-13
 
 
 
+看**设计模式** 就好了
+
+[Software Design and Architecture - Coursera](https://www.coursera.org/specializations/software-design-architecture)
+
+
+
 目前 MIT 的课都可以在这上面看到。 
 
 [Fall 2020 Course 6: Electrical Engineering and Computer Science (Archive) (mit.edu)](http://student.mit.edu/catalog/archive/fall/m6a.html)

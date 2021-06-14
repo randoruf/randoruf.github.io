@@ -23,11 +23,11 @@ title: " CS科班生自救指南"
 
 - [ ] [Algorithm Design](https://www.cs.princeton.edu/~wayne/kleinberg-tardos/) 
 - [ ] [Algorithms 4th](https://algs4.cs.princeton.edu/home/)
-- [ ] [Leetcode 每日一题](https://github.com/randoruf/puroguraminngu-conntesuto-charennjibukku)
+- [ ] [Leetcode 每日一题 / 计算机程序设计挑战](https://github.com/randoruf/puroguraminngu-conntesuto-charennjibukku)
 
 ## 计算机网络
 
-- [ ] [【斯坦福大学】CS144 计算机网络介绍（完结·中英字幕·机翻）_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV137411Z7LR/)
+- [ ] [randoruf/cs144-computer-networking (github.com)](https://github.com/randoruf/cs144-computer-networking)
 
 ## C++编程
 
@@ -36,9 +36,9 @@ title: " CS科班生自救指南"
 
 ## 数据库
 
-- [ ] [【数据库系统】卡耐基梅隆大学公开课（中英双语字幕）_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1rN411f7Ef)
+- [ ] [randoruf/cmu-15-445-database-system](https://github.com/randoruf/cmu-15-445-database-system)
 
 ## SwiftUI 开法
 
-- [ ] [CS193p - Developing Apps for iOS (stanford.edu)](https://cs193p.sites.stanford.edu/)
+- [ ] [randoruf/cs193p-ios-development](https://github.com/randoruf/cs193p-ios-development)
 

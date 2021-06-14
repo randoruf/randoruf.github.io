@@ -52,5 +52,3 @@ The design of this website is inspired by the anime [Toradora!](http://king-cr.j
 
 [山田くんと7人の魔女 EDテーマ -  みみめめMIMI「CANDY MAGIC」MusicVideo #やまじょ - YouTube](https://www.youtube.com/watch?v=1BOfoSc7nBM)
 
-[Gyakko - Maaya Sakamoto](https://www.youtube.com/watch?v=Blb9WbuiazE)
-

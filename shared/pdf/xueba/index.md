@@ -11,6 +11,8 @@ title:  "说说你从非学霸变成学霸的经历吧？"
 >
 > [**時間という財産**: Hidetaka Nagaoka at TEDxSaku - 时间是财产](https://www.youtube.com/watch?v=EzXvih454dM)
 >
+> [防止内卷 + 防止浪费生命 - 人生生活指南](https://randoruf.github.io/2021/06/14/nei-juan.html)
+>
 > 28法则 (了解本质、核心 ， 因为时间有限)
 >
 > ***如果连简单的事情都做不好，怎么能做复杂的事情呢？*** 第一步都是以简单的事情为目标。

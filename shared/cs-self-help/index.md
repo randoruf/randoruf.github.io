@@ -37,7 +37,8 @@ title: "CS科班生自救指南"
 
 ## 数据库
 
-- [ ] [randoruf/cmu-15-445-database-system](https://github.com/randoruf/cmu-15-445-database-system)
+- [ ] 数据课系统的实现 -  [randoruf/cmu-15-445-database-system](https://github.com/randoruf/cmu-15-445-database-system)
+- [ ] 数据库的应用 - [randoruf/fit3171-databases: edX stanford databases (github.com)](https://github.com/randoruf/fit3171-databases)
 
 ## SwiftUI 开法
 

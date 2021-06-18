@@ -34,6 +34,7 @@ title: "为什么还摸鱼？ - CS科班生自救指南"
 
 主要靠多刷题。
 
+- [ ] [重学《算法与数据结构》 (ran.moe)](https://ran.moe/2021/06/18/winter-plan.html)
 - [ ] [Algorithm Design](https://www.cs.princeton.edu/~wayne/kleinberg-tardos/) 
 - [ ] [Algorithms 4th](https://algs4.cs.princeton.edu/home/)
 - [ ] [Leetcode 每日一题 / 计算机程序设计挑战](https://github.com/randoruf/puroguraminngu-conntesuto-charennjibukku)

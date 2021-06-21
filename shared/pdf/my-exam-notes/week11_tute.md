@@ -32,12 +32,17 @@
 ## Bottleneck 
 
 - Use **S** and **T** set 
-  - Use the edge with **hightest maximum capacity** in **S**
+  - Use the edge with **hightest maximum capacity** in **S** 
+  - **易错点**： 我们只关心 residual network 的 outgoing edge 。
   - 刚开始 **S 只有 s**  ， 其被 cut 的 edge 有 2, 13 。选 13 
   - 然后此时 **S 有 s, c**  。其被 cut 的 edge 有 2, 5, 6 。 选 6 。 
   - 直到**到达 t 为止**
 
 ![image-20210621133302460](image-20210621133302460.png)
+
+只**关心 outgoing edge** 
+
+<img src="image-20210621151259944.png" alt="image-20210621151259944" style="zoom: 67%;" />
 
 
 

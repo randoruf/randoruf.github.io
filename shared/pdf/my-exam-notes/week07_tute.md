@@ -74,6 +74,10 @@ Level 2: [A,C], [F,G,H,I], [K,L,N,O], [R,T,], [**V**,Z]
   - 如果满了， 把 leaf node 从 median 开始分离
   - 把 median 移动到 parent node 里面 
 
+![image-20210621161653949](image-20210621161653949.png)
+
+![image-20210621161736777](image-20210621161736777.png)
+
 
 
 ## Search 

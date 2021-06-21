@@ -83,8 +83,12 @@ Level 2: [A,C], [F,G,H,I], [K,L,N,O], [R,T,], [**V**,Z]
 ## Search 
 
 - 每看到一个满了的 node , 都要将其分离(split)
-  - lower bound : `t - 1`
+  - lower bound : `t - 1` elements 
   - upper bound : `2t - 1`
+
+- 如果是 node 有多少个 subtrees  
+  - lower bound : `t` subtrees  
+  - upper bound : `2t`
 
 
 

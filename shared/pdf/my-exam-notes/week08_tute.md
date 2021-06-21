@@ -4,10 +4,18 @@
 
 ## Repeated Squaring 
 
-![image-20210621113729563](image-20210621113729563.png)
+<img src="image-20210621113729563.png" alt="image-20210621113729563" style="zoom: 50%;" />
 
 - 一直**将前面的结果平方**。 
 - 然后**取需要的 x^{2^k}**  (二进制数位)
+
+<img src="image-20210621141507423.png" alt="image-20210621141507423" style="zoom:40%;" />
+
+
+
+<img src="image-20210621141521358.png" alt="image-20210621141521358" style="zoom: 40%;" />
+
+
 
 ![image-20210621114002424](image-20210621114002424.png)
 

@@ -65,7 +65,7 @@ Part (iii)
 - Assume that while we are at maximum flow there is an augmenting path P in the residual network. 
 - If the minimum capacity of an edge in P is c (c > 0 as it is a capacity) (0.5 marks for stating c > 0), 
 - we can augment the flow out of the source by c in the original network (1 mark). 
-- This would in turn increase the flow of the network by c, which contradicts the fact that we were at maximum flow! (1 mark) 
+- **This would in turn increase the flow of the network by c, which contradicts the fact that we were at maximum flow! (1 mark)** 
 - Thus, P cannot exist in the residual network and when we are at maximum flow the residual network cannot contain an augmenting path. (0.5 marks)
 
 

@@ -46,6 +46,15 @@
 
 
 
+![image-20210621152526488](image-20210621152526488.png)
+
+- **min-cut outgoing capacity** (只是 outgoing 哦)
+- **flow of the network**  
+
+
+
+
+
 ## Max Flow and Residual Network 
 
 (iii) Suppose now that our flow network is at maximum flow. Argue that in this case the corresponding residual network cannot contain an augmenting path.
@@ -62,6 +71,8 @@ Part (iii)
 
 
 ## Min-cut Max-flow theorem
+
+By the Min-cut Max-flow theorem, the maximum flow of a flow network is equal to the capacity of the minimum cut
 
 ![image-20210621133832614](image-20210621133832614.png)
 

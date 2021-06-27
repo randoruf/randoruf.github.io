@@ -48,3 +48,32 @@ date: 2021-06-27
 
 
 
+## 优化算法
+
+优化算法就很烦，要求有优化的基础， 起码要知道 slack variables 和 constraints 是啥玩意儿。
+
+其实就是 ***Linear Programming*** 里面要学的玩意儿。
+
+![image-20210627215717753](image-20210627215717753.png)
+
+[gophae的博客_CSDN博客-自动驾驶,Matlab,路径规划领域博主](https://yunchengjiang.blog.csdn.net/)
+
+- [Hybrid A*论文解析(1)_gophae的博客-CSDN博客](https://yunchengjiang.blog.csdn.net/article/details/107344216)
+- [Hybrid A*论文解析(3)_gophae的博客-CSDN博客](https://yunchengjiang.blog.csdn.net/article/details/107415479)
+- [Hybrid A*论文解析(4)_gophae的博客-CSDN博客](https://yunchengjiang.blog.csdn.net/article/details/107598373)
+- [Hybrid A*论文解析(5)_gophae的博客-CSDN博客](https://yunchengjiang.blog.csdn.net/article/details/109658857)
+- [针对Hybrid A*论文解析(5)中的方法的一些验证_gophae的博客-CSDN博客](https://yunchengjiang.blog.csdn.net/article/details/109689728)
+
+- [Apollo规划算法基于多边形分离的平滑分析（一） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/74528043)
+- [Apollo规划算法基于多边形分离的平滑分析（二） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/74528875)
+
+
+
+
+
+## DWA
+
+[DWA泊车算法的实现_gophae的博客-CSDN博客](https://yunchengjiang.blog.csdn.net/article/details/107085729)
+
+- 但是DWA的弊端时很明显的，**他对heading的实现是一个软约束**，并不能够很好的在终点结束时达到期望的heading 。这个问题在对终点heading很敏感的泊车功能中是非常大的（不能歪歪扭扭吧）。
+- 

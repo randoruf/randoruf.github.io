@@ -10,7 +10,7 @@ date: 2021-06-27
 
 
 
-伯克利停车场 
+## 伯克利停车场 
 
 [carla/PythonAPI/analysis at parking · MPC-Berkeley/carla (github.com)](https://github.com/MPC-Berkeley/carla/tree/parking/PythonAPI/analysis)
 
@@ -22,9 +22,19 @@ date: 2021-06-27
 
 他们用的 Carla 模拟的， 比你搞的东西好看多了。
 
+[Xu Shen - Fleet Parking (google.com)](https://sites.google.com/view/xushenssite/research/fleet-parking?authuser=0)
+
+ [Autonomous Parking of Vehicle Fleet in Tight Environments - IEEE Conference Publication | IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/9147671) 
+
+这篇论文发了 2020 ACC (The American Control Conference), 这是 **控制领域世界级顶级会议**。
+
+我都不知道原来我做的东西这么有价值。 
+
+如果真的把我的 Closed-loop 技巧好，处理好 Dynamic Scenarios (in and out) 那不就妥妥的**顶会**吗？
 
 
 
+## 百度阿波罗
 
 还有百度 Apollo 的自动泊车的优化框架也是这个实验室弄出来的
 

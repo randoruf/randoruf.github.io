@@ -10,6 +10,19 @@ date: 2021-06-27
 
 
 
+
+
+## Multi-agent Motion Planning 
+
+- Decoupled 
+	- Prioritized planning 
+	- single-agent + post-processing 
+- Centralized 
+	- joint planning (planning algorithm 那本书有， 比如一个 agent 是三维， 那么两个 agent 就是六维， 和 机器人的 joint motion planning 一模一样，所以叫 joint planning)
+	- 如果 李娇阳 的 CBS (conflict based search) , 都假设大家知道相互的位置， 本质是 space-time 
+
+
+
 ## 伯克利停车场 
 
 [carla/PythonAPI/analysis at parking · MPC-Berkeley/carla (github.com)](https://github.com/MPC-Berkeley/carla/tree/parking/PythonAPI/analysis)
@@ -74,10 +87,6 @@ date: 2021-06-27
 
 - [Apollo规划算法基于多边形分离的平滑分析（一） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/74528043)
 - [Apollo规划算法基于多边形分离的平滑分析（二） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/74528875)
-
-
-
-
 
 ## DWA
 

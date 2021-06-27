@@ -32,6 +32,14 @@ date: 2021-06-27
 
 如果真的把我的 Closed-loop 技巧好，处理好 Dynamic Scenarios (in and out) 那不就妥妥的**顶会**吗？
 
+还有 **IV 的录用率**
+
+> IEEE IV 2018大会共收到来自34个国家的603篇论文，接收论文356篇，**录取率为59%**，
+>
+> 其中282篇Contributed paper，21篇SpecialSession Paper，53篇Workshops paper。
+
+
+
 
 
 ## 百度阿波罗
@@ -54,7 +62,7 @@ date: 2021-06-27
 
 其实就是 ***Linear Programming*** 里面要学的玩意儿。
 
-![image-20210627215717753](image-20210627215717753.png)
+<img src="/shared/image-20210627215717753.png" style="zoom:50%;" />
 
 [gophae的博客_CSDN博客-自动驾驶,Matlab,路径规划领域博主](https://yunchengjiang.blog.csdn.net/)
 

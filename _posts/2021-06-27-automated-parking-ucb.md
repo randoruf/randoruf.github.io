@@ -21,6 +21,8 @@ date: 2021-06-27
 	- joint planning (planning algorithm 那本书有， 比如一个 agent 是三维， 那么两个 agent 就是六维， 和 机器人的 joint motion planning 一模一样，所以叫 joint planning)
 	- 如果 李娇阳 的 CBS (conflict based search) , 都假设大家知道相互的位置， 本质是 space-time 
 
+其实如果你学了 Linear Programming , 就会知道优化方法的本质是暴力法。但是会有规律地去尝试和收敛，计算速度比随机要快很多。就是 A\* 和 RRT 的区别，A\* 的本质也是优化。
+
 
 
 ## 伯克利停车场 

@@ -12,6 +12,24 @@ date: 2021-06-27
 
 
 
+
+
+
+
+## Motion Planning 
+
+[Intelligent Motion Laboratory at UIUC (illinois.edu)](http://motion.cs.illinois.edu/index.html)
+
+伊利诺伊大学的运动规划官网， 有最新的科研成果。
+
+[Robotic Systems  - Kris Hauser](http://motion.cs.illinois.edu/RoboticSystems/)
+
+这本书也不错，说了 Obstacle 的 Convex Set 的概念。Optimization-based Motion Planning 都是把 Obstacle 的几何形状弄成 Convex polygon (convex set) , 然后优化的。 不要看到不懂的名字就慌了， 原理可能很简单的。
+
+
+
+
+
 ## Multi-agent Motion Planning 
 
 - Decoupled 

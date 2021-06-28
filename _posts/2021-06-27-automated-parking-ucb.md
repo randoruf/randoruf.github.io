@@ -33,7 +33,7 @@ date: 2021-06-27
 
 [Autonomous Parking of Vehicle Fleet in Tight Environments — Automated Driving (automatedcars.space)](https://automatedcars.space/home/2020/6/7/autonomous-parking-of-vehicle-fleet-in-tight-environments)
 
-![image-20210627180557654](/shared/image-20210627180557654.png)
+![image-20210627180557654](/shared/imgs/image-20210627180557654.png)
 
 他们用的 Carla 模拟的， 比你搞的东西好看多了。
 
@@ -67,7 +67,7 @@ date: 2021-06-27
 
 [XiaojingGeorgeZhang/OBCA: Optimization-Based Collision Avoidance - a path planner for autonomous navigation (github.com)](https://github.com/XiaojingGeorgeZhang/OBCA)
 
-![TrajReverseHOBCA25x.gif](/shared/TrajReverseHOBCA25x.gif)
+![TrajReverseHOBCA25x.gif](/shared/imgs/TrajReverseHOBCA25x.gif)
 
 
 
@@ -77,7 +77,7 @@ date: 2021-06-27
 
 其实就是 ***Linear Programming*** 里面要学的玩意儿。
 
-<img src="/shared/image-20210627215717753.png" style="zoom:50%;" />
+<img src="/shared/imgs/image-20210627215717753.png" style="zoom:50%;" />
 
 [gophae的博客_CSDN博客-自动驾驶,Matlab,路径规划领域博主](https://yunchengjiang.blog.csdn.net/)
 

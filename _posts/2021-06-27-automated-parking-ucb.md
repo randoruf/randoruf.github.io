@@ -39,7 +39,7 @@ date: 2021-06-27
 
 [Xu Shen - Fleet Parking (google.com)](https://sites.google.com/view/xushenssite/research/fleet-parking?authuser=0)
 
- [Autonomous Parking of Vehicle Fleet in Tight Environments - IEEE Conference Publication | IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/9147671) 
+ [Autonomous Parking of Vehicle Fleet in Tight Environments - IEEE Conference Publication - IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/9147671) 
 
 这篇论文发了 2020 ACC (The American Control Conference), 这是 **控制领域世界级顶级会议**。
 

@@ -49,7 +49,7 @@ date: 2021-06-27
 
 这个例子很好地说明了什么是 **CBS**, 就是撞了就从头开始规划。
 
-其实这个方法没什么新意， 就是 Space-time Hybrid-A\*   。 但别人就是进了腾讯做 Robotics Researcher Intern ，我也想进啊。
+其实这个方法没什么新意， 就是 Space-time Hybrid-A\*  ， 然后他自己给了个新名字 。 但别人就是进了腾讯做 Robotics Researcher Intern ，我也想进啊。
 
 
 

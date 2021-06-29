@@ -51,7 +51,7 @@ date: 2021-06-27
 
 其实这个方法没什么新意， 就是 Space-time Hybrid-A\*  ， 然后他自己给了个新名字 。 但别人就是进了腾讯做 Robotics Researcher Intern ，我也想进啊。
 
-
+不过我看了 ICRA 2021 的入选文章，这篇论文好像并没有入选。
 
 
 

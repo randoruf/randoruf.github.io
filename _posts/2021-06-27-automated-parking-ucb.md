@@ -114,3 +114,18 @@ date: 2021-06-27
 
 - 但是DWA的弊端时很明显的，**他对heading的实现是一个软约束**，并不能够很好的在终点结束时达到期望的heading 。这个问题在对终点heading很敏感的泊车功能中是非常大的（不能歪歪扭扭吧）。
 - 
+
+
+
+
+
+## Hybrid-State A\*
+
+- Coursera 的课就有[Lesson 3: Trajectory Rollout Algorithm - Module 6: Reactive Planning in Static Environments - Coursera](https://www.coursera.org/lecture/motion-planning-self-driving-cars/lesson-3-trajectory-rollout-algorithm-3toeN)
+- 还有 Matlab 的 [Hybrid A* path planner - MATLAB - MathWorks Australia](https://au.mathworks.com/help/nav/ref/plannerhybridastar.html)
+- 原文过去复杂是因为考虑了很多优化策略。
+
+
+
+
+

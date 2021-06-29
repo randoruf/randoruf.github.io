@@ -130,17 +130,17 @@ date: 2021-06-27
 
 - 就是 Sampling Control Space , 然后根据 Objective Function 选择好 control actions 。 没了。
 - 考虑到电机可发挥的有限的加速度，**整个 velocity 搜索空间**减少到**动态窗口** (看下面文章的笔记)。
+	- 在速度坐标系里搜索合适的速度 $$(v, w)$$
 	- 该窗口仅包含**下一个时间间隔内可以达到的速度** （考虑**当前速度**和**最大加速度**， **注意刹车也叫加速度**）。
 	- 动态窗口是以实际速度为中心的，它的扩展取决于可以施加的加速度。
 	- $$V_r = V_s \cap V_a \cap V_d$$  
-		-  $$V_s$$ 叫 angular velocity  (就是一堆可选的速度， 不理解就想一下 $$ -10 < x < 10$$ 在 Cartesian Plan 是怎样的， 是不是瞬间觉得 DWA 是初中知识)
-		- 同理， $$V_a$$ 是 translation velocity 
-		- $$V_d$$ 才是 DWA 的精髓， 结合运动约束、几何约束
+	  -  $$V_s$$ 叫 angular velocity  (就是一堆可选的速度， 不理解就想一下 $$ -10 < x < 10$$ 在 Cartesian Plan 是怎样的， 是不是瞬间觉得 DWA 是初中知识)
+	  - 同理， $$V_a$$ 是 translation velocity 
+	  - $$V_d$$ 才是 DWA 的精髓， 结合运动约束、几何约束
 	- 对每条路径评价
-		- cost function 的设计才是核心， 具体就要看笔记和论文了。
-		- 但是自己玩玩的话， 这个随便搞
+	  - cost function 的设计才是核心， 具体就要看笔记和论文了。
+	  - 但是自己玩玩的话， 这个随便搞
 - [The Dynamic Window Approach to Collision Avoidance - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/70233164)
-
 - [Difference between DWA local_planner and TEB local_planner - ROS Answers: Open Source Q&A Forum](https://answers.ros.org/question/274564/difference-between-dwa-local_planner-and-teb-local_planner/)
 
 
@@ -158,6 +158,30 @@ date: 2021-06-27
 ## Local Path Planning 
 
 [Lesson 1: Parametric Curves - Coursera](https://www.coursera.org/learn/motion-planning-self-driving-cars/lecture/l4Aab/lesson-1-parametric-curves)
+
+
+
+
+
+## ORCA 
+
+在学习 ORCA 需要先学习 DWA  
+
+至少要明白 **速度坐标系** 的概念。
+
+Velocity Obstacle 的概念和 DWA 十分类似。
+
+[论文笔记《Reciprocal Velocity Obstacles for Real-Time Multi-Agent Navigation》 - 陪你度过漫长岁月 (meltycriss.com)](http://www.meltycriss.com/2017/01/13/paper-rvo/)
+
+[论文笔记《Reciprocal n-body Collision Avoidance》 -  陪你度过漫长岁月 (meltycriss.com)](http://www.meltycriss.com/2017/01/14/paper-orca/)
+
+然后可以看 Global + Local 
+
+[A Combination of Theta*, ORCA and Push and Rotate for Multi-agent Navigation (arxiv.org)](https://arxiv.org/abs/2008.01227)
+
+这个作者就有 [PathPlanning/ORCA-algorithm: Implementation of ORCA algorithm (github.com)](https://github.com/PathPlanning/ORCA-algorithm)
+
+也有官方实现 [RVO2 Library - Reciprocal Collision Avoidance for Real-Time Multi-Agent Simulation (unc.edu)](https://gamma.cs.unc.edu/RVO2/)
 
 
 

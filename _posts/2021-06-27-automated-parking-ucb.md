@@ -128,6 +128,21 @@ date: 2021-06-27
 
 [Lesson 4: Dynamic Windowing - Coursera](https://www.coursera.org/learn/motion-planning-self-driving-cars/lecture/PrN7r/lesson-4-dynamic-windowing)
 
+- 就是 Sampling Control Space , 然后根据 Objective Function 选择好 control actions 。 没了。
+- 考虑到电机可发挥的有限的加速度，**整个 velocity 搜索空间**减少到**动态窗口** (看下面文章的笔记)。
+	- 该窗口仅包含**下一个时间间隔内可以达到的速度** （考虑**当前速度**和**最大加速度**， **注意刹车也叫加速度**）。
+	- 动态窗口是以实际速度为中心的，它的扩展取决于可以施加的加速度。
+	- $$V_r = V_s \cap V_a \cap V_d$$  
+		-  $$V_s$$ 叫 angular velocity  (就是一堆可选的速度， 不理解就想一下 $$ -10 < x < 10$$ 在 Cartesian Plan 是怎样的， 是不是瞬间觉得 DWA 是初中知识)
+		- 同理， $$V_a$$ 是 translation velocity 
+		- $$V_d$$ 才是 DWA 的精髓， 结合运动约束、几何约束
+	- 对每条路径评价
+		- cost function 的设计才是核心， 具体就要看笔记和论文了。
+		- 但是自己玩玩的话， 这个随便搞
+- [The Dynamic Window Approach to Collision Avoidance - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/70233164)
+
+- [Difference between DWA local_planner and TEB local_planner - ROS Answers: Open Source Q&A Forum](https://answers.ros.org/question/274564/difference-between-dwa-local_planner-and-teb-local_planner/)
+
 
 
 
@@ -136,7 +151,7 @@ date: 2021-06-27
 
 - Coursera 的课就有[Lesson 3: Trajectory Rollout Algorithm - Module 6: Reactive Planning in Static Environments - Coursera](https://www.coursera.org/lecture/motion-planning-self-driving-cars/lesson-3-trajectory-rollout-algorithm-3toeN)
 - 还有 Matlab 的 [Hybrid A* path planner - MATLAB - MathWorks Australia](https://au.mathworks.com/help/nav/ref/plannerhybridastar.html)
-- 原文过去复杂是因为考虑了很多优化策略。
+- 原文过去复杂是因为考虑了很多优化策略。可以看到传统的 DWA 并没有 (Reversing 方向， 因为 Holonomic 机器人根本不需要)。
 
 
 

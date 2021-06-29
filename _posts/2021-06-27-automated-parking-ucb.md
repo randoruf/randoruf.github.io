@@ -43,6 +43,18 @@ date: 2021-06-27
 
 
 
+### Conflict-based Search 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KThsX04ABvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+这个例子很好地说明了什么是 **CBS**, 就是撞了就从头开始规划。
+
+其实这个方法没什么新意， 就是 Space-time Hybrid-A\*   。 但别人就是进了腾讯做 Robotics Researcher Intern ，我也想进啊。
+
+
+
+
+
 ## 伯克利停车场 
 
 [carla/PythonAPI/analysis at parking · MPC-Berkeley/carla (github.com)](https://github.com/MPC-Berkeley/carla/tree/parking/PythonAPI/analysis)
@@ -113,7 +125,8 @@ date: 2021-06-27
 [DWA泊车算法的实现_gophae的博客-CSDN博客](https://yunchengjiang.blog.csdn.net/article/details/107085729)
 
 - 但是DWA的弊端时很明显的，**他对heading的实现是一个软约束**，并不能够很好的在终点结束时达到期望的heading 。这个问题在对终点heading很敏感的泊车功能中是非常大的（不能歪歪扭扭吧）。
-- 
+
+[Lesson 4: Dynamic Windowing - Coursera](https://www.coursera.org/learn/motion-planning-self-driving-cars/lecture/PrN7r/lesson-4-dynamic-windowing)
 
 
 
@@ -126,6 +139,10 @@ date: 2021-06-27
 - 原文过去复杂是因为考虑了很多优化策略。
 
 
+
+## Local Path Planning 
+
+[Lesson 1: Parametric Curves - Coursera](https://www.coursera.org/learn/motion-planning-self-driving-cars/lecture/l4Aab/lesson-1-parametric-curves)
 
 
 

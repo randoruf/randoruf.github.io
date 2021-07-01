@@ -43,7 +43,7 @@ Firstly, if the AGV is entirely within one territory, then we only have to worry
 Secondly, if the AGV were a disc and it were to move along the territorial boundaries, it would be as far away from the obstacles as it could be. This might not be far enough, of course, but it's a start on path planning - we move along the territorial boundaries.
 
 But the AGV isn't a disc, and we may still collide with things. Note that most of the time we only have to be considering two obstacles - the ones either side of the boundary we're moving along.
- 
+
 
 ## Minkowski sums
 
@@ -83,6 +83,8 @@ Here is the place where the reference point on the half-disc can't go - the Mink
 
 ![img](/shared/imgs/ch11-minkowski/c12f12.gif)
 
+注意 Minkowski Sum 的目的是让 Polygon 化为 **point** ， 思考一下 reference point 可以去的位置就会明白为什么需要对称转换了。
+
 Here's an example of a Minkowski sum between more complicated shapes - a part of a tape transport mechanism and a disc and triangle:
 
 ![img](/shared/imgs/ch11-minkowski/c12f13.gif)
@@ -92,7 +94,7 @@ Note that it is not necessary for either shape to be *simply-connected*; here th
 With Minkowski sums, the problem of path planning for a complicated shape *just translating* reduces to moving a single point through the expanded obstacles. There are a number of ways to do this. We have already seen moving along the edges of the Voronoi territories. Another method is to imagine all the expanded obstacles have an electric charge and to move the point along the lowest potential. This is rather like the optimization we saw in the [last chapter ](https://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/BOWYER1/c11.htm)and suffers from the same problem of getting stuck in local minima.
 
 But we still don't have rotations, and computing Minkowski sums is still a research issue for shapes other than polyhedra.
- 
+
 
 ## Configuration Spaces
 

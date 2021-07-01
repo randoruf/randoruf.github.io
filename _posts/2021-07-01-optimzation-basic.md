@@ -110,7 +110,7 @@ date: 2021-07-01
 
 ## 04 优化问题的矩阵形式
 
-最终，我们可以将上述的代价函数和约束条件整合起来，构造成一个标准的二次优化问题来进行求解。其中代价函数本身已经为二次项的形式，第1，3个约束可以通过对优化变量的定义域来设置（ ![Image](/shared/imgs/optimization-basic-01/https://mmbiz.qpic.cn/sz_mmbiz_png/ibVw1NGwIHfg8WhM2iaypprV44pELwQ2O3uPdoaBl2Jl2J4E2cr9ax8SqXRFGDbTukvcia8KzB3VKNEqwGgGFPccA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1) ），连续性约束可以通过等式约束来设置（ ![Image](/shared/imgs/optimization-basic-01/640-20210701232049285) ），高阶的动力学约束可以通过不等式约束来设置（ ![Image](/shared/imgs/optimization-basic-01/640-20210701232049292) ），其中 ![Image](/shared/imgs/optimization-basic-01/640-20210701232049300) ，最终该优化问题可以写成下述的形式：
+最终，我们可以将上述的代价函数和约束条件整合起来，构造成一个标准的二次优化问题来进行求解。其中代价函数本身已经为二次项的形式，第1，3个约束可以通过对优化变量的定义域来设置（ ![img](/shared/imgs/optimization-basic-01/640-20210701234136093) ），连续性约束可以通过等式约束来设置（ ![Image](/shared/imgs/optimization-basic-01/640-20210701232049285) ），高阶的动力学约束可以通过不等式约束来设置（ ![Image](/shared/imgs/optimization-basic-01/640-20210701232049292) ），其中 ![Image](/shared/imgs/optimization-basic-01/640-20210701232049300) ，最终该优化问题可以写成下述的形式：
 
 ![Image](/shared/imgs/optimization-basic-01/640-20210701232049317)
 

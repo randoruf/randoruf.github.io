@@ -32,11 +32,11 @@ date: 2021-07-01
 
 ![Image](/shared/imgs/optimization-basic-01/640-20210701232049222)
 
-其中 <img src="/shared/imgs/640-20210701232048563" alt="Image" style="zoom: 5%;" /> 为在t时刻的贝塞尔曲线系数， <img src="/shared/imgs/640-20210701232048583" alt="Image" style="zoom:5%;" /> 为贝塞尔曲线的控制点，控制点的个数为贝塞尔曲线阶数加一。下面介绍贝塞尔曲线的几个重要性质，在后续的优化问题中会使用到。
+其中 <img src="/shared/imgs/optimization-basic-01/640-20210701232048563" alt="Image" style="zoom: 5%;" /> 为在t时刻的贝塞尔曲线系数， <img src="/shared/imgs/optimization-basic-01/640-20210701232048583" alt="Image" style="zoom:5%;" /> 为贝塞尔曲线的控制点，控制点的个数为贝塞尔曲线阶数加一。下面介绍贝塞尔曲线的几个重要性质，在后续的优化问题中会使用到。
 
 1. 贝塞尔曲线总是起始于第一个控制点，结束于最后一个控制点，并且不经过剩下的任何控制点；
 
-2. 贝塞尔曲线的时间参数t定义范围在[0,1]，即 <img src="/shared/imgs/640-20210701232048600" alt="Image" style="zoom:8%;" /> ，因此在实际应用时，需要乘上一个比例因子对时间进行放缩；
+2. 贝塞尔曲线的时间参数t定义范围在[0,1]，即 <img src="/shared/imgs/optimization-basic-01/640-20210701232048600" alt="Image" style="zoom:8%;" /> ，因此在实际应用时，需要乘上一个比例因子对时间进行放缩；
 
 3. **凸包性质**，贝塞尔曲线被包裹在其控制点连成的凸包中。我们可以利用该性质来约束控制点的位置，从而保证了曲线与障碍物无碰撞；
 
@@ -62,7 +62,7 @@ date: 2021-07-01
 
 ![Image](/shared/imgs/optimization-basic-01/640-20210701232048658)
 
-我们从上式中可以看出，这其实是一个二次项的形式，即 <img src="/shared/imgs/640-20210701232048888" alt="Image" style="zoom:8%;" /> . 其中 ![Image](/shared/imgs/optimization-basic-01/640-20210701232048702) 是优化问题中的优化变量，在这个问题中即为贝塞尔曲线在各个维度的控制点 <img src="/shared/imgs/640-20210701232048718" alt="Image" style="zoom:5%;" /> ，而 <img src="/shared/imgs/640-20210701232048727" alt="Image" style="zoom:5%;" /> 则为代价方程的Hessian矩阵。上面提到过贝塞尔曲线只在 <img src="/shared/imgs/640-20210701232048773" alt="Image" style="zoom:5%;" /> 的范围内有定义，因此实际应用时需要乘上一个比例系数。如果我们将在 <img src="/shared/imgs/640-20210701232048755" alt="Image" style="zoom:5%;" /> 维度上第 <img src="/shared/imgs/640-20210701232048763" alt="Image" style="zoom:5%;" /> 段的贝塞尔曲线用 <img src="/shared/imgs/640-20210701232048834" alt="Image" style="zoom:5%;" /> 来表示，而未乘以比例系数的曲线用 <img src="/shared/imgs/640-20210701232049145" alt="Image" style="zoom:5%;" /> 来表示，并且 <img src="/shared/imgs/640-20210701232554497" alt="640 (1069×207)" style="zoom:15%;" />  ，那么上面的代价函数就可以改写为：
+我们从上式中可以看出，这其实是一个二次项的形式，即 <img src="/shared/imgs/optimization-basic-01/640-20210701232048888" alt="Image" style="zoom:8%;" /> . 其中 ![Image](/shared/imgs/optimization-basic-01/640-20210701232048702) 是优化问题中的优化变量，在这个问题中即为贝塞尔曲线在各个维度的控制点 <img src="/shared/imgs/optimization-basic-01/640-20210701232048718" alt="Image" style="zoom:5%;" /> ，而 <img src="/shared/imgs/optimization-basic-01/640-20210701232048727" alt="Image" style="zoom:5%;" /> 则为代价方程的Hessian矩阵。上面提到过贝塞尔曲线只在 <img src="/shared/imgs/optimization-basic-01/640-20210701232048773" alt="Image" style="zoom:5%;" /> 的范围内有定义，因此实际应用时需要乘上一个比例系数。如果我们将在 <img src="/shared/imgs/optimization-basic-01/640-20210701232048755" alt="Image" style="zoom:5%;" /> 维度上第 <img src="/shared/imgs/optimization-basic-01/640-20210701232048763" alt="Image" style="zoom:5%;" /> 段的贝塞尔曲线用 <img src="/shared/imgs/optimization-basic-01/640-20210701232048834" alt="Image" style="zoom:5%;" /> 来表示，而未乘以比例系数的曲线用 <img src="/shared/imgs/optimization-basic-01/640-20210701232049145" alt="Image" style="zoom:5%;" /> 来表示，并且 <img src="/shared/imgs/optimization-basic-01/640-20210701232554497" alt="640 (1069×207)" style="zoom:15%;" />  ，那么上面的代价函数就可以改写为：
 
 ![Image](/shared/imgs/optimization-basic-01/640-20210701232048889)
 
@@ -72,9 +72,9 @@ date: 2021-07-01
 
 这里，我还想多说一句关于代价函数的矩阵形式，上面提到过贝塞尔曲线和多项式其实存在着一个线性映射的关系的，因此这里的二项式其实可以这样来表示：
 
-<img src="/shared/imgs/640-20210701232048950" alt="Image" style="zoom:50%;" />
+<img src="/shared/imgs/optimization-basic-01/640-20210701232048950" alt="Image" style="zoom:50%;" />
 
-其中 <img src="/shared/imgs/640-20210701232049009" alt="Image" style="zoom:5%;" /> 为多项式中的系数，因此 <img src="/shared/imgs/640-20210701232049019" alt="Image" style="zoom:15%;" /> ，即 <img src="/shared/imgs/640-20210701232049082" alt="Image" style="zoom:5%;" /> 可以通过上一篇文章中的Q值来计算得出。
+其中 <img src="/shared/imgs/optimization-basic-01/640-20210701232049009" alt="Image" style="zoom:5%;" /> 为多项式中的系数，因此 <img src="/shared/imgs/optimization-basic-01/640-20210701232049019" alt="Image" style="zoom:15%;" /> ，即 <img src="/shared/imgs/optimization-basic-01/640-20210701232049082" alt="Image" style="zoom:5%;" /> 可以通过上一篇文章中的Q值来计算得出。
 
 
 

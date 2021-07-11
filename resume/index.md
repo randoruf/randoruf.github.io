@@ -22,7 +22,7 @@ Personal Website: <https://ran.moe/>
 
 | [Monash University](https://www.monash.edu/) / Bachelor of Engineering (Honours) and Bachelor of Computer Science |
 | ------------------------------------------------------------ |
-| *Feb 2016 -  July 2021,  Melbourne, Australia*<br /><br />**Specialisation**:  Electrical and Computer Systems Engineering and Advanced Computer Science.<br />**GPA** 3.2/4<br />**WAM** 77 |
+| *Feb 2016 -  Oct 2021,  Melbourne, Australia*<br /><br />**Specialisation**:  Electrical and Computer Systems Engineering and Advanced Computer Science.<br />**GPA** 3.3/4<br />**WAM** 78 |
 
 ## Projects
 
@@ -67,6 +67,8 @@ JavaScript/TypeScript
 Matlab
 
 Java
+
+Haskell 
 
 
 

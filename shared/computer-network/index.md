@@ -29,6 +29,8 @@ title: 八股文 - 计算机网络
 
 有了这些了解， 就可以去看那些厚厚的书了，看的时候， 不要忘记每层对应的设备。
 
+其中软件工程师最常用的就是 **TCP/IP** , 主要对应 **Transport 和 Network Layer** 。
+
 ![这里写图片描述](aHR0cDovL2hpLmNzZG4ubmV0L2F0dGFjaG1lbnQvMjAxMjAxLzUvMF8xMzI1NzQ0NTk3V00zMi5naWY.gif)
 
 

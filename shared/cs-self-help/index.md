@@ -61,6 +61,7 @@ title: "为什么还摸鱼？ - CS科班生自救指南"
 
 ## 计算机网络
 
+- [ ] [计算机网络入门](https://randoruf.github.io/shared/computer-network/)
 - [ ] [randoruf/cs144-computer-networking (github.com)](https://github.com/randoruf/cs144-computer-networking)
 
 ## C++编程

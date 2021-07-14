@@ -11,10 +11,12 @@ title: 八股文 - 计算机网络
 
 - **应用层** ： 开发应用程序的人 (user mode)
   - 应用程序
+  - [【硬件科普】能上QQ但是打不开网页？详解DNS服务，DNS解析，DNS劫持和污染 - YouTube](https://www.youtube.com/watch?v=2QJLxhS2lXw)
 - **传输层** ： 开发操作系统、设备的人 (kernal mode)
   - 操作系统
 - **网络层**： 企业级路由器 + 电信部门
   - 企业级路由器 (路由算法、路由表是你的家用路由器能承受的吗？)
+  - [【硬件科普】IP地址是什么东西？IPV6和IPV4有什么区别？公网IP和私有IP又是什么？ - YouTube](https://www.youtube.com/watch?v=tVNx-6OEy-k)
 - **数据链层** ：局域网的构建  
   - 家用路由器， 家用交换机， 家用网桥
 - **物理层**：传导的**介质**

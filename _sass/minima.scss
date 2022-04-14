@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+$enable-dark-skin: true;
+$mojave-dark-mode: true;
+
+
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+$text-color:       #111 !default;
+$background-color: #fdfdfd !default;
+$brand-color:      #ffffff !default;
+
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+$orange-color:     #f66a0a !default;
+$table-text-align: left !default;
+
+$dark-skin-background: #1b1f23;
+$dark-skin-light-text: #c8e1ff;
+$dark-skin-dark-text: #1b1f23;
+$dark-skin-code-background: #333333;
+@if ($enable-dark-skin) {
+  $text-color: $dark-skin-light-text;
+  $background-color: $dark-skin-background;
+}
+@media (prefers-color-scheme: dark) {
+  @if ($mojave-dark-mode) {
+    $text-color: if($mojave-dark-mode, $dark-skin-light-text, $text-color);
+    $background-color: if($mojave-dark-mode, $dark-skin-background, $background-color);
+  }
+}
+
+// Width of the content area
+$content-width:    850px !default;
+
+$on-palm:          750px !default;
+$on-laptop:        850px !default;
+
+$on-medium:        $on-palm !default;
+$on-large:         $on-laptop !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+// Notice the following mixin uses max-width, in a deprecated, desktop-first
+// approach, whereas media queries used elsewhere now use min-width.
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import
+  "minima/base",
+  "minima/layout",
+  "minima/syntax-highlighting"
+;

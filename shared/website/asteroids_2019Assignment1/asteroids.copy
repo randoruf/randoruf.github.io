@@ -1,0 +1,182 @@
+// FIT2102 2019 Assignment 1
+// https://docs.google.com/document/d/1Gr-M6LTU-tfm4yabqZWJYg-zTjEVqHKKTCvePGCYsUA/edit?usp=sharing
+
+function asteroids() {
+  // Inside this function you will use the classes and functions 
+  // defined in svgelement.ts and observable.ts
+  // to add visuals to the svg element in asteroids.html, animate them, and make them interactive.
+  // Study and complete the Observable tasks in the week 4 tutorial worksheet first to get ideas.
+
+  // You will be marked on your functional programming style
+  // as well as the functionality that you implement.
+  // Document your code!  
+  // Explain which ideas you have used ideas from the lectures to 
+  // create reusable, generic functions.
+  const svg:HTMLElement = document.getElementById("canvas")!;
+  const background_width = parseInt(svg.getAttribute("width")!);
+  const background_height = parseInt(svg.getAttribute("height")!);
+
+  const limitRange = 
+    (pendingNum: number) => (min: number) => (max: number) => 
+    (pendingNum < min ? (pendingNum + max) : (pendingNum % max)); 
+
+  const createVector = 
+    (magnitude: number) => 
+    (angle: number) => 
+    ({x:   Math.round(magnitude*Math.sin(angle*Math.PI/180)), 
+      y: - Math.round(magnitude*Math.cos(angle*Math.PI/180))}); 
+
+  /**
+   * this function generates a random number between min and max (both inclusive)
+   * @param min the lowest number
+   * @param max the highest number
+   */
+  const getRandomArbitrary =
+   (min:number) => (max:number) => 
+   (Math.round(Math.random() * (max - min) + min)); 
+
+  function getShioPosition<T extends Elem>(target: T) : ({x:number, y: number, angle: number}){
+    const regex = /[0-9]+/g;
+    const pos = g.attr("transform")
+                 .match(regex)!
+                 .map(Number); 
+    return {x: pos[0], y: pos[1], angle: pos[2]} ;
+  } 
+
+  
+  class Asteroid{
+    readonly orien: number; 
+    readonly vel: number; 
+    readonly elem: Elem;
+
+    constructor(element: Elem){
+      this.orien = getRandomArbitrary(0)(360);
+      this.vel = getRandomArbitrary(1)(3); 
+      this.elem = element; 
+    }
+
+    // update method has side effect 
+    get update(): ({element:Elem, x:number, y:number, angle:number}) {
+        const x = limitRange(parseInt(this.elem.attr("cx")) + createVector(this.vel)(this.orien).x)
+                  (0)(background_width); 
+        const y = limitRange(parseInt(this.elem.attr("cy")) + createVector(this.vel)(this.orien).y)
+                  (0)(background_height);
+        return ({element: this.elem, x:x , y:y, angle:this.orien})
+    }
+  }
+
+
+  let velocity:number = 0, 
+      rotation:number = 0, 
+      life = 3, 
+      asteroids: Asteroid[] = []; 
+  
+  const asteroidsObservable = Observable.interval(1);
+  asteroidsObservable
+    .takeUntil(asteroidsObservable.filter(i => i == 10))
+    .subscribe(_ => { 
+        asteroids.push(
+          new Asteroid( 
+            (new Elem(svg, "circle")
+                  .attr("cx", getRandomArbitrary(0)(background_width)) 
+                  .attr("cy", getRandomArbitrary(0)(background_height))
+                  .attr("r", getRandomArbitrary(10)(50))
+                  .attr("style","fill:gray;fill-opacity:0.5;stroke:white;stroke-width:1")))
+        )
+    });
+
+  // make a group for the spaceship and a transform to move it and rotate it
+  // to animate the spaceship you will update the transform property
+  let g = new Elem(svg,'g')
+    .attr("transform","translate(250 200) rotate(0)")    
+  
+  // create a polygon shape for the space ship as a child of the transform group
+  let ship = new Elem(svg, 'polygon', g.elem) 
+    .attr("points","-15,20 15,20 0,-20")
+    .attr("style","fill:lime;stroke:purple;stroke-width:1")
+
+  const keyPress = Observable.fromEvent<KeyboardEvent>(document, "keydown"),
+        keyRelease = Observable.fromEvent<KeyboardEvent>(document, "keyup"); 
+
+  // the idea here is similar to LED display, the refresh rate is interval(10).....
+  const sysClock = Observable.interval(10); 
+  const sysController = 
+            sysClock.takeUntil(sysClock.filter( _ => (life === 0))); 
+
+  const shipUpdate = sysController
+                  .map( _ => getShioPosition(g))
+                  .map(({x, y, angle}) => ({
+                      x: x + createVector(velocity)(angle).x, 
+                      y: y + createVector(velocity)(angle).y, 
+                      angle: rotation
+                  }))
+                  .map(({x, y, angle}) => ({
+                      x: limitRange(x)(0)(background_width), 
+                      y: limitRange(y)(0)(background_height), 
+                      angle : limitRange(angle)(0)(360)
+                    }))
+                  .subscribe(({x, y, angle}) => { 
+                    g.attr("transform", "translate("+ x + " " + y + ") rotate("+ angle + ")");
+                    // damping ratio
+                    velocity *= 0.98; 
+                    rotation = angle;
+                  }
+                );
+
+  const asteroidsUpate = sysController
+                .filter(i => (i % 50 == 0))
+                .subscribe( _ => {
+                    asteroids.map(e => e.update)
+                             .forEach(e => {
+                                e.element.attr("cx", e.x);
+                                e.element.attr("cy", e.y); 
+                             })
+                })
+
+  
+  keyPress.map(e => ({key: e.key, repeat: e.repeat}))
+          .filter(({key, repeat}) => (key == "w" && !repeat))
+          // inspired by the tutorial "observableexamples.ts" (Rectangle animation, moving forward smoothly for 1 second). 
+          .flatMap(() => 
+              Observable.interval(100)
+                        .takeUntil(keyRelease.filter(e => e.key == "w")))
+          .subscribe(() => {
+              velocity = velocity < 10 ? velocity + 1 : velocity;
+          });
+
+  keyPress.map(e => ({key: e.key, repeat: e.repeat}))
+          // with object destructuring
+          .filter(({key, repeat}) => (key == "a" && !repeat))
+          // inspired by the tutorial "observableexamples.ts" (Rectangle animation, moving forward smoothly for 1 second). 
+          .flatMap(() => 
+              Observable.interval(10)
+                        .takeUntil(keyRelease.filter(e => e.key == "a")))
+          .subscribe(() => {
+              rotation -= 5;
+          });
+
+  keyPress.map(e => ({key: e.key, repeat: e.repeat}))
+          .filter(({key, repeat}) => (key == "d" && !repeat))
+          // inspired by the tutorial "observableexamples.ts" (Rectangle animation, moving forward smoothly for 1 second). 
+          .flatMap(() => 
+              Observable.interval(10)
+                        .takeUntil(keyRelease.filter(e => e.key == "d")))
+          .subscribe(() => {
+              rotation += 5;
+          });
+
+}
+
+
+// the following simply runs your asteroids function on window load.  Make sure to leave it in place.
+if (typeof window != 'undefined')
+  window.onload = ()=>{
+    asteroids();
+  }
+
+
+
+
+
+// ----------------------------------------------------------------------------------------------------------
+

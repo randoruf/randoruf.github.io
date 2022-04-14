@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://teachyourselfcs.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Teach Yourself Computer Science</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="All the resources you need to give yourself a world class computer science education">
+<link rel="icon" type="image/png" href="https://teachyourselfcs.com/favicon.ico">
+<link rel="stylesheet" type="text/css" href="./index_files/brochureware.css">
+<link href="./index_files/basscss.min.css" rel="stylesheet">
+<style>
+  .toradora_box{
+    width: 160px;
+    height: 80px;
+    padding: 8px; 
+  }
+
+  .toradora_button {
+    text-shadow: 1px 1px 2px black, 0 0 10px black; 
+  }
+  
+  .toradora_button:hover {
+    filter: brightness(120%);
+  }
+  
+  .toradora_button:active {
+    filter: brightness(80%);
+  }
+</style>
+
+</head><body data-gr-c-s-loaded="true"><div class="max-width-4 mx-auto py1 md-py4">
+  <div class="px2">
+    <a href="/" style="color: white; text-shadow: 0 0 3px #000000, 0 0 5px #ffffff;">
+      <span style="background-color:#e95499;">Ra</span><span style="background-color:#f29a4b;">n</span><span style="background-color:#6bcaf3;">do</span><span style="background-color:#d2bc61;">ru</span><span style="background-color:#e94e5c;">f</span><span style="color: white;">の小部屋</span>
+    </a>
+
+    <span class="toradora_box">
+      <a class="toradora_button toradora_box" href="/archives/" style="background-color:#e95499; color:white;">Archives</a>
+      <a class="toradora_button toradora_box" href="/projects/" style="background-color:#f29a4b; color:white;">Projects</a>
+      <a class="toradora_button toradora_box" href="/publications/" style="background-color:#6bcaf3; color:white;">Publications</a>
+      <a class="toradora_button toradora_box" href="/cs_course/" style="background-color:#d2bc61; color:white;">Notes</a>
+      <a class="toradora_button toradora_box" href="/about/" style="background-color:#e94e5c; color:white;">About</a>
+    </span>
+
+    <h1 class="h1 pb1 bb">Teach Yourself Computer Science</h1>
+
+    <div class="max-width-3">
+      <p class="my3 bold red">常用 <a href="https://github.com/haohua-li/cs-wiki">CS百科</a> - <a href="https://github.com/haohua-li/haohua-nikki">日记</a>  | 鸡汤 <a href="/cs_course/xueba/">说说你从非学霸变成学霸的经历吧？+ 人不聪明怎么办?</a> | 原版 <a href="https://teachyourselfcs.com/">see here</a></p>
+      <p class="my3 bold red">MikeTech的 iOS 开发笔记(每天必看) <a href="https://yigang.life/">链接</a></p>    
+    </div> 
+    <h3>神人xiaoweixiang 每天写代码、学算法、学日语</h3> 
+    <img src="image-20220105193742769.png" alt="image-20220105193742769" style="zoom:50%;"/>
+    <img src="https://raw.githubusercontent.com/haohua-li/photo-asset-repo/main/imgs/image-20220113010833991.png" style="zoom:50%;">
+
+    <h3>编程是一门艺术 + Just Do It</h3>
+    如果让你学画画，你可能不会思考太多，马上就会动手。编程应该也要这样。
+    任何专业只需要2000小时(来自 Redjuice 的理论) , 只需要1年你就可以达到入行标准。<br/>
+    <img src="image-00030919192146061.png" alt="image-00030919192146061" style="zoom:80%;"/>
+    <h3>每天都要学编程+英语+日语!</h3>
+    <img src="image-00030923200828986.png" alt="image-00030919192146061" style="zoom:80%;"/>
+    <iframe width="560" height="315" src="https://player.bilibili.com/player.html?aid=891715241&bvid=BV1BP4y157bp&cid=443650040&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+  </div>
+
+  <div class="px2 py3">
+    <table id="tldr-table" class="table-light">
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Why&nbsp;study?</th>
+          <th>Book</th>
+          <th>Videos</th>
+        </tr>
+      </thead>
+      <tbody class="h5">
+        <tr>
+          <td><strong><a href="#programming">Programming</a></strong></td>
+          <td>Don’t be the person who “never quite understood” something like recursion.</td>
+          <td><em>Structure and Interpretation of Computer Programs 计算机程序的构造和解释</em>, C++ Primer C++语言, Programming abstractions in C++ Qt C++入门, Principles of Software System Construction 面向对象设计</td>
+          <td><a href="http://numbbbbb.com/2016/03/28/20160328_%E6%88%91%E5%A6%82%E4%BD%95%E7%94%A8%E4%B8%A4%E5%91%A8%E6%97%B6%E9%97%B4%E5%88%B7%E5%AE%8C%20SICP/">我如何用20天刷完 SICP</a> Berkeley <a href="https://cs61a.org/">CS 61A</a>, Stanford <a href="http://web.stanford.edu/class/cs106b/">CS106B</a>, <a href="https://www.coursera.org/specializations/cs-fundamentals">Computer Science Fundamentals</a>, <a href="https://www.cs.cmu.edu/~aldrich/courses/15-214-11fa/">CMU 15-214</a></td>
+        </tr>
+        <tr>
+          <td><strong><a href="#architecture">Computer Architecture</a></strong></td>
+          <td>If you don’t have a solid mental model of how a computer actually works, all of your higher-level abstractions will be brittle.</td>
+          <td><em>Computer Systems: A Programmer's Perspective 深入理解计算机系统</em>, </td>
+          <td>Berkeley <a href="https://cs61c.org/">CS61C</a></td>
+        </tr>
+        <tr>
+          <td><strong><a href="#algorithms">Algorithms and Data&nbsp;Structures</a></strong></td>
+          <td>If you don’t know how to use ubiquitous data structures like stacks, queues, trees, and graphs, you won’t be able to solve challenging problems.</td>
+          <td>Data Structures and Algorithms Analysis 数据结构与算法分析, <em>The Algorithm Design Manual 算法设计手册</em>, Algorithms 4th 算法</td>
+          <td>
+            <ul>
+              <li><a href="https://ran.moe/shared/algorithms/FIT2004%20Course%20Notes.pdf">FIT2004笔记</a></li>
+              <li><a href="https://ran.moe/shared/algorithms/https://ran.moe/shared/algorithms/Steven%20Skiena%20-%20The%20algorithm%20design%20manual.pdf">算法设计手册</a></li>
+              <li><a href="https://algs4.cs.princeton.edu/home/">Algorithms 4th 教材</a></li>
+              <li><a href="https://ran.moe/shared/algorithms/Mark%20A.%20Weiss%20-%20Data%20Structures%20&%20Algorithm%20Analysis%20in%20C++%20(2013,%20Prentice%20Hall)%20-%20libgen.lc.pdf">数据结构与算法分析 C++</a></li>
+              <li><a href="https://ran.moe/shared/algorithms/intro_algorithms/book6/">算法导论</a></li>
+              <li><a href="https://ran.moe/shared/algorithms/(Princeton%20Science%20Library)%20G.%20Polya%20-%20How%20to%20Solve%20It_%20A%20New%20Aspect%20of%20Mathematical%20Method-Princeton%20University%20Press%20(2014).azw">怎么解题</a></li>
+              <li><a href="https://www.hackerearth.com/zh/practice/">Hackerearth 教程</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><strong><a href="#math">Math for CS</a></strong></td>
+          <td>CS is basically a runaway branch of applied math, so learning math will give you a competitive advantage.</td>
+          <td><em>Thomas'Calculus 微积分, Linear algebra Done Right 线性代数, Probability 概率论, Discrete Mathematics and its application 离散数学, Concrete Mathematics 具体数学</em></td>
+          <td><a href="https://youtu.be/lkx2BJcnyxk">Sheldon Axler's youtube</a>, <a href="https://www.cs.utah.edu/~jeffp/teaching/cs3130.html">CS3130</a>, <a href="https://www.coursera.org/specializations/discrete-mathematics">Coursera's discrete math</a>, <a href="https://book.douban.com/subject/21323941/">Donald Knuth's book</a></td>
+        </tr>
+        <tr>
+          <td><strong><a href="#operating-systems">Operating Systems</a></strong></td>
+          <td>Most of the code you write is run by an operating system, so you should know how those interact.</td>
+          <td><em>Operating Systems: Three Easy Pieces 操作系统</em></td>
+          <td><a href="https://cs162.eecs.berkeley.edu/">Berkeley CS 162</a></td>
+        </tr>
+        <tr>
+          <td><strong><a href="#networking">Computer Networking</a></strong></td>
+          <td>The Internet turned out to be a big deal: understand how it works to unlock its full potential.</td>
+          <td><em>Computer Networking: A Top-Down Approach 计算机网络：自顶向下方法</em>, Deep Dive Into Modern Web Development</td>
+          <td>Stanford <a href="https://cs144.github.io/">CS 144</a>, <a href="https://web.stanford.edu/class/cs142/">CS 142</a>, <a href="https://fullstackopen.com/">Helsinki Full stack</a></td>
+        </tr>
+
+        <tr>
+          <td><strong><a href="#">Robotics</a></strong></td>
+          <td>Robotics is the future.</td>
+          <td><a href="/cs_course/robotics/">大疆技术总监：如何用六年成为一个全能的机器人工程师</a></td>
+          <td><a href="http://lavalle.pl/planning/">Planning Algorithms</a> by Steven M. LaValle. </td>
+        </tr>
+
+        <tr>
+          <td><strong><a href="#databases">Databases</a></strong></td>
+          <td>Data is at the heart of most significant programs, but few understand how database systems actually work.</td>
+          <td><em>A First Course in Database Systems 数据库系统基础教程, Database System Implementation 数据库系统实现, Readings in Database Systems 数据库红宝书</em></td>
+          <td>Joe Hellerstein’s Berkeley <a href="http://www.infocobuild.com/education/audio-video-courses/computer-science/cs186-spring2015-berkeley.html">CS 186</a> and <a href="https://sites.google.com/site/cs186spring2015/">material</a></td>
+        </tr>
+        <tr>
+          <td><strong><a href="#languages">Languages and Compilers</a></strong></td>
+          <td>If you understand how languages and compilers actually work, you’ll write better code and learn new languages more easily.</td>
+          <td><em>Crafting Interpreters 手撕编译器, Engineering a Compiler 写个编译器</em></td>
+          <td>Alex Aiken’s course on <a href="https://www.edx.org/course/compilers">edX</a>, <a href="https://inst.eecs.berkeley.edu/~cs164/">伯克利 CS 164</a></td>
+        </tr>
+
+        <tr>
+          <td><strong><a href="#languages">Software Engineering</a></strong></td>
+          <td>It includes fundamental principles and techniques of software development.</td>
+          <td><em>Head First Design Patterns 2nd</em> by Eric Freeman and Elisabeth Robson</td>
+          <td>MIT 6.005 Software Construction, <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-005-software-construction-spring-2016/">edX</a></td>
+        </tr>
+
+        <tr>
+          <td><strong><a href="#machine-learning">Machine Learning</a></strong></td>
+          <td>Everything can be done by machine learning! (but the accuracy is not 100%)</td>
+          <td><em>机器学习</em> by 周志华, <em>Deep Learning</em> by Ian Goodfellow et.al 花书</td>
+          <td><a href="https://github.com/SKKSaikia/CS229_ML">CS229</a>, <a href="http://introtodeeplearning.com/">6.S191</a>, <a href="https://cs230.stanford.edu/">CS230</a>, <a href="http://cs231n.stanford.edu/">CS231n</a>, <a href="http://web.stanford.edu/class/cs224n/">CS224n</a></td>
+        </tr>
+        <tr>
+          <td><strong><a href="#distributed-systems">Distributed Systems</a></strong></td>
+          <td>These days, <em>most</em> systems are distributed systems.</td>
+          <td><em>Designing Data-Intensive Applications</em> 设计数据密集型应用 by Martin Kleppmann</td>
+          <td>MIT 6.824</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="px2">
+    <h2 class="h2 mb0" id="too-much">Still too much?</h2>
+  </div>
+
+  <div class="flex flex-wrap">
+      <div class="md-col-8 px2">
+        <p>至少阅读两本书，分别是《深入了解计算机系统》和《设计数据密集型应用》。</p>
+      </div>
+  </div>
+
+  <div class="px2">
+    <h2 class="h2 mb0">Subject guides</h2>
+  </div>
+
+  <div class="max-width-3 px2">
+    <h3 class="h3 mb0" id="programming">Programming</h3>
+  </div>
+
+  <div class="flex flex-wrap">
+    <div class="md-col-8 px2">
+
+      <p>教科书 <em>Structure and Interpretation of Computer Programs</em> <a href="https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html">a book</a>. </p>
+      <p>教学视频 <a href="https://archive.org/details/ucberkeley-webcast-PL3E89002AA9B9879E?sort=titleSorter">Brian Harvey’s SICP lectures</a> (for the 61A course at Berkeley).</p>
+      <p>如果你觉得SICP过于简单，那我们推荐 《Concepts, Techniques, and Models of Computer Programming》 。如果读这些书让你觉得没有收获，也行你应该先学习其他科目，一两年后再重新审视编程的理念。</p>
+    
+    </div>
+    <div class="md-col-4 px2">
+      <a href="https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html">
+        <img class="py2 pr1" height="300" src="./index_files/sicp.jpg" alt="Structure and Interpretation of Computer Programs">
+      </a>
+    </div>
+
+  </div>
+
+  <div class="max-width-3 px2">
+    <h3 class="h3 mb0" id="architecture">Computer Architecture</h3>
+  </div>
+
+  <div class="flex flex-wrap">
+    <div class="md-col-8 px2">
+      
+      <p>从程序员的角度了解计算机 <em><a href="http://csapp.cs.cmu.edu/3e/home.html">Computer Systems: A Programmer's Perspective</a></em>, 配套的课程 <a href="http://csapp.cs.cmu.edu/3e/courses.html">计算机体系结构导论课程</a> 会覆盖前 1-6 章节的内容.</p>
+    
+      <p>上面这本书会侧着软件，如果也想了解硬件可以看 <em>The Elements of Computing Systems</em>, 又名“从与非门到俄罗斯方块”（“Nand2Tetris”. 这本书的每一章节对应如何构建计算机整体系统中的一小部分，从用HDL（硬件描述语言）写基本的逻辑门电路出发，途经CPU和汇编，最终抵达诸如俄罗斯方块这般规模的应用程序。</p>
+    
+      <p>我们推荐把此书的前六章读完，并完成对应的项目练习。这么做，你将更加深入地理解，计算机架构和运行其上的软件之间的关系。</p>
+    
+      <p>这本书的前半部分（包括所有对应的项目）均可从Nand2Tetris的网站上免费获得。同时，在Coursera上，这是一门视频课程。<a href="http://www.nand2tetris.org/">the Nand2Tetris website</a>. It’s also available as <a href="https://www.coursera.org/learn/build-a-computer">a Coursera course with accompanying videos</a>.</p>
+    
+      <p>为了追求简洁和紧凑，这本书牺牲了内容上的深度。尤其值得注意的是，流水线和存储层次结构是现代计算机架构中极其重要的两个概念，然而这本书对此几乎毫无涉及。</p>
+    
+      <p>你掌握了Nand2Tetris的内容后，我们推荐要么回到《深入理解计算机系统》，或者考虑Patterson和Hennessy二人所著的 <em><a href="https://smile.amazon.com/Computer-Organization-Design-Fifth-Architecture/dp/0124077269">Computer Organization and Design</a></em>,一本优秀的经典著作。这本书中的不同章节重要程度不一，因此我们建议根据Berkeley的 <a href="http://inst.eecs.berkeley.edu/~cs61c/sp15/">CS61C course</a> 计算机架构中的伟大思想”来着重阅读一些章节。这门课的笔记和实验在网络上可以免费获得，并且在<a href="https://archive.org/details/ucberkeley-webcast-PL-XXv-cvA_iCl2-D-FS5mk0jFF6cYSJs_">on the Internet Archive</a>.</p>
+    
+    </div>
+    <div class="md-col-4 px2">
+      <a href="http://csapp.cs.cmu.edu/3e/home.html">
+        <img class="py2" height="300" src="./index_files/csapp.jpg" alt="Computer Systems: A Programmer&#39;s Perspective">
+      </a>
+    
+      <blockquote class="h3 bold bl ml0 pl2 mt3 red">
+        <p>Hardware is the platform</p>
+      </blockquote>
+      <cite>– Mike Acton, Engine Director at Insomniac Games<br>(<a href="https://www.youtube.com/watch?v=rX0ItVEVjHc">watch his CppCon talk</a>)</cite>
+    
+    </div>
+  </div>
+
+  <div class="max-width-3 px2">
+    <h3 class="h3 mb0" id="algorithms">Algorithms and Data Structures</h3>
+  </div>
+
+  <div class="flex flex-wrap">
+    <div class="md-col-6 px2">
+    
+      <p>但是我们的最爱是Steven Skiena编写的<em><a href="https://smile.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/">The Algorithm Design Manual</a></em> by Steven Skiena. 在我们看来，这本书给人一种焕然一新的体验，完全不同于那些更加经常被推荐的书（比如Cormen，Leiserson，Rivest 和 Stein，或者 Sedgewick的书，后两者充斥着过多的证明，不适合以 解决问题 为导向的学习）。</p>
+      <p>算法设计的模式有 动态规划。Steven说 其实很简单，直到你弄懂之前。 </p>
+
+      <p>配套视频, <a href="https://www.youtube.com/watch?v=22hwcnXIGgk&list=PLOtl7M3yp-DX6ic0HGT0PUX_wiNmkWkXx">CSE 373</a></p>
+    
+      <p>刷算法 <a href="https://leetcode.com/">Leetcode</a>.</p>
+    
+      <p><em><a href="https://smile.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069116407X/">How to Solve It</a></em> 这本书极为优秀且独特，指导人们解决广义上的问题，因而一如其适用于数学，它适用于计算机科学。</p>
+    
+    </div>
+    
+    <div class="md-col-6 px2">
+      <a href="https://smile.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/">
+        <img class="py2 pr1" height="300" src="./index_files/skiena.jpg" alt="The Algorithm Design Manual"></a>
+      <a href="https://smile.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069116407X/">
+        <img class="py2" height="300" src="./index_files/polya.jpg" alt="How to Solve It">
+      </a>
+    
+      <blockquote class="h3 bold bl ml0 pl2 red">
+        <p>I have only one method that I recommend extensively—it’s called think before you write.</p>
+      </blockquote>
+      <cite>— Richard Hamming</cite>
+    
+    </div>
+  </div>
+
+  <div class="max-width-3 px2">
+    <h3 class="h3 mb0" id="algorithms">ACM算法学习</h3>
+  </div>
+
+  <div class="flex flex-wrap">
+    <div class="md-col-6 px2">
+      <p>可以看一看 <a href="https://segmentfault.com/a/1190000018113038">浅谈算法学习 - flyawayl</a></p>
+      <p>推荐《算法竞赛入门经典》, 代码可以在 <a href="https://github.com/aoapc-book/aoapc-bac2nd/">这里</a> 下载。</p>
+      <p>进一步的高级算法可以看 《算法设计》</p>
+    </div>
+    
+    <div class="md-col-6 px2">
+      <a href="https://smile.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/">
+        <img class="py2 pr1" height="280" src="https://raw.githubusercontent.com/haohua-li/photo-asset-repo/main/imgs/5ad5c0d4N58de1557.jpg" alt="The Algorithm Design Manual"></a>
+      <a href="https://smile.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069116407X/">
+        <img class="py2" height="280" src="https://raw.githubusercontent.com/haohua-li/photo-asset-repo/main/imgs/51BHNytrZCL._SX218_BO1,204,203,200_QL40_ML2_.jpg" alt="How to Solve It">
+      </a>
+    
+      <blockquote class="h3 bold bl ml0 pl2 red">
+        <p>Get your hands dirty. </p>
+      </blockquote>
+      <cite>— 在科研中需要实现idea (比如 编程实现/做出实验/推出公式等等)</cite>
+    
+    </div>
+  </div>
+
+  <div class="max-width-3 px2">
+    <h3 class="h3 mb0" id="math">Mathematics for Computer Science</h3>
+  </div>
+
+  <div class="flex flex-wrap">
+    <div class="md-col-8 px2">
+      <p>对于计算机科学，数学中最相关的领域是“离散数学”，其中的“离散”与“连续”相对立，大致上指的是应用数学中那些有趣的主题，而不是微积分之类的。由于定义比较含糊，试图掌握离散数学的全部内容是没有意义的。较为现实的学习目标是，了解逻辑、排列组合、概率论、集合论、图论以及密码学相关的一些数论知识。考虑到线性代数在计算机图形学和机器学习中的重要性，该领域同样值得学习。</p>
+    
+      <p>学习离散数学，我们建议从<a href="http://www.cs.elte.hu/~lovasz/dmbook.ps">lecture notes by László Lovász</a>. 开始。Lovász教授成功地让这些内容浅显易懂且符合直觉，因此，比起正式的教材，这更适合初学者。</p>
+    
+      <p>对于更加高阶的学习，我们推荐 <em><a href="https://courses.csail.mit.edu/6.042/spring17/mcs.pdf">Mathematics for Computer Science</a></em>, MIT同名课程的课程笔记，篇幅与书籍相当（事实上，现已出版）。这门课程的视频同样 <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/">freely available</a>, and are our recommended video lectures for discrete math.</p>
+    
+      <p>For linear algebra, we suggest starting with the <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">Essence of linear algebra</a> video series, followed by Gilbert Strang’s <a href="https://www.amazon.com/Introduction-Linear-Algebra-Gilbert-Strang/dp/0980232775/">book</a> and <a href="https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/">video lectures</a>.</p>
+    
+    </div>
+    
+    <div class="md-col-4 px2">
+    
+      <blockquote class="h3 bold bl ml0 pl2 red">
+        <p>If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is.</p>
+      </blockquote>
+      <cite>— John von Neumann</cite>
+    
+    </div>
+  </div>
+
+
+  <div class="max-width-3 px2">
+    <h3 class="h3 mb0" id="operating-systems">Operating Systems</h3>
+  </div>
+
+  <div class="flex flex-wrap">
+    <div class="md-col-8 px2">
+
+      <p><em><a href="https://www.amazon.com/dp/1118063333/">Operating System Concepts</a></em> (the “Dinosaur book”) and <em><a href="https://www.amazon.com/dp/013359162X/">Modern Operating Systems</a></em> are the “classic” books on operating systems. Both have attracted criticism for their lack of clarity and general student unfriendliness.</p>
+    
+      <p><em>Operating Systems: Three Easy Pieces</em> is a good alternative that’s <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/">freely available online</a>. We particularly like the structure and readability of the book, and feel that the exercises are worthwhile.</p>
+    
+      <p>After OSTEP, we encourage you to explore the design decisions of specific operating systems, through “{OS name} Internals” style books such as <em><a href="https://www.amazon.com/Lions-Commentary-Unix-John/dp/1573980137/">Lion's commentary on Unix</a></em>, <em><a href="https://www.amazon.com/Design-Implementation-FreeBSD-Operating-System/dp/0321968972/">The Design and Implementation of the FreeBSD Operating System</a></em>, and <em><a href="https://www.amazon.com/Mac-OS-Internals-Systems-Approach/dp/0321278542/">Mac OS X Internals</a></em>. For Linux, we suggest Robert Love's fantastic <a href="https://www.amazon.com/Linux-Kernel-Development-Robert-Love/dp/0672329468">Linux Kernel Development</a>.</p>
+    
+      <p>A great way to consolidate your understanding of operating systems is to read the code of a small kernel and add features. One choice is <a href="https://pdos.csail.mit.edu/6.828/2016/xv6.html">xv6</a>, a port of Unix V6 to ANSI C and x86, maintained for a course at MIT. OSTEP has an appendix of potential <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/lab-projects-xv6.pdf">xv6 labs</a> full of great ideas for potential projects.</p>
+    
+    </div>
+    <div class="md-col-4 px2">
+    
+      <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/">
+        <img class="py2 pr1" height="300" src="./index_files/ostep.jpeg" alt="Operating Systems: Three Easy Pieces">
+      </a>
+    
+    </div>
+
+  </div>
+
+
+  <div class="max-width-3 px2">
+    <h3 class="h3 mb0" id="networking">Computer Networking</h3>
+  </div>
+
+  <div class="flex flex-wrap">
+    <div class="md-col-6 px2">
+      <p>鉴于有那么多关于网络服务端和客户端的软件工程，计算机网络是计算机科学中价值最为“立竿见影”的领域之一。我们的学生，系统性地学习了计算机网络，最终能够理解那些曾困扰他们多年的术语、概念和协议。</p>
+      
+      <p>Our favorite book on the topic is <em><a href="https://smile.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149/">Computer Networking: A Top-Down Approach</a></em>. The small projects and exercises in the book are well worth doing, and we particularly like the “Wireshark labs”, which they have <a href="http://www-net.cs.umass.edu/wireshark-labs/">generously provided online</a>.</p>
+    
+      <p>如果更喜欢视频课程，我们推荐Stanford的 <a href="https://www.youtube.com/playlist?list=PLvFG2xYBrYAQCyz4Wx3NPoYJOFjvU7g2Z"><em>Introduction to Computer Networking course</em></a> previously available via Stanford's MOOC platform Lagunita, but sadly now only available as unofficial playlists on Youtube.</p>
+      
+      <p>对于计算机网络的学习，做项目比完成小的习题更有益。一些可能的项目有：HTTP服务器，基于UDP的聊天APP，<a href="https://jvns.ca/blog/2014/08/12/what-happens-if-you-write-a-tcp-stack-in-python/" >迷你TCP栈</a>，代理，负载均衡器，或者分布式哈希表。</p>
+    </div>
+    
+    <div class="md-col-6 px2">
+    
+      <blockquote class="h3 bold bl ml0 pl2 red">
+        <p>You can’t gaze in the crystal ball and see the future. What the Internet is going to be in the future is what society makes it.</p>
+      </blockquote>
+      <p><cite>— Bob Kahn</cite></p>
+    
+      <a href="https://smile.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149/">
+        <img class="py2 pr1" height="300" src="./index_files/top-down.jpg" alt="Computer Networking: A Top-Down Approach">
+      </a>
+    </div>
+
+  </div>
+
+
+  <div class="max-width-3 px2">
+    <h3 class="h3 mb0" id="databases">Databases</h3>
+  </div>
+
+  <div class="flex flex-wrap">
+    <div class="md-col-8 px2">
+
+      <p>比起其他主题，自学数据库系统需要更多的付出。这是一个相对年轻的研究领域，并且出于很强的商业动机，研究者把想法藏在紧闭的门后。此外，许多原本有潜力写出优秀教材的作者反而选择了加入或创立公司。</p>
+    
+      <p>鉴于如上情况，我们鼓励自学者大体上抛弃教材，而是从 <a href="https://www.youtube.com/user/CS186Berkeley/videos">recordings of CS 186</a>, （Joe Hellerstein在Berkeley的数据库课程）开始，然后前往阅读论文。</p>
+    
+      <p>对于初学者，有一篇格外值得提及的论文：“<a href="http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf">Architecture of a Database System</a>”, 这篇论文提供了独特的对关系型数据库管理系统（RDBMS）如何工作的高层次观点，是后续学习的实用梗概。</p>
+    
+      <p><em>Readings in Database Systems</em> <a href="http://www.redbook.io/">数据库红宝书</a> 是由Peter Bailis，Joe Hellerstein和Michael Stonebraker编纂的论文合集。对于那些想要在CS 186课程的水平更进一步的学习者，“红书”应当是下一步。</p>
+    
+      <p>如果你坚持一定要一本导论教材，那我们推荐Ramakrishnan和Gehrke所著的  <em><a href="https://smile.amazon.com/Database-Management-Systems-Raghu-Ramakrishnan/dp/0072465638/">Database Management Systems</a></em>  如需更深一步，Jim Gray的经典著作 <em><a href="https://www.amazon.com/Transaction-Processing-Concepts-Techniques-Management/dp/1558601902">Transaction Processing: Concepts and Techniques</a></em> 值得一读，不过我们不建议把这本书当作首要资源。.</p>
+      
+      <p>如果没有编写足够数量的代码，很难巩固数据库理论。CS 186课程的学生给Spark添加特性，倒是不错的项目，不过我们仅仅建议从零实现一个简单的关系型数据库管理系统。自然，它将不会有太多的特性，但是即便只实现典型的关系型数据库管理系统每个方面最基础的功能，也是相当有启发的。</p>
+
+      <p>最后，数据模型往往是数据库中一个被忽视的、教学不充分的方面。关于这个主题，我们推荐的书籍是 <em><a href="https://www.amazon.com/Data-Reality-Perspective-Perceiving-Information/dp/1935504215">Data and Reality: A Timeless Perspective on Perceiving and Managing Information in Our Imprecise World</a></em>.</p>
+    
+    </div>
+    
+    <div class="md-col-4 px2">
+    
+      <a href="http://www.redbook.io/">
+        <img class="py2 pr1" height="300" src="./index_files/redbook.jpg" alt="Readings in Database Systems">
+      </a>
+      <a href="https://www.amazon.com/Data-Reality-Perspective-Perceiving-Information/dp/1935504215">
+        <img class="py2" height="300" src="./index_files/data-reality.jpg" alt="Data and Reality">
+      </a>
+    
+    </div>
+
+  </div>
+
+
+  <div class="max-width-3 px2">
+    <h3 class="h3 mb0" id="languages">Languages and Compilers</h3>
+  </div>
+
+  <div class="flex flex-wrap">
+    <div class="md-col-6 px2">
+      <p>多数程序员学习编程语言的知识，而多数计算机科学家学习编程语言 相关 的知识。这使得计算机科学家比起程序员拥有显著的优势，即便在编程领域！因为他们的知识可以推而广之：相较只学习过特定编程语言的人，他们可以更深入更快速地理解新的编程语言。</p>
+    
+      <p>我们推荐的入门书是 Bob Nystrom 所著的优秀的 <em><a href="https://craftinginterpreters.com/contents.html">Crafting Interpreters</a></em> 可在网上免费获取。这本书条理清晰，富有趣味性，非常适合那些想要更好地理解语言和语言工具的人。我们建议你花时间读完整本书，并尝试任何一个感兴趣的“挑战”。</p>
+    
+      <p>另一本更为传统的推荐书籍是 <em><a href="https://smile.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811">Compilers: Principles, Techniques &amp; Tools</a></em>, ，通常称为“龙书”。不幸的是，这本书不是为自学者而设计的，而是供教师从中挑选一些主题用于1-2学期的教学。</p>
+    
+      <p>如果你选择使用龙书进行自学，你需要从中甄选主题，而且最好是在导师的帮助下。我们建议依据某个视频课程来设定学习的结构，然后按需从龙书中获取深入的内容。我们推荐的在线课程是 <a href="https://www.edx.org/course/compilers">Alex Aiken’s, on edX</a>.</p>
+    
+    </div>
+    
+    <div class="md-col-6 px2">
+    
+      <a href="https://smile.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811">
+        <img class="py2 pr1" height="300" src="./index_files/dragon.jpg" alt="Compilers: Principles, Techniques &amp; Tools">
+      </a>
+    
+      <blockquote class="h3 bold bl ml0 pl2 red">
+        <p>Don’t be a boilerplate programmer. Instead, build tools for users and other programmers. Take historical note of textile and steel industries: do you want to build machines and tools, or do you want to operate those machines?</p>
+      </blockquote>
+      <p><cite>— Ras Bodik at the start of his compilers course</cite></p>
+    
+    </div>
+
+  </div>
+
+
+  <div class="max-width-3 px2">
+    <h3 class="h3 mb0" id="distributed-systems">Distributed Systems</h3>
+  </div>
+
+  <div class="flex flex-wrap">
+    <div class="md-col-8 px2">
+
+      <p>我们推荐的自学参考书是 Martin Kleppmann 的 <em><a href="https://smile.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable-ebook/dp/B06XPJML5D/">Designing Data-Intensive Applications</a></em>. 与传统的教科书相比，它是一本为实践者设计的具有很高的可读性的书，并且保持了深度和严谨性。</p>
+    
+      <p>对于那些偏爱传统教材，或者希望可以从网上免费获取的人，我们推荐的教材是Maarten van Steen和Andrew Tanenbaum所著的 《分布式系统原理与范型》 <em><a href="https://www.distributed-systems.net/index.php/books/ds3/">Distributed Systems, 3rd Edition</a></em>.</p>
+    
+      <p>对于喜欢视频课程的人 <a href="https://www.youtube.com/watch?v=cQP8WApzIQQ&amp;list=PLrw6a1wE39_tb2fErI4-WkMbsvGQk9_UB">MIT’s 6.824</a>, 是一门很好的在线视频课程，由 Robert Morris 教授的研究生课程，在<a href="https://pdos.csail.mit.edu/6.824/schedule.html">here</a>可以看到课程安排。.</p>
+    
+      <p>不管选择怎样的教材或者其他辅助资料，学习分布式系统必然要求阅读论文。A good list is <a href="http://dsrg.pdos.csail.mit.edu/papers/">here</a>, 能参加勉强会一起读论文当然更好了。</p>
+    
+    </div>
+    
+    <div class="md-col-4 px2">
+    
+      <a href="https://smile.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable-ebook/dp/B06XPJML5D/">
+        <img class="py2 pr1" height="300" src="./index_files/ddia.jpg" alt="Designing Data-Intensive Applications">
+      </a>
+    
+    </div>
+
+  </div>
+
+  <div class="px2">
+    <div class="max-width-3">
+      <h2 class="h2">Frequently asked questions</h2>
+
+      <h4 class="h4">What about AI/graphics/pet-topic-X?</h4>
+      <p>We’ve tried to limit our list to computer science topics that we feel <em>every practicing software engineer</em> should know, irrespective of specialty or industry, but with a focus on systems. In our experience, these will be the highest ROI topics for the overwhelming majority of self-taught engineers and bootcamp grads, and provide a solid foundation for further study. Subsequently, you’ll be in a much better position to pick up textbooks or papers and learn the core concepts without much guidance. Here are our suggested starting points for a couple of common “electives”:</p>
+      <ul>
+        <li><b>人工智能</b>：通过观看视频并完成Pacman项目来学习 <a href="http://ai.berkeley.edu/">Berkeley’s intro to AI course</a> 至于教材，使用Russell和Norvig编写的 <em>Artificial Intelligence: A Modern Approach</em>.</li>
+        <li><b>机器学习</b>：学习吴恩达在Coursera上的课程。耐心学习，先确保理解了基础概念再奔向类如深度学习的诱人新主题。</li>
+        <li><b>计算机图形学</b>：学习 <a href="http://inst.eecs.berkeley.edu/~cs184/fa12/onlinelectures.html">Berkeley’s CS 184</a> material, 使用 <a href="https://www.amazon.com/Computer-Graphics-Principles-Practice-3rd/dp/0321399528">Computer Graphics: Principles and Practice</a> as a textbook.</li>
+      </ul>
+
+      <h4 class="h4">How does this compare to Open Source Society or freeCodeCamp curricula?</h4>
+      <p><a href="https://github.com/open-source-society/computer-science">OSS guide</a> 涵盖太多主题，在许多主题中推荐劣质资源没有就特定课程哪些方面有价值提供原因或指引。我们努力对这份指引中的课程加以限制，仅仅包括那些你作为软件工程师 确实需要了解的，不论你的专业方向，并且对每门课程为何必要做出了解释以帮助你理解。</p>
+      
+      <p>FreeCodeCamp主要关注编程，而不是计算机科学。至于你为什么要学习计算机科学，参见上文。如果你是个新手，我们建议先学 freeCodeCamp 的课程，一两年后再回归本指南。</p>
+      
+      <h4 class="h4">Why are you still recommending SICP?</h4>
+      <p>先尝试读一下，有些人觉得 SICP 让人神魂颠倒，这在其他书很少见。如果你不喜欢，你可以尝试其他的东西，也许以后再回到 SICP。</p>
+    
+      <h4 class="h4">Why are you still recommending the Dragon book?</h4>
+      <p>龙书依旧是内容最为完整的编译器单本书籍。由于过分强调一些如今不够时新的主题的细节，比如解析，这本书招致了恶评。然而事实上，这本书从未打算供人一页一页的学习，而仅仅是为了给教师准备一门课程提供足够的材料。类似地，自学者可以从书中量身按需挑选主题，或者最好依照公开课授课教师在课程大纲中的建议。</p>
+
+      <h4 class="h4">Who made this?</h4>
+      <p>这份指引由Bradfield School of Computer Science（旧金山）的两位教员：Ozan Onay和Myles Byrne编写，并由 Oz 于 2020 年更新。这份指引基于我们对数千名自学成才的工程师和培训班学生教授计算机科学基础的经验。感谢我们所有学生对自学资源的持续反馈。</p>
+      <p>只要有足够的时间和动力，我们非常有信心，你可以自学完以上所有课程。如果你喜欢一个集中式、结构化、由教师指导的课程，你可能对我们的计算机科学强化班感兴趣。</p>
+      <P><b>我们不建议你去攻读硕士学位。</b><a href="https://ozwrites.com/masters/">为什么不能读硕士？</a></p>
+
+<link rel="stylesheet" href="./index_files/formEmbed.css"> 
+
+<h3>前端学习</h3> 
+<p>在学生时候有空就多逛逛就业网站 Indeed 之类的(以前忘了看那本书也这么说)。</p>
+<p>感受一下就业机会就知道自己应该提前学些什么，像现在2021年，Indeed 上全都是在找前端的人</p> 
+<ul>
+  <li>Experience in web technologies, including object-oriented JavaScript, HTML5, and CSS3.</li> 
+  <li>Experience in web technologies, including object-oriented JavaScript, Typescript or React.js.</li>
+  <li>Experience developing web-based applications.</li>
+  <li>Experienced with Java and Spring/Springboot. </li>
+  <li>Understands microservice architectures and RESTful APIs</li>
+  <li>Has hands on experience with cloud computing services (e.g. AWS, GCP, Azure)</li>
+  <li>Competent with database technologies (e.g.RDMS such as MySQL, PostgreSQL and/or NoSQL like DynamoDB, Cassandra, MongoDB)</li>
+  <li>Experience with object-relational databases (PostgreSQL preferred)</li>
+  <li>Understands code testability, build pipelines, Docker and CI/CD systems</li>
+  <li>You have experience writing REST or Graphql APIs</li>
+  <li>You are passionate about a test driven approach, especially using automation testing tools like Mocha and Enzyme</li>
+</ul>
+
+<h3>其他要学的</h3>
+<ul>
+  <li>Excellent programming skills in C++ and/or Java required</li>
+  <li>Solid conceptual knowledge (e.g., data structures, **programming languages design, distributed systems** etc) and practical skills for writing efficient code</li>
+  <li>Knowledge of build automation for Java (e.g. Maven, Gradle) and C/C++ (e.g. autoconf, **cmake**)</li>
+  <li>Demonstrable experience in at least one of the following: **program analysis**, **compilers** or web application security</li>
+  <li>分布式技术</li>
+  <li>Redis</li>
+  <li>MySQL</li>
+  <li>NoSQL, MongoDB</li>
+  <li>后端开发</li>
+  <li>网络爬虫技术</li>
+</ul>
+
+<div class="email-octopus-form-wrapper">
+    <h2 class="email-octopus-heading"></h2>
+    <p class="email-octopus-success-message"></p>
+    <p class="email-octopus-error-message"></p>
+    <form method="post" action="https://emailoctopus.com/lists/f4cad433-e8b5-11e9-be00-06b4694bee2a/members/embedded/1.3/add" class="email-octopus-form bound" data-sitekey="6LdYsmsUAAAAAPXVTt-ovRsPIJ_IVhvYBBhGvRV6">
+        <input id="field_0" class="email px1 mr1" name="field_0" type="email" placeholder="email address" style="float: left; font-size: large" required="">
+        <input type="hidden" name="successRedirectUrl" value="">
+        <input type="submit" value="Subscribe" name="subscribe" class="button" style="font-size: large">
+        <div class="email-octopus-form-row-hp" aria-hidden="true">
+            <!-- Do not remove this field, otherwise you risk bot sign-ups -->
+            <input type="text" name="hpf4cad433-e8b5-11e9-be00-06b4694bee2a" tabindex="-1" autocomplete="nope">
+        </div>
+    </form>
+</div>
+
+<script src="./index_files/jquery.min.js.download"></script>
+<script src="./index_files/formEmbed.js.download"></script>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="py3 max-width-4 mx-auto">
+  <div class="px2">
+    <p class="h6 mt0 mb1">
+      <a href="mailto:hello@bradfieldcs.com">hello@bradfieldcs.com</a>
+      <br>
+      San Francisco, California
+      <br>
+      © 2016-2020 Bradfield School of Computer Science
+    </p>
+  </div>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71655366-3', 'auto');
+  ga('send', 'pageview');
+</script>
+</body></html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang }}">
+    <style>
+        .cover-banner {
+            z-index: -1;
+            width: 100%;
+            height: 100vh;
+            max-height: 800px;
+            display: flex;
+            flex-direction: row;
+            
+            background-image: url('/bg_main.jpg');
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .banner-text {
+            text-align: center;
+            position: relative;
+            color: white;
+            left: 0%;
+            top: 70%;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #000000, 0 0 20px #1f1f1f, 0 0 25px #414141, 0 0 30px #5e5f5f, 0 0 35px #ffffff;
+        }
+
+        .flex-item-left {
+            /* background-color: #f1f1f1; */
+            padding: 10px;
+            flex: 80%;
+            min-height: 500px;
+            visibility: hidden;
+        }
+
+        .flex-item-right {
+            /* background-color: dodgerblue; */
+            position: relative;
+            padding: 10px;
+            flex: 50%;
+            visibility: visible;
+        }
+
+        /* Responsive layout - 
+            Basically like if condition, if the width is greater than 800px, 
+            then change the property of a style.....
+        */
+        @media (max-width: 1000px) {
+            .cover-banner {
+                flex-direction: column;
+            }
+
+            .flex-item-right{
+                visibility: hidden;
+            }
+
+            .flex-item-left{
+                visibility: visible;
+            }
+
+
+            .banner-text{
+                left: 0px;
+                top: 30%;
+            }
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+            background-color: white;
+        }
+
+    </style>
+
+  {% include head.html %}
+
+    <body>
+        
+        {% include header.html %}
+        <main>
+            <div class="cover-banner">
+
+                <div class="flex-item-left">
+                    <div class="banner-text">
+                        <!-- <h1><ruby> 一所懸命 <rt> いっしょう  けんめい </rt> </ruby></h1> -->
+                        <!-- <h1>八原罪: 菜、傲慢、嫉妒、暴怒、懒惰、贪婪、色欲、暴食</h1> -->
+                        <h1>求知若饥 虚心若愚</h1>
+                    </div>
+                </div>
+                <div class="flex-item-right">
+                    <div class="banner-text">
+                        <!-- <h1 style="font-size: 40px;"><ruby> 一所懸命 <rt> いっしょう  けんめい </rt> </ruby></h1>-->
+                        <h1 style="font-size: 40px;">求知若饥 虚心若愚</h1>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        {% include footer.html %}
+
+    </body>
+
+</html>

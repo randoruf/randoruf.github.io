@@ -18,10 +18,15 @@ LeetCode : <https://leetcode-cn.com/u/kouka/>
   - 何もできない。19歳から日本語、プログラミングを勉強します。
   - **怠惰怠惰怠惰怠惰怠惰怠惰怠惰怠**
 - 今からは変わるの時
+- 2022年 - 27歳廃人、無職、キモいオタク
 
 ## プログラミングの作品
 
 ないし。
+
+## 僕の存在証明は何?
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PVUZ8Nvr1ic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 夢と目標
 

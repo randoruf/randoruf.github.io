@@ -8,6 +8,8 @@ tags: [cs]
 
 by [虎老狮](https://www.zhihu.com/people/the-tiger-lion)
 
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Larry_Ellison_picture.png/440px-Larry_Ellison_picture.png)
+
 [Oracle创始人：埃里森(Larry Ellison) - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/41773095)
 
 Oracle公司成立于1977年，当时叫“软件开发实验室”，
@@ -120,3 +122,4 @@ Ellison心态很稳，他的公司曾在一天之内市值增发几十亿，但E
 当员工纷纷离职的时候，Ellison也不挽留，任其来去，他心里有谱——只要公司发展得好，这些人自然会回来。
 
 > 反观某些公司，员工要离职各种话术劝阻，还扣押工资、恐吓威胁什么的。
+

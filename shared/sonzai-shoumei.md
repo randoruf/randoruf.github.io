@@ -3,16 +3,16 @@ layout: page
 title: "Kai さん - TOEICは「僕の存在証明の手段」だった。"
 ---
 
-
 Kai
 2019年12月25日 23:40
 
 ---
 
-https://note.com/potatoes0123/n/ne919ad08cb43
+<https://note.com/potatoes0123/n/ne919ad08cb43>
 
-https://kotobank.jp/word/%E5%AD%98%E5%9C%A8%E8%A8%BC%E6%98%8E-681862
+<https://kotobank.jp/word/%E5%AD%98%E5%9C%A8%E8%A8%BC%E6%98%8E-681862>
 
+![見出し画像](https://raw.githubusercontent.com/randoruf/photo-asset-repo/main/imgs/rectangle_large_type_2_037cedc5e004998c88ce23f8bbb53c20.jpeg)
 
 くそったれ。
 

@@ -6,7 +6,7 @@ permalink: /about/
 
 ---
 
-Github : <https://github.com/haohua-li>
+Github : <https://github.com/randoruf>
 
 LeetCode : <https://leetcode-cn.com/u/kouka/>
 

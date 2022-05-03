@@ -24,10 +24,6 @@ LeetCode : <https://leetcode-cn.com/u/kouka/>
 
 ないし。
 
-## 僕の存在証明は何?
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PVUZ8Nvr1ic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ## 夢と目標
 
 以[每天学法 - xiaodongli](https://leetcode-cn.com/u/xiaoweixiang/)为榜样！

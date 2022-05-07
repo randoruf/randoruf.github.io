@@ -36,7 +36,7 @@ collect2: fatal error: ld terminated with signal 9 [Killed]
   - 预留至少 30 GB 给 LLVM 生成的中间二进制
 
 - **内存**: 
-  - linking 至少需要 10 GB。 
+  - linking 至少需要 20 GB。 
     - 比如我在 Docker Container 里面 Build LLVM， 然后发现内存直接炸了。
     - 记得查一查 container 最大可以使用的内存。
 

@@ -107,7 +107,7 @@ git clone --depth=1 https://github.com/llvm/llvm-project.git
 ```bash
 mkdir build && cd build
 
-cmake ../llvm -G Ninja -DCMAKE_BUILD_TYPE="Debug" -DLLVM_ENABLE_PROJECTS="clang"-DLLVM_INCLUDE_EXAMPLES="OFF" -DLLVM_INCLUDE_TESTS="OFF" -DLLVM_INCLUDE_BENCHMARKS="OFF" -DLLVM_TARGETS_TO_BUILD="X86" 
+cmake ../llvm -G Ninja -DCMAKE_BUILD_TYPE="Debug" -DLLVM_ENABLE_PROJECTS="clang" -DLLVM_INCLUDE_EXAMPLES="OFF" -DLLVM_INCLUDE_TESTS="OFF" -DLLVM_INCLUDE_BENCHMARKS="OFF" -DLLVM_TARGETS_TO_BUILD="X86" 
 
 # build (use all cores in the laptop)
 # cmake --build . -j $(nproc)

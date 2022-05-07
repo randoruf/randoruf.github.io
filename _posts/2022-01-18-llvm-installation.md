@@ -18,6 +18,73 @@ tags: [llvm]
 - 【书】Getting Started with LLVM Core Libraries
 - 【书】LLVM12 
 
+### 最低配置
+
+[ubuntu 虚拟机环境下 安装 配置 Clang/LLVM - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/36769900)
+
+> LLVM非常耗内存，LLVM非常耗内存，LLVM非常耗内存，实测需要10G左右内存，
+>
+> 没有这个内存，肯定需要一些其他方法来进行相关处理！！！！
+>
+> ***基本都是在ld的时候，内存不足的错误。***
+
+```bash
+collect2: fatal error: ld terminated with signal 9 [Killed]
+```
+
+- **硬盘空间**: 
+  - 预留至少 30 GB 给 LLVM 生成的中间二进制
+
+- **内存**: 
+  - linking 至少需要 10 GB。 
+    - 比如我在 Docker Container 里面 Build LLVM， 然后发现内存直接炸了。
+    - 记得查一查 container 最大可以使用的内存。
+
+  - 把 `ld` 换成 `ld.lld`  
+  - 创建 swap 交换区
+
+
+> **题外话**: 开发机推荐至少 32 GB 内存， CPU 6 核左右。特别是内存越大越好。一个 docker 可能就占至少 8 GB (好像是因为 hyperkit 的性能问题)。
+> 反而是像 AMD 那种线程撕裂者大可不必，因为大多数软件的优化根本跟不上，那是提供给有自己专业软件的企业的。
+
+**[How do I add swap after system installation? - Ask Ubuntu](https://askubuntu.com/questions/33697/how-do-i-add-swap-after-system-installation)**
+
+**[Releases - The Haskell Tool Stack (haskellstack.org)](https://docs.haskellstack.org/en/v1.9.3/maintainers/releases/)**
+
+创建一个临时文件
+
+```bash
+sudo dd if=/dev/zero of=/tmp/swap1 bs=1M count=8192
+sudo chmod 600 /tmp/swap1
+```
+
+格式化为交换分区
+
+```bash
+mkswap /tmp/swap1
+```
+
+挂载交换分区 
+
+```bash
+swapon /tmp/swap1
+```
+
+可以查看是否成功
+
+```
+free
+top -bn1 | grep -i swap
+```
+
+应该返回 `KiB Swap:  4194300 total,  4194300 free`
+
+去掉分区
+
+```bash
+swapoff /tmp/swap1
+```
+
 ### 下载
 
 下载文件 (仅仅只存下载的 Source Code，通常会在 Source Code 的文件夹下 Build 文件。注意 Source Code 跟最后要安装的路径不一样) 。由于 LLVM 有一些公共文件会共用，必须整个下载，没有办法单独下载。但一般而言可以把历史版本抛弃。
@@ -35,15 +102,16 @@ git clone --depth=1 https://github.com/llvm/llvm-project.git
 **注意一定要用 `Release`** , 否则会把 assertion 都编译进去，速度会非常慢。
 
 - [Debug模式和Release模式有什么区别？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/443340911)
+- `DLLVM_ENABLE_PROJECTS="clang;libcxx;libcxxabi;clang-tools-extra;compiler-rt"`
 
 ```bash
-cd where-you-want-to-install 
 mkdir build && cd build
 
-cmake ../llvm -G Ninja -DCMAKE_BUILD_TYPE="Release" -DLLVM_ENABLE_PROJECTS="clang;libcxx;libcxxabi;clang-tools-extra;compiler-rt"
+cmake ../llvm -G Ninja -DCMAKE_BUILD_TYPE="Debug" -DLLVM_ENABLE_PROJECTS="clang"-DLLVM_INCLUDE_EXAMPLES="OFF" -DLLVM_INCLUDE_TESTS="OFF" -DLLVM_INCLUDE_BENCHMARKS="OFF" -DLLVM_TARGETS_TO_BUILD="X86" 
 
 # build (use all cores in the laptop)
-cmake --build . -j $(nproc)
+# cmake --build . -j $(nproc)
+ninja -j $(nproc)
 
 # install (use cmake to install, since cmake will keep a record of installed files)
 # https://gist.github.com/etaf/5f77158f1c45e90abfa3225f19f3c4bb

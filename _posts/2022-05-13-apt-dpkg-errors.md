@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "dpkg/apt errors"
+title: "dpkg/apt 安装错误"
 date: 2022-05-13
 tags: [cs,os,ubuntu]
 ---

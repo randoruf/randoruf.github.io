@@ -77,7 +77,9 @@ sudo make modules_install
 sudo make install
 ```
 
-(下面的命令只是为了让你更好地明白到底安装了什么，实际上不需要！)
+Linux 的内核实际上由好几个部分。 可以参考 
+
+
 
 ```
 $ sudo mkinitramfs /lib/modules/5.9.12 -o /boot/initrd.img-5.9.12-generic
@@ -87,17 +89,16 @@ $ sudo cp /usr/src/linux-5.9.12/System.map /boot/System.map-5.9.12
 
 ### make deb-pkg
 
-[Recompiling the Kali Linux Kernel - Kali Linux Documentation](https://www.kali.org/docs/development/recompiling-the-kali-linux-kernel/)
+主要可以参考 Kali 的做法。
 
-[How to customize, compile and install the Linux Kernel On Ubuntu, Debian and Linux Mint 【V3.2019】 - YouTube](https://www.youtube.com/watch?v=EpabBljarPM)
-
-[8.10. Compiling a Kernel (debian-handbook.info)](https://debian-handbook.info/browse/stable/sect.kernel-compilation.html)
-
-[Create and upload an Ubuntu Linux VHD in Azure - Azure Virtual Machines - Microsoft Docs](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-upload-ubuntu)
+- [Recompiling the Kali Linux Kernel - Kali Linux Documentation](https://www.kali.org/docs/development/recompiling-the-kali-linux-kernel/)
+- [How to customize, compile and install the Linux Kernel On Ubuntu, Debian and Linux Mint 【V3.2019】 - YouTube](https://www.youtube.com/watch?v=EpabBljarPM)
+- [8.10. Compiling a Kernel (debian-handbook.info)](https://debian-handbook.info/browse/stable/sect.kernel-compilation.html)
+- [Create and upload an Ubuntu Linux VHD in Azure - Azure Virtual Machines - Microsoft Docs](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-upload-ubuntu)
 
 Kali 的做法更好，能够顺便生成 header, image 。这样即使改了 `local version` 在用 `dkpg-query linux-header-$(uname -r)` 也不会出错。
 
-[Recompiling the Kali Linux Kernel - Kali Linux Documentation](https://www.kali.org/docs/development/recompiling-the-kali-linux-kernel/)
+- [Recompiling the Kali Linux Kernel - Kali Linux Documentation](https://www.kali.org/docs/development/recompiling-the-kali-linux-kernel/)
 
 解压源码
 

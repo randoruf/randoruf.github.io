@@ -87,18 +87,17 @@ swapoff /tmp/swap1
 
 ### Ubuntu LLVM Toolchain 
 
+#### 直接安装
+
 如果是 distro , 可以下载 ***LLVM Toolchain*** 来编译 LLVM 。
 
-详见 [LLVM Debian/Ubuntu packages](https://apt.llvm.org/) , 例如在 Ubuntu 18.04 下载 LLVM-project 13 
+要注意的是 **Deb 可能不包含 LLVM 的源**， 要到 `/etc/apt/sources.list` 手动添加源告诉 deb 在哪里下载 LLVM 。详见 [repository - Why am I getting "Command 'deb' not found"? - Ask Ubuntu](https://askubuntu.com/questions/233064/why-am-i-getting-command-deb-not-found)
 
-```
-deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-13 main
-deb-src http://apt.llvm.org/bionic/ llvm-toolchain-bionic-13 main
-```
+把  [LLVM Debian/Ubuntu packages](https://apt.llvm.org/) 里面出现的 deb 加到 `sources.list` 文件即可。
 
-否则可能就需要 按照 [docker-clang-toolchain/Dockerfile at master · genshen/docker-clang-toolchain (github.com)](https://github.com/genshen/docker-clang-toolchain/blob/master/Dockerfile) 的参数配置。
+#### 两次编译
 
-也就是分两次编译。
+否则可能就需要 按照 [docker-clang-toolchain/Dockerfile at master · genshen/docker-clang-toolchain (github.com)](https://github.com/genshen/docker-clang-toolchain/blob/master/Dockerfile) 的参数配置。也就是分两次编译。
 
 ```dockerfile
 ARG ALPINE_VERSION=3.15

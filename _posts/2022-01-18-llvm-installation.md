@@ -93,7 +93,16 @@ swapoff /tmp/swap1
 
 要注意的是 **Deb 可能不包含 LLVM 的源**， 要到 `/etc/apt/sources.list` 手动添加源告诉 deb 在哪里下载 LLVM 。详见 [repository - Why am I getting "Command 'deb' not found"? - Ask Ubuntu](https://askubuntu.com/questions/233064/why-am-i-getting-command-deb-not-found)
 
-把  [LLVM Debian/Ubuntu packages](https://apt.llvm.org/) 里面出现的 deb 加到 `sources.list` 文件即可。
+- 把  [LLVM Debian/Ubuntu packages](https://apt.llvm.org/) 里面出现的 deb 加到 `sources.list` 文件即可。
+- 按照 [LLVM Debian/Ubuntu packages](https://apt.llvm.org/) 的步骤添加 public key 
+  - [apt - Error getting access to LLVM Debian/Ubuntu nightly packages - Ask Ubuntu](https://askubuntu.com/questions/895786/error-getting-access-to-llvm-debian-ubuntu-nightly-packages)
+
+```
+wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
+# Fingerprint: 6084 F3CF 814B 57C1 CF12 EFD5 15CF 4D18 AF4F 7421
+```
+
+然后就可以开始安装了。
 
 #### 两次编译
 

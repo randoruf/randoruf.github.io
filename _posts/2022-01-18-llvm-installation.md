@@ -110,7 +110,7 @@ wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
 # Fingerprint: 6084 F3CF 814B 57C1 CF12 EFD5 15CF 4D18 AF4F 7421
 ```
 
-然后就可以开始安装了。
+然后就可以开始安装了。(安装之前记得 `sudo apt update` 更新一下源)
 
 ```
 sudo apt install llvm-toolchain-9

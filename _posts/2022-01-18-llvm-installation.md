@@ -94,6 +94,14 @@ swapoff /tmp/swap1
 要注意的是 **Deb 可能不包含 LLVM 的源**， 要到 `/etc/apt/sources.list` 手动添加源告诉 deb 在哪里下载 LLVM 。详见 [repository - Why am I getting "Command 'deb' not found"? - Ask Ubuntu](https://askubuntu.com/questions/233064/why-am-i-getting-command-deb-not-found)
 
 - 把  [LLVM Debian/Ubuntu packages](https://apt.llvm.org/) 里面出现的 deb 加到 `sources.list` 文件即可。
+
+以 Ubuntu 18.04 为例 (注意 bionic 位 Ubuntu 18.04 的代号，不同 Ubuntu 版本需要修改)。
+
+```
+deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-9 main
+deb-src http://apt.llvm.org/bionic/ llvm-toolchain-bionic-9 main
+```
+
 - 按照 [LLVM Debian/Ubuntu packages](https://apt.llvm.org/) 的步骤添加 public key 
   - [apt - Error getting access to LLVM Debian/Ubuntu nightly packages - Ask Ubuntu](https://askubuntu.com/questions/895786/error-getting-access-to-llvm-debian-ubuntu-nightly-packages)
 
@@ -103,6 +111,10 @@ wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
 ```
 
 然后就可以开始安装了。
+
+```
+sudo apt install llvm-toolchain-9
+```
 
 #### 两次编译
 

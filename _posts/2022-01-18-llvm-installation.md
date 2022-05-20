@@ -113,7 +113,10 @@ wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
 然后就可以开始安装了。(安装之前记得 `sudo apt update` 更新一下源)
 
 ```
-sudo apt-get install clang-format clang-tidy clang-tools clang clangd libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libllvm-ocaml-dev libomp-dev libomp5 lld lldb llvm-dev llvm-runtime llvm python3-clang
+apt-get install clang-9 lldb-9 lld-9
+apt-get install libc++-9-dev libc++abi-9-dev
+apt-get install libunwind-9-dev
+apt-get install libllvm9 llvm-9 llvm-9-dev llvm-9-runtime
 ```
 
 #### 两次编译

@@ -21,6 +21,8 @@ tags: [tools]
 
 [TLS安全策略等级 - 三度 - 博客园 (cnblogs.com)](https://www.cnblogs.com/sanduzxcvbnm/p/16173529.html)
 
+[Ubuntu 20.04 : Apache 웹서버 컴파일 설치 (tistory.com)](https://bluexmas.tistory.com/1127)
+
 ## Overview
 
 > Why? 配置完成后，需要 **HTTPS** 才能访问服务器 (domain name/IP)。
@@ -69,7 +71,9 @@ make install # 卸载需要 make uninstall
   - 下载后放到 `httpd_source_tree_root/srclib/` 目录下。
   - 在 `./config` 的时候，需要 `--with-included-apr` 告诉系统这些 `apache-dev` 资源在哪里。
 - Perl-Compatible Regular Expressions Library (PCRE) 
-  - `apk add pcre`  <https://pkgs.alpinelinux.org/package/v3.8/main/x86_64/pcre>
+  - 下载 `pcre`   后放到 `httpd_source_tree_root/srclib/` 目录下 (不要下载 `pcre2`)
+  - 在 `./config` 的时候，需要 `--with-included-pcre` 告诉系统这些 `apache-dev` 资源在哪里。
+  - 看一看这个 [Ubuntu 20.04 : Apache 웹서버 컴파일 설치 (tistory.com)](https://bluexmas.tistory.com/1127)
 - OpenSSL
   - 如果 `mod_ssl` 被启用，`./config` 会自动检测 dependencies (`apk add` 或者像上面那样编译 OpenSSL)
 

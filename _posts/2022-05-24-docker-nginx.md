@@ -240,6 +240,16 @@ docker run \
 - 在 URL 栏打 `thisisunsafe`
 - 安装证书 (比如 FireFox 可以单独管理证书)
 
+**Setting -> Privay & Security -> Certificates -> View Certificates** 
+
+(话说试了一下， Firefox 速度真的快)
+
+如果依旧出错，就是加密算法不匹配了 (比如 `SSL_ERROR_NO_CYPHER_OVERLAP` 就是 Server 那边只允许特定的加密算法)。
+
+<https://support.mozilla.org/dsb/questions/1260906>
+
+
+
 
 
 

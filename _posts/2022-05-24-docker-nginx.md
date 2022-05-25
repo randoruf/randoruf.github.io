@@ -149,6 +149,16 @@ ServerName 127.0.0.1:3000
 
 参数具体含义见 <https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-18-04#step-3-adjusting-the-firewall>
 
+> 这里能看到 RSA 。不知道 stackoverflow 哪个傻逼说 certificate 跟 ciphersuite 一点关系都没。
+>
+> 我刚开始就在想 certificate 和 ciphersuite 的关系，结果网上几乎没有简单回应的答案 (我太菜了，因为没系统学过计算机网络)。
+>
+> 所以其实很多人的网络安全意识都十分低，包括开发人员。网络安全真的是蓝海。
+>
+> [tls - Link between Cipher suites and certificate key - Information Security Stack Exchange](https://security.stackexchange.com/questions/133409/link-between-cipher-suites-and-certificate-key)
+>
+> [《图解密码技术》第14章 SSL/TLS----为了更安全的通信 - 小超的博客 (xiaochaowei.com)](https://xiaochaowei.com/2018/09/23/IllustrationCryptology14/)
+
 比较重要的是
 
 - `-keyout`: 私有密钥 

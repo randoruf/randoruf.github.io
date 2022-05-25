@@ -23,6 +23,8 @@ tags: [tools]
 
 [Ubuntu 20.04 : Apache 웹서버 컴파일 설치 (tistory.com)](https://bluexmas.tistory.com/1127)
 
+[《图解密码技术》第14章 SSL/TLS----为了更安全的通信 -  小超的博客 (xiaochaowei.com)](https://xiaochaowei.com/2018/09/23/IllustrationCryptology14/)
+
 ## Overview
 
 > Why? 配置完成后，需要 **HTTPS** 才能访问服务器 (domain name/IP)。

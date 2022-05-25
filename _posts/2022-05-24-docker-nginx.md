@@ -244,9 +244,20 @@ docker run \
 
 (话说试了一下， Firefox 速度真的快)
 
-如果依旧出错，就是加密算法不匹配了 (比如 `SSL_ERROR_NO_CYPHER_OVERLAP` 就是 Server 那边只允许特定的加密算法)。
+如果依旧出错，就是加密算法不匹配了 
 
-<https://support.mozilla.org/dsb/questions/1260906>
+> <https://support.mozilla.org/dsb/questions/1260906>
+>
+> 比如 `SSL_ERROR_NO_CYPHER_OVERLAP` 就是 Server 那边只提供特定的加密算法。
+>
+> 可以使用类似以下的配置只提供两种加密套件。但是有些加密套件比较弱，已经被放弃了。
+>
+> 所以即使安装了证书也依旧会出现 `SSL_ERROR_NO_CYPHER_OVERLAP`
+>
+> ```
+> SSLCipherSuite "ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-GCM-SHA384"
+> SSLHonorCipherOrder on
+> ```
 
 
 

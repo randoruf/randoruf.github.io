@@ -7,7 +7,7 @@ tags: [tools]
 
 ## Recommended Articles  
 
-[How To Create a Self-Signed SSL Certificate for Apache in Ubuntu 18.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-18-04)
+[How To Create a Self-Signed SSL Certificate for Apache in Ubuntu 18.04 - DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-18-04)
 
 [How to Setup Apache HTTP with SSL Certificate? (geekflare.com)](https://geekflare.com/apache-setup-ssl-certificate/)
 
@@ -15,7 +15,7 @@ tags: [tools]
 
 [compiling - Apache + mod_ssl build not linking to my OpenSSL build - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/465417/apache-mod-ssl-build-not-linking-to-my-openssl-build)
 
-[How To Create a Self-Signed SSL Certificate for Apache in Ubuntu 18.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-18-04)
+[How To Create a Self-Signed SSL Certificate for Apache in Ubuntu 18.04 - DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-18-04)
 
 [写给开发人员的实用密码学（八）—— 数字证书与 TLS 协议 - This Cute World](https://thiscute.world/posts/about-tls-cert/#2-生成-ecc-证书链)
 

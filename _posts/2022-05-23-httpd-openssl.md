@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "为 Apache2 HTTP 配置 SSL 证书"
+title: "Apache2 HTTP 编译"
 date: 2022-05-23
 tags: [tools]
 ---
@@ -126,54 +126,3 @@ make install # 卸载需要 make uninstall
 >
 > Read <https://httpd.apache.org/docs/2.4/programs/configure.html#installationdirectories>
 
-## Getting an SSL Certificate
-
-有两种方法  **CSR (Certificate Signing Request)** 和 **Self-signed** 。
-
-参考 <https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-18-04>
-
-这里有一个误区: 注意 SSL certificate 和 Ciphersuite 是没有关系的。
-
-所以 Digitalocean 里的命令可以瞎弄。
-
-## Apache SSL Configuration
-
-备份 `httpd.conf` (默认放在 `/usr/local/apache2/conf/`) ，确保里面有
-
-```
-LoadModule ssl_module modules/mod_ssl.so 
-Include conf/extra/httpd-ssl.conf
-```
-
-We will use **httpd-ssl.conf** file to configure the certificate details. 
-
-1. SSLCertificateFile – Certificate CRT file path which you downloaded earlier
-2. SSLCertificateKeyFile – private.a key file path
-3. SSLCertificateChainFile – ca_bundle.crt file path
-
-备份并打开 `httpd-ssl.conf`
-
-```
-SSLCertificateFile "/usr/local/apache2/conf/ssl/certificate.crt"
-SSLCertificateChainFile "/usr/local/apache2/conf/ssl/ca_bundle.crt"
-SSLCertificateKeyFile "/usr/local/apache2/conf/ssl/private.key"
-```
-
-Next, you need to configure the “**ServerName**” directive. Usually, it’s your domain/URL name
-
-```
-ServerName chandan.io
-```
-
-Save the file and restart the Apache Webserver
-
-```
-./apachectl stop 
-./apachectl start
-```
-
-## 最后
-
->The above steps are essential for setting up an SSL certificate, and you must tweak the SSL further to [harden and secure which I explained here](https://geekflare.com/apache-web-server-hardening-security/#5-SSL). Before go-live, you may also want to [test your web server SSL/TLS](https://geekflare.com/ssl-test-certificate/) to ensure it’s not exposed to common security vulnerabilities.
-
-还需要细微调整 SSL 和 测试。就跳过了，日后再谈。

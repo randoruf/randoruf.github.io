@@ -139,30 +139,12 @@ ServerName 127.0.0.1:3000
 
 ## 自签名证书
 
-自签名证书不需要提CRS请求(还是CSR?) ，适合自己一个人玩 (但自签名的证书一般会被浏览器识别不安全)。
+需要参考 
 
-首先生成证书
+- [自签名https证书生成 (附赠nginx配置文件) - BEZALEL的部落格](https://bezalel.xyz/posts/https-with-self-signed-ca/)
+- [使用ECDSA算法的自签名https证书生成 - BEZALEL的部落格](https://bezalel.xyz/posts/https-with-self-signed-ecc-ca/)
 
-```
-/tests/apache/opt/bin/openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /tests/apache/opt/conf/certs/hello.key -out /tests/apache/opt/conf/certs/hello.crt
-```
-
-参数具体含义见 <https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-18-04#step-3-adjusting-the-firewall>
-
-> 这里能看到 RSA 。不知道 stackoverflow 哪个傻逼说 certificate 跟 ciphersuite 一点关系都没。
->
-> 我刚开始就在想 certificate 和 ciphersuite 的关系，结果网上几乎没有简单回应的答案 (我太菜了，因为没系统学过计算机网络)。
->
-> 所以其实很多人的网络安全意识都十分低，包括开发人员。网络安全真的是蓝海。
->
-> [tls - Link between Cipher suites and certificate key - Information Security Stack Exchange](https://security.stackexchange.com/questions/133409/link-between-cipher-suites-and-certificate-key)
->
-> [《图解密码技术》第14章 SSL/TLS----为了更安全的通信 - 小超的博客 (xiaochaowei.com)](https://xiaochaowei.com/2018/09/23/IllustrationCryptology14/)
-
-比较重要的是
-
-- `-keyout`: 私有密钥 
-- `-out`: 证书
+这里需要注意，Ciphersuite 包含了密钥的加密方法，也就是证书其实是跟 ciphersuite 相关的 **(因为证书里面包含了公钥**)。
 
 > **可能的错误:** 
 >
@@ -269,9 +251,15 @@ docker run \
 > SSLHonorCipherOrder on
 > ```
 
+## SSL 加强配置
 
+以上的配置实际上是不安全的。在生产环境还需要其他额外的设置。
 
+- [How To Create a Self-Signed SSL Certificate for Apache in Ubuntu 18.04 - DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-18-04)
+- [Cipherlist.eu - Strong Ciphers for Apache, nginx and Lighttpd](https://cipherlist.eu/)
+- [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/)
 
+有时间再去研究其他东西。
 
 
 

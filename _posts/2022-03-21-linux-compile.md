@@ -13,7 +13,7 @@ Linux 编译还挺麻烦。本人还比较菜，不知道哪种方法才比较�
 
 ## 学习 Linux 
 
-[Linux之旅 - 魔芋红茶's blog - 第 3 页 (icexmoon.cn)](https://blog.icexmoon.cn/archives/category/zhuanlan/linux之旅/page/3)
+[Gentoo update kernel on the T website (tiimmm.com)](https://tiimmm.com/subhtml/linux/gentooupdatekernel.php)
 
 ## 配置
 
@@ -53,38 +53,34 @@ make: *** [Makefile:1106: vmlinux] Error 1
 
 ### make
 
-[Linux 之旅 24：内核编译 - 魔芋红茶's blog (icexmoon.xyz)](https://blog.icexmoon.xyz/archives/274.html)
+[Gentoo update kernel on the T website (tiimmm.com)](https://tiimmm.com/subhtml/linux/gentooupdatekernel.php)
 
-[Configuring a Custom Linux Kernel (5.6.7-gentoo) - YouTube](https://www.youtube.com/watch?v=NVWVHiLx1sU&t=1659s)
+```bash
+cd /usr/src/linux
 
-[8.10. Compiling a Kernel (debian-handbook.info)](https://debian-handbook.info/browse/stable/sect.kernel-compilation.html)
+#保持干净源码
+make clean
+make mrproper
+make distclean
 
-[Linux - 内核编译安装 - Hyperzsb’s Ideas](https://blog.hyperzsb.tech/linux-kernel-compile-install/)
+#复制旧的系统已有的配置文件
+cp /boot/config-????? ./.config 
+#使用旧内核配置，所有新的配置选项设置为推荐（即默认）值
+make olddefconfig
+#查看微调内核配置
+make menuconfig
+#重新安装外部内核模块(可选)
+make modules_prepare
+#编译
+make -j8
+make headers -j8
 
-[How to compile and install Linux Kernel 5.16.9 from source code - nixCraft (cyberciti.biz)](https://www.cyberciti.biz/tips/compiling-linux-kernel-26.html)
-
-[Linux 内核编译及运行 – 杨河老李 (kviccn.github.io)](https://kviccn.github.io/posts/2021/08/linux-内核编译及运行/)
-
-- `make vmlinux`：将内核编译成未压缩的内核文件。
-- `make modules`：仅编译内核模块。
-- `make bzImage`：将内核编译成压缩后的内核文件。
-- `make`：执行上边所有的三个操作。
-
-等待运行结束后安装 (实际上 install 就可以了，但本质就是把东西复制到 boot 文件夹）
-
-```
-sudo make modules_install
-sudo make install
-```
-
-Linux 的内核实际上由好几个部分。 可以参考 
-
-
-
-```
-$ sudo mkinitramfs /lib/modules/5.9.12 -o /boot/initrd.img-5.9.12-generic
-$ sudo cp /usr/src/linux-5.9.12/arch/x86/boot/bzImage /boot/vmlinuz-5.9.12-generic
-$ sudo cp /usr/src/linux-5.9.12/System.map /boot/System.map-5.9.12 
+#可选择安装或者不安装header (通常是向前兼容的，所以一般只能安装较新的 kernel)
+make headers_install
+#安装modules到/lib/modules下
+make modules_install
+#安装 initramfs 和 vmzlinux 到 /boot 下
+make install
 ```
 
 ### make deb-pkg
@@ -92,9 +88,7 @@ $ sudo cp /usr/src/linux-5.9.12/System.map /boot/System.map-5.9.12
 主要可以参考 Kali 的做法。
 
 - [Recompiling the Kali Linux Kernel - Kali Linux Documentation](https://www.kali.org/docs/development/recompiling-the-kali-linux-kernel/)
-- [How to customize, compile and install the Linux Kernel On Ubuntu, Debian and Linux Mint 【V3.2019】 - YouTube](https://www.youtube.com/watch?v=EpabBljarPM)
 - [8.10. Compiling a Kernel (debian-handbook.info)](https://debian-handbook.info/browse/stable/sect.kernel-compilation.html)
-- [Create and upload an Ubuntu Linux VHD in Azure - Azure Virtual Machines - Microsoft Docs](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-upload-ubuntu)
 
 Kali 的做法更好，能够顺便生成 header, image 。这样即使改了 `local version` 在用 `dkpg-query linux-header-$(uname -r)` 也不会出错。
 
@@ -121,24 +115,14 @@ sudo tar -xvJf archive.tar.xz
 # 清除
 sudo make mrproper
 # 配置 .config 文件
-sudo make menuconfig 
+cp /boot/config-????? ./.config
 sudo make oldconfig
-```
-
-编译
-
-```BASH
+sudo make menuconfig 
 sudo make clean 
-sudo make -j4 deb-pkg LOCALVERSION=-kouka KDEB_PKGVERSION=$(make kernelversion)-1
+sudo make deb-pkg -j8 LOCALVERSION=-kouka KDEB_PKGVERSION=$(make kernelversion)-1
 ```
 
-记得用四核编译啊..................
-
-可以看到 一个 Kernel 的本体有 kernel (modules), image, 还有 headers. 
-
-按照 [Recompiling the Kali Linux Kernel - Kali Linux Documentation](https://www.kali.org/docs/development/recompiling-the-kali-linux-kernel/) 把 header 也一起装就可以了。至于 libc 应该不需要。
-
-至此，如果有人让你检测是否安装了 Kernel Headers,  就不会再报错了。
+记得用四核编译啊..................可以看到 一个 Kernel 的本体有 kernel (modules), image, 还有 headers。按照 [Recompiling the Kali Linux Kernel - Kali Linux Documentation](https://www.kali.org/docs/development/recompiling-the-kali-linux-kernel/) 把 header 也一起装就可以了。至于 libc 应该不需要。至此，如果有人让你检测是否安装了 Kernel Headers,  就不会再报错了。
 
 ```bash
 dpkg-query -s linux-headers-$(uname -r)
@@ -329,9 +313,7 @@ dpkg --list | grep linux-image
 sudo apt purge linux-image-?????
 ```
 
-如果当初是 `make install` 安装的话，就手动删除相关的内核文件 (`initrd.img`, `System.map`, `vmlinux `, 后面都有版本名) 就好了，然后更新一下 `initrd ` 啥的，
-
-手动更更新吧。。。。
+如果当初是 `make install` 安装的话，就手动删除相关的内核文件 (`initrd.img`, `System.map`, `vmlinux `, 后面都有版本名) 就好了，然后更新一下 `initrd ` 啥的，手动更更新吧。。。。
 
 ```bash
 sudo update-grub

@@ -55,6 +55,8 @@ make: *** [Makefile:1106: vmlinux] Error 1
 
 [Gentoo update kernel on the T website (tiimmm.com)](https://tiimmm.com/subhtml/linux/gentooupdatekernel.php)
 
+[wsl 安装内核头文件 (listera.top)](https://www.listera.top/wsl-an-zhuang-nei-he-tou-wen-jian/)
+
 需要完整安装 vmzline, initramfs, linux-header 才算完整的安装。
 
 ```bash
@@ -84,6 +86,30 @@ make modules_install
 #安装 initramfs 和 vmzlinux 到 /boot 下
 make install
 ```
+
+> 缺少头文件的情况在 WSL2 也会经常发生。
+>
+> ```bash
+> #查看内核版本 
+> uname -r
+> #下载内核源码
+> wget https://github.com/microsoft/WSL2-Linux-Kernel/?????? 
+> tar vzxf *.tar.gz
+> #安装依赖
+> sudo apt install libelf-dev build-essential pkg-config bison build-essential flex libssl-dev libelf-dev bc
+> #配置(复制旧配置)
+> cd WLS2*
+> zcat /proc/config.gz > .config 
+> #编译(仅编译头文件)
+> #make -j$(nproc)
+> make headers -j$(nproc) 
+> #安装(仅安装头文件)
+> #sudo make install
+> #sudo make modules_install
+> sudo make headers_install
+> ```
+>
+> 这样 vscode 就可以自动识别 **Linux API**  (也就是 system call ) 了
 
 ### make deb-pkg
 

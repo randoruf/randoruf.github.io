@@ -55,6 +55,8 @@ make: *** [Makefile:1106: vmlinux] Error 1
 
 [Gentoo update kernel on the T website (tiimmm.com)](https://tiimmm.com/subhtml/linux/gentooupdatekernel.php)
 
+需要完整安装 vmzline, initramfs, linux-header 才算完整的安装。
+
 ```bash
 cd /usr/src/linux
 

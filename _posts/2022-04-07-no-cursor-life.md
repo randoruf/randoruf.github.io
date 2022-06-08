@@ -47,9 +47,9 @@ Visual Studio Code 非常强大，已经类似于 emacs 和 vim 了。自带 SSH
 
 记得安装 C++ Intellisense ，VScode 自带的 C++ Intellisense 像弱智一样。
 
+### Visual Studio Code 遗珠
 
-
-
+- <kbd>ctl</kbd> + <kbd>d</kbd> 可以快速 rename 修改。
 
 ## No Cursor Life
 

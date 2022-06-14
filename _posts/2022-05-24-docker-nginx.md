@@ -132,10 +132,122 @@ httpd: Could not reliably determine the server's fully qualified domain name, us
 修改配置文件 `httpd.conf` 就可以 (提前知道这个在之后生成 SSL 证书能用上，OpenSSL 创建证书需要回答几个问题)。
 
 ```
-ServerName 127.0.0.1:3000
+ServerName 127.0.0.1
 ```
 
 (不需要画蛇添足，到时候加端口就好了)。
+
+### 如果启动失败
+
+[Upgrading to 2.4 from 2.2 - Apache HTTP Server Version 2.4](https://httpd.apache.org/docs/2.4/upgrading.html)
+
+```
+Invalid command 'User', perhaps misspelled or defined by a module not included in the server configuration - load module mod_unixd
+```
+
+载入  load module `mod_unixd` 。
+
+打开 `httpd.conf`
+
+```
+LoadModule unixd_module modules/mod_unixd.so
+```
+
+### 添加到系统路径
+
+这里假设不涉及编译过程 (编译的话需要 include, lib)
+
+```bash
+export PATH=/usr/local/openssl/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/openssl/lib:$LD_LIBRARY_PATH
+```
+
+## RSA/ECC 双证书
+
+[使用ECDSA算法的自签名https证书生成 - BEZALEL的部落格](https://bezalel.xyz/posts/https-with-self-signed-ecc-ca/)
+
+[自签名https证书生成 (附赠nginx配置文件) - BEZALEL的部落格](https://bezalel.xyz/posts/https-with-self-signed-ca/)
+
+### 密钥文件的生成
+
+```bash
+openssl genrsa -des3 -out server.key 4096
+openssl rsa -in server.key -out server.key
+```
+
+第二个指令是去掉 密码。
+
+**CSR, CA, certificate 全部用同一个 key 。**
+
+### 服务器证书申请文件  Certificate Signing Request (CSR)
+
+ 生成的*server.csr*文件，是用来递交给CA让他来认证签名的。
+
+```bash
+openssl req -new -key server_rsa.key -out server_rsa.csr
+```
+
+```
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:AU
+State or Province Name (full name) [Some-State]:VIC
+Locality Name (eg, city) []:Melbourne
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:Randoruf
+Organizational Unit Name (eg, section) []:Randoruf
+Common Name (e.g. server FQDN or YOUR name) []:127.0.0.1
+Email Address []:masswie@yahoo.com
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:12345
+An optional company name []:Randoruf
+```
+
+A challenge password []:12345
+
+### CA证书的生成
+
+```bash
+openssl req -new -x509 -key server_rsa.key -out ca_rsa.crt -days 365
+```
+
+```
+bash-4.4# openssl req -new -x509 -key server_rsa.key -out ca_rsa.crt -days 365
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:AU
+State or Province Name (full name) [Some-State]:VIC
+Locality Name (eg, city) []:Melbourne
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:Randoruf
+Organizational Unit Name (eg, section) []:Randoruf
+Common Name (e.g. server FQDN or YOUR name) []:127.0.0.1                                             
+Email Address []:masswie@yahoo.com
+```
+
+### 为服务器签发证书
+
+```bash
+openssl x509 -req -days 365 -in server_rsa.csr -CA ca_rsa.crt -CAkey server_rsa.key -CAcreateserial -out server_rsa.crt
+```
+
+```
+Signature ok
+subject=C = AU, ST = VIC, L = Melbourne, O = Randoruf, OU = Randoruf, CN = 127.0.0.1, emailAddress = masswie@yahoo.com
+Getting CA Private Key
+```
+
+至此，我们已经完成了证书的生成。我们将得到 *server.key*，*server.csr*，*server.crt*，*ca.crt*四个文件，如果你为CA单独生成个密钥， 可能还会有一个 *ca.key*的文件。
 
 ## 自签名证书
 

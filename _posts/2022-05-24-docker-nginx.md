@@ -171,8 +171,8 @@ export LD_LIBRARY_PATH=/usr/local/openssl/lib:$LD_LIBRARY_PATH
 ### 密钥文件的生成
 
 ```bash
-openssl genrsa -des3 -out server.key 4096
-openssl rsa -in server.key -out server.key
+openssl genrsa -des3 -out server_rsa.key 4096
+openssl rsa -in server_rsa.key -out server_rsa.key
 ```
 
 第二个指令是去掉 密码。
@@ -182,6 +182,8 @@ openssl rsa -in server.key -out server.key
 ### 服务器证书申请文件  Certificate Signing Request (CSR)
 
  生成的*server.csr*文件，是用来递交给CA让他来认证签名的。
+
+146.179.131.210
 
 ```bash
 openssl req -new -key server_rsa.key -out server_rsa.csr
@@ -205,11 +207,11 @@ Email Address []:masswie@yahoo.com
 
 Please enter the following 'extra' attributes
 to be sent with your certificate request
-A challenge password []:12345
+A challenge password []:123456
 An optional company name []:Randoruf
 ```
 
-A challenge password []:12345
+A challenge password []:123456
 
 ### CA证书的生成
 

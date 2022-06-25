@@ -1,0 +1,45 @@
+---
+layout: post
+title: "Networking - 与理解中的人接触"
+date: 2022-06-24
+tags: [networking]
+---
+
+以前我不知道 ***Networking 的重要性***。
+
+其实非常重要。这在《一日学习法》里面就有提及到。
+
+## Open Source 国外的开源氛围
+
+***中国在这方面可能很欠缺。***
+
+但是不要以在中国那种思维去思考。
+
+国外的极客分享精神很浓厚，几乎天天都有免费的 BootCamp 。
+
+一些 Project 也会有定期的 Meetup 可以让你参加，甚至 LLVM 等等都有 discord 。
+
+虽然极客时间确实做的不错，但是国外有 freecodeCamp 。你就是知道国内那种知识付费到底有多恶心。
+
+## Networking = 与理想中的人接触
+
+***只要你留心一点，你就可以跟技术大牛零距离接触，还不用花钱***
+
+你还可以去参加 English Talk 和 翻译 Club 
+
+> 《一日学习法》
+>
+> 如果你有想从事的职业，先问一问周边的相关人士... 
+>
+> 出去找找吧，静静地待在这里，那些人是不会来找你的。
+>
+> 想个注意，怎么才能见到他们，实在没办法，直接去找他们也不赖。
+
+## 常见的软件
+
+这下面的网站输入 hackathon, english, career, bootcamp, llvm, micropython 等等 
+
+甚至招聘会你也可以找到，比如是 IDP 的也有。Australia International Student Career Expo
+
+- eventbrite (google)
+- meetup (google)

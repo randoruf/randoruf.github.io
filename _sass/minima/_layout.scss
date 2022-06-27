@@ -68,6 +68,7 @@
 }
 
 .site-nav {
+  z-index: 1;
   position: absolute;
   top: 9px;
   right: $spacing-unit / 2;

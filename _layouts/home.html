@@ -2,7 +2,7 @@
 <html lang="{{ page.lang | default: site.lang }}">
     <style>
         .cover-banner {
-            z-index: -1;
+            z-index: 0;
             width: 100%;
             height: 100vh;
             max-height: 800px;
@@ -22,7 +22,7 @@
             position: relative;
             color: white;
             left: 0%;
-            top: 40%;
+            top: 60%;
             text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #000000, 0 0 20px #1f1f1f, 0 0 25px #414141, 0 0 30px #5e5f5f, 0 0 35px #ffffff;
         }
 
@@ -59,20 +59,10 @@
                 visibility: visible;
             }
 
-
             .banner-text{
                 left: 0px;
                 top: 30%;
             }
-        }
-
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5);
-            max-width: 300px;
-            margin: auto;
-            text-align: center;
-            font-family: arial;
-            background-color: white;
         }
 
     </style>
@@ -80,8 +70,8 @@
     <body>
         {% include header.html %}
         <main>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZfDYRy17CBY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="cover-banner">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZfDYRy17CBY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div class="flex-item-left">
                     <div class="banner-text">
                         <h1>努力は裏切らないね</h1>

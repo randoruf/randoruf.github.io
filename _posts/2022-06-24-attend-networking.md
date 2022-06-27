@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Networking - 与理解中的人接触"
+title: "Networking - 与理想中的人接触"
 date: 2022-06-24
 tags: [networking]
 ---

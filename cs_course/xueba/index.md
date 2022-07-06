@@ -3,6 +3,8 @@ layout: page
 title:  "说说你从非学霸变成学霸的经历吧？" 
 ---
 
+<iframe src="https://www.w3schools.com" title="Life Timer"></iframe>
+
 <span><img src="https://raw.githubusercontent.com/haohua-li/photo-asset-repo/main/imgs/v2-e102d785c87e09c105bfab01fc45c89b_xl.jpg" alt="img" style="zoom: 25%;" /> **[Chin](https://www.zhihu.com/people/chen-cun-cun)** 陳さん: 意志のあるところに、道は開ける。</span>
 
 ----

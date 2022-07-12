@@ -95,6 +95,11 @@ swapoff /tmp/swap1
 
 - 把  [LLVM Debian/Ubuntu packages](https://apt.llvm.org/) 里面出现的 deb 加到 `sources.list` 文件即可。
 
+ **不得不说 `apt` 真是有毛病**。添加源的时候，竟然允许瞎加 `list` 文件。
+
+- `/etc/apt/sources.list` 
+- `/etc/apt/sources.list.d` 文件夹下的所有 `.list` 文件也会造成影响。 
+
 以 Ubuntu 18.04 为例 (注意 bionic 位 Ubuntu 18.04 的代号，不同 Ubuntu 版本需要修改)。
 
 ```

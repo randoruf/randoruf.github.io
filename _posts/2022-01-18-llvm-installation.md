@@ -299,7 +299,13 @@ git clone --depth=1 https://github.com/llvm/llvm-project.git
 ```bash
 mkdir build && cd build
 
-cmake ../llvm -G Ninja -DCMAKE_BUILD_TYPE="Debug" -DLLVM_ENABLE_PROJECTS="clang" -DLLVM_INCLUDE_EXAMPLES="OFF" -DLLVM_INCLUDE_TESTS="OFF" -DLLVM_INCLUDE_BENCHMARKS="OFF" -DLLVM_TARGETS_TO_BUILD="X86" 
+cmake ../llvm -G Ninja -DCMAKE_BUILD_TYPE="Debug" \
+-DLLVM_ENABLE_PROJECTS="clang" \
+-DLLVM_INCLUDE_EXAMPLES="OFF" \
+-DLLVM_INCLUDE_TESTS="OFF" \
+-DLLVM_INCLUDE_BENCHMARKS="OFF" \
+-DLLVM_TARGETS_TO_BUILD="X86" \
+-DLLVM_USE_LINKER=lld
 
 # build (use all cores in the laptop)
 # cmake --build . -j $(nproc)
@@ -312,6 +318,8 @@ sudo cmake -P cmake_install.cmake
 # uninstall 
 sudo xargs rm -rf < install_manifest.txt
 ```
+
+> 使用 **GNU ld** 作为 Linker 会爆内存，所以要预先装好 **lld** 或者 **ld.gold**  
 
 不用太担心 `.h` 文件的事情。`install` 命令会把需要的 binary 文件和 header 文件复制到 `-DCMAKE_INSTALL_PREFIX=""` 的。
 

@@ -305,7 +305,7 @@ cmake ../llvm -G Ninja -DCMAKE_BUILD_TYPE="Debug" \
 -DLLVM_INCLUDE_TESTS="OFF" \
 -DLLVM_INCLUDE_BENCHMARKS="OFF" \
 -DLLVM_TARGETS_TO_BUILD="X86" \
--DLLVM_USE_LINKER=lld
+-DLLVM_USE_LINKER=gold
 
 # build (use all cores in the laptop)
 # cmake --build . -j $(nproc)

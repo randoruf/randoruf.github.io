@@ -319,7 +319,7 @@ sudo cmake -P cmake_install.cmake
 sudo xargs rm -rf < install_manifest.txt
 ```
 
-> 使用 **GNU ld** 作为 Linker 会爆内存，所以要预先装好 **lld** 或者 **ld.gold**  
+> 使用 **GNU ld** 作为 Linker 会爆内存，所以要预先装好 **lld** 或者 **ld.gold**  (即 `lld` 或者 `gold`)
 
 不用太担心 `.h` 文件的事情。`install` 命令会把需要的 binary 文件和 header 文件复制到 `-DCMAKE_INSTALL_PREFIX=""` 的。
 

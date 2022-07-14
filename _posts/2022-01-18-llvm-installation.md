@@ -299,7 +299,8 @@ git clone --depth=1 https://github.com/llvm/llvm-project.git
 ```bash
 mkdir build && cd build
 
-cmake ../llvm -G Ninja -DCMAKE_BUILD_TYPE="Debug" \
+cmake ../llvm -G Ninja 
+-DCMAKE_BUILD_TYPE="Release" -DLLVM_ENABLE_ASSERTIONS=ON \
 -DLLVM_ENABLE_PROJECTS="clang" \
 -DLLVM_INCLUDE_EXAMPLES="OFF" \
 -DLLVM_INCLUDE_TESTS="OFF" \
@@ -322,6 +323,8 @@ sudo xargs rm -rf < install_manifest.txt
 ```
 
 > 使用 **GNU ld** 作为 Linker 会爆内存，所以要预先装好 **lld** 或者 **ld.gold**  (即 `lld` 或者 `gold`)
+>
+> 如果内存比较大可以选择 `DCMAKE_BUILD_TYPE="Debug"` 
 
 不用太担心 `.h` 文件的事情。`install` 命令会把需要的 binary 文件和 header 文件复制到 `-DCMAKE_INSTALL_PREFIX=""` 的。
 

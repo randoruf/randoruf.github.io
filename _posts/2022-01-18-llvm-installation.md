@@ -89,15 +89,15 @@ sudo apt-get install libunwind-14-dev
 
 ```bash
 chmod +x update-alternatives-clang.sh
-./update-alternatives-clang.sh 14 1
+sudo ./update-alternatives-clang.sh 14 1
 
 
-update-alternatives --install /usr/bin/cc      cc      /usr/local/llvm/bin/clang   1
-update-alternatives --install /usr/bin/c++     c++     /usr/local/llvm/bin/clang++ 1
-update-alternatives --install /usr/bin/ld      ld      /usr/local/llvm/bin/ld.lld  1
-update-alternatives --set                      cc      /usr/local/llvm/bin/clang  
-update-alternatives --set                      c++     /usr/local/llvm/bin/clang++ 
-update-alternatives --set                      ld      /usr/local/llvm/bin/ld.lld
+sudo update-alternatives --install /usr/bin/cc      cc      /usr/local/llvm/bin/clang   1
+sudo update-alternatives --install /usr/bin/c++     c++     /usr/local/llvm/bin/clang++ 1
+sudo update-alternatives --install /usr/bin/ld      ld      /usr/local/llvm/bin/ld.lld  1
+sudo update-alternatives --set                      cc      /usr/local/llvm/bin/clang  
+sudo update-alternatives --set                      c++     /usr/local/llvm/bin/clang++ 
+sudo update-alternatives --set                      ld      /usr/local/llvm/bin/ld.lld
 
 
 sudo apt install binutils linux-headers musl-dev zlib
@@ -119,6 +119,20 @@ export LDFLAGS="-rtlib=compiler-rt -unwindlib=libunwind -stdlib=libc++ -lc++ -lc
 ```
 
 (否则会自动 `-rtlib=libgcc` )
+
+为了验证是否成功，可以尝试使用 LLVM address sanitizer 
+
+```cpp
+int main(int argc, char **argv) {
+  int *array = new int[100];
+  delete [] array;
+  return array[5];  // BOOM
+}
+```
+
+```bash
+clang++ -O0 -g -fsanitize=address hello.cpp
+```
 
 ## 从源码编译
 

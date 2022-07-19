@@ -95,8 +95,9 @@ sudo apt-get install libunwind-14-dev
 ```bash
 chmod +x update-alternatives-clang.sh
 sudo ./update-alternatives-clang.sh 14 1
+```
 
-
+```bash
 sudo update-alternatives --install /usr/bin/cc      cc      /usr/local/llvm/bin/clang   1
 sudo update-alternatives --install /usr/bin/c++     c++     /usr/local/llvm/bin/clang++ 1
 sudo update-alternatives --install /usr/bin/ld      ld      /usr/local/llvm/bin/ld.lld  1

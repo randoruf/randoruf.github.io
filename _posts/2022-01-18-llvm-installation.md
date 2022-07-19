@@ -5,7 +5,7 @@ date: 2022-01-18
 tags: [llvm]
 ---
 
-## 安装 LLVM 
+## 参考资料
 
 小小记录一下 LLVM 的安装，主要参考 
 
@@ -17,6 +17,110 @@ tags: [llvm]
 - [Building LLVM with CMake — LLVM 13 documentation](https://llvm.org/docs/CMake.html)
 - 【书】Getting Started with LLVM Core Libraries
 - 【书】LLVM12 
+
+## 最简单的 LLVM 安装
+
+主要参考 <https://apt.llvm.org/>
+
+添加安装源 ，打开 `/etc/apt/sources.list` ，在任意一处添加以下内容
+
+```
+# Bionic LTS (18.04) - Last update : Mon, 18 Jul 2022 19:28:06 UTC / Revision: 20220718064109+dbed4326dd9c
+deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic main
+deb-src http://apt.llvm.org/bionic/ llvm-toolchain-bionic main
+# Needs 'sudo add-apt-repository ppa:ubuntu-toolchain-r/test' for libstdc++ with C++20 support
+# 13
+deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-13 main
+deb-src http://apt.llvm.org/bionic/ llvm-toolchain-bionic-13 main
+# 14
+deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-14 main
+deb-src http://apt.llvm.org/bionic/ llvm-toolchain-bionic-14 main
+```
+
+然后更新
+
+```
+sudo apt update
+```
+
+添加签名
+
+```
+sudo wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
+```
+
+运行如下脚本安装
+
+```
+sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
+```
+
+我期望用的是 LLVM Toolchain ，所以仅仅 Clang, LLVM, LLD 是完全不够的。
+
+参考
+
+* [build-clang-llvm/alpine_3.10.1.Dockerfile at master · coldfusionjp/build-clang-llvm (github.com)](https://github.com/coldfusionjp/build-clang-llvm/blob/master/Dockerfiles/alpine_3.10.1.Dockerfile)
+* [docker-clang-toolchain/Dockerfile at master · genshen/docker-clang-toolchain (github.com)](https://github.com/genshen/docker-clang-toolchain/blob/master/Dockerfile)
+
+```bash
+# LLVM
+sudo apt-get install libllvm-14-ocaml-dev libllvm14 llvm-14 llvm-14-dev llvm-14-doc llvm-14-examples llvm-14-runtime
+# Clang and co
+sudo apt-get install clang-14 clang-tools-14 clang-14-doc libclang-common-14-dev libclang-14-dev libclang1-14 clang-format-14 python3-clang-14 clangd-14 clang-tidy-14
+# lldb
+sudo apt-get install lldb-14
+# lld (linker)
+sudo apt-get install lld-14
+# libc++
+sudo apt-get install libc++-14-dev libc++abi-14-dev
+# libunwind
+sudo apt-get install libunwind-14-dev
+```
+
+安装完成后还有几点值得注意
+
+* 默认的 symbolic links 
+* 在 `.bashrc` 把 clang 设置为默认 toolchain 
+* 在环境变量中把 gcc 变成 clang 
+
+安装完成后，由于默认的是 **clang-xx** ，需要  **update-alternatives** (由于可能会有多个版本的 LLVM Toolchain, 需要手动指定哪个版本可以有最高优先级)。参考这个脚本 <https://gist.github.com/randoruf/194780ba1de290efd9a8f67e7fd40afc>，
+
+以 LLVM 14 为例，设置 1 优先级
+
+```bash
+chmod +x update-alternatives-clang.sh
+./update-alternatives-clang.sh 14 1
+
+
+update-alternatives --install /usr/bin/cc      cc      /usr/local/llvm/bin/clang   1
+update-alternatives --install /usr/bin/c++     c++     /usr/local/llvm/bin/clang++ 1
+update-alternatives --install /usr/bin/ld      ld      /usr/local/llvm/bin/ld.lld  1
+update-alternatives --set                      cc      /usr/local/llvm/bin/clang  
+update-alternatives --set                      c++     /usr/local/llvm/bin/clang++ 
+update-alternatives --set                      ld      /usr/local/llvm/bin/ld.lld
+
+
+sudo apt install binutils linux-headers musl-dev zlib
+```
+
+由于 LLVM 在默认情况下依旧调用 **glibc** (例如 libgcc runtime)，我们需要让其默认链接 libc++ 
+
+* [bash - How do I add environment variables? - Ask Ubuntu](https://askubuntu.com/questions/58814/how-do-i-add-environment-variables)
+
+打开 `.bashrc`
+
+```bash
+# set llvm toolchain as default
+export CC=clang
+export CXX=clang++
+# export CFLAGS=""
+export CXXFLAGS="-stdlib=libc++"
+export LDFLAGS="-rtlib=compiler-rt -unwindlib=libunwind -stdlib=libc++ -lc++ -lc++abi"
+```
+
+(否则会自动 `-rtlib=libgcc` )
+
+## 从源码编译
 
 ### 最低配置
 
@@ -36,7 +140,7 @@ collect2: fatal error: ld terminated with signal 9 [Killed]
   - 预留至少 30 GB 给 LLVM 生成的中间二进制
 
 - **内存**: 
-  - linking 至少需要 20 GB。 
+  - linking 至少需要 5 GB。 
     - 比如我在 Docker Container 里面 Build LLVM， 然后发现内存直接炸了。
     - 记得查一查 container 最大可以使用的内存。
 
@@ -87,7 +191,7 @@ swapoff /tmp/swap1
 
 ### Ubuntu LLVM Toolchain 
 
-#### 直接安装
+#### 手动安装
 
 如果是 distro , 可以下载 ***LLVM Toolchain*** 来编译 LLVM 。
 

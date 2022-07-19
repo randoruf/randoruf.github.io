@@ -5,11 +5,14 @@ date: 2022-01-18
 tags: [llvm]
 ---
 
-## 最简单的 LLVM 安装
+* TOC
+{:toc}
 
-主要参考 <https://apt.llvm.org/>
+## Install LLVM Toolchain 
 
-添加安装源 ，打开 `/etc/apt/sources.list` ，在任意一处添加以下内容
+All steps from <https://apt.llvm.org/>
+
+Open `/etc/apt/sources.list` and add the following content 
 
 ```
 # Bionic LTS (18.04) - Last update : Mon, 18 Jul 2022 19:28:06 UTC / Revision: 20220718064109+dbed4326dd9c
@@ -24,30 +27,30 @@ deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-14 main
 deb-src http://apt.llvm.org/bionic/ llvm-toolchain-bionic-14 main
 ```
 
-然后更新
+update the source list of apt 
 
 ```bash
 sudo apt update
 ```
 
-添加签名
+the sign file 
 
 ```bash
 sudo wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
 ```
 
-运行如下脚本安装
+run the script to install the latest LLVM basic tools. 
 
 ```bash
 sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
 ```
 
-我期望用的是 LLVM Toolchain ，所以仅仅 Clang, LLVM, LLD 是完全不够的。
-
-参考
+It may only provide Clang, LLVM, LLD. To have a full LLVM Toolchain, we have to do more. 
 
 * [build-clang-llvm/alpine_3.10.1.Dockerfile at master · coldfusionjp/build-clang-llvm (github.com)](https://github.com/coldfusionjp/build-clang-llvm/blob/master/Dockerfiles/alpine_3.10.1.Dockerfile)
 * [docker-clang-toolchain/Dockerfile at master · genshen/docker-clang-toolchain (github.com)](https://github.com/genshen/docker-clang-toolchain/blob/master/Dockerfile)
+
+Install the whole LLVM 14 toolchain. 
 
 ```bash
 # LLVM
@@ -64,18 +67,12 @@ sudo apt-get install libc++-14-dev libc++abi-14-dev
 sudo apt-get install libunwind-14-dev
 ```
 
-安装完成后还有几点值得注意
+After the installation, we have to note that 
 
-* 默认的 symbolic links 
-* 在 `.bashrc` 把 clang 设置为默认 toolchain 
-* 在环境变量中把 gcc 变成 clang 
+* the default symbolic links 
+* set the environment variables in the  `.bashrc ` file 
 
-安装完成后，由于默认的是 **clang-xx** ，需要  **update-alternatives** (由于可能会有多个版本的 LLVM Toolchain, 需要手动指定哪个版本可以有最高优先级)。参考这个脚本 
-
-* <https://gist.github.com/randoruf/194780ba1de290efd9a8f67e7fd40afc>
-* [LLVM-14.0.6 (linuxfromscratch.org)](https://www.linuxfromscratch.org/blfs/view/svn/general/llvm.html) 
-
-如果不够，可以到 ***Beyond Linux® From Scratch*** 查看 LLVM 一章，按需增加。
+Then install some other packages
 
 ```bash
 sudo apt install binutils 
@@ -84,18 +81,27 @@ sudo apt install zlib1g-dev
 sudo apt-get install linux-headers-$(uname -r)
 ```
 
-以 LLVM 14 为例，设置 1 优先级
+In this example, LLVM 14 is installed in my computer. But when you type `clang --version`,  the terminal still tells you that clang is missing. So we have to set the default alternative for clang. 
+
+Download the script at <https://gist.github.com/randoruf/194780ba1de290efd9a8f67e7fd40afc> and 
+
+Run it 
 
 ```bash
 chmod +x update-alternatives-clang.sh
 sudo ./update-alternatives-clang.sh 14 1
 ```
 
-由于 LLVM 在默认情况下依旧调用 **glibc** (例如 libgcc runtime)，我们需要让其默认链接 libc++ 
+(in this example, the LLVM version is 14 and the priority is set to highest, which is 1)
 
-* [bash - How do I add environment variables? - Ask Ubuntu](https://askubuntu.com/questions/58814/how-do-i-add-environment-variables)
+The details of LLVM tools can be seen at ***[Beyond Linux® From Scratch](https://www.linuxfromscratch.org/blfs/view/svn/general/llvm.html)***. A very good book.  
 
-打开 `.bashrc`
+Be default, Clang will link **glibc** (and use the libgcc runtime), it is undesirable in my case.  
+
+I have to change the environment variables permenently, see this post 
+[bash - How do I add environment variables? - Ask Ubuntu](https://askubuntu.com/questions/58814/how-do-i-add-environment-variables)
+
+Open `~/.bashrc` , and then append the following text to the end of the file. 
 
 ```bash
 # set llvm toolchain as default
@@ -106,9 +112,7 @@ export CXXFLAGS="-stdlib=libc++"
 export LDFLAGS="-rtlib=compiler-rt -unwindlib=libunwind -stdlib=libc++ -lc++ -lc++abi"
 ```
 
-(否则会自动 `-rtlib=libgcc` )
-
-为了验证是否成功，可以尝试使用 LLVM address sanitizer 
+Now it is the time for harness test (use the address sanitizer)
 
 ```cpp
 int main(int argc, char **argv) {
@@ -122,7 +126,9 @@ int main(int argc, char **argv) {
 clang++ -O0 -g -fsanitize=address hello.cpp
 ```
 
-## 从源码编译
+
+
+## Build LLVM from Source 
 
 ### 最低配置
 

@@ -83,7 +83,12 @@ sudo apt-get install libunwind-14-dev
 * 在 `.bashrc` 把 clang 设置为默认 toolchain 
 * 在环境变量中把 gcc 变成 clang 
 
-安装完成后，由于默认的是 **clang-xx** ，需要  **update-alternatives** (由于可能会有多个版本的 LLVM Toolchain, 需要手动指定哪个版本可以有最高优先级)。参考这个脚本 <https://gist.github.com/randoruf/194780ba1de290efd9a8f67e7fd40afc>，
+安装完成后，由于默认的是 **clang-xx** ，需要  **update-alternatives** (由于可能会有多个版本的 LLVM Toolchain, 需要手动指定哪个版本可以有最高优先级)。参考这个脚本 
+
+* <https://gist.github.com/randoruf/194780ba1de290efd9a8f67e7fd40afc>
+* [LLVM-14.0.6 (linuxfromscratch.org)](https://www.linuxfromscratch.org/blfs/view/svn/general/llvm.html) 
+
+如果不够，可以到 ***Beyond Linux® From Scratch*** 查看 LLVM 一章，按需增加。
 
 以 LLVM 14 为例，设置 1 优先级
 

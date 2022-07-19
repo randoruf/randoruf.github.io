@@ -103,9 +103,13 @@ sudo update-alternatives --install /usr/bin/ld      ld      /usr/local/llvm/bin/
 sudo update-alternatives --set                      cc      /usr/local/llvm/bin/clang  
 sudo update-alternatives --set                      c++     /usr/local/llvm/bin/clang++ 
 sudo update-alternatives --set                      ld      /usr/local/llvm/bin/ld.lld
+```
 
-
-sudo apt install binutils linux-headers musl-dev zlib
+```bash
+sudo apt install binutils 
+sudo apt install zlib1g
+sudo apt install zlib1g-dev
+sudo apt-get install linux-headers-$(uname -r)
 ```
 
 由于 LLVM 在默认情况下依旧调用 **glibc** (例如 libgcc runtime)，我们需要让其默认链接 libc++ 

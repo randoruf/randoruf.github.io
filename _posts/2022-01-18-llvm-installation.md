@@ -39,19 +39,19 @@ deb-src http://apt.llvm.org/bionic/ llvm-toolchain-bionic-14 main
 
 然后更新
 
-```
+```bash
 sudo apt update
 ```
 
 添加签名
 
-```
+```bash
 sudo wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
 ```
 
 运行如下脚本安装
 
-```
+```bash
 sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
 ```
 
@@ -90,27 +90,18 @@ sudo apt-get install libunwind-14-dev
 
 如果不够，可以到 ***Beyond Linux® From Scratch*** 查看 LLVM 一章，按需增加。
 
-以 LLVM 14 为例，设置 1 优先级
-
-```bash
-chmod +x update-alternatives-clang.sh
-sudo ./update-alternatives-clang.sh 14 1
-```
-
-```bash
-sudo update-alternatives --install /usr/bin/cc      cc      /usr/local/llvm/bin/clang   1
-sudo update-alternatives --install /usr/bin/c++     c++     /usr/local/llvm/bin/clang++ 1
-sudo update-alternatives --install /usr/bin/ld      ld      /usr/local/llvm/bin/ld.lld  1
-sudo update-alternatives --set                      cc      /usr/local/llvm/bin/clang  
-sudo update-alternatives --set                      c++     /usr/local/llvm/bin/clang++ 
-sudo update-alternatives --set                      ld      /usr/local/llvm/bin/ld.lld
-```
-
 ```bash
 sudo apt install binutils 
 sudo apt install zlib1g
 sudo apt install zlib1g-dev
 sudo apt-get install linux-headers-$(uname -r)
+```
+
+以 LLVM 14 为例，设置 1 优先级
+
+```bash
+chmod +x update-alternatives-clang.sh
+sudo ./update-alternatives-clang.sh 14 1
 ```
 
 由于 LLVM 在默认情况下依旧调用 **glibc** (例如 libgcc runtime)，我们需要让其默认链接 libc++ 

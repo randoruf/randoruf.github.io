@@ -5,19 +5,6 @@ date: 2022-01-18
 tags: [llvm]
 ---
 
-## 参考资料
-
-小小记录一下 LLVM 的安装，主要参考 
-
-- [Getting Started with the LLVM System — LLVM 13 documentation](https://llvm.org/docs/GettingStarted.html)
-- [llvm-adventure/Build LLVM on macOS.md at master · appcypher/llvm-adventure (github.com)](https://github.com/appcypher/llvm-adventure/blob/master/Build LLVM on macOS.md)
-- [Mac 编译 llvm / mlir - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/430469470)
-- [LLVM 入门教程之基本介绍 - Yuuoniy's blog](https://blog.yuuoniy.cn/posts/llvm-1/)
-- [Git clone仓库的一个子目录 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/54581830)
-- [Building LLVM with CMake — LLVM 13 documentation](https://llvm.org/docs/CMake.html)
-- 【书】Getting Started with LLVM Core Libraries
-- 【书】LLVM12 
-
 ## 最简单的 LLVM 安装
 
 主要参考 <https://apt.llvm.org/>
@@ -725,3 +712,15 @@ define i32 @_Z3addv() #0 {
 }
 ```
 
+## 参考资料
+
+小小记录一下 LLVM 的安装，主要参考 
+
+- [Getting Started with the LLVM System — LLVM 13 documentation](https://llvm.org/docs/GettingStarted.html)
+- [llvm-adventure/Build LLVM on macOS.md at master · appcypher/llvm-adventure (github.com)](https://github.com/appcypher/llvm-adventure/blob/master/Build LLVM on macOS.md)
+- [Mac 编译 llvm / mlir - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/430469470)
+- [LLVM 入门教程之基本介绍 - Yuuoniy's blog](https://blog.yuuoniy.cn/posts/llvm-1/)
+- [Git clone仓库的一个子目录 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/54581830)
+- [Building LLVM with CMake — LLVM 13 documentation](https://llvm.org/docs/CMake.html)
+- 【书】Getting Started with LLVM Core Libraries
+- 【书】LLVM12 

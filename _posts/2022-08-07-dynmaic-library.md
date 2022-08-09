@@ -5,9 +5,12 @@ date: 2022-08-07
 tags: [cpp]
 ---
 
+* Advanced Programming in the UNIX Environment: Week 11, Segment 3 - Shared Libraries <https://www.youtube.com/watch?v=eloJO0ssrfc>
 * 《程序员的自我修养—链接、装载与库》
 * <https://amir.rachum.com/blog/2016/09/17/shared-libraries/>
 
+
+主要看 ***Advanced Programming in the UNIX Environment: Week 11, Segment 3 - Shared Libraries***
 ## Shared Library 
 Library 就是**预先编译好的模块**。比较典型的就是 glibc, stdc++ (STL) 等等。显然使用 Library 可以显著加快编译速度。
 

@@ -1,0 +1,39 @@
+/*顶部*/
+body{min-width:1300px;}
+.header_t .search {background: url(images/search.png) left center no-repeat;}
+.header_t .home {background: url(images/home.png) left center no-repeat;margin-left: 10px;}
+.header_t a {color: #fff;padding-left: 25px;}
+.header_t a:hover{color:#fff;}
+.headbar{height:130px;background:#165aa1;background:url(images/header.png) center top no-repeat;}
+.header{width:1150px;height:130px;margin:0 auto;overflow:hidden}
+.logo{float:left;padding-top: 38px;}
+.top_right{float:right;text-align:right;margin-top:15px;}
+.nav_menu_box{background-color:#b01f24;height:46px;}
+.nav_menu{width:1150px;margin:0 auto;height:46px;overflow:hidden;}
+.nav_menu a:link,.nav_menu a:visited{ color:#ffffff; height:46px;line-height:46px;display:block; font-weight:normal;font-size:16px;text-decoration: none;}
+.nav_menu li{float:left; display:inline-block; width:104px;height:46px;overflow:hidden; text-align:center;}
+#menu_nav >:first-child{background:url(images/index.png) left center no-repeat;}
+#menu_nav dl {display:none; z-index:99;position:absolute; width:104px; display:block; margin-left:1px;}
+#menu_nav dl dt { height:30px; line-height:30px;  width:104px; border-bottom:1px solid #ffffff}
+#menu_nav dl dt a:link, #menu_nav dl dt a:visited {background:#b01f24;font-size:14px; height:30px; line-height:30px; color:#fff;text-decoration: none; }
+#menu_nav dl dt a:hover {background:#950009; color:#fff; }
+.nav_menu-extra {background:#fff;height: 30px;border-bottom:#cccccc 1px solid}
+.nav_menu-extra .focus_news {background:#fff;float: left;height:30px;line-height: 32px;overflow: hidden;padding-left: 20px;}
+.nav_menu-extra h2 {background:url(xiaoxi.gif) no-repeat;padding-left:30px;float: left;height: 32px;line-height: 32px;	font-size:12px;font-weight:bold;margin-right:10px;}
+.nav_menu-extra .focus_news .con {float: left;height: 26px;overflow: hidden;padding-top:6px;;width: 450px;}
+
+.search_form {width:180px;height:28px;margin-right:10px;margin-top:15px;border: 1px solid #c1c1c1;float:right;background:#fff;overflow:hidden;}
+.search_form .keyword{width:152px;height:28px;line-height:28px;border:none;background: none;float:left;}
+.search_form .submitbtn{background:url(btn_search.jpg) no-repeat left center; width:21px; height:28px; border:none;float:left;}
+
+/*底部*/
+
+.friendlink li{float: left;}
+.friendlink span{margin:0 15px;}
+.ficon{text-align:center;}
+#footer {clear:both; display:block;background:#b01f24; }
+#footer .inner {width: 1000px;height:auto;padding:20px 0;margin: 0 auto;overflow: hidden;display: block;color: #fff;position:relative;}
+#footer .ficon{position:absolute;top:35px;right:0;}
+#footer .copyright ul { padding:10px 0px; }
+#footer .copyright ul li {color:#ffffff;line-height:28px;text-align:center;font-size:14px;}
+#footer a,#footer a.vison{color:#fff;}

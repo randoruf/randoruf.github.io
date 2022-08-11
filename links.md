@@ -4,6 +4,13 @@ title: Links
 permalink: /links/
 ---
 
+## 安全
+多点参加比赛。TCTF2019 之类的。
+
+* hooooooooooook <https://gloxec.github.io/page/4/>
+* Going to Chinese Hacking Competition - Real World CTF Finals <https://www.youtube.com/watch?v=2S_TXaGYD8E>
+* [如何为 Clang 编译器写插件实现自动化重构 - Netcan](https://netcan.github.io/2020/08/07/%E5%A6%82%E4%BD%95%E4%B8%BAClang%E7%BC%96%E8%AF%91%E5%99%A8%E5%86%99%E6%8F%92%E4%BB%B6%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%8C%96%E9%87%8D%E6%9E%84/)
+* [自己动手实现基于llvm的字符串加密 - Zhang](https://iosre.com/t/llvm/10610)
 
 
 ## 励志

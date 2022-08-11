@@ -23,6 +23,8 @@ tags: [cpp]
 
 ### Shared Library 
 
+一般配合 `-fPIC` 参数使用 (可以了解一下 `-fpic` 和 `-fPIC` 的区别)
+
 ### Search Path for Shared Library
 
 

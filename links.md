@@ -4,6 +4,13 @@ title: Links
 permalink: /links/
 ---
 
+## LeetCode 课堂 
+
+8 月 16 日｜力扣线上公开课｜LeetLive - 登录认证原理与实现 <https://leetcode.cn/circle/discuss/w6isbn/>
+
+8 月 9 日｜力扣线上公开课｜LeetLive - MySQL 数据库应用实战 <https://leetcode.cn/circle/discuss/Nm2HmS/>
+
+
 ## 安全
 多点参加比赛。TCTF2019 之类的。
 

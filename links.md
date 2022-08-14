@@ -43,6 +43,7 @@ No, No, No, 你的思想还停留在第一层。
 ## 安全
 多点参加比赛。TCTF2019 之类的。
 
+* [MRCTF2022 llvmvm出题以及解题](https://bbs.pediy.com/thread-272599.htm)
 * [基于llvm的变量轮转混淆pass实现](https://bbs.pediy.com/thread-271867.htm)
 * [自己动手实现基于llvm的字符串加密 - Zhang](https://iosre.com/t/llvm/10610)
 * [从零开始瞎玩llvm:利用llvm保护程序免受内存修改器的攻击](https://iosre.com/t/llvm-llvm/11132)

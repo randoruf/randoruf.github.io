@@ -30,8 +30,8 @@ No, No, No, 你的思想还停留在第一层。
 ![](https://raw.githubusercontent.com/randoruf/photo-asset-repo/main/imgs/2022-08-14-15-54-54.png)
 
 
-* 第一层: “抄作业都不会，活该找不到工作”
-* 第二层: “做自己的研究”
+* 第一层【临摹】: “抄作业都不会，活该找不到工作”
+* 第二层【原创】: “做自己的研究”
 
 ## LeetCode 课堂 
 

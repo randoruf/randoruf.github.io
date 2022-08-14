@@ -4,6 +4,33 @@ title: Links
 permalink: /links/
 ---
 
+## 笨蛋就活该
+
+蠢就算了，**如果你还懒的话，就死定了**。
+
+<https://iosre.com/t/llvm-hikari/10720>
+![](https://raw.githubusercontent.com/randoruf/photo-asset-repo/main/imgs/2022-08-14-15-46-13.png)
+
+> 你们这些弱智连文档都不读，我选择开源是个错误。
+
+还有这个项目的起源 
+<https://github.com/HikariObfuscator/Hikari>
+> Hikari(Light in Japanese, name stolen from the Nintendo Switch game Xenoblade Chronicles 2) is **Naville's 2017 Christmas Toy Project**.
+
+圣诞节的玩具项目。
+
+## "iOS 逆向是违法的，找不到正经工作" 
+
+No, No, No, 你的思想还停留在第一层。
+
+<https://everettjf.github.io/2018/01/15/ios-app-reverse-engineering-stuff/>
+
+看看别人是怎么说的: 
+
+![](https://raw.githubusercontent.com/randoruf/photo-asset-repo/main/imgs/2022-08-14-15-54-54.png)
+
+
+
 ## LeetCode 课堂 
 
 8 月 16 日｜力扣线上公开课｜LeetLive - 登录认证原理与实现 <https://leetcode.cn/circle/discuss/w6isbn/>

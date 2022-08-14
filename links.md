@@ -30,6 +30,8 @@ No, No, No, 你的思想还停留在第一层。
 ![](https://raw.githubusercontent.com/randoruf/photo-asset-repo/main/imgs/2022-08-14-15-54-54.png)
 
 
+* 第一层: “抄作业都不会，活该找不到工作”
+* 第二层: “做自己的研究”
 
 ## LeetCode 课堂 
 
@@ -41,6 +43,7 @@ No, No, No, 你的思想还停留在第一层。
 ## 安全
 多点参加比赛。TCTF2019 之类的。
 
+* [基于llvm的变量轮转混淆pass实现](https://bbs.pediy.com/thread-271867.htm)
 * [自己动手实现基于llvm的字符串加密 - Zhang](https://iosre.com/t/llvm/10610)
 * [从零开始瞎玩llvm:利用llvm保护程序免受内存修改器的攻击](https://iosre.com/t/llvm-llvm/11132)
 * hooooooooooook <https://gloxec.github.io/page/4/>

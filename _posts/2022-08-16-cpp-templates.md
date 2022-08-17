@@ -79,7 +79,9 @@ struct Shape{
 
 template <typename T> 
 struct ShapeCRTP : public Shape{ 
-    virtual Shape* Clone() override { return new T(*static_cast<T*>(this)); }
+    virtual Shape* Clone() override { 
+        return new T(*static_cast<T*>(this)); 
+    }
 }; 
 
 struct Square : public ShapeCRTP<Square>{

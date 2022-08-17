@@ -68,6 +68,44 @@ static RegisterStandardPasses Y(
 clang -flegacy-pass-manager -Xclang -load -Xclang libHelloWorldPass.so bar.c 
 ```
 
+## 使用 New Pass Manager 
+
+<https://llvm.org/docs/WritingAnLLVMNewPMPass.html>
+
+>  All LLVM passes inherit from the CRTP mix-in `PassInfoMixin<PassT>`.
+
+这里出现了 Concept-based Polymorphism 的概念，涉及到 Mix-in Class 和 CRTP 。
+
+New Pass Manager 会分开 Anlyses 和 Passes， 由不同的 Pass Manager 负责。 
+
+还有 Pass 之间的转换要显著地使用 Adaptor (不懂是什么)。 
+
+可见 LLVM New PM 用了很多**设计模式**的知识。
+
+首先需要先明白有哪些 Pass Manager 
+
+常见的 Analysis Pass Manager 
+
+```cpp
+LoopAnalysisManager LAM;
+FunctionAnalysisManager FAM;
+CGSCCAnalysisManager CGAM;
+ModuleAnalysisManager MAM;
+```
+
+还有普通各种 level 的 Pass Manager 
+```cpp
+FunctionPassManager FPM;
+FPM.addPass(InstSimplifyPass());  // InstSimplifyPass is a function pass
+```
+可以把 Function Pass 加入到 Moudle Pass (使用 **Adaptor**) 
+```cpp
+FunctionPassManager FPM;
+FPM.addPass(InstSimplifyPass()); // InstSimplifyPass is a function pass
+
+ModulePassManager MPM;
+MPM.addPass(createModuleToFunctionPassAdaptor(std::move(FPM)));
+```
 
 
 ## 参考资料

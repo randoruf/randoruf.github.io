@@ -269,12 +269,17 @@ llvmGetPassPluginInfo() {
 ```
 
 在 Terminal 启动
+(可以看 <https://stackoverflow.com/questions/54447985/how-to-automatically-register-and-load-modern-pass-in-clang>)
+
 ```bash
 # opt -O0 -load-pass-plugin=libHelloWorld.dylib --disable-output <input-llvm-file>
 
-clang -Xclang -load-pass-plugin=libHelloWorldPass.dylib <input-c-file>
+clang -fpass-plugin=./libHelloWorld.dylib ../test.c
 ```
 
+> 注意： 
+> 可以发现使用 clang 是不需要提供优化级别的。
+> 所以这里学到知识就是 `opt` 一定要跟 优化级别 `-O0` 一起使用。
 ### add Passes to Compiler/Driver Pipeline 
 
 这部分主要涉及到 Optimization Level 。

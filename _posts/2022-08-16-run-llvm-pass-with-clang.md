@@ -131,54 +131,65 @@ llvmGetPassPluginInfo() {
 ### 注册到流水线 / Extension Point of Pipeline
 我们还可以插入到 ***Extension Point***, 也就是插入到标准流程的一环。
 
-这部分可以看 <https://github.com/banach-space/llvm-tutor/blob/main/lib/OpcodeCounter.cpp>
+这部分可以看 
+* <https://github.com/banach-space/llvm-tutor/blob/main/lib/OpcodeCounter.cpp>
+* <https://github.com/banach-space/llvm-tutor/blob/main/HelloWorld/HelloWorld.cpp>
+
+* llvm NewPassManager API分析及适配方案 <https://bbs.pediy.com/thread-272821.htm>
+
+
+| 回调函数                                      | 回调时提供的对象    | 对应 ExtensionPointTy        |
+| --------------------------------------------- | ------------------- | ---------------------------- |
+| registerPeepholeEPCallback                    | FunctionPassManager | 对应EP_Peephole              |
+| registerLateLoopOptimizationsEPCallback       | LoopPassManager     | 对应EP_LoopOptimizerEnd      |
+| registerLoopOptimizerEndEPCallback            | LoopPassManager     | 对应EP_LateLoopOptimizations |
+| registerScalarOptimizerLateEPCallback         | FunctionPassManager | 对应 EP_ScalarOptimizerLate  |
+| registerCGSCCOptimizerLateEPCallback          | CGSCCPassManager    | 对应EP_CGSCCOptimizerLate    |
+| registerVectorizerStartEPCallback             | FunctionPassManager | 对应EP_VectorizerStart       |
+| registerPipelineStartEPCallback               | ModulePassManager   | 对应EP_EarlyAsPossible       |
+| registerPipelineEarlySimplificationEPCallback | ModulePassManager   | 对应 EP_ModuleOptimizerEarly |
+| registerOptimizerLastEPCallback               | ModulePassManager   | 对应EP_OptimizerLast         |
+
+
 
 
 ```cpp
-//------------------------------------------------------------------------------
-// New PM interface
-//------------------------------------------------------------------------------
-using ResultOpcodeCounter = llvm::StringMap<unsigned>;
-
-struct OpcodeCounter : public llvm::AnalysisInfoMixin<OpcodeCounter> {
-  using Result = ResultOpcodeCounter;
-  Result run(llvm::Function &F,
-             llvm::FunctionAnalysisManager &);
-
-  OpcodeCounter::Result generateOpcodeMap(llvm::Function &F);
-  // Part of the official API:
-  //  https://llvm.org/docs/WritingAnLLVMNewPMPass.html#required-passes
+namespace {
+struct HelloWorld : PassInfoMixin<HelloWorld> {
+  PreservedAnalyses run(Function &F, FunctionAnalysisManager &) {
+    errs() << "(llvm-tutor) Hello from: "<< F.getName() << "\n";
+    errs() << "(llvm-tutor)   number of arguments: " << F.arg_size() << "\n";
+    return PreservedAnalyses::all();
+  }
+  // Without isRequired returning true, this pass will be skipped for functions decorated with the optnone LLVM attribute. Note that clang -O0 decorates all functions with optnone.
   static bool isRequired() { return true; }
-
-private:
-  // A special type used by analysis passes to provide an address that
-  // identifies that particular analysis pass type.
-  static llvm::AnalysisKey Key;
-  friend struct llvm::AnalysisInfoMixin<OpcodeCounter>;
 };
-
-//------------------------------------------------------------------------------
-// New PM interface for the printer pass
-//------------------------------------------------------------------------------
-class OpcodeCounterPrinter : public llvm::PassInfoMixin<OpcodeCounterPrinter> {
-public:
-  explicit OpcodeCounterPrinter(llvm::raw_ostream &OutS) : OS(OutS) {}
-
-  llvm::PreservedAnalyses run(llvm::Function &Func,
-                              llvm::FunctionAnalysisManager &FAM);
-  // Part of the official API:
-  //  https://llvm.org/docs/WritingAnLLVMNewPMPass.html#required-passes
-  static bool isRequired() { return true; }
-
-private:
-  llvm::raw_ostream &OS;
-};
-
-
+} // namespace
 ```
 
-如果是使用 Legacy Pass Manager 比较简单
+#### Legacy Pass Manager 
+如果是使用 Legacy Pass Manager 比较简单 (注意需要**继承**，这里没有展示 Legacy Pass 的实现代码)
 
+##### 参数启动
+使用参数 `legacy-hello-world`
+
+```cpp
+char LegacyHelloWorld::ID = 0;
+static RegisterPass<LegacyHelloWorld>
+    X("legacy-hello-world", "Hello World Pass",
+      true, // This pass doesn't modify the CFG => true
+      false // This pass is not a pure analysis pass => false
+    );
+```
+在 Terminal 启动, 
+```bash
+opt -enable-new-pm=0 -load libHelloWorld.dylib -legacy-hello-world -disable-output <input-llvm-file>
+```
+
+##### 自动启动
+> 提示1: 
+> 必须显式地指明优化级别(如 `-O{0|1|2|3}` 等)，
+> 否则 `opt` 将会在没有运行任何 Pass 的情况下 **直接结束**。 ***不会尝试去构建 Pipeline***
 ```cpp
 char LegacyOpcodeCounter::ID = 0;
 // Register LegacyOpcodeCounter as a step of an existing pipeline, which means that LegacyOpcodeCounter will be run automatically at '-O{0|1|2|3}'.
@@ -187,50 +198,82 @@ static llvm::RegisterStandardPasses RegisterOpcodeCounter
    (llvm::PassManagerBuilder::EP_EarlyAsPossible,
       [](const llvm::PassManagerBuilder &Builder,
                llvm::legacy::PassManagerBase &PM) 
-            {PM.add(new LegacyOpcodeCounter());});
+            {PM.add(new HelloWorld());});
+```
+在 Terminal 启动
+```bash
+# opt -O0 -enable-new-pm=0 -load libHelloWorld.dylib -disable-output <input-llvm-file>
+
+clang -flegacy-pass-manager -Xclang -load -Xclang libHelloWorldPass.dylib <input-c-file>
 ```
 
-如果是使用 New Pass Manager, 
-(一个 输出 Pass Printer 和 一个 Analysis Pass)
+#### New Pass Manager 
 
-> 提示: 
-> 由于我们的 OpcodeCounter 是 **Function Pass**, 但是 `PassBuilder::registerPipelineStartEPCallback` 的接口是要求 Module Pass 的。所以这里需要 adapator `createModuleToFunctionPassAdaptor` 进行 explicit conversion。
-> 此处稍微有点复杂，可以看一看原版的 [pcodeCounter.cpp](https://github.com/banach-space/llvm-tutor/blob/main/lib/OpcodeCounter.cpp)，他用的是 `registerVectorizerStartEPCallback` 。也可以看 Learn 12 Chapter 也有详细说明。
-> 「llvm-dev」 How to port symcc to clang/llvm-13? <https://groups.google.com/g/llvm-dev/c/e_4WobR9WP0>
-
-那个 `OptimizationLevel` 也允许我们对输入的优化级别进行判断，这个不用，所以 `-O{g|0|1|2|3}` 全部都用
-
+##### 参数启动
+使用参数 `"hello-world"`
 ```cpp
-llvm::PassPluginLibraryInfo getOpcodeCounterPluginInfo() {
-  return {
-    LLVM_PLUGIN_API_VERSION, "OpcodeCounter", LLVM_VERSION_STRING,
-        [](PassBuilder &PB) {
-          // Register OpcodeCounterPrinter as a step of an existing pipeline. It adds our CountIRPass Pass to the beginning of the pipeline (i.e. when using '-O{0|1|2|3|s}') .
-          PB.registerPipelineStartEPCallback(
-              [](ModulePassManager &MPM, OptimizationLevel Level) {
-                MPM.addPass(
-                  createModuleToFunctionPassAdaptor(
-                    OpcodeCounterPrinter(llvm::errs())
-                  )
-               );
-              });
-          // #3 REGISTRATION FOR "FAM.getResult<OpcodeCounter>(Func)"
-          // Register OpcodeCounter as an analysis pass. This is required so that OpcodeCounterPrinter (or any other pass) can request the results of OpcodeCounter.
-          PB.registerAnalysisRegistrationCallback(
-              [](FunctionAnalysisManager &FAM) {
-                FAM.registerPass([&] { return OpcodeCounter(); });
-              });
-          }
-        };
+llvm::PassPluginLibraryInfo getHelloWorldPluginInfo() {
+  return {LLVM_PLUGIN_API_VERSION, "HelloWorld", LLVM_VERSION_STRING,
+          [](PassBuilder &PB) {
+            PB.registerPipelineParsingCallback(
+                [](StringRef Name, FunctionPassManager &FPM,
+                   ArrayRef<PassBuilder::PipelineElement>) {
+                  if (Name == "hello-world") {
+                    FPM.addPass(HelloWorld());
+                    return true;
+                  }
+                  return false;
+                });
+          }};
 }
 
 extern "C" LLVM_ATTRIBUTE_WEAK ::llvm::PassPluginLibraryInfo
 llvmGetPassPluginInfo() {
-  return getOpcodeCounterPluginInfo();
+  return getHelloWorldPluginInfo();
 }
 ```
+在 Terminal 启动, 
+```bash
+opt -load-pass-plugin=libHelloWorld.dylib  -passes="hello-world"  --disable-output  <input-llvm-file>
+```
+
+##### 自动启动
+> 提示1: 
+> 必须显式地指明优化级别(如 `-O{0|1|2|3}` 等)，
+> 否则 `opt` 将会在没有运行任何 Pass 的情况下 **直接结束**。 ***不会尝试去构建 Pipeline***
 
 
+> 提示2: 
+> 由于我们的 HelloWorld 是 **Function Pass**, 但是 `PassBuilder::registerPipelineStartEPCallback` 的接口是要求 Module Pass 的。所以这里需要 adapator `createModuleToFunctionPassAdaptor` 进行 explicit conversion。
+
+> 提示3: 
+> `OptimizationLevel` 也允许我们对输入的优化级别进行判断。
+> 如果这个不用，可对 `-O{0|1|2|3}` 全部都用
+```cpp
+llvm::PassPluginLibraryInfo getHelloWorldPluginInfo() {
+  return {LLVM_PLUGIN_API_VERSION, "HelloWorld", LLVM_VERSION_STRING,
+          [](PassBuilder &PB) {
+            PB.registerPipelineStartEPCallback(
+              [&](llvm::ModulePassManager &MPM, llvm::OptimizationLevel Level) {
+                MPM.addPass(createModuleToFunctionPassAdaptor(HelloWorld()));
+              }
+            );
+          }};
+}
+
+extern "C" LLVM_ATTRIBUTE_WEAK ::llvm::PassPluginLibraryInfo
+llvmGetPassPluginInfo() {
+  return getHelloWorldPluginInfo();
+}
+
+```
+
+在 Terminal 启动
+```bash
+# opt -O0 -load-pass-plugin=libHelloWorld.dylib --disable-output <input-llvm-file>
+
+clang -Xclang -load-pass-plugin=libHelloWorldPass.dylib <input-c-file>
+```
 
 ### add Passes to Compiler/Driver Pipeline 
 
@@ -243,7 +286,8 @@ llvmGetPassPluginInfo() {
 * [Learn LLVM 12 - Chapter 8:Adding an optimization pipeline to your compiler](https://www.packtpub.com/product/learn-llvm-12/9781839213502)
 
 ## 参考资料
-
+* [llvm NewPassManager API分析及适配方案(看雪论坛)](https://bbs.pediy.com/thread-272821.htm)
+* 「llvm-dev」How to port symcc to clang/llvm-13? <https://groups.google.com/g/llvm-dev/c/e_4WobR9WP0>
 * [Writing an LLVM Pass with New PM](https://llvm.org/docs/WritingAnLLVMNewPMPass.html)
 * [Getting Started with LLVM Core Libraries](https://www.amazon.com/Getting-Started-LLVM-Core-Libraries/dp/1782166920)
 * [Learn LLVM 12](https://github.com/PacktPublishing/Learn-LLVM-12)

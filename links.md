@@ -3,6 +3,9 @@ layout: page
 title: Links
 permalink: /links/
 ---
+## 为什么需要学习 LLVM ？ 
+<img src="https://raw.githubusercontent.com/randoruf/photo-asset-repo/924be731ab8c235d4d85ebf0a0a837db8a01b7bb/imgs/WechatIMG16018.png" alt="why-llvm" style="zoom:50%;">
+
 
 ## 笨蛋就活该
 

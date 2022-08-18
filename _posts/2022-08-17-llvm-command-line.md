@@ -84,6 +84,8 @@ clang -Xclang -load -Xclang build/libHelloWorld.dylib -mllvm -lists -mllvm ARG1 
 
 非常值得学习。如果关掉的话可以去有 2022年8月18日的备份。
 
+<https://pan.baidu.com/s/1S3kqgqu1fIuidvytPhTIMQ>
+
 
 ## 参考资料
 * [spu-llvm by Kai Plociennik](https://gitlab.itwm.fraunhofer.de/kai_plociennik/spu-llvm/-/tree/master/llvm/examples/Bye)

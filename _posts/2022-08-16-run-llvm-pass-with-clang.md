@@ -125,6 +125,7 @@ llvmGetPassPluginInfo() {
   return getHellWorldPluginInfo();
 }
 ```
+
 > 提示: 
 > 在 ***Learn LLVM 12*** - Chapter 8 可以看到详细的意思。这里都是用 Lambda 创建 Callback Function, 目的是等真正的 PassBuilder 可以在创建后才执行其 construtor (也就是真正动态地添加和删除 pass)  
 
@@ -167,10 +168,12 @@ struct HelloWorld : PassInfoMixin<HelloWorld> {
 } // namespace
 ```
 
-#### Legacy Pass Manager 
+#### Legacy Pass Manager
+
 如果是使用 Legacy Pass Manager 比较简单 (注意需要**继承**，这里没有展示 Legacy Pass 的实现代码)
 
 ##### 参数启动
+
 使用参数 `legacy-hello-world`
 
 ```cpp
@@ -181,7 +184,9 @@ static RegisterPass<LegacyHelloWorld>
       false // This pass is not a pure analysis pass => false
     );
 ```
+
 在 Terminal 启动, 
+
 ```bash
 opt -enable-new-pm=0 -load libHelloWorld.dylib -legacy-hello-world -disable-output <input-llvm-file>
 ```
@@ -212,6 +217,7 @@ clang -flegacy-pass-manager -Xclang -load -Xclang libHelloWorldPass.dylib <input
 
 ##### 参数启动
 使用参数 `"hello-world"`
+
 ```cpp
 llvm::PassPluginLibraryInfo getHelloWorldPluginInfo() {
   return {LLVM_PLUGIN_API_VERSION, "HelloWorld", LLVM_VERSION_STRING,
@@ -233,6 +239,7 @@ llvmGetPassPluginInfo() {
   return getHelloWorldPluginInfo();
 }
 ```
+
 在 Terminal 启动,
 
 ```bash
@@ -243,7 +250,6 @@ opt -load-pass-plugin=libHelloWorld.dylib  -passes="hello-world"  --disable-outp
 > 提示1: 
 > 必须显式地指明优化级别(如 `-O{0|1|2|3}` 等)，
 > 否则 `opt` 将会在没有运行任何 Pass 的情况下 **直接结束**。 ***不会尝试去构建 Pipeline***
-
 
 > 提示2: 
 > 由于我们的 HelloWorld 是 **Function Pass**, 但是 `PassBuilder::registerPipelineStartEPCallback` 的接口是要求 Module Pass 的。所以这里需要 adapator `createModuleToFunctionPassAdaptor` 进行 explicit conversion。

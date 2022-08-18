@@ -78,6 +78,8 @@ clang -flegacy-pass-manager -Xclang -load -Xclang libHelloWorldPass.so bar.c
 
 ## 使用 New Pass Manager 
 
+### 查看 Pass Manager 
+
 这里暂时不涉及 Compiler/Driver 部分，只涉及到 **Plugin** 。
 
 如果是使用 legacy pass manager 
@@ -103,6 +105,10 @@ opt hello.ll -disable-output -debug-pass-manager
 ```bash 
 opt --load-pass-plugin=libHelloWorld.{dylib|so} --passes="hello-world" --disable-output
 ```
+
+> FIXME: 
+> (待认证) 实际上可以用 `-mllvm --passes="hello-world"` 或者 `-fpasses=hello-world` 之类的把参数从 clang 传递到 llvm 。所以应该可以避免注册到流水线的。
+
 其注册代码可以是 
 ```cpp 
 llvm::PassPluginLibraryInfo getHellWorldPluginInfo() {

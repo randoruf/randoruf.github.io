@@ -200,10 +200,11 @@ static llvm::RegisterStandardPasses RegisterOpcodeCounter
                llvm::legacy::PassManagerBase &PM) 
             {PM.add(new HelloWorld());});
 ```
+
 在 Terminal 启动
+
 ```bash
 # opt -O0 -enable-new-pm=0 -load libHelloWorld.dylib -disable-output <input-llvm-file>
-
 clang -flegacy-pass-manager -Xclang -load -Xclang libHelloWorldPass.dylib <input-c-file>
 ```
 
@@ -232,7 +233,8 @@ llvmGetPassPluginInfo() {
   return getHelloWorldPluginInfo();
 }
 ```
-在 Terminal 启动, 
+在 Terminal 启动,
+
 ```bash
 opt -load-pass-plugin=libHelloWorld.dylib  -passes="hello-world"  --disable-output  <input-llvm-file>
 ```
@@ -273,7 +275,6 @@ llvmGetPassPluginInfo() {
 
 ```bash
 # opt -O0 -load-pass-plugin=libHelloWorld.dylib --disable-output <input-llvm-file>
-
 clang -fpass-plugin=./libHelloWorld.dylib ../test.c
 ```
 

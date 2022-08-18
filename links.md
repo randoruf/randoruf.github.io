@@ -6,13 +6,21 @@ permalink: /links/
 ## 为什么需要学习 LLVM ？ 
 <img src="https://raw.githubusercontent.com/randoruf/photo-asset-repo/924be731ab8c235d4d85ebf0a0a837db8a01b7bb/imgs/WechatIMG16018.png" alt="why-llvm" style="zoom:50%;">
 
+> 正经的，用 Swift 语言写 UIKit 框架。然后学习 SwiftUI框架。
+> 语言：选 Swift。因为 OC 彻底式微了，主流框架和文档都不再支持 OC；
+> 框架：选 UIKit，因为大部分开发还是用这套；**SwiftUI** 是未来跨平台主推，但
+> 前只能运行在高版本系统上，框架还不成熟，但终究要成为未来。
 
-## 笨蛋就活该
+## 笨蛋就活该 
+
+张总才24岁就是腾讯高级工程师了
+
+<img src="https://raw.githubusercontent.com/randoruf/photo-asset-repo/main/imgs/2022-08-18-15-57-09.png" style="zoom:50%;">
 
 蠢就算了，**如果你还懒的话，就死定了**。
 
 <https://iosre.com/t/llvm-hikari/10720>
-![](https://raw.githubusercontent.com/randoruf/photo-asset-repo/main/imgs/2022-08-14-15-46-13.png)
+<img src="https://raw.githubusercontent.com/randoruf/photo-asset-repo/main/imgs/2022-08-14-15-46-13.png" alt="hikari" style="zoom:50%;"> 
 
 > 你们这些弱智连文档都不读，我选择开源是个错误。
 

@@ -247,6 +247,7 @@ opt -load-pass-plugin=libHelloWorld.dylib  -passes="hello-world"  --disable-outp
 ```
 
 ##### 自动启动
+
 > 提示1: 
 > 必须显式地指明优化级别(如 `-O{0|1|2|3}` 等)，
 > 否则 `opt` 将会在没有运行任何 Pass 的情况下 **直接结束**。 ***不会尝试去构建 Pipeline***
@@ -257,6 +258,8 @@ opt -load-pass-plugin=libHelloWorld.dylib  -passes="hello-world"  --disable-outp
 > 提示3: 
 > `OptimizationLevel` 也允许我们对输入的优化级别进行判断。
 > 如果这个不用，可对 `-O{0|1|2|3}` 全部都用
+
+
 ```cpp
 llvm::PassPluginLibraryInfo getHelloWorldPluginInfo() {
   return {LLVM_PLUGIN_API_VERSION, "HelloWorld", LLVM_VERSION_STRING,
@@ -273,20 +276,23 @@ extern "C" LLVM_ATTRIBUTE_WEAK ::llvm::PassPluginLibraryInfo
 llvmGetPassPluginInfo() {
   return getHelloWorldPluginInfo();
 }
-
 ```
 
 在 Terminal 启动
 (可以看 <https://stackoverflow.com/questions/54447985/how-to-automatically-register-and-load-modern-pass-in-clang>)
+
 
 ```bash
 # opt -O0 -load-pass-plugin=libHelloWorld.dylib --disable-output <input-llvm-file>
 clang -fpass-plugin=./libHelloWorld.dylib ../test.c
 ```
 
+
 > 注意： 
 > 可以发现使用 clang 是不需要提供优化级别的。
 > 所以这里学到知识就是 `opt` 一定要跟 优化级别 `-O0` 一起使用。
+
+
 ### add Passes to Compiler/Driver Pipeline 
 
 这部分主要涉及到 Optimization Level 。

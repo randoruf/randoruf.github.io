@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "【by Lewis Revill】Implementing Machine Code Optimizations for RISC-V in LLVM — A Detailed Look"
+title: "【Lewis Revill】Implementing Machine Code Optimizations for RISC-V in LLVM"
 date: 2022-06-26
 tags: [llvm,compiler,cs]
 ---

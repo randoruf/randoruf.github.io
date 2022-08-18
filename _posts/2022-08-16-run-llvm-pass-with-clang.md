@@ -196,9 +196,9 @@ static llvm::RegisterStandardPasses RegisterOpcodeCounter
 > 提示: 
 > 由于我们的 OpcodeCounter 是 **Function Pass**, 但是 `PassBuilder::registerPipelineStartEPCallback` 的接口是要求 Module Pass 的。所以这里需要 adapator `createModuleToFunctionPassAdaptor` 进行 explicit conversion。
 > 此处稍微有点复杂，可以看一看原版的 [pcodeCounter.cpp](https://github.com/banach-space/llvm-tutor/blob/main/lib/OpcodeCounter.cpp)，他用的是 `registerVectorizerStartEPCallback` 。也可以看 Learn 12 Chapter 也有详细说明。
+> 「llvm-dev」 How to port symcc to clang/llvm-13? <https://groups.google.com/g/llvm-dev/c/e_4WobR9WP0>
 
-
-
+那个 `OptimizationLevel` 也允许我们对输入的优化级别进行判断，这个不用，所以 `-O{g|0|1|2|3}` 全部都用
 
 ```cpp
 llvm::PassPluginLibraryInfo getOpcodeCounterPluginInfo() {
@@ -207,10 +207,10 @@ llvm::PassPluginLibraryInfo getOpcodeCounterPluginInfo() {
         [](PassBuilder &PB) {
           // Register OpcodeCounterPrinter as a step of an existing pipeline. It adds our CountIRPass Pass to the beginning of the pipeline (i.e. when using '-O{0|1|2|3|s}') .
           PB.registerPipelineStartEPCallback(
-              [](ModulePassManager &MPM) {
+              [](ModulePassManager &MPM, OptimizationLevel Level) {
                 MPM.addPass(
                   createModuleToFunctionPassAdaptor(
-                     OpcodeCounterPrinter(llvm::errs())
+                    OpcodeCounterPrinter(llvm::errs())
                   )
                );
               });

@@ -10,6 +10,20 @@ tags: [git]
 
 ---
 
+
+### 使用 Keyring 避免重复输入密码
+
+> **提示**:
+> From 2021, GitHub would not longer to allow authentication by using the account passwords. You could generate a new token and use it as the account password. For example, when git is asking the password, **just key in the token**. 
+
+有两种方法，
+* 个人电脑: 可以 `git config credential.helper store` 保存到 `~/.git-credentials` , 由于你就是 root user, 所以没有太大问题
+* 公共电脑: 可以使用 **Keyring/Keychain** 来储存你的密码。比如 macOS 就可以 `git config credential.helper osxkeychain` ，其他发行版 KDE, gnome 需要其他指令。
+
+<https://oracleyue.github.io/post/git-keyring/>
+
+
+
 ### 新出现的文件
 
 ```bash

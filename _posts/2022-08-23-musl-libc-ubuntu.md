@@ -139,7 +139,6 @@ Another issue is that `test_errstr`, `test_ca`, `test_ssl_new` will not pass. Se
 
 The final issue is that this wrapper only supports c language. Another wrapper may be helpful see <https://github.com/esjeon/musl-clang/blob/master/musl-clang>
 
-I will update and fix it later. 
 
 
 ### About the Test Case in OpenSSL

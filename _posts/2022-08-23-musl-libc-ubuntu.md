@@ -135,13 +135,7 @@ Error relocating libmylibrary.so: main: symbol not found
 ``` 
 Since the library has the startfile, it may have an entry to `main`. This is the reason why the `main` symbol is not found. 
 
-Another issue is that 
-- `test_errstr`, 
-- `test_ca`, 
-- `test_ssl_new`
-
-will not pass. 
-
+Another issue is that `test_errstr`, `test_ca`, `test_ssl_new` will not pass. See [Why these test case will fail?](#about-the-test-case-in-openssl)
 
 The final issue is that this wrapper only supports c language. Another wrapper may be helpful see <https://github.com/esjeon/musl-clang/blob/master/musl-clang>
 

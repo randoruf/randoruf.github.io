@@ -11,6 +11,14 @@ tags: [git]
 ---
 
 
+### Git Merge 
+
+但 `main` 有更新的时候，我们想从 `main` 拉取最新的修改
+
+```bash
+git checkout ＜branchname＞
+git marge main
+```
 ### 使用 Keyring 避免重复输入密码
 
 > **提示**:

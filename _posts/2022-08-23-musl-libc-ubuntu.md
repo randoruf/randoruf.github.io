@@ -161,7 +161,7 @@ If the target system is different (ths operating system is not built against mus
 
 This could be found at `test/recipes/02-test_errstr.t`
 
-```
+```perl
 my $perr = eval {
     # Set $! to the error number...
     local $! = $errnum;
@@ -187,7 +187,7 @@ $ ../../util/shlib_wrap.sh /usr/bin/perl -I ../../util/perl ../generate_ssl_test
 
 We can trace back to `shlib_wrap.sh` file, and we can see that 
 
-```
+```bash
 LIBCRYPTOSO="${THERE}/libcrypto.so.1.1"
 LIBSSLSO="${THERE}/libssl.so.1.1"
 ...

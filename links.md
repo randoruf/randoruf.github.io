@@ -12,8 +12,9 @@ permalink: /links/
 * <https://www.codewars.com/>
 
 > **注意**: 
-> codewars 有实现 compiler 的小测验。可以看看 
-> <https://github.com/randoruf/codewars-kata-ThreePass-Tiny-Compiler>
+> codewars 有实现 compiler 的小测验。
+> 
+> 可以看看 <https://github.com/randoruf/codewars-kata-ThreePass-Tiny-Compiler>
 
 
 * <https://www.hackerrank.com/>

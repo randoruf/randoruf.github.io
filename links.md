@@ -3,6 +3,23 @@ layout: page
 title: Links
 permalink: /links/
 ---
+
+## 算法与编程知识的练习
+
+
+
+* <https://leetcode.cn/>
+* <https://www.codewars.com/>
+
+> **注意**: 
+> codewars 有实现 compiler 的小测验。可以看看 
+> <https://github.com/randoruf/codewars-kata-ThreePass-Tiny-Compiler>
+
+
+* <https://www.hackerrank.com/>
+* <https://codeforces.com/>
+
+
 ## 为什么需要学习 LLVM ？ 
 <img src="https://raw.githubusercontent.com/randoruf/photo-asset-repo/924be731ab8c235d4d85ebf0a0a837db8a01b7bb/imgs/WechatIMG16018.png" alt="why-llvm" style="zoom:50%;">
 

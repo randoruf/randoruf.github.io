@@ -22,7 +22,7 @@ permalink: /links/
 
 
 ## 为什么需要学习 LLVM ？ 
-<img src="https://raw.githubusercontent.com/randoruf/photo-asset-repo/924be731ab8c235d4d85ebf0a0a837db8a01b7bb/imgs/WechatIMG16018.png" alt="why-llvm" style="zoom:15%;">
+<img src="https://raw.githubusercontent.com/randoruf/photo-asset-repo/924be731ab8c235d4d85ebf0a0a837db8a01b7bb/imgs/WechatIMG16018.png" alt="why-llvm" style="zoom:20%;">
 
 > 正经的，用 Swift 语言写 UIKit 框架。然后学习 SwiftUI框架。
 > 语言：选 Swift。因为 OC 彻底式微了，主流框架和文档都不再支持 OC；

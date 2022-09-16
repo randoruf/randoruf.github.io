@@ -15,6 +15,8 @@ SGX-LKL 在安装过程中有些坑
 以这个版本为基础 <https://github.com/lsds/sgx-lkl/tree/b6e838e0034de86b48470b6a6bf87d2e262e65c9> 
 
 
+<https://gist.github.com/randoruf/6b290824d2d18d273f813be1cc3a11f4>
+
 ### SGX 安装指南
 
 在安装 SGX-LKL 时, 需要先确保一下依赖已经安装

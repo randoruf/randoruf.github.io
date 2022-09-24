@@ -47,6 +47,13 @@ tags: [jinsei]
   * 排队的时候就不要看单词表或者抖音了。
 * **工作和学习的时候不要听歌**
 
+## 高强度的学习 
+
+<https://www.youtube.com/watch?v=W1UFzC0WLXc>
+
+* Torres 托哥说成人自学钢琴需要 ***consistent, consistent, intensive***
+* 可以分阶段。每个阶段3个月。
+* 每个阶段都有不同的目的。
 
 ## 如果想认真地开始一件事，请付钱 (if you take it seriously, pay for it in cash)
 
@@ -56,4 +63,3 @@ tags: [jinsei]
 * 动漫的 Dub 版本一般都是要付钱的 (netflex, funimation, hulu 都有)
 * Torres托哥 在 私人教练 的指导下，90天就从一个肚腩肉饱满到**好身材**。
   * <https://www.youtube.com/watch?v=LVpbfB5_Nko>
-

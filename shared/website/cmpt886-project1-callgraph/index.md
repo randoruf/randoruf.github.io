@@ -11,9 +11,10 @@ As a reminder, a call graph is a directed graph where the nodes represent the fu
 
 The dynamic weighted call graphs that you construct for this project shall show the observed call targets for each call site within an execution of the program. In addition, they shall show the weight of an edge in the call graph, the number of times that particular function was the target of that call site. For example, consider the simple program:
 
-example.c
+
 
 ```cpp
+// file: example.c
 #include <stdio.h>
 
 void foo(int i) {

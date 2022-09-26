@@ -1,4 +1,7 @@
-# [鱼皮 - 前端学习路线](https://code-learning-gamma.vercel.app/#/./学习路线/鱼皮出品-前端学习路线?id=鱼皮-前端学习路线)
+---
+layout: page
+title: "鱼皮 - 前端学习路线"
+---
 
 - [Document (code-learning-gamma.vercel.app)](https://code-learning-gamma.vercel.app/#/./学习路线/鱼皮出品-前端学习路线?id=特点)
 - [【自学编程】最新前端编程学习路线，速成贴心，冲击大厂程序员_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1nh411e7oG/?spm_id_from=333.788.recommend_more_video.2)

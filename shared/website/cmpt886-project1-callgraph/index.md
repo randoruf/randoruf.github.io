@@ -80,7 +80,7 @@ digraph {
 ```
 
 
-<svg style="display: block;margin:auto;" width="200pt" height="241pt" viewBox="0.00 0.00 199.50 241.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg style="display: block;margin:auto; background-color:white" width="200pt" height="241pt" viewBox="0.00 0.00 199.50 241.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 237)">
 <title>%3</title>
 <!-- printf -->

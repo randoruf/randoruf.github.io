@@ -77,6 +77,63 @@ digraph {
   "printf"[label="{printf}"];
 }
 ```
+
+
+<svg style="display: block;margin:auto;" width="200pt" height="241pt" viewBox="0.00 0.00 199.50 241.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 237)">
+<title>%3</title>
+<!-- printf -->
+<g id="node1" class="node"><title>printf</title>
+<polygon fill="none" stroke="black" points="123,-0.5 123,-36.5 177,-36.5 177,-0.5 123,-0.5"></polygon>
+<text text-anchor="middle" x="150" y="-14.8" font-family="Times,serif" font-size="14.00">printf</text>
+</g>
+<!-- main -->
+<g id="node2" class="node"><title>main</title>
+<polygon fill="none" stroke="black" points="61,-186.5 61,-232.5 151,-232.5 151,-186.5 61,-186.5"></polygon>
+<text text-anchor="middle" x="106" y="-217.3" font-family="Times,serif" font-size="14.00">main</text>
+<polyline fill="none" stroke="black" points="61,-209.5 151,-209.5 "></polyline>
+<text text-anchor="middle" x="106" y="-194.3" font-family="Times,serif" font-size="14.00">example.c:22</text>
+</g>
+<!-- bar -->
+<g id="node3" class="node"><title>bar</title>
+<polygon fill="none" stroke="black" points="0,-88.5 0,-134.5 90,-134.5 90,-88.5 0,-88.5"></polygon>
+<text text-anchor="middle" x="45" y="-119.3" font-family="Times,serif" font-size="14.00">bar</text>
+<polyline fill="none" stroke="black" points="0,-111.5 90,-111.5 "></polyline>
+<text text-anchor="middle" x="45" y="-96.3" font-family="Times,serif" font-size="14.00">example.c:13</text>
+</g>
+<!-- main&#45;&gt;bar -->
+<g id="edge1" class="edge"><title>main:l0-&gt;bar</title>
+<path fill="none" stroke="#380000" stroke-width="1.11111" d="M106,-186C106,-175.597 91.3472,-157.736 76.4046,-142.226"></path>
+<polygon fill="#380000" stroke="#380000" stroke-width="1.11111" points="78.6276,-139.496 69.1088,-134.844 73.6489,-144.417 78.6276,-139.496"></polygon>
+<text text-anchor="middle" x="101.5" y="-156.8" font-family="Times,serif" font-size="14.00">4</text>
+</g>
+<!-- foo -->
+<g id="node4" class="node"><title>foo</title>
+<polygon fill="none" stroke="black" points="108.5,-88.5 108.5,-134.5 191.5,-134.5 191.5,-88.5 108.5,-88.5"></polygon>
+<text text-anchor="middle" x="150" y="-119.3" font-family="Times,serif" font-size="14.00">foo</text>
+<polyline fill="none" stroke="black" points="108.5,-111.5 191.5,-111.5 "></polyline>
+<text text-anchor="middle" x="150" y="-96.3" font-family="Times,serif" font-size="14.00">example.c:6</text>
+</g>
+<!-- main&#45;&gt;foo -->
+<g id="edge2" class="edge"><title>main:l0-&gt;foo</title>
+<path fill="none" stroke="#550000" stroke-width="1.66667" d="M106,-186C106,-170.412 113.376,-155.268 122.087,-142.817"></path>
+<polygon fill="#550000" stroke="#550000" stroke-width="1.66667" points="125.019,-144.742 128.258,-134.654 119.435,-140.521 125.019,-144.742"></polygon>
+<text text-anchor="middle" x="119.5" y="-156.8" font-family="Times,serif" font-size="14.00">6</text>
+</g>
+<!-- bar&#45;&gt;bar -->
+<g id="edge3" class="edge"><title>bar:l0-&gt;bar</title>
+<path fill="none" stroke="#ff0000" stroke-width="5" d="M49.3073,-111.712C53.6428,-130.999 52.207,-159 45,-159 41.1086,-159 38.8998,-153.08 38.3735,-145.08"></path>
+<polygon fill="#ff0000" stroke="#ff0000" stroke-width="5" points="42.7497,-145.028 38.5285,-134.962 34.0007,-144.894 42.7497,-145.028"></polygon>
+<text text-anchor="middle" x="45" y="-162.8" font-family="Times,serif" font-size="14.00">18</text>
+</g>
+<!-- foo&#45;&gt;printf -->
+<g id="edge4" class="edge"><title>foo:l0-&gt;printf</title>
+<path fill="none" stroke="#550000" stroke-width="1.66667" d="M150,-88C150,-74.4789 150,-59.4566 150,-46.9335"></path>
+<polygon fill="#550000" stroke="#550000" stroke-width="1.66667" points="153.5,-46.6722 150,-36.6722 146.5,-46.6723 153.5,-46.6722"></polygon>
+<text text-anchor="middle" x="153.5" y="-58.8" font-family="Times,serif" font-size="14.00">6</text>
+</g>
+</g>
+</svg>
  
 ## Issues to keep in mind
 IR Intrinsics -- LLVM inserts calls to some functions in order to represent

@@ -3,6 +3,10 @@ layout: page
 title: "CMPT 886  Automated Software Analysis & Security - Project 1 - Weighted Call Graphs"
 ---
 
+
+Author: [Nick Sumner](https://www2.cs.sfu.ca/~wsumner/teaching/886/18/)
+
+
 This project will help you get acquainted with using infrastructures like LLVM to gather basic information about computer programs. You will also gain some experience recognizing limitations and trade-offs made when designing and constructing a dynamic analysis tool.
 
 For this project, you will construct an LLVM tool that can compute and output a weighted dynamic call graph for an execution of an input program.

@@ -2,7 +2,7 @@
 layout: post
 title: '如何切换到 Ubuntu Server 模式? (从 graphical view 切换)'
 date: 2022-08-21
-tags: [re]
+tags: [re,linux]
 ---
 
 * TOC 

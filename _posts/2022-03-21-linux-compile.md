@@ -1,14 +1,75 @@
 ---
 layout: post
-title: "Linux 内核编译"
+title: "Linux 内核编译 和 版本锁定"
 date: 2022-03-21
 tags: [cs,linux]
 ---
+
 
 Linux 编译还挺麻烦。本人还比较菜，不知道哪种方法才比较正确。 
 
 * TOC
 {:toc}
+
+
+
+## 删除内核
+
+删除 `/boot/` 目录下相关的内核镜像，然后更新一下启动项。
+
+[Linux 系统下删除无用的旧内核 - Ming's Blog (inkuang.com)](https://blog.inkuang.com/2019/317/)
+
+可以查看一下当前装了什么内核镜像 (可能当初 `make -deb-pkg ` 才会有这个选项，如果是 debian 系的话，还是比较推荐生成 deb 包)
+
+```bash
+dpkg --list | grep linux-image
+```
+
+可以直接用 apt 管理
+
+```bash
+sudo apt purge linux-image-?????
+```
+
+如果当初是 `make install` 安装的话，就手动删除相关的内核文件 (`initrd.img`, `System.map`, `vmlinux `, 后面都有版本名) 就好了，然后更新一下 `initrd ` 啥的，手动更更新吧。。。。
+
+```bash
+sudo update-grub
+```
+
+由于安装内核也会在 `update-initramfs` 加入内核的信息。
+
+* [linux kernel - Error in updating initramfs in ubuntu 20.04 - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/667636/error-in-updating-initramfs-in-ubuntu-20-04)
+* [update-initramfs selects wrong kernel](https://unix.stackexchange.com/questions/274115/update-initramfs-selects-wrong-kernel)
+* [Running a script on kernel upgrade - Raspberry Pi](https://forums.raspberrypi.com/viewtopic.php?t=227287)
+
+最后也需要在 `/var/lib/initramfs-tools/` 删除不用的 kernel 。
+
+或者 `update-initramfs -ck KERNEL_VERSION`
+
+
+## 锁定 Linux 版本
+
+要十分小心，因为 `sudo apt upgrage` 会更新内核版本。
+
+可以锁定系统的版本。因为要做实验，系统这样更新 kernel 就很混乱。
+
+正常用户就无所谓了。
+
+```bash
+uname -r 
+>> 5.4.124-generic 
+sudo apt-mark hold 5.4.124-generic
+```
+
+## 关闭 Crash Report 
+
+这个功能好像没什么用。有问题直接去 Ubuntu 的 forum 去问就好了。
+
+<https://www.youtube.com/watch?v=6GYgrnZUI6Q>
+
+* 去 `/var/crash` 下删掉所有 `.crash` 的文件
+* 修改 `/etc/default/apport` 把 `enabled=1` 改成 `enabled=0` 
 
 
 ## 学习 Linux 
@@ -322,40 +383,3 @@ sudo vim /etc/default/grub
 ```
 sudo update-grub
 ```
-
-## 删除内核
-
-删除 `/boot/` 目录下相关的内核镜像，然后更新一下启动项。
-
-[Linux 系统下删除无用的旧内核 - Ming's Blog (inkuang.com)](https://blog.inkuang.com/2019/317/)
-
-可以查看一下当前装了什么内核镜像 (可能当初 `make -deb-pkg ` 才会有这个选项，如果是 debian 系的话，还是比较推荐生成 deb 包)
-
-```bash
-dpkg --list | grep linux-image
-```
-
-可以直接用 apt 管理
-
-```bash
-sudo apt purge linux-image-?????
-```
-
-如果当初是 `make install` 安装的话，就手动删除相关的内核文件 (`initrd.img`, `System.map`, `vmlinux `, 后面都有版本名) 就好了，然后更新一下 `initrd ` 啥的，手动更更新吧。。。。
-
-```bash
-sudo update-grub
-```
-
-[linux kernel - Error in updating initramfs in ubuntu 20.04 - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/667636/error-in-updating-initramfs-in-ubuntu-20-04)
-
-下面这个不知道是什么。。。。
-
-```bash 
-sudo update-initramfs -ck $(uanem -r)
-```
-
-(Linux 一直在更新，每天的 commits 很多，所以网上的命令失效非常常见。这里的 `initram` 实际上只是一个 wrapper,  新的 kernel 已经换了另一种实现)。
-
-
-

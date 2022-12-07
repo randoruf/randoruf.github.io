@@ -33,6 +33,9 @@ SGX-LKL 在安装过程中有些坑
 
 #### 预先准备
 
+
+
+
 安装如下工具
 
 ```
@@ -64,7 +67,6 @@ sudo apt-get install cryptsetup cryptsetup-bin libcryptsetup-dev
 
 ```
 git clone --branch oe_port --recursive https://github.com/lsds/sgx-lkl.git
-
 cd sgx-lkl
 ```
 

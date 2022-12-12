@@ -25,7 +25,7 @@ git config --global url."https://github.com/".insteadOf git@github.com:
 git config --global url."https://".insteadOf git://
 ```
 
-最好的方法当然是自己搭建一条专线。
+最好的方法当然是自己搭建一条专线 (注意需要全局代理)。
 
 ## 对 OpenEnclave 的修改
 

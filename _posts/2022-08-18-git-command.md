@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Git 命令'
+title: 'Git 的 小知识'
 date: 2022-08-18
 tags: [git]
 ---
@@ -9,6 +9,40 @@ tags: [git]
 {:toc}
 
 ---
+
+比较建议买一本 Git 的专门书籍。
+
+比较建议买一本 VSCode 的专门书籍。
+
+### Git Submodules 
+
+一般情况下是 
+
+```
+git submodule add <repo_ulr> <path>
+```
+
+`<path>` 指的是 submdoule 在 project 的路径。
+
+
+但是如果要添加类似 Linux 的 project 就麻烦了。可以 shallow clone 。
+
+<https://stackoverflow.com/questions/2144406/how-to-make-shallow-git-submodules>
+
+
+```
+# add shallow submodule
+git submodule add --depth 1 <repo-url> <path>
+git config -f .gitmodules submodule.<path>.shallow true
+```
+
+也可以在后面解除
+
+```
+# later unshallow
+git config -f .gitmodules submodule.<path>.shallow false
+git submodule update <path>
+```
 
 
 ### Git Merge 

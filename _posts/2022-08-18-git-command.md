@@ -45,6 +45,18 @@ git submodule update <path>
 ```
 
 
+### Rename Git Branch 
+
+If you have a local clone, you can update it by running the following commands. 
+
+```
+git branch -m master intel-sdk
+git fetch origin
+git branch -u origin/intel-sdk intel-sdk
+git remote set-head origin -a
+
+```
+
 ### Git Merge 
 
 但 `main` 有更新的时候，我们想从 `main` 拉取最新的修改

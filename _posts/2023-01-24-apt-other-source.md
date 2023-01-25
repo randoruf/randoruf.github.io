@@ -5,7 +5,6 @@ date: 2023-01-24
 tags: [linux]
 ---
 
-
 * TOC 
 {:toc}
 
@@ -14,6 +13,5 @@ tags: [linux]
 
 第一种方法是 `/etc/apt/sources.list`
 
-第二种方法是 **Software & Updates -> Other Sources**
-
+第二种方法是 **`Software & Updates -> Other Sources`**
 

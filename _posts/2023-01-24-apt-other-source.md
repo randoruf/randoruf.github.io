@@ -14,6 +14,6 @@ tags: [linux]
 
 第一种方法是 `/etc/apt/sources.list`
 
-第二种方法是 **Software Update -> Other Sources**
+第二种方法是 **Software & Updates -> Other Sources**
 
 

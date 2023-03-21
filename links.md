@@ -4,6 +4,13 @@ title: Links
 permalink: /links/
 ---
 
+## 鸿蒙已经是大势所趋
+
+- [2022 开源鸿蒙 OpenHarmony 年度运营报告发布，共建近亿行代码](https://www.ithome.com/0/681/014.htm)
+  - ***鸿蒙有非常多的开发版源代码，是学习嵌入式的最佳切入点***。
+- 覃谈谭的blog <https://adtxl.com/index.php/187.html>
+
+
 ## 学习教程
 
 ### 入门学习
@@ -18,71 +25,71 @@ permalink: /links/
 
 系统开发
 
-- Go https://cloud.tencent.com/developer/doc/1101
-- C https://cloud.tencent.com/developer/doc/1023
-- C++ https://cloud.tencent.com/developer/doc/1024
-- Docker https://cloud.tencent.com/developer/doc/1060
-- Python https://cloud.tencent.com/developer/doc/1198
+- Go <https://cloud.tencent.com/developer/doc/1101>
+- C <https://cloud.tencent.com/developer/doc/1023>
+- C++ <https://cloud.tencent.com/developer/doc/1024>
+- Docker <https://cloud.tencent.com/developer/doc/1060>
+- Python <https://cloud.tencent.com/developer/doc/1198>
 
 客户端
-- Electron https://cloud.tencent.com/developer/doc/1070
+- Electron <https://cloud.tencent.com/developer/doc/1070>
 
 
 前端/后端
 
-- JavaScript https://cloud.tencent.com/developer/doc/1121
-- CCS https://cloud.tencent.com/developer/doc/1052 
-- HTML https://cloud.tencent.com/developer/doc/1116
-- HTTP 教程 https://cloud.tencent.com/developer/doc/1117
-- Redux https://cloud.tencent.com/developer/doc/1204
-- RxJS 5  https://cloud.tencent.com/developer/doc/1257
-- Bootstrap 4 https://cloud.tencent.com/developer/doc/1018
-- Express https://cloud.tencent.com/developer/doc/1079
-- Socket.IO https://cloud.tencent.com/developer/doc/1227
-- nginx https://cloud.tencent.com/developer/doc/1158
-- redis https://cloud.tencent.com/developer/doc/1203
-- Sass https://cloud.tencent.com/developer/doc/1220
-- TypeScript https://cloud.tencent.com/developer/doc/1244
-- SQLite https://cloud.tencent.com/developer/doc/1228
-- Vue 2 https://cloud.tencent.com/developer/doc/1247
-- Webpack https://cloud.tencent.com/developer/doc/1250
-- Babel https://cloud.tencent.com/developer/doc/1260
-- Element UI https://cloud.tencent.com/developer/doc/1270
-- Node.js https://cloud.tencent.com/developer/doc/1292
-- JSON https://cloud.tencent.com/developer/doc/1293
-- MongoDB https://cloud.tencent.com/developer/doc/1326
-
+- JavaScript <https://cloud.tencent.com/developer/doc/1121>
+- CCS <https://cloud.tencent.com/developer/doc/1052 >
+- HTML <https://cloud.tencent.com/developer/doc/1116>
+- HTTP 教程 <https://cloud.tencent.com/developer/doc/1117>
+- Redux <https://cloud.tencent.com/developer/doc/1204>
+- RxJS 5  <https://cloud.tencent.com/developer/doc/1257>
+- Bootstrap 4 <https://cloud.tencent.com/developer/doc/1018>
+- Express <https://cloud.tencent.com/developer/doc/1079>
+- Socket.IO <https://cloud.tencent.com/developer/doc/1227>
+- nginx <https://cloud.tencent.com/developer/doc/1158>
+- redis <https://cloud.tencent.com/developer/doc/1203>
+- Sass <https://cloud.tencent.com/developer/doc/1220>
+- TypeScript <https://cloud.tencent.com/developer/doc/1244>
+- SQLite <https://cloud.tencent.com/developer/doc/1228>
+- Vue 2 <https://cloud.tencent.com/developer/doc/1247>
+- Webpack <https://cloud.tencent.com/developer/doc/1250>
+- Babel <https://cloud.tencent.com/developer/doc/1260>
+- Element UI <https://cloud.tencent.com/developer/doc/1270>
+- Node.js <https://cloud.tencent.com/developer/doc/1292>
+- JSON <https://cloud.tencent.com/developer/doc/1293>
+- MongoDB <https://cloud.tencent.com/developer/doc/1326>
+>
 工具
-- Git https://cloud.tencent.com/developer/doc/1096
+- Git <https://cloud.tencent.com/developer/doc/1096>
 
 ### Java 万花筒
 
 看这个就够了。Java 可以助你最快速上岸。
 
-- Java 全栈知识体系 https://pdai.tech/ 
-- 后端 （Java Golang）全栈知识架构体系总结 https://github.com/zhonghuasheng/Tutorial
+- Java 全栈知识体系 <https://pdai.tech>
+- 后端 （Java Golang）全栈知识架构体系总结 <https://github.com/zhonghuasheng/Tutorial>
 
 ### 巩固与实践语言
 
 写不同的项目可以熟悉各种语言的特征，写什么项目好呢？ 当然要写最复杂的程序了。
 
-- https://codecrafters.io/
-- https://github.com/suisui-koubou/build-your-own-x
+- <https://codecrafters.io>
+- <https://github.com/suisui-koubou/build-your-own-x>
 
 ### 写一个漂亮的 APP
 
 付钱买 designcode 学习 app 开发
 
-- https://designcode.io/
+- <https://designcode.io>
 
 
 ### 我需要更多 ideas 
 
-- 字节校园 http://ur.bytedance.com/learning-community
-- 字节镜像计划 https://bytedance.feishu.cn/docx/doxcnGUGc79drcJ7oQTC5JSQpBb
-- 华为云大赛 https://competition.huaweicloud.com/information/1000041810/introduction?track=112
-- MIT6.824 Labs
-- 字节校园瞭望计划 https://bytedancecampus1.feishu.cn/docs/doccnkB0p3xbPeunctSb8XU9PVf 
+- 字节校园 <https://ur.bytedance.com/learning-community>
+- 字节镜像计划 <https://bytedance.feishu.cn/docx/doxcnGUGc79drcJ7oQTC5JSQpBb>
+- 华为云大赛 <https://competition.huaweicloud.com/information/1000041810/introduction?track=112>
+- MIT6.824 Labs>
+- 字节校园瞭望计划 <https://bytedancecampus1.feishu.cn/docs/doccnkB0p3xbPeunctSb8XU9PVf>
 
 > 字节跳动针对高校研发专业学生开展的一系列合作课程，将目前企业中已有的成熟技术及案例与高校计算机课程体系相结合，通过讲授、实践作业、小学期项目实践、毕业设计等方式方法做到产学联合培养。
 
@@ -90,12 +97,12 @@ permalink: /links/
 
 GAMES101 还有很多系列。
 
-- GAMES101: 现代计算机图形学入门 https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html
+- GAMES101: 现代计算机图形学入门 <https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html>
 
 ## android 系统开发推荐
 #### 关于Android学习的三个终极问题 by 韦东山 
 
-https://www.bilibili.com/read/cv3149895
+<https://www.bilibili.com/read/cv3149895>
 
 **Android底层开发** / 从事底层开发的码农们叫**BSP或驱动开发工程师**
 - Linux Kernel 和 驱动
@@ -114,9 +121,9 @@ https://www.bilibili.com/read/cv3149895
 - 了解技术的本质
 
 
-android bsp学习_嵌入式开发需要学习哪些东西 https://blog.csdn.net/weixin_39581964/article/details/112321709
+android bsp学习_嵌入式开发需要学习哪些东西 <https://blog.csdn.net/weixin_39581964/article/details/112321709>
 
-覃谈谭的blog https://adtxl.com/index.php/187.html
+覃谈谭的blog <https://adtxl.com/index.php/187.html>
 
 
 ## 算法与编程知识的练习

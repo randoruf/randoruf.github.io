@@ -4,9 +4,34 @@ title: Links
 permalink: /links/
 ---
 
+## android 系统开发推荐
+#### 关于Android学习的三个终极问题 by 韦东山 
+
+https://www.bilibili.com/read/cv3149895
+
+**Android底层开发** / 从事底层开发的码农们叫**BSP或驱动开发工程师**
+- Linux Kernel 和 驱动
+- 移植、bugfix 
+- 性能优化、功耗优化
+- 毛德操老师的《Linux内核情景分析》
+
+**Android系统层开发**
+- Framework层, telephony, local connectivity, multimedia
+- Android JVM 等
+
+**Android应用层开发**
+- 从事应用层开发同学的比例最大 
+- 内容太多，容易迷失方向。浮躁。
+- 一定要掌握的技术积累：**多线程编程、网络(TCP/IP)编程、设计模式**
+- 了解技术的本质
+
+
+android bsp学习_嵌入式开发需要学习哪些东西 https://blog.csdn.net/weixin_39581964/article/details/112321709
+
+覃谈谭的blog https://adtxl.com/index.php/187.html
+
+
 ## 算法与编程知识的练习
-
-
 
 * <https://leetcode.cn/>
 * <https://www.codewars.com/>

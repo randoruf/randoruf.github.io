@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title:  "【亚麻】怎么mentor这种转码一窍不通的新同事？ZT" 
 ---
 

@@ -4,6 +4,26 @@ title: Links
 permalink: /links/
 ---
 
+## CS自学指南
+
+https://csdiy.wiki/
+
+## RISC-V Phone
+
+https://majstor.org/rvphone/
+
+https://xiangshan-doc.readthedocs.io/zh_CN/latest/
+
+https://ysyx.oscc.cc/
+
+https://riscv.org/learn/
+
+## Rust 
+
+你能给 Rust 提高 pull request 的 bug fix 吗? 
+
+只走 C++ 和 Rust 就可以了，一条路走到黑，还要研究 OpenGL 怎么画图。
+
 ## 鸿蒙已经是大势所趋
 
 - [2022 开源鸿蒙 OpenHarmony 年度运营报告发布，共建近亿行代码](https://www.ithome.com/0/681/014.htm)

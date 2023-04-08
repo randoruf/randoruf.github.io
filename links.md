@@ -6,17 +6,21 @@ permalink: /links/
 
 ## CS自学指南
 
-https://csdiy.wiki/
+<https://csdiy.wiki/>
+
+<https://github.com/codecrafters-io/build-your-own-x>
+
+<https://codecrafters.io/>
 
 ## RISC-V Phone
 
-https://majstor.org/rvphone/
+<https://majstor.org/rvphone/>
 
-https://xiangshan-doc.readthedocs.io/zh_CN/latest/
+<https://xiangshan-doc.readthedocs.io/zh_CN/latest/>
 
-https://ysyx.oscc.cc/
+<https://ysyx.oscc.cc/>
 
-https://riscv.org/learn/
+<https://riscv.org/learn/>
 
 ## Rust 
 

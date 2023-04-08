@@ -24,6 +24,8 @@ https://riscv.org/learn/
 
 只走 C++ 和 Rust 就可以了，一条路走到黑，还要研究 OpenGL 怎么画图。
 
+记住。**贪多嚼不烂** (用 3d渲染入门 C++)
+
 ## 鸿蒙已经是大势所趋
 
 - [2022 开源鸿蒙 OpenHarmony 年度运营报告发布，共建近亿行代码](https://www.ithome.com/0/681/014.htm)

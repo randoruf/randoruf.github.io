@@ -45,3 +45,29 @@ https://blog.csdn.net/gavin_surekam/article/details/119315071
 > 来源：知乎
 > 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
+
+## 基本思路
+
+通过Sensei查看温度。
+
+## 色域/颜色描述
+
+改完效果还挺明显的。从风扇狂转到风扇轻微转 (70度稳定到60度)。
+
+打开 “调度中心(Mission Control)” 关闭 “Displays have seperate space”
+
+然后在 “Displays” 选择第二个显示器，在 Color Profile (色彩颜色文件) 选择与 Built-in Display 相同的方案，比如 LCD color 
+
+## 拓展坞
+
+苹果官方的拓展坞要 500 人民币。而 Satachi 好像只要100-200元。
+
+据说 macbook pro 的 GPU 最高配用了很优质的显存颗粒，发热量非常低。
+
+真的是 ***一分钱一分货***。
+
+- 有条件的话, ***GPU 一定要选颗粒优质的，避免发热***
+- 有条件的话，***转换器选苹果官方的***(哪怕贵的离谱)
+
+
+

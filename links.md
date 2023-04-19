@@ -4,6 +4,23 @@ title: Links
 permalink: /links/
 ---
 
+
+## Build Your Own MVP (minimum viable product)
+
+<https://github.com/suisui-koubou/build-your-own-x>
+
+
+Y Combinator 的 "How to Build An MVP with Michael Seibel" 节目。里面介绍了 Airbnb 一开始是如何简陋。
+
+- 不要陷入过度调查的陷阱(安宅和人的《麦卡锡教给我的思考武器》提过)
+- 定一个明确的截止时间(如1个月)做出 MVP/demo/prototype
+- 只实现最简单的2-3个功能去解决市场问题
+- 推向市场 (找用户做白老鼠这种事甲骨文老总没少做)
+- 从用户中学习和改变，快速迭代
+
+这个 build your own x 就非常适合 MVP 的定位，锻炼快速完成产品原型的能力
+
+
 ## 什么是成功? 
 
 2022年11月 OpenAI 发布了 ChatGPT, 这注定是历史里程碑。

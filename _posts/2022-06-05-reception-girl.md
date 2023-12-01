@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "前台小妹"
+title: "你算法还不如前台小妹"
 date: 2022-06-05
 tags: [jinsei]
 ---

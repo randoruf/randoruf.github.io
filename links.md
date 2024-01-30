@@ -4,6 +4,19 @@ title: Links
 permalink: /links/
 ---
 
+## 偶像 Zhang Wenting 
+
+https://www.zephray.me/
+
+http://analogmiko.com/
+
+https://www.lithcore.cn/
+
+
+dieshot 
+
+![](/dieshot.png)
+
 
 ## Build Your Own MVP (minimum viable product)
 

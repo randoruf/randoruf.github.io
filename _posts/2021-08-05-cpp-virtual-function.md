@@ -67,6 +67,9 @@ C++ 是**静态类型**，也就是一般**编译时**就可以映射**函数的
 **网易面试题： **
 
 ```cpp
+#include <iostream>
+
+
 class A {
 public:
     A() {}
@@ -77,15 +80,17 @@ public:
 }; 
 
 class B : public A{
+    int v = 0; 
+    int *v_ptr; 
+
 public:
-    B()  {}
+    B()  { v_ptr = &v; }
     ~B() {}
 
     void test() const{
         std::cout << "B\n";  
+        *v_ptr = 999; 
     }
-
-    int val = 999; 
 }; 
 
 int main(){

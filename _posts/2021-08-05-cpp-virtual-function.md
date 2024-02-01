@@ -66,9 +66,13 @@ C++ 是**静态类型**，也就是一般**编译时**就可以映射**函数的
 
 **网易面试题： **
 
+- 我的想法
+  - 应该跟虚函数无关。是C++继承的原理。
+  - 第一句运行会有 Seg Fault, 因为类型A被强制转成成类型B的指针，A里面没有 `v_ptr`
+  - 我记得C++继承类似Java继承，在子类埋了一个父类的引用？？
+
 ```cpp
 #include <iostream>
-
 
 class A {
 public:
@@ -108,6 +112,54 @@ int main(){
 B
 A
 ```
+
+尝试验证 C++继承 是否是像 Java继承，运行下面的代码。
+
+```cpp
+#include <iostream>
+
+class A {
+public:
+    A() {
+        std::cout << "initialize A\n"; 
+    }
+    ~A() {}
+    void test() const {
+        std::cout << "test_A\n"; 
+    }
+}; 
+
+class B : public A{
+public:
+    B()  {
+        std::cout << "initialize B\n"; 
+    }
+    ~B() {}
+    void test() const{
+        std::cout << "test_B\n";  
+    }
+}; 
+
+int main(){
+    B* p0 = (B*) new A; 
+    A* p1 = (A*) new B; 
+
+    p0->test();
+    p1->test(); 
+}
+
+```
+
+输出的结果是
+
+```
+initialize A
+initialize A
+initialize B
+test_B
+test_A
+```
+
 
 ## 动态联翩 - Overriding 
 

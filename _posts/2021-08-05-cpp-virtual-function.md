@@ -68,6 +68,8 @@ C++ 是**静态类型**，也就是一般**编译时**就可以映射**函数的
 
 参考类似 <https://blog.csdn.net/Huuaaaaa/article/details/128334396>
 
+可以尝试在 Visual Studio 里面看看有没有越界(如果A类和B类的内存结构不一样的话)。
+
 据说是一道面试题。
 
 ```cpp

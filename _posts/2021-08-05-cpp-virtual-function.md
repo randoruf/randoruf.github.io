@@ -66,6 +66,10 @@ C++ 是**静态类型**，也就是一般**编译时**就可以映射**函数的
 
 ### C++继承与指针： 
 
+参考类似 <https://blog.csdn.net/Huuaaaaa/article/details/128334396>
+
+据说是一道面试题。
+
 ```cpp
 #include <iostream>
 

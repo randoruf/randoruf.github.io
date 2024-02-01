@@ -1,8 +1,13 @@
 ---
 layout: page
-title: Demos
-permalink: /demos/
+title: Archives
+permalink: /archives/
 ---
+
+这里以后只记录想法。
+
+技术细节最好要有代码实例，可以放到 `cs-nano-projects` 里面。 
+
 
 <h2>>>>> Also in <a href="/tag/">Tag</a></h2>
 

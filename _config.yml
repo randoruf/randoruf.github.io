@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Koukaの小部屋
-email: masswie22@gmail.com
+email: masswie@yahoo.com
 description: >- # this means to ignore newlines until "baseurl:"
 # 要对自己的每一分每一秒负责 by 李特务  |  每天都要学编程、日语 by  https://leetcode-cn.com/u/xiaoweixiang/
 

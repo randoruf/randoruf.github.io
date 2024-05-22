@@ -19,7 +19,7 @@ permalink: /projects/
 
 | Winter Research Internship @ [tLab](https://sites.google.com/monash.edu/tlab/home) |
 | :----------------------------------------------------------- |
-| Use the K-medoids, PCA/t-SNE, [HCTSA](https://github.com/benfulcher/hctsa) and Multitaper Spectrogram to analyze the sleep data under the supervision of Naotsugu Tsuchiya. <br />**Duration**: 1 month (May 2020). <br><img src="https://raw.githubusercontent.com/haohua-li/photo-asset-repo/main/imgs/image-20210205142640664.png" alt="image-20210205142640664" style="zoom:100%;" /><br>[![View Github](GitHub_Rep_brightgreen.svg)](https://github.com/haohua-li/tlab-intern-code-2019-2020/tree/master/tLab-2020-winter-research-sleep) |
+| Use the K-medoids, PCA/t-SNE, [HCTSA](https://github.com/benfulcher/hctsa) and Multitaper Spectrogram to analyze the sleep data under the supervision of Naotsugu Tsuchiya. Laplace transform could be used to improve the EGG signals? <br />**Duration**: 1 month (May 2020). <br><img src="https://raw.githubusercontent.com/haohua-li/photo-asset-repo/main/imgs/image-20210205142640664.png" alt="image-20210205142640664" style="zoom:100%;" /><br>[![View Github](GitHub_Rep_brightgreen.svg)](https://github.com/haohua-li/tlab-intern-code-2019-2020/tree/master/tLab-2020-winter-research-sleep) |
 
 | CSSR-Matlab                                                  |
 | ------------------------------------------------------------ |

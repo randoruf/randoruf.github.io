@@ -13,9 +13,13 @@ tags: [convex_hull, algorithms]
 ## What is Convex Hull ?
 
 > ***Materials to read: ***
+> 
 > OI Wiki - 凸包 <https://oi-wiki.org/geometry/convex-hull/>
+> 
 > Convex Hull - USACO Guide <https://usaco.guide/plat/convex-hull?lang=cpp>
+> 
 > Convex Hull Algorithm - Graham Scan and Jarvis March tutorial <https://www.youtube.com/watch?v=B2AJoQSZf4M>
+> 
 > 算法学习笔记(64): 极角排序 - <https://zhuanlan.zhihu.com/p/338272449>
 
 ## Solutions to Convex Hull

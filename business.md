@@ -47,7 +47,7 @@ permalink: /business/
 
 明确的商业场景：AI研究室 帆哥 AI助手 / 大象机器人，外五县小孩编程班/乐高机器人
 
-## 机器人养老
+## 3. 机器人养老
 - 麻省理工新成果 E-Bar 养老机器人帮助老人 洗澡、如厕、弯腰 <https://www.bilibili.com/video/BV1jiK6zkE12/>
 
 

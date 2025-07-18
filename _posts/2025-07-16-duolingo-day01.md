@@ -92,6 +92,55 @@ variants: {
     }
 ```
 
-## Button Libraries 
+## Router
+
+1. create a new folder `src/app/console` and a page file `src/app/console/page.tsx`
+
+```tsx
+import { Button } from "@/components/ui/button";
+
+const ConsolePage = () => {
+    return (
+        <div>
+            <div>Console Page</div>
+            <div className="p-4 space-y-4 flex flex-col lg:flex-row">
+                <Button>Primary</Button>
+                <Button>Primary Outline</Button>
+            </div>
+        </div>
+    );
+}; 
+
+export default ConsolePage; 
+```
+
+or 
+
+```tsx
+export default function ConsolePage() {
+    return (
+        <div>
+            <div>Console Page</div>
+            <div className="p-4 space-y-4 flex flex-col lg:flex-row max-w-[200px]">
+                <Button>Primary</Button>
+                <Button>Primary Outline</Button>
+            </div>
+        </div>
+    );
+}
+```
+
+- 其中 `border-b-4` 和 `border-b-[4px]` 后面是具体数字。
+
+## A Duolingo Button 
+
+如何制作多邻国的动画效果。
+
+```
+"bg-white text-black border-slate-200 border-2 border-b-4 active:border-b-2 hover:bg-slate-100 text-slate-500"
+```
+
+- `border-slate-200` 边框颜色
+- `border-b-4` border bottom 的边框宽度
 
 

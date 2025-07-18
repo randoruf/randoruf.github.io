@@ -143,4 +143,38 @@ export default function ConsolePage() {
 - `border-slate-200` 边框颜色
 - `border-b-4` border bottom 的边框宽度
 
+Create a button UI libraries for Duolingo with shadcn/ui and tailwindcss. 
 
+(see <https://youtu.be/dP75Khfy4s4?si=2q3dlULHuZkRTlbs&t=1770>)
+
+```tsx
+      variant: {
+        default:
+          "bg-white text-black border-slate-200 border-2 border-b-4 active:border-b-2 hover:bg-slate-100 text-slate-500",
+        primary: 
+          "bg-sky-400 text-primary-foreground border-sky-500 border-b-4 hover:bg-sky-400/90 active:border-b-1", 
+        primaryOutline:
+          "bg-white text-sky-500 hover:bg-slate-100", 
+        secondary:
+          "bg-green-500 text-primary-foreground border-green-600 border-b-4 hover:bg-green-500/90 active:border-b-1", 
+        secondaryOutline:
+          "bg-white text-green-500 hover:bg-slate-100", 
+        danger:
+          "bg-rose-500 text-primary-foreground border-rose-600 border-b-4 hover:bg-rose-500/90 active:border-b-1", 
+        dangerOutline:
+          "bg-white text-rose-500 hover:bg-slate-100", 
+        super:
+          "bg-indigo-500 text-primary-foreground border-indigo-600 border-b-4 hover:bg-indigo-500/90 active:border-b-1", 
+        superOutline:
+          "bg-white text-indigo-500 hover:bg-slate-100", 
+        ghost:
+          "bg-transparent text-slate-500 border-transparent border-0 hover:bg-slate-100", 
+        sidebar:
+          "bg-transparent text-slate-500 border-2 hover:bg-slate-100 transition-none", 
+        sidebarOutline:
+          "bg-sky-500/15 text-sky-500 border-sky-300 border-2 hover:bg-sky-500/20 transition-none"
+      },
+```
+
+
+## 

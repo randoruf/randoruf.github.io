@@ -2,7 +2,7 @@
 layout: post
 title: '【TOY PJ】基于 Next.js 构建 Duolingo 克隆 Day 01' 
 date: 2025-07-16
-tags: [duolingo web toy_project]
+tags: [duolingo,web,toy_project]
 ---
 
 ## Project Setup 

@@ -2,7 +2,7 @@
 layout: post
 title: 'PDF Compression'
 date: 2025-07-14
-tags: [pdf gs]
+tags: [pdf,gs]
 ---
 
 

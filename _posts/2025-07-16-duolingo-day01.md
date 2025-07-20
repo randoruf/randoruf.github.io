@@ -187,7 +187,7 @@ If we want to build a blog system, the blog page with dynamic data can be render
 
 For example, the blog page `app/blog/[id]/page.tsx`
 
-```ts
+```tsx
 export default async function Page({ params }: {
   params: Promise<{ id: string }>
 }) {

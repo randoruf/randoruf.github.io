@@ -177,4 +177,50 @@ Create a button UI libraries for Duolingo with shadcn/ui and tailwindcss.
 ```
 
 
-## 
+## Next.js File Conventions  
+
+<https://nextjs.org/docs/app/api-reference/file-conventions/dynamic-routes>
+
+### Dynamic Route Segments
+
+If we want to build a blog system, the blog page with dynamic data can be render by providing the route segment names. 
+
+For example, the blog page `app/blog/[id]/page.tsx`
+
+```ts
+export default async function Page({ params }: {
+  params: Promise<{ id: string }>
+}) {
+  const { id } = await params; 
+  const { title, content } = await queryPost(id); /* send request to the database/JDBC */; 
+
+  return 
+    <div>
+      <h2>Title: {title} </h2>
+      <p>Content: {content}</p>
+    </div>
+}
+```
+
+
+### Path Name with Parenthese in Next.js 
+
+A **route group** can be created by wrapping a folder's name in parenthesis: `(folderName)`.
+
+This convention indicates the folder is for organizational purposes and should not be included in the route's URL path.
+
+
+```
+app 
+    (admin)
+        dashboard 
+            page.js     -> /dashboard
+    (marketing)
+        about
+            page.js     -> /about
+        blog 
+            page.js     -> /blog
+```
+
+In this case, we can ***group*** different kinds of routes by a directory whose name is wrapped by a pair of parenthesis. 
+

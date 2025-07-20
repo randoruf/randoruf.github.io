@@ -29,7 +29,13 @@ permalink: /business/
 - 微信群 -> 社区团购
   - 家附近的 “果sun林” 做的风生水起，天天晒自己的订单，才发现这种商业模式
   - 永宁大观对面的卖进口食品的店，拉了一个微信群，如果有大家需求，就去山姆买东西回来拆散卖
-
+  
+可能有用的项目：
+- 尚硅谷Java项目《尚品甄选》 SpringBoot+SpringCloud萌新学会企业级java项目 <https://www.bilibili.com/video/BV1NF411S7DS>
+- 前端Vue热门实战, 美团买菜团购商城系统架构移动端APP项目实战 <https://www.bilibili.com/video/BV1Em4y1E7ag>
+- Build a full stack UBER EATS clone - 1/5 Days Challenge 🔴 <https://www.youtube.com/watch?v=ZPNHWlMk6_E&list=PLY3ncAV1dSVBc5v8jfQXQZrfZO93X3PGP>
+- Ubereats clone Delivery Partner Assignment using Delivery Service #88 <https://www.youtube.com/watch?v=XpEcu2fHQrk&list=PLIGDNOJWiL1-Smf4ABmuvcOrV7E4mCqN3&index=91>
+  
 ## 1. 谷歌notebookLM和Capwords 
 
 - NotebookLM
@@ -75,9 +81,15 @@ permalink: /business/
 
 明确的商业场景：AI研究室 帆哥 AI助手 / 大象机器人，外五县小孩编程班/乐高机器人
 
-## 3. 机器人养老
+
+## 3. AI Imaging
+
+CT, MR <https://www.youtube.com/@UCDRadiology/videos>
+
+## 4. 机器人养老
 - 麻省理工新成果 E-Bar 养老机器人帮助老人 洗澡、如厕、弯腰 <https://www.bilibili.com/video/BV1jiK6zkE12/>
 
 
 明确的商业场景：暂无
+
 

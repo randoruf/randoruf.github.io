@@ -59,6 +59,15 @@ permalink: /business/
   
 明确的商业场景：谷歌notebookLM国产化(解决大部分不上外网的缺点)，小红书的背单词软件，带字幕的英语教学视频，都有不错的销量。
 
+可能有用的项目
+
+- Claude Code 逆向工程研究仓库 https://github.com/shareAI-lab/analysis_claude_code
+- 复习飞桨创造营的课程
+- 写一个OCR识别网页的开源工具
+- 在7个月内学完MIT数学基础课程
+- 每天上午六点半起床坚持写博客
+- 每天至少去健身房锻炼1小时
+- 读完Vue的源码分析
 
 
 ## 2. 智能机器人玩具

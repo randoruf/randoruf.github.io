@@ -38,6 +38,17 @@ permalink: /business/
   
 ## 1. 谷歌notebookLM和Capwords 
 
+
+- 小仙儿的妹妹是卡卡发布了一篇小红书笔记，快来看吧！ 
+  - http://xhslink.com/m/6Fj9Q53B3eu 
+- 三年级的小孩：
+  - 1. 读英语原著 罗尔德达尔 
+    - (利用NotebookLM和Genimi超长上下文，生成对应的英语练习，如完形填空、单词填空、阅读理解，参考http://xhslink.com/m/3gNeoc6YDPX )
+  - 2. 英语新闻 (同上，阅读中背单词 http://xhslink.com/m/8q2NlaXV9et 和  http://xhslink.com/m/3aGNcznHGoJ )
+  - 3. 初中数学奥赛(华东师范 小蓝本)
+  - 4. 高中数学奥赛(华东师范 小蓝本)
+
+
 - NotebookLM
   - 【[中英+文稿] 谷歌NotebookLM简直是学英语的绝配】 <https://www.bilibili.com/video/BV17gNkz5EWg/>
   - 目标受众是英语老师

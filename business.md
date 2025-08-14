@@ -41,20 +41,55 @@ permalink: /business/
 
 - 小仙儿的妹妹是卡卡发布了一篇小红书笔记，快来看吧！ 
   - http://xhslink.com/m/6Fj9Q53B3eu 
-- 三年级的小孩：
-  - 1. 读英语原著 罗尔德达尔 
-    - (利用NotebookLM和Genimi超长上下文，生成对应的英语练习，如完形填空、单词填空、阅读理解，参考http://xhslink.com/m/3gNeoc6YDPX )
-  - 2. 英语新闻 (同上，阅读中背单词 http://xhslink.com/m/8q2NlaXV9et 和  http://xhslink.com/m/3aGNcznHGoJ )
-  - 3. 初中数学奥赛(华东师范 小蓝本)
-  - 4. 高中数学奥赛(华东师范 小蓝本)
-- 如何正确背单词? 
+- 坚果单词 App
+  - 语境查词
+    - 能够从短句子中自动筛选出最有可能的词汇解释。
+    - 比如对于句子 "strong winds can often indicate changing weather **conditions**" 假设要查 condtions 的意思，是会自动考虑整个句子，不会单独查词。
+      - condition: 
+        - medical 
+          - the physical state of sb's health 
+          - an illness or a medical problem that suffered from a long time 
+        - state of sth 
+          - the state of sth
+        - circumstances 
+          - the circumstances or situation in which people live
+          - the physical situation that affects how sth happens
+        - rule 
+          - a rule or decision that you must agree to. 
+        - necessary situation 
+          - a situation that must exist in order for sth else to happen
+        - state of group 
+          - the state of a particular group of people 
+    - 应该属于 circumstances, 指环境条件，或者是 state of sth, 某种状态。
+    - 英和字典 Widsom 会按照词汇解释的出现频率排序 (比如 fan 作为风扇还是粉丝的频率高)
+  - 场景记忆单词: 
+    - 类似完形填空，通过AI对话， 在下划线处填入单词。做完后会显示选项的意思（完形填空）
+    - 一篇文章挖空，填入刚才学习的单词。
+  - 深度理解
+    - 分析词义：解释词的起源
+    - 常见搭配：类似 英和Wisdom词典的 词组搭配
+    - 使用场景和频率：
+      - 例如 barometer 在日常生活中较少使用，主要用于气象、天气预报和科学领域。用于衡量大气气压，帮助预测天气，常用于新闻、气象报告和科学讨论中，
+- 新东方包钢背单词的练习
+  - Vocabulary Basic 
+  - Vocabulary 6000
+  - Vocabulary 12000
+  - Vocabulary 36000
+  - 模仿里面的单词练习，同义词/反义词连线，完形填空练习。
+- 如何正确拼写单词?（坚固单词拼写和语法）
+  - 最原始的方式是在白纸上用纸和笔一遍一遍默写单词，进一步是在电脑上写。
   - 如果只是单纯拼写单词，一是无聊，二是无法写出正确的语法形式（日语、英语尤为明显）
   - 所以“单词卡片”、“单词拼写” 的复习模式要完全摈弃
   - 可替代方式：
     - “句子挖空，填写单词的正确形式(同时考察单词和语法)”，
     - “句子挖空，同义词填写(考察同义词、同义词组的运用)”，
     - 以上既可以是书写模式，也可以是停歇模式。
-
+- 三年级的小孩：
+  - 1. 读英语原著 罗尔德达尔 
+    - (利用NotebookLM和Genimi超长上下文，生成对应的英语练习，如完形填空、单词填空、阅读理解，参考http://xhslink.com/m/3gNeoc6YDPX )
+  - 2. 英语新闻 (同上，阅读中背单词 http://xhslink.com/m/8q2NlaXV9et 和  http://xhslink.com/m/3aGNcznHGoJ )
+  - 3. 初中数学奥赛(华东师范 小蓝本)
+  - 4. 高中数学奥赛(华东师范 小蓝本)
 
 - NotebookLM
   - 【[中英+文稿] 谷歌NotebookLM简直是学英语的绝配】 <https://www.bilibili.com/video/BV17gNkz5EWg/>

@@ -38,9 +38,12 @@ permalink: /business/
   
 ## 1. 谷歌notebookLM和Capwords 
 
-
 - 小仙儿的妹妹是卡卡发布了一篇小红书笔记，快来看吧！ 
   - http://xhslink.com/m/6Fj9Q53B3eu 
+- Capwords
+  - 【独立开发闪卡 app #capwords #app #独立开发 #初创启动台】 <https://www.bilibili.com/video/BV1keTtzEEk6/>
+- 奶酪单词
+  - 【大型纪录片《奶酪单词传奇》】 <https://www.bilibili.com/video/BV1xH4y1Z73k/>
 - 坚果单词 App
   - (优先级0) ***语境查词***
     - 能够从短句子中自动筛选出最有可能的词汇解释。
@@ -94,7 +97,6 @@ permalink: /business/
   - 2. 英语新闻 (同上，阅读中背单词 http://xhslink.com/m/8q2NlaXV9et 和  http://xhslink.com/m/3aGNcznHGoJ )
   - 3. 初中数学奥赛(华东师范 小蓝本)
   - 4. 高中数学奥赛(华东师范 小蓝本)
-
 - NotebookLM
   - 【[中英+文稿] 谷歌NotebookLM简直是学英语的绝配】 <https://www.bilibili.com/video/BV17gNkz5EWg/>
   - 目标受众是英语老师
@@ -106,10 +108,6 @@ permalink: /business/
   - 后期还要融合清华wantwords,优化字典的解释等，例如用LLM技术颠覆过去的英汉字典
   - 清华妈妈快跟不上北京一年级难度了 <http://xhslink.com/m/22aAJqQMiNM>
   - 打卡6月26日世界头条英语新闻，高效积累5500词！ <http://xhslink.com/m/51aD8AuzAbo>
-- Capwords
-  -  【独立开发闪卡 app #capwords #app #独立开发 #初创启动台】 <https://www.bilibili.com/video/BV1keTtzEEk6/>
-- 奶酪单词
-  - 【大型纪录片《奶酪单词传奇》】 <https://www.bilibili.com/video/BV1xH4y1Z73k/>
 - Moji字典、背单词
 - 母语星球外教机 (消音设备、同声传译)
 - 日本三省堂 Daily Consice 日英、英日词典(日英收录8.8万，英日收录7.8万)

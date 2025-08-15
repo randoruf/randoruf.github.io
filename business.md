@@ -35,6 +35,11 @@ permalink: /business/
 - 前端Vue热门实战, 美团买菜团购商城系统架构移动端APP项目实战 <https://www.bilibili.com/video/BV1Em4y1E7ag>
 - Build a full stack UBER EATS clone - 1/5 Days Challenge 🔴 <https://www.youtube.com/watch?v=ZPNHWlMk6_E&list=PLY3ncAV1dSVBc5v8jfQXQZrfZO93X3PGP>
 - Ubereats clone Delivery Partner Assignment using Delivery Service #88 <https://www.youtube.com/watch?v=XpEcu2fHQrk&list=PLIGDNOJWiL1-Smf4ABmuvcOrV7E4mCqN3&index=91>
+
+## 1. Macaron 
+
+全新的 AI Agent, 拥有 Memory Sysytem, 会记住你爱好、你的脾性，像你的女朋友！
+可以跟她培养感情！
   
 ## 1. 谷歌notebookLM和Capwords 
 

@@ -42,7 +42,15 @@ permalink: /business/
 - Ubereats clone Delivery Partner Assignment using Delivery Service #88 <https://www.youtube.com/watch?v=XpEcu2fHQrk&list=PLIGDNOJWiL1-Smf4ABmuvcOrV7E4mCqN3&index=91>
 
 
-## 0. 东南亚、东亚相亲软件
+## 0. 语言学习伴侣 - 东南亚、东亚相亲软件
+
+一个能够找 语伴 的相亲软件，
+
+将东亚、东南亚文化归属一类，英联邦归属一类，穆斯林归属一类，印度归属一类，美洲、欧洲、非洲各一类。
+
+模块化的好处是，通过文化学习语言，并且不同语言只需切换翻译就可以，大大减少课程内容的制作。
+
+另外，最重要的功能是，能够找到一起学习语言的人，能够让中国男人外娶，也能让中国女人外嫁！
 
 东南亚、东亚的女性在文化上中国相似，能够更容易融合到中国文化。
 

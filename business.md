@@ -41,6 +41,9 @@ permalink: /business/
 - Build a full stack UBER EATS clone - 1/5 Days Challenge 🔴 <https://www.youtube.com/watch?v=ZPNHWlMk6_E&list=PLY3ncAV1dSVBc5v8jfQXQZrfZO93X3PGP>
 - Ubereats clone Delivery Partner Assignment using Delivery Service #88 <https://www.youtube.com/watch?v=XpEcu2fHQrk&list=PLIGDNOJWiL1-Smf4ABmuvcOrV7E4mCqN3&index=91>
 
+## 0. Language Reactor 
+
+一个Chrome的插件，可以在网页查生词、视频查生词，加入复习计划。
 
 ## 0. 语言学习伴侣 - 东南亚、东亚相亲软件
 

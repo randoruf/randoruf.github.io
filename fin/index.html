@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Insights Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+    <div class="max-w-7xl mx-auto py-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500 mb-2">
+                Daily Financial Insights
+            </h1>
+            <p class="text-gray-400 text-lg">
+                Your daily digest of market news and investment opportunities.
+            </p>
+        </header>
+
+        <!-- Loading spinner -->
+        <div id="loading-spinner" class="flex justify-center items-center h-64">
+            <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-emerald-500"></div>
+        </div>
+
+        <!-- Main content sections -->
+        <main id="content" class="hidden">
+            <!-- Financial News Section -->
+            <section class="mb-12">
+                <div class="flex items-center gap-2 mb-6">
+                    <h2 class="text-2xl sm:text-3xl font-semibold">Financial News</h2>
+                    <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Today</span>
+                </div>
+                <ul id="news-container" class="divide-y divide-gray-700">
+                    <!-- News list items will be injected here by JavaScript -->
+                </ul>
+            </section>
+
+            <!-- Investment Opportunities Section -->
+            <section>
+                <div class="flex items-center gap-2 mb-6">
+                    <h2 class="text-2xl sm:text-3xl font-semibold">Investment Opportunities</h2>
+                    <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Top Picks</span>
+                </div>
+                <ul id="opportunities-container" class="divide-y divide-gray-700">
+                    <!-- Opportunity list items will be injected here by JavaScript -->
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Function to create a reusable list item component
+        const createListItem = (item) => {
+            return `
+                <li class="py-4 cursor-pointer transform transition-transform hover:scale-[1.01]">
+                    <h3 class="text-xl font-bold text-white mb-1">${item.title}</h3>
+                    <p class="text-gray-400 mb-2">${item.description}</p>
+                    <div class="text-sm font-medium text-gray-500">
+                        <p>${item.source} | <span class="text-gray-400">${item.date}</span></p>
+                    </div>
+                </li>
+            `;
+        };
+
+        // Mock data to simulate API response
+        const mockData = {
+            news: [
+                {
+                    title: "Tech Giants Unveil Q3 Earnings: AI and Cloud Drive Growth",
+                    description: "Major tech companies report better-than-expected earnings, fueled by strong demand for their artificial intelligence and cloud computing services.",
+                    source: "Bloomberg",
+                    date: "September 9, 2025"
+                },
+                {
+                    title: "Federal Reserve Holds Rates, Signals Cautious Outlook",
+                    description: "The Federal Reserve's latest meeting concludes with no change to interest rates, citing persistent inflation concerns despite slowing economic growth.",
+                    source: "Reuters",
+                    date: "September 9, 2025"
+                },
+                {
+                    title: "Renewable Energy Sector Sees Record Investment",
+                    description: "A new report highlights a surge in venture capital and government funding flowing into solar, wind, and battery storage projects worldwide.",
+                    source: "GreenTech Today",
+                    date: "September 9, 2025"
+                }
+            ],
+            opportunities: [
+                {
+                    title: "Small-Cap Healthcare Stock with New Drug Approval",
+                    description: "A small-cap biotech firm receives FDA approval for a groundbreaking cancer treatment, opening up significant growth potential.",
+                    source: "MarketWatch",
+                    date: "September 9, 2025"
+                },
+                {
+                    title: "ESG-Focused ETF with Strong Performance",
+                    description: "An environmentally, socially, and governance-focused exchange-traded fund has demonstrated robust returns over the past year, attracting new investors.",
+                    source: "Vanguard",
+                    date: "September 9, 2025"
+                },
+                {
+                    title: "AI Infrastructure Company Poised for Expansion",
+                    description: "A leading provider of specialized hardware for AI models is expanding its operations to meet surging global demand from data centers.",
+                    source: "CNBC",
+                    date: "September 9, 2025"
+                }
+            ]
+        };
+
+        const showLoading = () => {
+            document.getElementById('loading-spinner').classList.remove('hidden');
+            document.getElementById('content').classList.add('hidden');
+        };
+
+        const hideLoading = () => {
+            document.getElementById('loading-spinner').classList.add('hidden');
+            document.getElementById('content').classList.remove('hidden');
+        };
+
+        const mockFetchData = () => {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    resolve(mockData);
+                }, 2000); // Simulate a 2-second network delay
+            });
+        };
+
+        const renderContent = (data) => {
+            const newsContainer = document.getElementById('news-container');
+            const opportunitiesContainer = document.getElementById('opportunities-container');
+
+            // Render news list items
+            newsContainer.innerHTML = data.news.map(createListItem).join('');
+
+            // Render opportunity list items
+            opportunitiesContainer.innerHTML = data.opportunities.map(createListItem).join('');
+        };
+
+        // Initialize the app
+        const init = async () => {
+            try {
+                showLoading();
+                const data = await mockFetchData();
+                renderContent(data);
+            } catch (error) {
+                console.error('Failed to fetch data:', error);
+                // In a real app, you would display an error message to the user here
+            } finally {
+                hideLoading();
+            }
+        };
+
+        window.onload = init;
+    </script>
+</body>
+</html>

@@ -11,6 +11,14 @@ permalink: /business/
 ## 0. sweetspot 
 
 - sweetspot 
+  - 1. Search
+    - AI-Powered Search: Search for descriptions of contract and grant opportunities you've bid on in the past and Sweetspot will find you similar open contracts. 
+  - 2. Ask 
+    - Business Intelligence: Ask questions about the solicitation documents and historical contract data to make an informed bid/no-bid decision.
+  - 3. Manage 
+    - Pipelines & Pursuits: Streamline capture, manage pursuits, assign tasks, and update your AI Profile to match you with the most relevant contract opportunities.
+  - 4. Respond 
+    - Proposal Copilot: Our AI takes in context of services your business offers to help you effortlessly respond to RFPs, RFIs, and RFQs.
   - 需求1: 自动寻找潜在客户
     - 1.1 信息来源: 用户可以给定政采的信息来源
       - 如 https://www.ccgp.gov.cn/cggg/dfgg/gkzb/ 或者 https://ggzyjyzx.tl.gov.cn/jyxx/003002/003002001/trade_info.html

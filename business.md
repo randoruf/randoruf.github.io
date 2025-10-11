@@ -13,6 +13,57 @@ permalink: /business/
 - GPT 等 LLM 模型通常有 Tokenizer, 有一个属于自己的 Token 词汇库。
 - 这是学习外语的最好方式，因为贴近词汇的出现频率 (例如中文出现最多的是 “波多野结衣”)
 - 可以做一个单词软件，利用 GPT 的 token 频率出现技术，分析单词 (类似词根记忆)
+- 下面是我问 Google Gemini 的结果 
+  
+That's a very insightful way to think about building vocabulary! The words included in a tokenizer's vocabulary are essentially the building blocks that Large Language Models (LLMs) consider the most frequent and important.
+
+Modern LLMs (like GPT, BERT, or Llama) use **subword tokenization** (like Byte Pair Encoding or WordPiece). This means their vocabulary is a mix of three main types of units:
+
+1.  **High-Frequency English Words (Intact Words):** The most common words are kept as single, complete tokens because they appear so often. Learning these is essential for fluency.
+2.  **Common Prefixes, Suffixes, and Root Morphemes (Subwords):** Less frequent words are broken down into meaningful chunks. Learning these chunks helps you understand new words and word parts.
+3.  **Individual Characters and Digits:** A base set of characters is always included as a fallback.
+
+Here is a breakdown of the *types* of English vocabulary you can focus on by thinking like a tokenizer:
+
+---
+
+### 1. High-Frequency "Whole Word" Tokens
+
+These are the most common words in English. The tokenizer keeps them whole to be efficient. Mastering these is the fastest way to understand most English text.
+
+| Category | Examples (Likely Single Tokens) | Why Learn Them? |
+| :--- | :--- | :--- |
+| **Function Words** | the, a, and, or, but, is, are, was, were, be, to, of, for, in, at, on, that, this, it, he, she, we, they, you, my, your | These are the grammatical glue of the language. They make up the bulk of any conversation or text. |
+| **Common Verbs** | get, go, have, do, make, take, say, know, see, think, look, want, need, come, give, use, find | Crucial for forming basic sentences and understanding actions. |
+| **High-Frequency Nouns** | time, year, people, way, day, man, thing, home, life, world, work, place, part | Essential nouns for talking about common concepts. |
+| **Common Adverbs/Adj.**| very, not, only, much, well, good, new, first, old, long, great, little, other, sure | Necessary for modifying and adding detail to your sentences. |
+
+### 2. Common Subword/Morphological Tokens
+
+The tokenizer creates tokens for frequently occurring prefixes and suffixes so that it can build new words efficiently. Learning these will help you guess the meaning of unfamiliar words and correctly spell them.
+
+| Subword Type | Token Examples | Full Word Examples | Meaning/Function |
+| :--- | :--- | :--- | :--- |
+| **Suffixes** | `ing`, `ed`, `ly`, `es`, `er`, `tion`, `able`, `ous`, `ize`, `ment`, `ness` | runn**ing**, work**ed**, quick**ly**, box**es**, fast**er**, crea**tion**, understand**able**, danger**ous**, real**ize**, develop**ment**, kind**ness** | Denote verb tense, adverbs, plurals, comparisons, or create nouns/adjectives from other word types. |
+| **Prefixes** | `un`, `re`, `dis`, `pre`, `in`, `con`, `inter` | **un**happy, **re**start, **dis**agree, **pre**view, **in**complete, **con**nect, **inter**national | Often change the meaning (like `un` for "not," or `re` for "again"). |
+| **Punctuation/Misc.**| `.` `! ` `? ` `, ` `( ` `)` `s` ` ##` | The tokenizer often treats punctuation with a space as its own token. The `##` (or similar marker like `Ġ` or `_` for different models) indicates a subword that follows another subword (e.g., `token` + `##ization`). | Crucial for reading fluency and sentence structure. |
+
+### 3. Topic-Specific Vocabulary
+
+While the majority of the vocabulary is general, the next most frequent words will be from the massive amount of text LLMs are trained on. These include many concepts from technology, science, and programming.
+
+| Category | Examples | Why Learn Them? |
+| :--- | :--- | :--- |
+| **Technology/Data** | data, model, process, algorithm, machine, network, system, compute, server | Highly relevant to modern English conversation and professional contexts. |
+| **Technical Verbs**| generate, provide, implement, create, configure, optimize, leverage | Common in instructions, documentation, and academic writing. |
+| **Academic/Formal**| therefore, however, moreover, thus, substantial, fundamental, consequence, evidence | Improves your ability to read academic papers, news articles, and write formal essays. |
+
+### How to Use This for Learning English
+
+1.  **Prioritize the Core 1,000-5,000 Words:** The tokenizer confirms that mastering the most frequent words (Category 1) is the highest priority. Use frequency lists like the **New General Service List (NGSL)** or **Oxford 3000** for a systematic approach.
+2.  **Focus on Affixes (Category 2):** When you learn a new word, look for its common prefixes and suffixes. Knowing that `un-` means "not" and `-able` means "can be done" allows you to understand dozens of new words (e.g., *unbearable*, *unforgettable*).
+3.  **Read and Listen Widely:** The subword tokens are derived from sheer frequency across massive text. The best way to naturally acquire them is through extensive reading and listening to authentic English content (books, news, podcasts, videos).
+
  
 
 ## 0. 宠物智能项圈

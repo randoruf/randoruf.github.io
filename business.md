@@ -7,6 +7,11 @@ permalink: /business/
 我们工作室的主营业务
 
 
+## 0. From Manga to Anime 
+
+将 小说、漫画 转化为 动漫 (虾仁动漫的升级版)。
+
+
 ## 0. 通过 Token 学习外语
 
 - https://arxiv.org/abs/2508.17771

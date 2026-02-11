@@ -21,6 +21,7 @@ It gives grades of mimicking produciations.
 - 对模仿的口音评价
 - 学完一个单元之后有练习
 - 也可以即使AI对话，从发音、用词是否地道评价
+- WenetChuan的原生语料库已经给你了，分析一下里面的词频，按场景分类，提取高频词组。
 
 ## 开发日记
 

@@ -1,15 +1,13 @@
 ---
-layout: page
-title: 業務
-permalink: /business/
+layout: post
+title: 'Products Under Development' 
 ---
 
-我们工作室的主营业务
-
-
-## 0. From Manga to Anime 
-
-将 小说、漫画 转化为 动漫 (虾仁动漫的升级版)。
+- 电子病历
+- 日语
+- 英语
+- 四川方言
+- 粤语方言
 
 
 ## 0. 通过 Token 学习外语
@@ -121,21 +119,6 @@ While the majority of the vocabulary is general, the next most frequent words wi
     - 普通的贴图映射
     - 高斯3D泼溅
 
-
-## 0. 外贸助手
-- 外贸助手
-  - 利用 RAG技术自动回答顾客问题
-  - 利用阿里巴巴的集运出海！
-
-## 0. 内裤/拖鞋外贸
-
-- 一个大专小伙子，拖鞋外贸每年5000千万营业额
-- 网易外贸通
-  - 不要认为做独立站出海是很专业、很难的事情
-    - 可以搜搜1818黄金眼，有人付了5万多给网易有道的 AI独立站出海业务 (能上 Gemini, GPT的几天就能做完，这东西竟然可以卖5万，真实大开眼界)
-    - 把 铁圆饼 翻译成 cake, 反正特别搞笑。
-  - 自动回复Agent，一个1万。 
-
 ## 0. 吸水清洁器、猫砂自动清洁器、宠物自动喂食器、
 
 - 日本一家15人的公司制作了一款 吸水清洁器(清洁头在喷水的同时马上吸水， 所以能够轻松清洗老人的身体)
@@ -153,7 +136,6 @@ While the majority of the vocabulary is general, the next most frequent words wi
 - 只能喂鸟器
 - 后花园 AI摄像头，偷偷看松鼠吃东西，小鸟筑巢，蜜蜂工作等等
 - 谁会给鸟儿买智能手机
-
 
 ## 0. 社区团购
 
@@ -194,12 +176,10 @@ While the majority of the vocabulary is general, the next most frequent words wi
 
 - [ ] 词根分析器 (github项目)
 - [ ] 社区团购App
-- [ ] 上班顺风车 (一起上班的人为什么不能坐顺风车？轮流安排司机就公平了)
 
 ## 0. 微景观模型
 
 - 一个山东小伙，拜师做庭院房屋的微景观模型，年入500百万。
-
 
 ## 0. Language Reactor 
 
@@ -372,5 +352,7 @@ CT, MR <https://www.youtube.com/@UCDRadiology/videos>
 
 
 明确的商业场景：暂无
+
+
 
 

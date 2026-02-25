@@ -210,24 +210,46 @@
     const resultList = document.getElementById('result-list');
     const allButtons = document.querySelectorAll('button');
 
+    // --- 核心逻辑：获取真随机种子 (多源融合版) ---
     async function fetchSeed() {
-        statusBox.textContent = "正在请求量子随机种子...";
+        statusBox.textContent = "正在同步全球随机信标 (Drand)...";
         statusBox.className = "";
         allButtons.forEach(b => b.disabled = true);
 
+        let finalSeed = 0;
+
         try {
-            const res = await fetch("https://qrng.anu.edu.au/API/jsonI.php?length=1&type=hex16&size=4", { signal: AbortSignal.timeout(6000) });
+            // 使用 Drand 的公共 HTTP 终点 (该接口通常在全球范围内都很稳定)
+            // 这是 League of Entropy 提供的分布式随机数
+            const drandUrl = "https://drand.cloudflare.com/public/latest";
+            
+            const res = await fetch(drandUrl, { signal: AbortSignal.timeout(5000) });
             const data = await res.json();
-            const hex = data.data[0];
-            setSeed(parseInt(hex, 16));
-            statusBox.textContent = `✅ 量子种子已就绪\n源: ANU Quantum Random\nHex: ${hex.toUpperCase()}`;
+            
+            // randomness 是一个 64 位的十六进制字符串
+            const remoteRandomness = data.randomness;
+            
+            // 为了保险，我们将“远程随机数”与“本地系统硬件随机数”进行异或(XOR)运算
+            const localEntropy = window.crypto.getRandomValues(new Uint32Array(1))[0];
+            const remotePart = parseInt(remoteRandomness.substring(0, 8), 16);
+            
+            finalSeed = (remotePart ^ localEntropy) >>> 0;
+            
+            statusBox.textContent = `✅ 种子已就绪 (混合动力)\n远程源: Drand (League of Entropy)\n本地源: Web Crypto API\n混合Hash: 0x${finalSeed.toString(16).toUpperCase()}`;
             statusBox.className = "quantum";
         } catch (e) {
-            const localSeed = window.crypto.getRandomValues(new Uint32Array(1))[0];
-            setSeed(localSeed);
-            statusBox.textContent = `⚠️ 无法连接量子服务器，已启用本地 Web Crypto 安全随机源。\nSeed: ${localSeed}`;
+            console.warn("Drand 访问受限，启用本地高强度熵池:", e);
+            
+            // 彻底无网时的回退方案：获取多个本地硬件随机数并混合时间戳
+            const buffer = new Uint32Array(2);
+            window.crypto.getRandomValues(buffer);
+            finalSeed = (buffer[0] ^ buffer[1] ^ Date.now()) >>> 0;
+            
+            statusBox.textContent = `⚠️ 网络连接超时，已启用本地系统级熵池。\n种子已根据硬件噪声生成: ${finalSeed}`;
             statusBox.className = "fallback";
         }
+
+        setSeed(finalSeed);
         allButtons.forEach(b => b.disabled = false);
     }
 

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>量子波动体彩生成器</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ffc107;
+            --text-dark: #333;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            color: var-text-dark;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        /* 状态栏样式 */
+        #status-box {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+            border-left: 5px solid #ccc;
+            text-align: left;
+            word-break: break-all;
+        }
+
+        #status-box.quantum { border-left-color: #28a745; }
+        #status-box.fallback { border-left-color: #ffc107; }
+        #status-box.loading { border-left-color: #17a2b8; }
+
+        /* 按钮样式 */
+        .btn-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .btn-full {
+            grid-column: 1 / -1;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+            background-color: #004494;
+        }
+
+        button.secondary {
+            background-color: #6c757d;
+        }
+        
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* 结果展示区域样式 */
+        .result-area {
+            margin-top: 20px;
+        }
+
+        .lottery-result {
+            background: white;
+            border: 1px solid #eee;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: var(--shadow);
+            display: none; /* 默认隐藏 */
+        }
+
+        .lottery-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        /* 号码球样式 */
+        .ball {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            margin: 0 4px;
+            font-weight: bold;
+            color: white;
+        }
+        .ball.red { background-color: #e74c3c; }
+        .ball.blue { background-color: #3498db; }
+        .ball.yellow { background-color: #f39c12; color: white;}
+        .divider { margin: 0 5px; color: #999; }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>⚛️ 量子体彩生成器</h1>
+    <p class="subtitle">基于 ANU 实时量子真空涨落数据</p>
+
+    <div id="status-box" class="loading">
+        正在初始化量子连接...
+    </div>
+
+    <div class="btn-group">
+        <button id="btn-dlt" disabled>生成超级大乐透</button>
+        <button id="btn-p3" disabled>生成排列 3</button>
+        <button id="btn-p5" disabled>生成排列 5</button>
+        <button id="btn-qxc" disabled>生成 7 星彩</button>
+        <button id="btn-refresh" class="secondary btn-full">🔄 重新获取量子种子</button>
+    </div>
+
+    <div class="result-area">
+        <div id="result-dlt" class="lottery-result">
+            <div class="lottery-title">超级大乐透</div>
+            <div class="numbers"></div>
+        </div>
+        <div id="result-generic" class="lottery-result">
+            <div class="lottery-title" id="generic-title">彩票结果</div>
+            <div class="numbers" id="generic-nums"></div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // ==========================================
+    // 1. 自定义可置种子的随机数生成器 (PRNG)
+    // ==========================================
+    // JavaScript 的 Math.random() 无法设置种子。
+    // 我们使用一个简单高效的算法 "mulberry32" 来实现基于种子的随机。
+    let seedState = 0;
+
+    function initializeSeed(seedValue) {
+        seedState = seedValue >>> 0; // 确保是无符号32位整数
+    }
+
+    // 返回一个 [0, 1) 之间的浮点数，类似于 Math.random()
+    function nextRandom() {
+        let t = seedState += 0x6D2B79F5;
+        t = Math.imul(t ^ (t >>> 15), t | 1);
+        t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+        return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    }
+
+    // 辅助函数：生成指定范围内的随机整数 [min, max]
+    function getRandomInt(min, max) {
+        return Math.floor(nextRandom() * (max - min + 1)) + min;
+    }
+
+    // ==========================================
+    // 2. 核心逻辑：获取真随机种子 & 更新 UI
+    // ==========================================
+    const statusBox = document.getElementById('status-box');
+    const buttons = document.querySelectorAll('.btn-group button:not(.secondary)');
+    const refreshBtn = document.getElementById('btn-refresh');
+
+    function updateStatus(message, type) {
+        statusBox.textContent = message;
+        statusBox.className = type; // loading, quantum, fallback
+        // 种子就绪后启用按钮
+        buttons.forEach(btn => btn.disabled = (type === 'loading'));
+        refreshBtn.disabled = (type === 'loading');
+    }
+
+    async function fetchQuantumSeed() {
+        updateStatus("正在连接澳大利亚国立大学(ANU)量子服务器...", "loading");
+        
+        // 请求一个 32位的十六进制数作为种子
+        const url = "https://qrng.anu.edu.au/API/jsonI.php?length=1&type=hex16&size=4";
+
+        try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 8000); // 8秒超时
+
+            const response = await fetch(url, { signal: controller.signal });
+            clearTimeout(timeoutId);
+
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            const data = await response.json();
+
+            if (data.success && data.data && data.data.length > 0) {
+                const hexSeed = data.data[0];
+                // 将十六进制字符串转换为整数种子
+                const numericSeed = parseInt(hexSeed, 16);
+                initializeSeed(numericSeed);
+                updateStatus(`✅ 量子种子已就绪。来源: ANU真空涨落\nSeedHash: 0x${hexSeed.substring(0, 10)}`, "quantum");
+            } else {
+                throw new Error("API 返回数据格式错误");
+            }
+        } catch (error) {
+            console.warn("量子API连接失败，切换至本地安全随机源:", error);
+            // 回退方案：使用浏览器内置的密码学安全随机数生成器
+            const fallbackSeed = new Uint32Array(1);
+            window.crypto.getRandomValues(fallbackSeed);
+            initializeSeed(fallbackSeed[0]);
+            updateStatus(`⚠️ 无法连接量子服务器 (原因: ${error.message})。\n已切换为本地浏览器安全随机源 (Web Crypto API)。`, "fallback");
+        }
+    }
+
+    // ==========================================
+    // 3. 彩票生成逻辑
+    // ==========================================
+
+    // 辅助：抽取不重复的数字并排序 (用于大乐透前区/后区)
+    function drawUniqueSorted(count, min, max) {
+        const nums = new Set();
+        while (nums.size < count) {
+            nums.add(getRandomInt(min, max));
+        }
+        return Array.from(nums).sort((a, b) => a - b);
+    }
+
+    // 辅助：抽取可重复的数字 (用于排列3/5, 七星彩)
+    function drawRepeatable(count, min, max) {
+        const nums = [];
+        for (let i = 0; i < count; i++) {
+            nums.push(getRandomInt(min, max));
+        }
+        return nums;
+    }
+
+    // 辅助：格式化数字为两位数 (如 5 -> "05")
+    const fmt = n => n.toString().padStart(2, '0');
+
+    // 生成并显示大乐透
+    function generateDLT() {
+        const front = drawUniqueSorted(5, 1, 35).map(n => `<span class="ball red">${fmt(n)}</span>`).join('');
+        const back = drawUniqueSorted(2, 1, 12).map(n => `<span class="ball blue">${fmt(n)}</span>`).join('');
+        
+        document.querySelector('#result-dlt .numbers').innerHTML = `${front} <span class="divider">|</span> ${back}`;
+        document.getElementById('result-dlt').style.display = 'block';
+        document.getElementById('result-generic').style.display = 'none';
+    }
+
+    // 生成并显示通用数字型 (排列3/5, 七星彩)
+    function generateNumericLottery(title, count, ballClass) {
+        const nums = drawRepeatable(count, 0, 9)
+            .map(n => `<span class="ball ${ballClass}">${n}</span>`)
+            .join('');
+        
+        document.getElementById('generic-title').textContent = title;
+        document.getElementById('generic-nums').innerHTML = nums;
+        document.getElementById('result-generic').style.display = 'block';
+        document.getElementById('result-dlt').style.display = 'none';
+    }
+
+    // ==========================================
+    // 4. 事件监听与初始化
+    // ==========================================
+    document.getElementById('btn-refresh').addEventListener('click', fetchQuantumSeed);
+    
+    document.getElementById('btn-dlt').addEventListener('click', generateDLT);
+    
+    document.getElementById('btn-p3').addEventListener('click', () => {
+        generateNumericLottery('排列 3 (P3)', 3, 'yellow');
+    });
+    
+    document.getElementById('btn-p5').addEventListener('click', () => {
+        generateNumericLottery('排列 5 (P5)', 5, 'yellow');
+    });
+
+    document.getElementById('btn-qxc').addEventListener('click', () => {
+        // 七星彩前6位是基本号码，最后1位是特别号码，这里简化统一显示，也可分开
+        generateNumericLottery('7 星彩 (QXC)', 7, 'blue');
+    });
+
+    // 页面加载完成后立即获取种子
+    fetchQuantumSeed();
+
+</script>
+</body>
+</html>

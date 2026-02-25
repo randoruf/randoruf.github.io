@@ -6,9 +6,6 @@ permalink: /about/
 
 ---
 
-![](/2025-10-13-00-01-56.png)
-
-
 Github : <https://github.com/randoruf>
 
 LeetCode : <https://leetcode-cn.com/u/kouka/>

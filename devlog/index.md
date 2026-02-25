@@ -11,6 +11,8 @@ title: 'Products Under Development'
 - 孙哥说将 20%的时间花在试错，80%的时间花在复盘和迭代。
   - 在2022年之后的AI时代，孙哥的话就有可执行性。在AI时代可以先把D MVP (Minimal Viable Product)
   - 最夸张是 Cloudflare 的一个工程师用AI agent花了1周时间就将Next.js用Vite重建 <https://blog.cloudflare.com/vinext/>
+  - 先用AI把工具搭建起来，疯狂从AI上学习知识，出错就自然知道问题了，
+  - 因为AI将试错成本无限降低，所以大胆做就是了。
 
 
 ## 0. 宮水三葉 和 机器马喝啤酒

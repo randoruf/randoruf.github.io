@@ -35,7 +35,6 @@
         }
 
         h1 { color: var(--primary-color); margin-bottom: 5px; font-size: 1.8rem; }
-        .subtitle { color: #666; font-size: 0.9rem; margin-bottom: 20px; }
 
         #status-box {
             background: #f1f3f5;
@@ -159,7 +158,6 @@
 
 <div class="container">
     <h1>⚛️ 量子体彩生成器</h1>
-    <p class="subtitle">真随机种子来源：ANU 量子真空涨落</p>
 
     <div id="status-box">正在获取量子熵源...</div>
 
@@ -172,8 +170,6 @@
     </div>
 
     <div class="btn-grid">
-        <button id="btn-p3" disabled>排列 3</button>
-        <button id="btn-p5" disabled>排列 5</button>
         <button id="btn-refresh" class="btn-refresh">🔄 更新量子种子</button>
     </div>
 
@@ -274,19 +270,6 @@
         }
         resultList.innerHTML = html;
         resultList.scrollTop = 0;
-    };
-
-    // 其他彩种
-    document.getElementById('btn-p3').onclick = () => {
-        const nums = Array.from({length:3}, () => randInt(0, 9));
-        const balls = nums.map(n => `<span class="ball yellow">${n}</span>`).join('');
-        resultList.innerHTML = `<div class="lottery-row"><span class="row-index">P3</span><div>${balls}</div></div>`;
-    };
-
-    document.getElementById('btn-p5').onclick = () => {
-        const nums = Array.from({length:5}, () => randInt(0, 9));
-        const balls = nums.map(n => `<span class="ball yellow">${n}</span>`).join('');
-        resultList.innerHTML = `<div class="lottery-row"><span class="row-index">P5</span><div>${balls}</div></div>`;
     };
 
     document.getElementById('btn-refresh').onclick = fetchSeed;

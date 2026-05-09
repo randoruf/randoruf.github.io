@@ -3,6 +3,14 @@ layout: post
 title: 'Duolingo for Sichuan Dialect' 
 ---
 
+
+
+
+
+
+
+
+
 ## Introduction 
 
 - Next.js Duolingo Clone <https://www.bilibili.com/video/BV1Q5Y3zEEEh>
